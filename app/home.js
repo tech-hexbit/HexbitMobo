@@ -2,27 +2,22 @@ import { useState } from "react";
 import { Stack, useRouter } from "expo-router";
 import { SafeAreaView, ScrollView, View, Text } from "react-native";
 
+import Header from "../components/Header";
+
 const Home = () => {
   const router = useRouter();
 
   return (
     <View>
-      <SafeAreaView style={{ flex: 1, backgroundColor: "red" }}>
-        <Stack.Screen
+      <SafeAreaView style={{ flex: 1 }}>
+        {/* <Stack.Screen
           options={{
-            headerStyle: { backgroundColor: "red" },
+            headerStyle: { backgroundColor: "#350b5e" },
             headerShadowVisible: false,
             headerTitle: "Home",
           }}
-        />
-        {/* <ScrollView showsVerticalScrollIndicator={false}>
-        <View
-        style={{
-            flex: 1,
-            padding: 10,
-        }}
-        ></View>
-    </ScrollView> */}
+        /> */}
+        <Header pageName="pageName" />
       </SafeAreaView>
     </View>
   );
