@@ -1,16 +1,5 @@
-import { View, Text } from "react-native";
+import { Redirect } from "expo-router";
 
-import { Activity } from "./../components/Orders";
-
-const Home = () => {
-  return (
-    <View>
-      <Text>Hexbit.io</Text>
-      <Text>Orders</Text>
-
-      <Text>Sales Activity</Text>
-    </View>
-  );
-};
-
-export default Home;
+export default function Index() {
+  return <Redirect href="/home" />;
+}
