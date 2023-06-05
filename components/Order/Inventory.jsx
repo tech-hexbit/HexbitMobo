@@ -35,9 +35,9 @@ const InventoryCss = StyleSheet.create({
   },
   ViewRow: {
     flexDirection: "row",
-    // justifyContent: "space-between",
     alignItems: "center",
-    padding: 10,
+    paddingRight: 10,
+    paddingLeft: 10,
   },
   txt1: {
     color: "white",
@@ -45,7 +45,6 @@ const InventoryCss = StyleSheet.create({
     fontWeight: 500,
     fontSize: 16,
     width: 230,
-    // backgroundColor: "red",
     borderColor: "white",
     borderRightWidth: 1,
     borderBottomWidth: 1,
@@ -56,12 +55,8 @@ const InventoryCss = StyleSheet.create({
     fontWeight: 500,
     fontSize: 16,
     width: 120,
-    // backgroundColor: "red",
     borderColor: "white",
     borderBottomWidth: 1,
-
-    // width: 50,
-    // backgroundColor: "red",
   },
   txt3: {
     color: "white",
@@ -69,23 +64,16 @@ const InventoryCss = StyleSheet.create({
     fontWeight: 500,
     fontSize: 16,
     width: 230,
-    // backgroundColor: "red",
+    backgroundColor: "red",
     borderColor: "white",
     borderRightWidth: 1,
-    // borderBottomWidth: 1,
   },
   txt4: {
     color: "white",
     padding: 7,
     fontWeight: 500,
     fontSize: 16,
-    // width: 150,
-    // backgroundColor: "red",
     borderColor: "white",
-    // borderBottomWidth: 1,
-
-    // width: 50,
-    // backgroundColor: "red",
   },
 });
 
