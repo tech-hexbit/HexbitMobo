@@ -32,6 +32,7 @@ const InventoryCss = StyleSheet.create({
   tabView: {
     backgroundColor: COLORS.ActivityBlock,
     borderRadius: 10,
+    marginBottom: 15,
   },
   ViewRow: {
     flexDirection: "row",
