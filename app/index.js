@@ -10,7 +10,7 @@ export default function Home() {
       {/* Use the `Screen` component to configure the layout. */}
       <Stack.Screen options={{ title: "Home" }} />
       {/* Use the `Link` component to enable optimized client-side routing. */}
-      <Header pageName="pageName" />
+      <Header pageName="Orders" />
       <Text>Hello World</Text>
     </View>
   );
