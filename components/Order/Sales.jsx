@@ -28,7 +28,7 @@ const SalesCss = StyleSheet.create({
     color: COLORS.primary,
     fontWeight: 900,
     fontSize: 20,
-    marginBottom: 13,
+    marginBottom: 15,
   },
   ActivityRow: {
     // flex: 3,
@@ -36,7 +36,7 @@ const SalesCss = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 13,
+    marginBottom: 15,
   },
 });
 
