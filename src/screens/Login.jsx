@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
 const Login = () => {
@@ -8,5 +8,7 @@ const Login = () => {
     </View>
   );
 };
+
+const LoginCss = StyleSheet.create({});
 
 export default Login;
