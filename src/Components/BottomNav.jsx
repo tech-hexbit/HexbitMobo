@@ -5,10 +5,15 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // screens
 import Home from "./../screens/Home";
 import Inventory from "./../screens/Inventory";
+import Cart from "./../screens/Cart";
+import Profile from "./../screens/Profile";
 
 // img
 import img1 from "./../../assets/Vector-3.png";
 import img2 from "./../../assets/Vector-1.png";
+import img3 from "./../../assets/Vector-2.png";
+import img4 from "./../../assets/Vector-4.png";
+import img5 from "./../../assets/Vector.png";
 
 const BottomNav = () => {
   const Tab = createBottomTabNavigator();
@@ -41,10 +46,10 @@ const BottomNav = () => {
         }}
       />
       <Tab.Screen
-        name="Cart"
-        component={Cart}
+        name="Inventory"
+        component={Inventory}
         options={{
-          tabBarLabel: "Cart",
+          tabBarLabel: "Inventory",
           tabBarIcon: ({ focused }) => (
             <Image
               source={img2}
@@ -55,17 +60,16 @@ const BottomNav = () => {
               }}
             />
           ),
-          tabBarBadge: 3,
         }}
       />
       <Tab.Screen
-        name="Inventory"
-        component={Inventory}
+        name="Cart"
+        component={Cart}
         options={{
-          tabBarLabel: "Inventory",
+          tabBarLabel: "Cart",
           tabBarIcon: ({ focused }) => (
             <Image
-              source={img2}
+              source={img3}
               style={{
                 width: 25,
                 height: 25,
