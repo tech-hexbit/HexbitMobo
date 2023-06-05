@@ -36,7 +36,9 @@ const Inventory = () => {
           All
         </Text>
         <Text
-          style={InventoryCss.Shipped}
+          style={
+            show === "Shipped" ? InventoryCss.selected : InventoryCss.Shipped
+          }
           onPress={() => {
             set("Shipped");
           }}
@@ -44,7 +46,11 @@ const Inventory = () => {
           Shipped
         </Text>
         <Text
-          style={InventoryCss.Cancelled}
+          style={
+            show === "Cancelled"
+              ? InventoryCss.selected
+              : InventoryCss.Cancelled
+          }
           onPress={() => {
             set("Cancelled");
           }}
