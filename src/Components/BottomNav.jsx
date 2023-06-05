@@ -7,6 +7,7 @@ import Home from "./../screens/Home";
 import Inventory from "./../screens/Inventory";
 import Cart from "./../screens/Cart";
 import Profile from "./../screens/Profile";
+import Discount from "./../screens/Discount";
 
 // img
 import img1 from "./../../assets/Vector-3.png";
@@ -19,7 +20,7 @@ const BottomNav = () => {
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Inventory"
       screenOptions={{
         tabBarStyle: {
           backgroundColor: "#350b5e",
@@ -81,13 +82,13 @@ const BottomNav = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="Discount"
+        component={Discount}
         options={{
-          tabBarLabel: "Profile",
+          tabBarLabel: "Discount",
           tabBarIcon: ({ focused }) => (
             <Image
-              source={img5}
+              source={img4}
               style={{
                 width: 25,
                 height: 25,
