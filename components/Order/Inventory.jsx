@@ -22,7 +22,10 @@ const Inventory = () => {
         </View>
       </View>
       <View style={InventoryCss.toggleBtn}>
-        <Text>674</Text>
+        <Text style={InventoryCss.All}>All</Text>
+        <Text style={InventoryCss.Shipped}>Shipped</Text>
+        <Text style={InventoryCss.Cancelled}>Cancelled</Text>
+        <Text style={InventoryCss.On}>On Hold</Text>
       </View>
       <Table />
     </View>
@@ -89,6 +92,21 @@ const InventoryCss = StyleSheet.create({
   toggleBtn: {
     marginTop: 5,
     marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignContent: "center",
+  },
+  All: {
+    color: COLORS.primary,
+  },
+  Shipped: {
+    color: "#216445",
+  },
+  Cancelled: {
+    color: "#882830",
+  },
+  On: {
+    color: "#8f9d4b",
   },
 });
 
