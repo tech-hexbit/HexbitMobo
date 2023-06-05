@@ -9,7 +9,7 @@ import { COLORS, SIZES } from "../../constants/theme";
 
 const Sales = () => {
   return (
-    <View style={SalesCss.mDiv}>
+    <View>
       <Text style={SalesCss.SalesText}>Sales Activity</Text>
       <View style={SalesCss.ActivityRow}>
         <Activity amt="345" status="To be packed" />
@@ -24,9 +24,6 @@ const Sales = () => {
 };
 
 const SalesCss = StyleSheet.create({
-  mDiv: {
-    margin: 20,
-  },
   SalesText: {
     color: COLORS.primary,
     fontWeight: 900,
