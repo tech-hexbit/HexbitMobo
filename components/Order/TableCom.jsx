@@ -88,10 +88,23 @@ const TableCss = StyleSheet.create({
   // text2: {
   //   textAlign: "center",
   // },
-  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: "#fff" },
-  head: { height: 40, backgroundColor: "#808B97" },
-  text: { margin: 6 },
-  row: { flexDirection: "row", backgroundColor: "#FFF1C1" },
+  container: {
+    flex: 1,
+    padding: 15,
+    paddingTop: 30,
+    backgroundColor: "#fff",
+  },
+  head: {
+    height: 40,
+    backgroundColor: "#808B97",
+  },
+  text: {
+    margin: 6,
+  },
+  row: {
+    flexDirection: "row",
+    backgroundColor: "#FFF1C1",
+  },
 });
 
 export default TableCom;
