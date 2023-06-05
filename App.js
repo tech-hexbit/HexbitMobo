@@ -12,9 +12,11 @@ import BottomNav from "./src/Components/BottomNav";
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
-    <NavigationContainer>
-      <BottomNav />
-    </NavigationContainer>
+    <>
+      <NavigationContainer>
+        <BottomNav />
+      </NavigationContainer>
+    </>
   );
 }
 
