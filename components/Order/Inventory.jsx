@@ -13,7 +13,12 @@ const Inventory = () => {
 };
 
 const InventoryCss = StyleSheet.create({
-  StatusText: {},
+  StatusText: {
+    color: COLORS.primary,
+    fontWeight: 900,
+    fontSize: 20,
+    marginBottom: 15,
+  },
 });
 
 export default Inventory;
