@@ -16,15 +16,16 @@ const Activity = (props) => {
 const ActivityCss = StyleSheet.create({
   ActivityBlock: {
     backgroundColor: COLORS.ActivityBlock,
+    borderRadius: 10,
   },
   amtText: {
     color: "white",
-    fontWeight: 900,
-    fontSize: 20,
+    fontWeight: 500,
+    fontSize: 30,
   },
   statusText: {
     color: "white",
-    fontWeight: 900,
+    fontWeight: 500,
     fontSize: 20,
   },
 });
