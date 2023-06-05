@@ -63,7 +63,7 @@ const TableCom = () => {
                       : k == 1
                       ? {
                           color: COLORS.OrNo,
-                          textAlign: "center",
+                          textAlign: "left",
                           width: 95,
                         }
                       : k === 0
@@ -101,7 +101,7 @@ const TableCss = StyleSheet.create({
     textAlign: "center",
     color: COLORS.primary,
     fontWeight: 500,
-    fontSize: 13,
+    fontSize: 14,
   },
   row: {
     flexDirection: "row",
