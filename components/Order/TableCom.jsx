@@ -90,8 +90,6 @@ const TableCss = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: "black",
     padding: 10,
-
-    // backgroundColor: "#FFF1C1",
   },
 });
 
