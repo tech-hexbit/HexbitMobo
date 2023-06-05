@@ -27,7 +27,14 @@ const Inventory = () => {
         </View>
       </View>
       <View style={InventoryCss.toggleBtn}>
-        <Text style={InventoryCss.All}>All</Text>
+        <Text
+          style={InventoryCss.All}
+          onPress={() => {
+            set("All");
+          }}
+        >
+          All
+        </Text>
         <Text
           style={InventoryCss.Shipped}
           onPress={() => {
@@ -36,8 +43,22 @@ const Inventory = () => {
         >
           Shipped
         </Text>
-        <Text style={InventoryCss.Cancelled}>Cancelled</Text>
-        <Text style={InventoryCss.On}>On Hold</Text>
+        <Text
+          style={InventoryCss.Cancelled}
+          onPress={() => {
+            set("Cancelled");
+          }}
+        >
+          Cancelled
+        </Text>
+        <Text
+          style={InventoryCss.On}
+          onPress={() => {
+            set("On Hold");
+          }}
+        >
+          On Hold
+        </Text>
       </View>
       <Table />
     </View>
@@ -119,6 +140,8 @@ const InventoryCss = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     width: "25%",
+    borderRightWidth: 1,
+    borderRightColor: COLORS.ActivityBlock,
   },
   Shipped: {
     // backgroundColor: COLORS.ActivityBlock,
@@ -128,15 +151,18 @@ const InventoryCss = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     width: "25%",
+    borderRightWidth: 1,
+    borderRightColor: COLORS.ActivityBlock,
   },
   Cancelled: {
-    // backgroundColor: COLORS.ActivityBlock,
     color: "#882830",
     textAlign: "center",
     fontWeight: 500,
     paddingTop: 10,
     paddingBottom: 10,
     width: "25%",
+    borderRightWidth: 1,
+    borderRightColor: COLORS.ActivityBlock,
   },
   On: {
     // backgroundColor: COLORS.ActivityBlock,
