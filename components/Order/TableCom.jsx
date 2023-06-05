@@ -17,23 +17,27 @@ const TableCom = () => {
     ["04 Aug 2023", "#6745867", "Shipped", "564"],
     ["04 Aug 2023", "#6745867", "Shipped", "456"],
     ["04 Aug 2023", "#6745867", "Shipped", "564"],
+    ["04 Aug 2023", "#6745867", "Shipped", "564"],
+    ["04 Aug 2023", "#6745867", "Shipped", "564"],
   ]);
 
   return (
-    <View style={TableCss.container}>
-      <Table>
-        <Row
-          data={tableHead}
-          style={TableCss.head}
-          textStyle={TableCss.text1}
-        />
-        <Rows
-          data={tableData}
-          style={TableCss.head2}
-          textStyle={TableCss.text2}
-        />
-      </Table>
-    </View>
+    <ScrollView vertical={true}>
+      <View style={TableCss.container}>
+        <Table>
+          <Row
+            data={tableHead}
+            style={TableCss.head}
+            textStyle={TableCss.text1}
+          />
+          <Rows
+            data={tableData}
+            style={TableCss.head2}
+            textStyle={TableCss.text2}
+          />
+        </Table>
+      </View>
+    </ScrollView>
   );
 };
 
