@@ -6,6 +6,9 @@ import Header from "../components/Header";
 import Sales from "../components/Order/Sales";
 import Inventory from "../components/Order/Inventory";
 
+// theme
+import { COLORS, SIZES } from "../constants/theme";
+
 export default function Home() {
   return (
     <View style={sty.mDiv}>
@@ -24,5 +27,6 @@ export default function Home() {
 const sty = StyleSheet.create({
   mDiv: {
     margin: 20,
+    backgroundColor: COLORS.bgScreen,
   },
 });
