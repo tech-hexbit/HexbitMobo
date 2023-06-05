@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 
 // theme
@@ -11,7 +11,12 @@ import img2 from "./../../assets/Login/Cash Payment-bro 1.png";
 const Login = () => {
   return (
     <View style={LoginCss.mDIv}>
-      <Text>Login</Text>
+      <Image source={img1} />
+      <Image source={img2} />
+      <Text>Sell Smarter, </Text>
+      <Text>Sell Faster</Text>
+
+      <Text style={LoginCss.GetStarted}>Get Started</Text>
     </View>
   );
 };
@@ -21,6 +26,17 @@ const LoginCss = StyleSheet.create({
     backgroundColor: COLORS.primary,
     justifyContent: "center",
     alignItems: "center",
+  },
+  GetStarted: {
+    backgroundColor: "#fff",
+    color: COLORS.primary,
+    paddingTop: 15,
+    paddingBottom: 15,
+    paddingLeft: 67,
+    paddingRight: 60,
+    borderRadius: 10,
+    fontWeight: 600,
+    fontSize: 20,
   },
 });
 
