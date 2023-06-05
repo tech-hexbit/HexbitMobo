@@ -60,6 +60,7 @@ const BottomNav = () => {
               }}
             />
           ),
+          tabBarBadge: 3,
         }}
       />
       <Tab.Screen
