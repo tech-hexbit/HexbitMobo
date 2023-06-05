@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { Table, Row, Rows, Col } from "react-native-table-component";
+import {
+  Table,
+  Col,
+  Cols,
+  Rows,
+  TableWrapper,
+  Row,
+  Cell,
+} from "react-native-table-component";
 // theme
 import { COLORS, SIZES } from "../../constants/theme";
 
@@ -13,12 +21,10 @@ const TableCom = () => {
   ]);
 
   const [tableData, settableData] = useState([
-    ["04 Aug 2023", "#6745867", "Shipped", "645"],
-    ["04 Aug 2023", "#6745867", "Shipped", "564"],
-    ["04 Aug 2023", "#6745867", "Shipped", "456"],
-    ["04 Aug 2023", "#6745867", "Shipped", "564"],
-    ["04 Aug 2023", "#6745867", "Shipped", "564"],
-    ["04 Aug 2023", "#6745867", "Shipped", "564"],
+    ["04 Aug 2023", "04 Aug 2023", "04 Aug 2023", "04 Aug 2023"],
+    ["#6745867", "#6745867", "#6745867", "#6745867"],
+    ["Shipped", "Shipped", "Shipped", "Shipped"],
+    ["645", "564", "456", "564"],
   ]);
 
   return (
@@ -30,7 +36,7 @@ const TableCom = () => {
             style={TableCss.head}
             textStyle={TableCss.text1}
           />
-          <Rows
+          <Cols
             data={tableData}
             style={TableCss.head2}
             textStyle={TableCss.text2}
