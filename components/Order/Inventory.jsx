@@ -8,7 +8,9 @@ const Inventory = () => {
   return (
     <View>
       <Text style={InventoryCss.StatusText}>Inventory Status</Text>
-      <View style={InventoryCss.tabView}></View>
+      <View style={InventoryCss.tabView}>
+        <Text>S</Text>
+      </View>
     </View>
   );
 };
@@ -19,6 +21,9 @@ const InventoryCss = StyleSheet.create({
     fontWeight: 900,
     fontSize: 20,
     marginBottom: 15,
+  },
+  tabView: {
+    backgroundColor: COLORS.primary,
   },
 });
 
