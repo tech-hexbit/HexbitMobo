@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Link, Stack } from "expo-router";
 
 // components
@@ -11,22 +11,26 @@ import { COLORS, SIZES } from "../constants/theme";
 
 export default function Home() {
   return (
-    <View style={sty.mDiv}>
-      {/* Use the `Screen` component to configure the layout. */}
-      <Stack.Screen options={{ title: "Home" }} />
-      {/* Use the `Link` component to enable optimized client-side routing. */}
-      <Header pageName="Orders" />
-      <Sales />
-      <Inventory />
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={sty.mDiv}>
+        {/* Use the `Screen` component to configure the layout. */}
+        <Stack.Screen options={{ title: "Home" }} />
+        {/* Use the `Link` component to enable optimized client-side routing. */}
 
-      <Text>Hello World</Text>
-    </View>
+        <Header pageName="Orders" />
+
+        <Sales />
+        <Inventory />
+
+        <Text>Hello World</Text>
+      </View>
+    </ScrollView>
   );
 }
 
 const sty = StyleSheet.create({
   mDiv: {
-    margin: 20,
+    padding: 20,
     backgroundColor: COLORS.bgScreen,
   },
 });
