@@ -32,8 +32,6 @@ const SalesCss = StyleSheet.create({
     marginBottom: 15,
   },
   ActivityRow: {
-    // flex: 3,
-    // backgroundColor: "red",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
