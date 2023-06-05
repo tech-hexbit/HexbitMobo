@@ -13,10 +13,7 @@ const Home = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={sty.mDiv}>
-        <Header pageName="Orders" />
-
-        <Sales />
-        <Inventory />
+        <Text>Home</Text>
       </View>
     </ScrollView>
   );
