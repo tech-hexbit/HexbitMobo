@@ -7,14 +7,17 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/screens/Home";
 import Inventory from "./src/screens/Inventory";
 
+import BottomNav from "./src/Components/BottomNav";
+
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Inventory" component={Inventory} />
-      </Stack.Navigator>
+      {/* <Stack.Navigator initialRouteName="Home"> */}
+      {/* <Stack.Screen name="Home" component={Home} /> */}
+      {/* <Stack.Screen name="Inventory" component={Inventory} /> */}
+      {/* </Stack.Navigator> */}
+      <BottomNav />
     </NavigationContainer>
   );
 }
