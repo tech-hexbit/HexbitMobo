@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 // components
-import Table from "./Table";
+import Table from "./TableCom";
 
 // theme
 import { COLORS, SIZES } from "../../constants/theme";
