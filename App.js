@@ -13,10 +13,6 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="Home"> */}
-      {/* <Stack.Screen name="Home" component={Home} /> */}
-      {/* <Stack.Screen name="Inventory" component={Inventory} /> */}
-      {/* </Stack.Navigator> */}
       <BottomNav />
     </NavigationContainer>
   );
