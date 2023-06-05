@@ -19,12 +19,12 @@ const HeaderCss = StyleSheet.create({
   HeaderMDIv: {
     color: COLORS.primary,
     fontWeight: 900,
-    fontSize: 25,
+    fontSize: 20,
   },
   pageName: {
     color: COLORS.primary,
     fontWeight: 900,
-    fontSize: 45,
+    fontSize: 40,
   },
 });
 
