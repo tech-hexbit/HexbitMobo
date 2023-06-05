@@ -1,13 +1,21 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+
+import { COLORS, SIZES } from "../constants/theme";
 
 const Header = (props) => {
   return (
     <View>
-      <Text style={{ color: "red" }}>Hexbit.io</Text>
+      <Text style={{}}>Hexbit.io</Text>
       <Text>{props.pageName}</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  HeaderMDIv: {
+    color: COLORS.primary,
+  },
+});
 
 export default Header;
