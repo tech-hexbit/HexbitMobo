@@ -19,8 +19,6 @@ export default function Home() {
 
         <Sales />
         <Inventory />
-
-        <Text>Hello World</Text>
       </View>
     </ScrollView>
   );
