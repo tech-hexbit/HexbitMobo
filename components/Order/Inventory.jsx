@@ -150,7 +150,6 @@ const InventoryCss = StyleSheet.create({
   },
 
   All: {
-    // backgroundColor: COLORS.ActivityBlock,
     color: COLORS.primary,
     textAlign: "center",
     fontWeight: 500,
