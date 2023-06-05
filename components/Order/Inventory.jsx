@@ -144,7 +144,6 @@ const InventoryCss = StyleSheet.create({
     borderRightColor: COLORS.ActivityBlock,
   },
   Shipped: {
-    // backgroundColor: COLORS.ActivityBlock,
     color: "#216445",
     textAlign: "center",
     fontWeight: 500,
@@ -165,7 +164,6 @@ const InventoryCss = StyleSheet.create({
     borderRightColor: COLORS.ActivityBlock,
   },
   On: {
-    // backgroundColor: COLORS.ActivityBlock,
     color: "#8f9d4b",
     textAlign: "center",
     fontWeight: 500,
