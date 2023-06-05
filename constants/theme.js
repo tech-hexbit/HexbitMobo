@@ -3,6 +3,8 @@ const COLORS = {
   secondary: "#444262",
   tertiary: "#FF7754",
 
+  ActivityBlock: "#7d629b",
+
   gray: "#83829A",
   gray2: "#C1C0C8",
 
