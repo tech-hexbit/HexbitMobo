@@ -16,6 +16,10 @@ const BottomNav = () => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
+        tabBarStyle: {
+          backgroundColor: "#350b5e",
+        },
+        tabBarLabelStyle: { display: "none" },
         tabBarActiveTintColor: "#e91e63",
       }}
     >
@@ -30,7 +34,7 @@ const BottomNav = () => {
               style={{
                 width: 25,
                 height: 25,
-                tintColor: focused ? "#bf9fff" : "#717171",
+                tintColor: focused ? "#fff" : "#bf9fff",
               }}
               onPress={() => {
                 console.log("Home ++");
@@ -50,14 +54,14 @@ const BottomNav = () => {
               style={{
                 width: 25,
                 height: 25,
-                tintColor: focused ? "#bf9fff" : "#717171",
+                tintColor: focused ? "#fff" : "#bf9fff",
               }}
               onPress={() => {
                 console.log("Inventory --");
               }}
             />
           ),
-          //   tabBarBadge: 3,
+          tabBarBadge: 3,
         }}
       />
     </Tab.Navigator>
