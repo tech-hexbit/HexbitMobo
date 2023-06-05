@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 // components
@@ -8,6 +8,11 @@ import Table from "./TableCom";
 import { COLORS, SIZES } from "../../constants/theme";
 
 const Inventory = () => {
+  const [show, set] = useState("All");
+
+  useEffect(() => {
+    console.log(show);
+  }, [show]);
   return (
     <View>
       <Text style={InventoryCss.StatusText}>Inventory Status</Text>
@@ -23,7 +28,14 @@ const Inventory = () => {
       </View>
       <View style={InventoryCss.toggleBtn}>
         <Text style={InventoryCss.All}>All</Text>
-        <Text style={InventoryCss.Shipped}>Shipped</Text>
+        <Text
+          style={InventoryCss.Shipped}
+          onPress={() => {
+            set("Shipped");
+          }}
+        >
+          Shipped
+        </Text>
         <Text style={InventoryCss.Cancelled}>Cancelled</Text>
         <Text style={InventoryCss.On}>On Hold</Text>
       </View>
