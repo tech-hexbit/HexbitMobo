@@ -11,11 +11,11 @@ const Sales = () => {
   return (
     <View style={SalesCss.mDiv}>
       <Text style={SalesCss.SalesText}>Sales Activity</Text>
-      <View>
+      <View style={SalesCss.ActivityRow}>
         <Activity amt="345" status="To be packed" />
         <Activity amt="345" status="To be packed" />
       </View>
-      <View>
+      <View style={SalesCss.ActivityRow}>
         <Activity amt="345" status="To be packed" />
         <Activity amt="345" status="To be packed" />
       </View>
@@ -31,6 +31,15 @@ const SalesCss = StyleSheet.create({
     color: COLORS.primary,
     fontWeight: 900,
     fontSize: 20,
+    marginBottom: 13,
+  },
+  ActivityRow: {
+    // flex: 3,
+    // backgroundColor: "red",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 13,
   },
 });
 
