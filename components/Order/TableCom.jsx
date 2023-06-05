@@ -84,7 +84,6 @@ const TableCss = StyleSheet.create({
     fontWeight: 500,
     fontSize: 13,
   },
-  //   textAlign: "center",
   // },
 
   row: {
