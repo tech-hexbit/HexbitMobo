@@ -58,7 +58,7 @@ const Inventory = () => {
           Cancelled
         </Text>
         <Text
-          style={InventoryCss.On}
+          style={show === "On Hold" ? InventoryCss.selected : InventoryCss.On}
           onPress={() => {
             set("On Hold");
           }}
