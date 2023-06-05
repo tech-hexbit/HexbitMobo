@@ -20,6 +20,8 @@ const TableCom = () => {
     "Amount",
   ]);
 
+  const [widthArr, setwidthArr] = useState([60, 95, 95, 95, 95]);
+
   const [tableData, settableData] = useState([
     ["04 Aug 2023", "#6745867", "Shipped", "423"],
     ["04 Aug 2023", "#6745867", "Shipped", "674"],
@@ -36,6 +38,7 @@ const TableCom = () => {
             data={tableHead}
             style={TableCss.head}
             textStyle={TableCss.text1}
+            widthArr={widthArr}
           />
           {tableData.map((rowData, index) => (
             <TableWrapper key={index} style={TableCss.row}>
@@ -46,13 +49,29 @@ const TableCom = () => {
                   style={TableCss.CellCss}
                   textStyle={
                     k === 2
-                      ? { color: COLORS.Shipped, textAlign: "center" }
+                      ? {
+                          color: COLORS.Shipped,
+                          textAlign: "center",
+                          width: 95,
+                        }
                       : k === 3
-                      ? { color: COLORS.Amt, textAlign: "center" }
+                      ? {
+                          color: COLORS.Amt,
+                          textAlign: "center",
+                          width: 95,
+                        }
                       : k == 1
-                      ? { color: COLORS.OrNo, textAlign: "center" }
+                      ? {
+                          color: COLORS.OrNo,
+                          textAlign: "center",
+                          width: 95,
+                        }
                       : k === 0
-                      ? { color: COLORS.Amt, textAlign: "center" }
+                      ? {
+                          color: COLORS.Amt,
+                          textAlign: "center",
+                          width: 60,
+                        }
                       : ""
                   }
                 />
