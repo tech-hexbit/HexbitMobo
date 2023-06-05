@@ -1,6 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
+// components
+import Table from "./Table";
+
 // theme
 import { COLORS, SIZES } from "../../constants/theme";
 
@@ -18,6 +21,7 @@ const Inventory = () => {
           <Text style={InventoryCss.txt4}>674</Text>
         </View>
       </View>
+      <Table />
     </View>
   );
 };
