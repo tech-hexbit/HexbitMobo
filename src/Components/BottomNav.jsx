@@ -97,6 +97,23 @@ const BottomNav = () => {
           ),
         }}
       />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: "Profile",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={img5}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? "#fff" : "#bf9fff",
+              }}
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };
