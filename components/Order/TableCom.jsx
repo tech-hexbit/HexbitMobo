@@ -69,7 +69,6 @@ const TableCss = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    // paddingTop: 30,
     backgroundColor: "#fff",
     borderRadius: 10,
   },
@@ -78,8 +77,6 @@ const TableCss = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomWidth: 1,
     borderColor: "black",
-    // height: 40,
-    // backgroundColor: "#808B97",
   },
   // head: {
   //   borderColor: "black",
