@@ -28,6 +28,7 @@ const SalesCss = StyleSheet.create({
     color: COLORS.primary,
     fontWeight: 900,
     fontSize: 20,
+    marginTop: 15,
     marginBottom: 15,
   },
   ActivityRow: {
