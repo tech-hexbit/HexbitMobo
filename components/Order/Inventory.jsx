@@ -21,6 +21,9 @@ const Inventory = () => {
           <Text style={InventoryCss.txt4}>674</Text>
         </View>
       </View>
+      <View style={InventoryCss.toggleBtn}>
+        <Text>674</Text>
+      </View>
       <Table />
     </View>
   );
@@ -82,6 +85,10 @@ const InventoryCss = StyleSheet.create({
     fontSize: 16,
     borderColor: "white",
     marginBottom: 10,
+  },
+  toggleBtn: {
+    marginTop: 5,
+    marginBottom: 20,
   },
 });
 
