@@ -1,5 +1,8 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+
+// theme
+import { COLORS, SIZES } from "../../constants/theme";
 
 const Inventory = () => {
   return (
