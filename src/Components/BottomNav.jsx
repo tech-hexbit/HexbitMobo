@@ -41,6 +41,24 @@ const BottomNav = () => {
         }}
       />
       <Tab.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          tabBarLabel: "Cart",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={img2}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? "#fff" : "#bf9fff",
+              }}
+            />
+          ),
+          tabBarBadge: 3,
+        }}
+      />
+      <Tab.Screen
         name="Inventory"
         component={Inventory}
         options={{
@@ -55,7 +73,6 @@ const BottomNav = () => {
               }}
             />
           ),
-          tabBarBadge: 3,
         }}
       />
     </Tab.Navigator>
