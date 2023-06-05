@@ -28,7 +28,7 @@ const Inventory = () => {
       </View>
       <View style={InventoryCss.toggleBtn}>
         <Text
-          style={InventoryCss.All}
+          style={show === "All" ? InventoryCss.selected : InventoryCss.All}
           onPress={() => {
             set("All");
           }}
@@ -131,7 +131,17 @@ const InventoryCss = StyleSheet.create({
     borderColor: COLORS.ActivityBlock,
     borderWidth: 1,
     borderRadius: 10,
+    overflow: "hidden",
   },
+  selected: {
+    backgroundColor: COLORS.ActivityBlock,
+    textAlign: "center",
+    fontWeight: 500,
+    paddingTop: 10,
+    paddingBottom: 10,
+    width: "25%",
+  },
+
   All: {
     // backgroundColor: COLORS.ActivityBlock,
     color: COLORS.primary,
