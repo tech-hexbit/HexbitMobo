@@ -13,9 +13,7 @@ export default function Home() {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={sty.mDiv}>
-        {/* Use the `Screen` component to configure the layout. */}
         <Stack.Screen options={{ title: "Home" }} />
-        {/* Use the `Link` component to enable optimized client-side routing. */}
 
         <Header pageName="Orders" />
 
