@@ -1,8 +1,9 @@
 const COLORS = {
   primary: "#350b5e",
-  bgScreen: "#F3EFFF",
   secondary: "#444262",
   tertiary: "#FF7754",
+
+  bgScreen: "#F3EFFF",
 
   ActivityBlock: "#7d629b",
 
