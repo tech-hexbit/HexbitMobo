@@ -7,6 +7,10 @@ const COLORS = {
 
   ActivityBlock: "#7d629b",
 
+  Amt: "#595959",
+  OrNo: "#24385e",
+  Shipped: "#216445",
+
   gray: "#83829A",
   gray2: "#C1C0C8",
 
