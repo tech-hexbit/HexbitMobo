@@ -140,6 +140,7 @@ const InventoryCss = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     width: "25%",
+    color: "white",
   },
 
   All: {
