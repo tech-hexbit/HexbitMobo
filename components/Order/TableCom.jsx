@@ -78,7 +78,6 @@ const TableCss = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: "black",
   },
-  //   padding: 20,
   // },
   text1: {
     textAlign: "center",
