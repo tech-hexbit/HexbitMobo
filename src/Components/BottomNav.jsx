@@ -36,9 +36,6 @@ const BottomNav = () => {
                 height: 25,
                 tintColor: focused ? "#fff" : "#bf9fff",
               }}
-              onPress={() => {
-                console.log("Home ++");
-              }}
             />
           ),
         }}
@@ -55,9 +52,6 @@ const BottomNav = () => {
                 width: 25,
                 height: 25,
                 tintColor: focused ? "#fff" : "#bf9fff",
-              }}
-              onPress={() => {
-                console.log("Inventory --");
               }}
             />
           ),
