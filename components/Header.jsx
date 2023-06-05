@@ -6,7 +6,7 @@ import { COLORS, SIZES } from "../constants/theme";
 const Header = (props) => {
   return (
     <View>
-      <Text style={{}}>Hexbit.io</Text>
+      <Text style={styles.HeaderMDIv}>Hexbit.io</Text>
       <Text>{props.pageName}</Text>
     </View>
   );
@@ -15,6 +15,8 @@ const Header = (props) => {
 const styles = StyleSheet.create({
   HeaderMDIv: {
     color: COLORS.primary,
+    fontWeight: 900,
+    fontSize: 30,
   },
 });
 
