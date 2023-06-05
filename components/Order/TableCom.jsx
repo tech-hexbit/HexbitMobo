@@ -78,7 +78,6 @@ const TableCss = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: "black",
   },
-  // head2: {
   //   padding: 20,
   // },
   text1: {
