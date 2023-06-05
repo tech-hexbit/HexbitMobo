@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
+// theme
 import { COLORS, SIZES } from "../../constants/theme";
 
 const Sales = () => {
@@ -18,7 +19,7 @@ const SalesCss = StyleSheet.create({
   SalesText: {
     color: COLORS.primary,
     fontWeight: 900,
-    fontSize: 22,
+    fontSize: 20,
   },
 });
 
