@@ -6,7 +6,7 @@ import { COLORS, SIZES } from "../../constants/theme";
 const Sales = () => {
   return (
     <View style={SalesCss.mDiv}>
-      <Text>Sales</Text>
+      <Text style={SalesCss.SalesText}>Sales Activity</Text>
     </View>
   );
 };
@@ -14,6 +14,11 @@ const Sales = () => {
 const SalesCss = StyleSheet.create({
   mDiv: {
     margin: 20,
+  },
+  SalesText: {
+    color: COLORS.primary,
+    fontWeight: 900,
+    fontSize: 22,
   },
 });
 
