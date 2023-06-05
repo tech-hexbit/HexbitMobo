@@ -13,8 +13,8 @@ const Login = () => {
     <View style={LoginCss.mDIv}>
       <Image source={img1} />
       <Image source={img2} />
-      <Text>Sell Smarter, </Text>
-      <Text>Sell Faster</Text>
+      <Text style={LoginCss.Sell}>Sell Smarter,</Text>
+      <Text style={LoginCss.Sell}>Sell Faster</Text>
 
       <Text style={LoginCss.GetStarted}>Get Started</Text>
     </View>
@@ -26,6 +26,12 @@ const LoginCss = StyleSheet.create({
     backgroundColor: COLORS.primary,
     justifyContent: "center",
     alignItems: "center",
+  },
+  Sell: {
+    fontWeight: 700,
+    fontSize: 30,
+    color: "#fff",
+    marginBottom: 60,
   },
   GetStarted: {
     backgroundColor: "#fff",
