@@ -8,6 +8,7 @@ const Inventory = () => {
   return (
     <View>
       <Text style={InventoryCss.StatusText}>Inventory Status</Text>
+      <View style={InventoryCss.tabView}></View>
     </View>
   );
 };
