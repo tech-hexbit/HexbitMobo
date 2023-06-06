@@ -13,8 +13,11 @@ const Login = () => {
     <View style={LoginCss.mDIv}>
       <Image source={img1} />
       <Image source={img2} style={LoginCss.img2} />
-      <Text style={LoginCss.Sell}>Sell Smarter,</Text>
-      <Text style={LoginCss.Sell}>Sell Faster</Text>
+
+      <View>
+        <Text style={LoginCss.Sell}>Sell Smarter,</Text>
+        <Text style={LoginCss.Sell}>Sell Faster</Text>
+      </View>
 
       <Text style={LoginCss.GetStarted}>Get Started</Text>
     </View>
@@ -28,13 +31,18 @@ const LoginCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  img2: {
+    marginTop: 30,
+    marginBottom: 10,
+  },
   Sell: {
     fontWeight: 700,
     fontSize: 30,
     color: "#fff",
-    marginBottom: 60,
+    textAlign: "left",
   },
   GetStarted: {
+    marginTop: 60,
     backgroundColor: "#fff",
     color: COLORS.primary,
     paddingTop: 15,
@@ -44,6 +52,7 @@ const LoginCss = StyleSheet.create({
     borderRadius: 10,
     fontWeight: 600,
     fontSize: 20,
+    lineHeight: 30,
   },
 });
 
