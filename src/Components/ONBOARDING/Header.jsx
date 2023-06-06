@@ -4,7 +4,8 @@ import React from "react";
 const Header = (props) => {
   return (
     <View>
-      <Text>Header</Text>
+      <Text>Welcome to,</Text>
+      <Text>Hexbit.io</Text>
     </View>
   );
 };
