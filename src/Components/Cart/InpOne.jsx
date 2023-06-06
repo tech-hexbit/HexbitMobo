@@ -56,6 +56,10 @@ const InpOneCss = StyleSheet.create({
     padding: 12,
     marginBottom: 10,
   },
+  btnView: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
   btnNext: {
     paddingVertical: 11,
     backgroundColor: "#622AC3",
