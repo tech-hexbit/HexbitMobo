@@ -25,10 +25,45 @@ const Otp = () => {
       <Image source={img} style={OtpCss.img} />
       <Text style={OtpCss.Enter}>Enter the OTP</Text>
       <View style={OtpCss.ViewNumber}>
-        <TextInput style={OtpCss.inpNumber} keyboardType="numeric" />
-        <TextInput style={OtpCss.inpNumber} keyboardType="numeric" />
-        <TextInput style={OtpCss.inpNumber} keyboardType="numeric" />
-        <TextInput style={OtpCss.inpNumber} keyboardType="numeric" />
+        <TextInput
+          style={OtpCss.inpNumber}
+          ref={l1}
+          maxLength={1}
+          keyboardType="numeric"
+          onChangeText={(txt) => {
+            if (txt.length >= 1) {
+              l2.current.focus();
+            }
+          }}
+        />
+        <TextInput
+          style={OtpCss.inpNumber}
+          ref={l2}
+          maxLength={1}
+          keyboardType="numeric"
+          onChangeText={(txt) => {
+            if (txt.length >= 1) {
+              l3.current.focus();
+            }
+          }}
+        />
+        <TextInput
+          style={OtpCss.inpNumber}
+          ref={l3}
+          maxLength={1}
+          keyboardType="numeric"
+          onChangeText={(txt) => {
+            if (txt.length >= 1) {
+              l4.current.focus();
+            }
+          }}
+        />
+        <TextInput
+          style={OtpCss.inpNumber}
+          ref={l4}
+          maxLength={1}
+          keyboardType="numeric"
+        />
       </View>
 
       <LinearGradient
@@ -82,6 +117,7 @@ const OtpCss = StyleSheet.create({
     width: 50,
     height: 50,
     marginBottom: 20,
+    textAlign: "center",
   },
   button: {
     borderRadius: 10,
