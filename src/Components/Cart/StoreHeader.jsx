@@ -8,11 +8,11 @@ const StoreHeader = (props) => {
   return (
     <View style={StoreHeaderCss.mDiv}>
       {props.true === true ? (
-        <Text style={StoreHeaderCss.Welcome}>Welcome to,</Text>
+        <Text style={StoreHeaderCss.Welcome}>Hexbit.io</Text>
       ) : (
         ""
       )}
-      <Text style={StoreHeaderCss.Hexbit}>Hexbit.io</Text>
+      <Text style={StoreHeaderCss.Hexbit}>{props.title}</Text>
     </View>
   );
 };
@@ -20,17 +20,18 @@ const StoreHeader = (props) => {
 const StoreHeaderCss = StyleSheet.create({
   mDiv: {
     width: "100%",
-    paddingLeft: 44,
+    marginTop: 20,
+    paddingLeft: 20,
     marginBottom: 30,
   },
   Welcome: {
     color: COLORS.primary,
-    fontSize: 31,
-    fontWeight: 400,
+    fontSize: 20,
+    fontWeight: 900,
   },
   Hexbit: {
     color: COLORS.primary,
-    fontSize: 31,
+    fontSize: 33,
     fontWeight: 900,
   },
 });
