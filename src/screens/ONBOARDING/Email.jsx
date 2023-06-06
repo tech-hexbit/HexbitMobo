@@ -16,7 +16,9 @@ import img from "./../../../assets/Login/email.png";
 const Email = () => {
   const navigation = useNavigation();
   return (
-    <View>
+    <View style={EmailCss.mDIv}>
+      <Header true={false} msg="Enter your Details" />
+      <Path img={img} pos={2} />
       <Text>Email</Text>
     </View>
   );
