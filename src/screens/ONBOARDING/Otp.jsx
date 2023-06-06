@@ -92,7 +92,7 @@ const Otp = () => {
       </LinearGradient>
       <Text style={OtpCss.timer}>00:30</Text>
       <LinearGradient
-        colors={["#cc2b5e", "#753a88"]}
+        colors={["#BB14E2", "#161FE4"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
         style={OtpCss.linearGradient}
@@ -160,7 +160,7 @@ const OtpCss = StyleSheet.create({
   },
   linearGradient: {
     height: 50,
-    width: 100,
+    width: "30%",
     borderRadius: 20, // <-- Outer Border Radius
   },
   innerContainer: {
@@ -176,7 +176,7 @@ const OtpCss = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     margin: 10,
-    color: "#cc2b5e",
+    color: "#BB14E2",
     backgroundColor: "transparent",
   },
 });
