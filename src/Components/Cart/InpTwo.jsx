@@ -1,5 +1,13 @@
-import { View, Text, StyleSheet, ScrollView, TextInput } from "react-native";
 import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // Components
 import Header from "./Header";
@@ -8,6 +16,7 @@ import Header from "./Header";
 import img from "./../../../assets/Cart/cartGroceries.png";
 
 const InpTwo = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={InpTwoCss.mDiv}>
@@ -23,10 +32,21 @@ const InpTwo = () => {
         <TextInput
           placeholder="Write a breif description  of your store"
           multiline={true}
-          numberOfLines={10}
+          numberOfLines={20}
           style={InpTwoCss.des}
           // style={{ height: 200, textAlignVertical: "top" }}
         />
+
+        <View style={InpTwoCss.btnView}>
+          <TouchableOpacity
+            style={InpTwoCss.btnNext}
+            onPress={() => {
+              navigation.navigate("InpTwo");
+            }}
+          >
+            <Text style={InpTwoCss.Next}>Next</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -66,6 +86,25 @@ const InpTwoCss = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 20,
     paddingVertical: 16,
+  },
+  btnView: {
+    width: "80%",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  btnNext: {
+    paddingVertical: 11,
+    backgroundColor: "#622AC3",
+    width: 100,
+    borderRadius: 10,
+  },
+  Next: {
+    color: "#fff",
+    fontWeight: 800,
+    fontSize: 18,
+    textAlign: "center",
   },
 });
 
