@@ -7,8 +7,8 @@ import img from "./../../../assets/Cart/StoreFinal.png";
 const StoreFinal = () => {
   return (
     <View style={SFCss.mDiv}>
-      <Image source={img} />
-      <Text>StoreFinal</Text>
+      <Image source={img} style={SFCss.img} />
+      <Text>Congrats!! Your Store has been successfully created</Text>
     </View>
   );
 };
@@ -19,6 +19,10 @@ const SFCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#CCCEFF",
+  },
+  img: {
+    width: 350,
+    height: 300,
   },
 });
 
