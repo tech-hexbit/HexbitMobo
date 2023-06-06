@@ -24,7 +24,7 @@ const Login = () => {
       <Text
         style={LoginCss.GetStarted}
         onPress={() => {
-          navigation.navigate("Otp");
+          navigation.navigate("WhatsApp");
         }}
       >
         Get Started
