@@ -6,11 +6,13 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // theme
 import { COLORS } from "../../constants/theme";
 
-const InpOne = () => {
+const InpOne = (props) => {
+  const navigation = useNavigation();
   return (
     <View style={InpOneCss.imp1View}>
       <Text style={InpOneCss.StoreName}>Store Name</Text>
@@ -29,7 +31,12 @@ const InpOne = () => {
       />
 
       <View style={InpOneCss.btnView}>
-        <TouchableOpacity style={InpOneCss.btnNext}>
+        <TouchableOpacity
+          style={InpOneCss.btnNext}
+          onPress={() => {
+            navigation.navigate("InpTwo");
+          }}
+        >
           <Text style={InpOneCss.Next}>Next</Text>
         </TouchableOpacity>
       </View>
