@@ -45,7 +45,14 @@ const License = () => {
         style={LicenseCss.linearGradient}
       >
         <View style={LicenseCss.innerContainer}>
-          <Text style={LicenseCss.buttonText}>Resend</Text>
+          <Text
+            style={LicenseCss.buttonText}
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
+            Skip
+          </Text>
         </View>
       </LinearGradient>
     </View>
