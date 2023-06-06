@@ -90,6 +90,7 @@ const Otp = () => {
           Send OTP
         </Text>
       </LinearGradient>
+      <Text style={OtpCss.timer}>00:30</Text>
     </View>
   );
 };
@@ -140,6 +141,12 @@ const OtpCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     textAlign: "center",
+  },
+  timer: {
+    marginTop: 25,
+    marginBottom: 20,
+    fontSize: 18,
+    fontWeight: 700,
   },
 });
 
