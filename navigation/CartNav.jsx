@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // screens
 import InpTwo from "./../src/Components/Cart/InpTwo";
+import StoreFinal from "./../src/Components/Cart/StoreFinal";
 import Cart from "./../src/screens/Cart";
 
 export default function CartNav() {
@@ -14,6 +15,7 @@ export default function CartNav() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Cart" component={Cart} />
         <Stack.Screen name="InpTwo" component={InpTwo} />
+        <Stack.Screen name="StoreFinal" component={StoreFinal} />
       </Stack.Navigator>
     </>
   );
