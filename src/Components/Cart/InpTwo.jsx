@@ -21,6 +21,7 @@ const InpTwo = () => {
         <Text style={InpTwoCss.StoreName}>Store Description</Text>
 
         <TextInput
+          placeholder="Write a breif description  of your store"
           multiline={true}
           numberOfLines={10}
           style={InpTwoCss.des}
@@ -57,6 +58,14 @@ const InpTwoCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     marginBottom: 10,
+  },
+  des: {
+    width: "80%",
+    borderWidth: 1,
+    borderColor: "#7d629b",
+    borderRadius: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
   },
 });
 
