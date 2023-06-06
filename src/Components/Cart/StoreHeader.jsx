@@ -43,6 +43,7 @@ const StoreHeaderCss = StyleSheet.create({
     fontWeight: 900,
   },
   inpView: {
+    paddingLeft: 15,
     marginTop: 20,
     overflow: "hidden",
     flexDirection: "row",
@@ -50,7 +51,12 @@ const StoreHeaderCss = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
   },
-  inpNumber: {},
+  inp: {
+    marginVertical: 10,
+    marginLeft: 24,
+    width: "100%",
+    fontSize: 20,
+  },
 });
 
 export default StoreHeader;
