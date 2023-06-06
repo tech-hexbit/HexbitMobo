@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -12,6 +13,7 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/WhatsApp.png";
 
 const WhatsApp = () => {
+  const navigation = useNavigation();
   return (
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
@@ -29,7 +31,14 @@ const WhatsApp = () => {
         colors={["#BB14E2", "#161FE4"]}
         style={WhatsAppCss.button}
       >
-        <Text style={WhatsAppCss.SendOTP}>Send OTP</Text>
+        <Text
+          style={WhatsAppCss.SendOTP}
+          onPress={() => {
+            navigation.navigate("Otp");
+          }}
+        >
+          Send OTP
+        </Text>
       </LinearGradient>
     </View>
   );
