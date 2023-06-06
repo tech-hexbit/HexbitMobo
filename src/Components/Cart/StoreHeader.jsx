@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 import React from "react";
 
 // theme
@@ -13,6 +13,8 @@ const StoreHeader = (props) => {
         ""
       )}
       <Text style={StoreHeaderCss.Hexbit}>{props.title}</Text>
+
+      <TextInput style={StoreHeaderCss.inpNumber}></TextInput>
     </View>
   );
 };
@@ -20,9 +22,9 @@ const StoreHeader = (props) => {
 const StoreHeaderCss = StyleSheet.create({
   mDiv: {
     width: "100%",
-    marginTop: 20,
+    paddingVertical: 20,
     paddingLeft: 20,
-    marginBottom: 30,
+    backgroundColor: "#ccceff",
   },
   Welcome: {
     color: COLORS.primary,
