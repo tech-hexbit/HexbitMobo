@@ -30,7 +30,7 @@ const Name = () => {
         <Text
           style={NameCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("Email");
           }}
         >
           Next
