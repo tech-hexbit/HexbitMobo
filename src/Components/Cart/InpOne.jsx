@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 // theme
 import { COLORS } from "../../constants/theme";
@@ -21,6 +27,12 @@ const InpOne = () => {
         style={InpOneCss.inpNumber}
         placeholder="https://www.abcstore.com"
       />
+
+      <View style={InpOneCss.btnView}>
+        <TouchableOpacity style={InpOneCss.btnNext}>
+          <Text style={InpOneCss.Next}>Next</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -43,6 +55,18 @@ const InpOneCss = StyleSheet.create({
     borderRadius: 10,
     padding: 12,
     marginBottom: 10,
+  },
+  btnNext: {
+    paddingVertical: 11,
+    backgroundColor: "#622AC3",
+    width: 100,
+    borderRadius: 10,
+  },
+  Next: {
+    color: "#fff",
+    fontWeight: 800,
+    fontSize: 18,
+    textAlign: "center",
   },
 });
 
