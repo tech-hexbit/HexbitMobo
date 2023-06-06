@@ -118,6 +118,7 @@ const OtpCss = StyleSheet.create({
     height: 50,
     marginBottom: 20,
     textAlign: "center",
+    fontWeight: "700",
   },
   button: {
     borderRadius: 10,
