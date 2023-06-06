@@ -19,7 +19,23 @@ const Email = () => {
     <View style={EmailCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
       <Path img={img} pos={2} />
-      <Text>Email</Text>
+      <Text style={EmailCss.Enter}>Enter your Email</Text>
+      <TextInput style={EmailCss.inpNumber} placeholder="example@email.com" />
+      <LinearGradient
+        start={{ x: 0, y: 0.75 }}
+        end={{ x: 1, y: 0.25 }}
+        colors={["#BB14E2", "#161FE4"]}
+        style={EmailCss.button}
+      >
+        <Text
+          style={EmailCss.SendOTP}
+          onPress={() => {
+            navigation.navigate("Email");
+          }}
+        >
+          Next
+        </Text>
+      </LinearGradient>
     </View>
   );
 };
