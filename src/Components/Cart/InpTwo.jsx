@@ -17,6 +17,8 @@ const InpTwo = () => {
         <Text style={InpTwoCss.t2}>
           Add a short description about your store
         </Text>
+
+        <Text style={InpTwoCss.StoreName}>Store Type</Text>
       </View>
     </ScrollView>
   );
@@ -30,14 +32,17 @@ const InpTwoCss = StyleSheet.create({
     alignItems: "center",
   },
   t1: {
+    marginTop: 20,
     fontSize: 20,
     fontWeight: 900,
     color: "#350B5E",
   },
   t2: {
-    fontSize: 20,
-    fontWeight: 900,
-    color: "#350B5E",
+    marginTop: 10,
+    marginBottom: 20,
+    fontSize: 16,
+    fontWeight: 500,
+    color: "#7b579f",
   },
 });
 
