@@ -24,6 +24,7 @@ const Company = () => {
       <TextInput style={CompanyCss.inpNumber} placeholder="Name" />
 
       <Text style={CompanyCss.Enter}>Nature of the company</Text>
+      <TextInput style={CompanyCss.inpNumber} placeholder="Select" />
 
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
