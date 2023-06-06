@@ -37,6 +37,17 @@ const License = () => {
           Next
         </Text>
       </LinearGradient>
+
+      <LinearGradient
+        colors={["#BB14E2", "#161FE4"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+        style={LicenseCss.linearGradient}
+      >
+        <View style={LicenseCss.innerContainer}>
+          <Text style={LicenseCss.buttonText}>Resend</Text>
+        </View>
+      </LinearGradient>
     </View>
   );
 };
@@ -78,6 +89,28 @@ const LicenseCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     textAlign: "center",
+  },
+  linearGradient: {
+    marginTop: 30,
+    height: 50,
+    width: "30%",
+    borderRadius: 20, // <-- Outer Border Radius
+  },
+  innerContainer: {
+    borderRadius: 15, // <-- Inner Border Radius
+    flex: 1,
+    margin: 4, // <-- Border Width
+    backgroundColor: "#fff",
+    justifyContent: "center",
+  },
+  buttonText: {
+    fontSize: 18,
+    // fontFamily: "Gill Sans",
+    fontWeight: "bold",
+    textAlign: "center",
+    margin: 10,
+    color: "#BB14E2",
+    backgroundColor: "transparent",
   },
 });
 
