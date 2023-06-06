@@ -7,7 +7,7 @@ import StoreHeader from "./StoreHeader";
 const Store = () => {
   return (
     <View>
-      <StoreHeader />
+      <StoreHeader true={true} />
       <Text>Store</Text>
     </View>
   );
