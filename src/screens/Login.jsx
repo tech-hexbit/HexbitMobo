@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // theme
 import { COLORS } from "../constants/theme";
@@ -9,6 +10,7 @@ import img1 from "./../../assets/Login/logo.png";
 import img2 from "./../../assets/Login/Cash.png";
 
 const Login = () => {
+  const navigation = useNavigation();
   return (
     <View style={LoginCss.mDIv}>
       <Image source={img1} />
@@ -19,7 +21,14 @@ const Login = () => {
         <Text style={LoginCss.Sell}>Sell Faster</Text>
       </View>
 
-      <Text style={LoginCss.GetStarted}>Get Started</Text>
+      <Text
+        style={LoginCss.GetStarted}
+        onPress={() => {
+          navigation.navigate("BottomNav");
+        }}
+      >
+        Get Started
+      </Text>
     </View>
   );
 };
