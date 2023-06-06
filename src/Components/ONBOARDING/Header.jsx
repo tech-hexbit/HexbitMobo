@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <View>
       <Text>Header</Text>
