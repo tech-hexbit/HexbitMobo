@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -16,6 +16,11 @@ const WhatsApp = () => {
       <Header true={true} msg="Enter your Details" />
       <Image source={img} style={WhatsAppCss.img} />
       <Text style={WhatsAppCss.Enter}>Enter your WhatsApp number:</Text>
+      <TextInput
+        style={WhatsAppCss.inpNumber}
+        // placeholder="Enter your WhatsApp number"
+        keyboardType="numeric"
+      />
       <Text>WhatsApp</Text>
     </View>
   );
@@ -40,6 +45,13 @@ const WhatsAppCss = StyleSheet.create({
     color: COLORS.primary,
     fontWeight: 700,
     fontSize: 21,
+  },
+  inpNumber: {
+    padding: 12,
+    borderColor: "#6B4EFF",
+    borderWidth: 2,
+    borderRadius: 10,
+    width: "80%",
   },
 });
 
