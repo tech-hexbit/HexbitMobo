@@ -6,15 +6,21 @@ const Path = (props) => {
     <View style={PathCss.mDiv}>
       <View style={PathCss.pathmDiv}>
         <View style={PathCss.pathLine0}></View>
-        <Text style={props.pos === 1 ? PathCss.active : PathCss.pathmBud}>
+        <Text style={props.pos >= 1 ? PathCss.active : PathCss.pathmBud}>
           1
         </Text>
         <View style={PathCss.pathLine}></View>
-        <Text style={PathCss.pathmBud}>2</Text>
+        <Text style={props.pos >= 2 ? PathCss.active : PathCss.pathmBud}>
+          2
+        </Text>
         <View style={PathCss.pathLine}></View>
-        <Text style={PathCss.pathmBud}>3</Text>
+        <Text style={props.pos >= 3 ? PathCss.active : PathCss.pathmBud}>
+          3
+        </Text>
         <View style={PathCss.pathLine}></View>
-        <Text style={PathCss.pathmBud}>4</Text>
+        <Text style={props.pos >= 4 ? PathCss.active : PathCss.pathmBud}>
+          4
+        </Text>
       </View>
       <Image source={props.img} style={PathCss.img} />
     </View>
