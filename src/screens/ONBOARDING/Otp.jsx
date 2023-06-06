@@ -91,6 +91,16 @@ const Otp = () => {
         </Text>
       </LinearGradient>
       <Text style={OtpCss.timer}>00:30</Text>
+      <LinearGradient
+        colors={["#cc2b5e", "#753a88"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+        style={OtpCss.linearGradient}
+      >
+        <View style={OtpCss.innerContainer}>
+          <Text style={OtpCss.buttonText}>Resend</Text>
+        </View>
+      </LinearGradient>
     </View>
   );
 };
@@ -147,6 +157,27 @@ const OtpCss = StyleSheet.create({
     marginBottom: 20,
     fontSize: 18,
     fontWeight: 700,
+  },
+  linearGradient: {
+    height: 50,
+    width: 100,
+    borderRadius: 20, // <-- Outer Border Radius
+  },
+  innerContainer: {
+    borderRadius: 15, // <-- Inner Border Radius
+    flex: 1,
+    margin: 4, // <-- Border Width
+    backgroundColor: "#fff",
+    justifyContent: "center",
+  },
+  buttonText: {
+    fontSize: 18,
+    // fontFamily: "Gill Sans",
+    fontWeight: "bold",
+    textAlign: "center",
+    margin: 10,
+    color: "#cc2b5e",
+    backgroundColor: "transparent",
   },
 });
 
