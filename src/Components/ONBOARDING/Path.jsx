@@ -6,8 +6,11 @@ const Path = () => {
     <View style={PathCss.mDiv}>
       <View style={PathCss.pathmDiv}>
         <Text style={PathCss.pathmBud}>1</Text>
+        <View style={PathCss.pathLine}></View>
         <Text style={PathCss.pathmBud}>2</Text>
+        <View style={PathCss.pathLine}></View>
         <Text style={PathCss.pathmBud}>3</Text>
+        <View style={PathCss.pathLine}></View>
         <Text style={PathCss.pathmBud}>4</Text>
       </View>
     </View>
@@ -19,10 +22,9 @@ const PathCss = StyleSheet.create({
     marginBottom: 15,
   },
   pathmDiv: {
-    width: "100%",
-    backgroundColor: "red",
+    // backgroundColor: "red",
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    // justifyContent: "space-evenly",
     alignItems: "center",
   },
   pathmBud: {
@@ -33,6 +35,11 @@ const PathCss = StyleSheet.create({
     borderRadius: 15,
     textAlign: "center",
     paddingTop: 4,
+  },
+  pathLine: {
+    width: 70,
+    height: 6,
+    backgroundColor: "#595959",
   },
 });
 
