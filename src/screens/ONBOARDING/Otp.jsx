@@ -98,7 +98,7 @@ const Otp = () => {
         <Text
           style={OtpCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Otp");
+            navigation.navigate("Name");
           }}
         >
           Send OTP
