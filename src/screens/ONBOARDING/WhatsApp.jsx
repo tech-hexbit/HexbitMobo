@@ -25,7 +25,6 @@ const WhatsApp = () => {
         keyboardType="numeric"
       />
       <LinearGradient
-        // Button Linear Gradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
         colors={["#BB14E2", "#161FE4"]}
