@@ -15,7 +15,7 @@ const WhatsApp = () => {
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
       <Image source={img} style={WhatsAppCss.img} />
-      <Text></Text>
+      <Text style={WhatsAppCss.Enter}>Enter your WhatsApp number:</Text>
       <Text>WhatsApp</Text>
     </View>
   );
@@ -31,6 +31,15 @@ const WhatsAppCss = StyleSheet.create({
   img: {
     width: "80%",
     height: "30%",
+    marginBottom: 20,
+  },
+  Enter: {
+    width: "100%",
+    paddingLeft: 44,
+    marginBottom: 30,
+    color: COLORS.primary,
+    fontWeight: 700,
+    fontSize: 21,
   },
 });
 
