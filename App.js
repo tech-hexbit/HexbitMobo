@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./src/screens/ONBOARDING/Login";
 import Otp from "./src/screens/ONBOARDING/Otp";
 import WhatsApp from "./src/screens/ONBOARDING/WhatsApp";
+import Name from "./src/screens/ONBOARDING/Name";
 
 // Bottom Nav
 import BottomNav from "./src/Components/BottomNav";
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="WhatsApp" component={WhatsApp} />
           <Stack.Screen name="Otp" component={Otp} />
+          <Stack.Screen name="Name" component={Name} />
           <Stack.Screen name="Home" component={BottomNav} />
         </Stack.Navigator>
       </NavigationContainer>
