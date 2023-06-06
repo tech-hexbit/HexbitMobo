@@ -18,7 +18,7 @@ const InpTwo = () => {
           Add a short description about your store
         </Text>
 
-        <Text style={InpTwoCss.StoreName}>Store Type</Text>
+        <Text style={InpTwoCss.StoreName}>Store Description</Text>
       </View>
     </ScrollView>
   );
