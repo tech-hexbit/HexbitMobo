@@ -5,7 +5,10 @@ const Path = (props) => {
   return (
     <View style={PathCss.mDiv}>
       <View style={PathCss.pathmDiv}>
-        <Text style={PathCss.pathmBud}>1</Text>
+        <View style={PathCss.pathLine0}></View>
+        <Text style={props.pos === 1 ? PathCss.active : PathCss.pathmBud}>
+          1
+        </Text>
         <View style={PathCss.pathLine}></View>
         <Text style={PathCss.pathmBud}>2</Text>
         <View style={PathCss.pathLine}></View>
@@ -38,8 +41,24 @@ const PathCss = StyleSheet.create({
     textAlign: "center",
     paddingTop: 4,
   },
+  active: {
+    color: "#fff",
+    backgroundColor: "#350b5e",
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    textAlign: "center",
+    paddingTop: 4,
+  },
+  pathLine0: {
+    width: "7%",
+    height: 6,
+    backgroundColor: "#350b5e",
+    borderTopLeftRadius: 3,
+    borderBottomLeftRadius: 3,
+  },
   pathLine: {
-    width: "20%",
+    width: "15%",
     height: 6,
     backgroundColor: "#595959",
   },
