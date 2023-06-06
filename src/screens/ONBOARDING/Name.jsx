@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import React from "react";
+import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -15,7 +15,7 @@ const Name = () => {
     <View style={NameCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
       <Text style={NameCss.Enter}>Enter your Name</Text>
-
+      <TextInput style={NameCss.inpNumber} placeholder="Name" />
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
