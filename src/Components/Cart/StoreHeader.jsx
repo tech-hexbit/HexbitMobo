@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, Image } from "react-native";
 import React from "react";
 
 // theme
 import { COLORS } from "../../constants/theme";
+
+// img
+import img from "./../../../assets/Cart/search.png";
 
 const StoreHeader = (props) => {
   return (
@@ -14,7 +17,10 @@ const StoreHeader = (props) => {
       )}
       <Text style={StoreHeaderCss.Hexbit}>{props.title}</Text>
 
-      <TextInput style={StoreHeaderCss.inpNumber}></TextInput>
+      <View style={StoreHeaderCss.inpView}>
+        <Image source={img} />
+        <TextInput style={StoreHeaderCss.inp}></TextInput>
+      </View>
     </View>
   );
 };
@@ -23,7 +29,7 @@ const StoreHeaderCss = StyleSheet.create({
   mDiv: {
     width: "100%",
     paddingVertical: 20,
-    paddingLeft: 20,
+    paddingHorizontal: 20,
     backgroundColor: "#ccceff",
   },
   Welcome: {
@@ -36,6 +42,15 @@ const StoreHeaderCss = StyleSheet.create({
     fontSize: 33,
     fontWeight: 900,
   },
+  inpView: {
+    marginTop: 20,
+    overflow: "hidden",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    borderRadius: 10,
+  },
+  inpNumber: {},
 });
 
 export default StoreHeader;
