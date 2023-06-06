@@ -8,7 +8,7 @@ import Inventory from "./../screens/Inventory";
 import Cart from "./../screens/Cart";
 import Profile from "./../screens/Profile";
 import Discount from "./../screens/Discount";
-
+import CartNav from "../../navigation/CartNav";
 // img
 import img1 from "./../../assets/Vector-3.png";
 import img2 from "./../../assets/Vector-1.png";
@@ -22,6 +22,7 @@ const BottomNav = () => {
     <Tab.Navigator
       initialRouteName="Inventory"
       screenOptions={{
+        headerShown: false,
         tabBarStyle: {
           backgroundColor: "#350b5e",
         },
@@ -66,7 +67,7 @@ const BottomNav = () => {
       />
       <Tab.Screen
         name="Cart"
-        component={Cart}
+        component={CartNav}
         options={{
           tabBarLabel: "Cart",
           tabBarIcon: ({ focused }) => (
