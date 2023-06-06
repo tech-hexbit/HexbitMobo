@@ -19,7 +19,24 @@ const License = () => {
     <View style={LicenseCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
       <Path img={img} pos={4} />
-      <Text>License</Text>
+      <Text style={LicenseCss.Enter}>Importer License</Text>
+      <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
+
+      <LinearGradient
+        start={{ x: 0, y: 0.75 }}
+        end={{ x: 1, y: 0.25 }}
+        colors={["#BB14E2", "#161FE4"]}
+        style={LicenseCss.button}
+      >
+        <Text
+          style={LicenseCss.SendOTP}
+          onPress={() => {
+            navigation.navigate("Home");
+          }}
+        >
+          Next
+        </Text>
+      </LinearGradient>
     </View>
   );
 };
