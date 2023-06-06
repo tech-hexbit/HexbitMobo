@@ -20,6 +20,11 @@ const Company = () => {
       <Header true={false} msg="Enter your Details" />
       <Path img={img} pos={3} />
 
+      <Text style={CompanyCss.Enter}>Name of the company</Text>
+      <TextInput style={CompanyCss.inpNumber} placeholder="Name" />
+
+      <Text style={CompanyCss.Enter}>Nature of the company</Text>
+
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
