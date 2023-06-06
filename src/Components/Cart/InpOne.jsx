@@ -13,11 +13,14 @@ const InpOne = () => {
       <Text style={InpOneCss.StoreName}>Store Type</Text>
       <TextInput style={InpOneCss.inpNumber} placeholder="Select Store type" />
 
-      <Text style={InpOneCss.StoreName}>Store Type</Text>
-      <TextInput style={InpOneCss.inpNumber} placeholder="Select Store type" />
+      <Text style={InpOneCss.StoreName}>Location</Text>
+      <TextInput style={InpOneCss.inpNumber} placeholder="Delhi, India" />
 
-      <Text style={InpOneCss.StoreName}>Store Type</Text>
-      <TextInput style={InpOneCss.inpNumber} placeholder="Select Store type" />
+      <Text style={InpOneCss.StoreName}>Website</Text>
+      <TextInput
+        style={InpOneCss.inpNumber}
+        placeholder="https://www.abcstore.com"
+      />
     </View>
   );
 };
