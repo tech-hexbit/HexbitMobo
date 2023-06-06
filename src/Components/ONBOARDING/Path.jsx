@@ -3,10 +3,18 @@ import React from "react";
 
 const Path = () => {
   return (
-    <View>
-      <Text>Path</Text>
+    <View style={PathCss.mDiv}>
+      <View>
+        <Text>Path</Text>
+      </View>
     </View>
   );
 };
+
+const PathCss = StyleSheet.create({
+  mDiv: {
+    marginBottom: 15,
+  },
+});
 
 export default Path;
