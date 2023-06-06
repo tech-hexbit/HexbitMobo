@@ -22,9 +22,8 @@ const PathCss = StyleSheet.create({
     marginBottom: 15,
   },
   pathmDiv: {
-    // backgroundColor: "red",
     flexDirection: "row",
-    // justifyContent: "space-evenly",
+    justifyContent: "center",
     alignItems: "center",
   },
   pathmBud: {
@@ -37,7 +36,7 @@ const PathCss = StyleSheet.create({
     paddingTop: 4,
   },
   pathLine: {
-    width: 70,
+    width: "20%",
     height: 6,
     backgroundColor: "#595959",
   },
