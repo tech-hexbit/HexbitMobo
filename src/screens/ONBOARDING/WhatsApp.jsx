@@ -7,6 +7,7 @@ import Header from "../../Components/ONBOARDING/Header";
 const WhatsApp = () => {
   return (
     <View>
+      <Header true={true} msg="Enter your Details" />
       <Text>WhatsApp</Text>
     </View>
   );
