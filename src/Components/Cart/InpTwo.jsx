@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TextInput } from "react-native";
 import React from "react";
 
 // Components
@@ -19,6 +19,13 @@ const InpTwo = () => {
         </Text>
 
         <Text style={InpTwoCss.StoreName}>Store Description</Text>
+
+        <TextInput
+          multiline={true}
+          numberOfLines={10}
+          style={InpTwoCss.des}
+          // style={{ height: 200, textAlignVertical: "top" }}
+        />
       </View>
     </ScrollView>
   );
@@ -43,6 +50,13 @@ const InpTwoCss = StyleSheet.create({
     fontSize: 16,
     fontWeight: 500,
     color: "#7b579f",
+  },
+  StoreName: {
+    width: "80%",
+    color: "#626262",
+    fontWeight: 600,
+    fontSize: 20,
+    marginBottom: 10,
   },
 });
 
