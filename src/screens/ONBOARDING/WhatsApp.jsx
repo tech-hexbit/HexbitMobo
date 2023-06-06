@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -21,7 +22,15 @@ const WhatsApp = () => {
         // placeholder="Enter your WhatsApp number"
         keyboardType="numeric"
       />
-      <Text>WhatsApp</Text>
+      <LinearGradient
+        // Button Linear Gradient
+        start={{ x: 0, y: 0.75 }}
+        end={{ x: 1, y: 0.25 }}
+        colors={["#BB14E2", "#161FE4"]}
+        style={WhatsAppCss.button}
+      >
+        <Text style={WhatsAppCss.SendOTP}>Send OTP</Text>
+      </LinearGradient>
     </View>
   );
 };
@@ -52,6 +61,19 @@ const WhatsAppCss = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 10,
     width: "80%",
+    marginBottom: 20,
+  },
+  button: {
+    borderRadius: 10,
+    paddingTop: 14,
+    paddingBottom: 14,
+    width: "70%",
+  },
+  SendOTP: {
+    color: "#fff",
+    fontWeight: 600,
+    fontSize: 20,
+    textAlign: "center",
   },
 });
 
