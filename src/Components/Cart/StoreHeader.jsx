@@ -19,7 +19,7 @@ const StoreHeader = (props) => {
 
       <View style={StoreHeaderCss.inpView}>
         <Image source={img} />
-        <TextInput style={StoreHeaderCss.inp}></TextInput>
+        <TextInput style={StoreHeaderCss.inp} placeholder="Search"></TextInput>
       </View>
     </View>
   );
