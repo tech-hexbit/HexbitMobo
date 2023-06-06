@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 
 const InpOne = () => {
   return (
