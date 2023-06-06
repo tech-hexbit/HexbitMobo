@@ -10,12 +10,15 @@ import Path from "../../Components/ONBOARDING/Path";
 // theme
 import { COLORS } from "../../constants/theme";
 
+// img
+import img from "./../../../assets/Login/name.png";
+
 const Name = () => {
   const navigation = useNavigation();
   return (
     <View style={NameCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
-      <Path />
+      <Path img={img} pos={1} />
       <Text style={NameCss.Enter}>Enter your Name</Text>
       <TextInput style={NameCss.inpNumber} placeholder="Name" />
       <LinearGradient
