@@ -41,7 +41,7 @@ const InpTwo = () => {
           <TouchableOpacity
             style={InpTwoCss.btnNext}
             onPress={() => {
-              navigation.navigate("InpTwo");
+              navigation.navigate("StoreFinal");
             }}
           >
             <Text style={InpTwoCss.Next}>Next</Text>
