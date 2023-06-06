@@ -4,8 +4,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // screens
-import Home from "./src/screens/Home";
-import Inventory from "./src/screens/Inventory";
 import Login from "./src/screens/Login";
 
 // Bottom Nav
