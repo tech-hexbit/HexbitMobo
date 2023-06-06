@@ -18,7 +18,7 @@ const Name = () => {
   return (
     <View style={NameCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
-      <Path img={img} pos={1} />
+      <Path img={img} pos={3} />
       <Text style={NameCss.Enter}>Enter your Name</Text>
       <TextInput style={NameCss.inpNumber} placeholder="Name" />
       <LinearGradient
