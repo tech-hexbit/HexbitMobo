@@ -10,7 +10,9 @@ const Store = () => {
     <View>
       <StoreHeader true={true} title="MyStore" />
       <Text style={StoreCss.Products}>Products</Text>
-      <ProductCart />
+      <View style={StoreCss.ProductsGrid}>
+        <ProductCart />
+      </View>
     </View>
   );
 };
@@ -22,6 +24,11 @@ const StoreCss = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
     marginLeft: 20,
+  },
+  ProductsGrid: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
