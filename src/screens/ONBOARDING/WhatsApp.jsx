@@ -14,7 +14,7 @@ const WhatsApp = () => {
   return (
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
-      <Image source={img} />
+      <Image source={img} style={WhatsAppCss.img} />
       <Text>WhatsApp</Text>
     </View>
   );
@@ -23,9 +23,13 @@ const WhatsApp = () => {
 const WhatsAppCss = StyleSheet.create({
   mDIv: {
     flexGrow: 1,
-    backgroundColor: COLORS.primary,
+    backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
+  },
+  img: {
+    width: "80%",
+    height: "30%",
   },
 });
 
