@@ -30,7 +30,7 @@ const Email = () => {
         <Text
           style={EmailCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Email");
+            navigation.navigate("Company");
           }}
         >
           Next
