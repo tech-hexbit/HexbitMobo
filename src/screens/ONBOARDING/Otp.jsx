@@ -44,6 +44,8 @@ const Otp = () => {
           onChangeText={(txt) => {
             if (txt.length >= 1) {
               l3.current.focus();
+            } else if (txt.length < 1) {
+              l1.current.focus();
             }
           }}
         />
@@ -55,6 +57,8 @@ const Otp = () => {
           onChangeText={(txt) => {
             if (txt.length >= 1) {
               l4.current.focus();
+            } else if (txt.length < 1) {
+              l2.current.focus();
             }
           }}
         />
@@ -63,6 +67,11 @@ const Otp = () => {
           ref={l4}
           maxLength={1}
           keyboardType="numeric"
+          onChangeText={(txt) => {
+            if (txt.length < 1) {
+              l3.current.focus();
+            }
+          }}
         />
       </View>
 
