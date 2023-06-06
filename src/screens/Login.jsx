@@ -6,7 +6,7 @@ import { COLORS } from "../constants/theme";
 
 // img
 import img1 from "./../../assets/Login/logo.png";
-import img2 from "./../../assets/Login/Cash Payment-bro 1.png";
+import img2 from "./../../assets/Login/Cash.png";
 
 const Login = () => {
   return (
@@ -23,6 +23,7 @@ const Login = () => {
 
 const LoginCss = StyleSheet.create({
   mDIv: {
+    flexGrow: 1,
     backgroundColor: COLORS.primary,
     justifyContent: "center",
     alignItems: "center",
