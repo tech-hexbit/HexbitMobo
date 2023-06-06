@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
 // img
 import img from "./../../../assets/Cart/StoreFinal.png";
 
 const StoreFinal = () => {
+  const navigation = useNavigation();
   return (
     <View style={SFCss.mDiv}>
       <Image source={img} style={SFCss.img} />
@@ -25,7 +27,7 @@ const StoreFinal = () => {
         <Text
           style={SFCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("Store");
           }}
         >
           Go To Store
