@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <View style={LoginCss.mDIv}>
       <Image source={img1} />
-      <Image source={img2} />
+      <Image source={img2} style={LoginCss.img2} />
       <Text style={LoginCss.Sell}>Sell Smarter,</Text>
       <Text style={LoginCss.Sell}>Sell Faster</Text>
 
