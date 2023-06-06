@@ -3,11 +3,13 @@ import React from "react";
 
 // components
 import StoreHeader from "./StoreHeader";
+import ProductCart from "./ProductCart";
 
 const Store = () => {
   return (
     <View>
       <StoreHeader true={true} title="MyStore" />
+      <ProductCart />
       <Text>Store</Text>
     </View>
   );
