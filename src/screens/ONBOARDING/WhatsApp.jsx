@@ -15,6 +15,7 @@ const WhatsApp = () => {
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
       <Image source={img} style={WhatsAppCss.img} />
+      <Text></Text>
       <Text>WhatsApp</Text>
     </View>
   );
