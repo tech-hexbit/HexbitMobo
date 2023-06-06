@@ -82,6 +82,8 @@ const PathCss = StyleSheet.create({
   img: {
     width: 300,
     height: 220,
+    marginTop: 15,
+    marginBottom: 15,
   },
 });
 
