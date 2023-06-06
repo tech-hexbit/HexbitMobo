@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -11,6 +13,12 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/otp.png";
 
 const Otp = () => {
+  const navigation = useNavigation();
+
+  const l1 = useRef();
+  const l2 = useRef();
+  const l3 = useRef();
+  const l4 = useRef();
   return (
     <View style={OtpCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
@@ -23,7 +31,21 @@ const Otp = () => {
         <TextInput style={OtpCss.inpNumber} keyboardType="numeric" />
       </View>
 
-      <Text>Otp</Text>
+      <LinearGradient
+        start={{ x: 0, y: 0.75 }}
+        end={{ x: 1, y: 0.25 }}
+        colors={["#BB14E2", "#161FE4"]}
+        style={OtpCss.button}
+      >
+        <Text
+          style={OtpCss.SendOTP}
+          onPress={() => {
+            navigation.navigate("Otp");
+          }}
+        >
+          Send OTP
+        </Text>
+      </LinearGradient>
     </View>
   );
 };
@@ -60,6 +82,18 @@ const OtpCss = StyleSheet.create({
     width: 50,
     height: 50,
     marginBottom: 20,
+  },
+  button: {
+    borderRadius: 10,
+    paddingTop: 14,
+    paddingBottom: 14,
+    width: "70%",
+  },
+  SendOTP: {
+    color: "#fff",
+    fontWeight: 600,
+    fontSize: 20,
+    textAlign: "center",
   },
 });
 
