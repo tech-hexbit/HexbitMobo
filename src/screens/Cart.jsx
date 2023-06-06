@@ -1,10 +1,9 @@
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import React from "react";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 
 // Components
 import Header from "../Components/Cart/Header";
 import InpOne from "../Components/Cart/InpOne";
-import InpTwo from "../Components/Cart/InpTwo";
 
 // img
 import img from "./../../assets/Cart/cartGroceries.png";
@@ -13,11 +12,8 @@ const Cart = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={CartCss.mDiv}>
-        <Header Header="SETUP YOUR STORE" />
-        <Image source={img} style={CartCss.img} />
+        <Header Header="SETUP YOUR STORE" img={img} />
         <InpOne />
-        <InpTwo />
-        <Text>Cart</Text>
       </View>
     </ScrollView>
   );
@@ -29,10 +25,6 @@ const CartCss = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-  },
-  img: {
-    width: 200,
-    height: 200,
   },
 });
 
