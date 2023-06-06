@@ -9,15 +9,21 @@ const Path = (props) => {
         <Text style={props.pos >= 1 ? PathCss.active : PathCss.pathmBud}>
           1
         </Text>
-        <View style={PathCss.pathLine}></View>
+        <View
+          style={props.pos >= 2 ? PathCss.pathAct : PathCss.pathLine}
+        ></View>
         <Text style={props.pos >= 2 ? PathCss.active : PathCss.pathmBud}>
           2
         </Text>
-        <View style={PathCss.pathLine}></View>
+        <View
+          style={props.pos >= 3 ? PathCss.pathAct : PathCss.pathLine}
+        ></View>
         <Text style={props.pos >= 3 ? PathCss.active : PathCss.pathmBud}>
           3
         </Text>
-        <View style={PathCss.pathLine}></View>
+        <View
+          style={props.pos >= 4 ? PathCss.pathAct : PathCss.pathLine}
+        ></View>
         <Text style={props.pos >= 4 ? PathCss.active : PathCss.pathmBud}>
           4
         </Text>
@@ -67,6 +73,11 @@ const PathCss = StyleSheet.create({
     width: "15%",
     height: 6,
     backgroundColor: "#595959",
+  },
+  pathAct: {
+    width: "15%",
+    height: 6,
+    backgroundColor: "#350b5e",
   },
   img: {
     width: 300,
