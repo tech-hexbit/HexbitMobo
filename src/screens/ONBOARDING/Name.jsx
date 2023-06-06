@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
+import Path from "../../Components/ONBOARDING/Path";
 
 // theme
 import { COLORS } from "../../constants/theme";
@@ -14,6 +15,7 @@ const Name = () => {
   return (
     <View style={NameCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
+      <Path />
       <Text style={NameCss.Enter}>Enter your Name</Text>
       <TextInput style={NameCss.inpNumber} placeholder="Name" />
       <LinearGradient
