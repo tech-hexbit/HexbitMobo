@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
@@ -13,12 +13,26 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/otp.png";
 
 const Otp = () => {
+  const [seconds, setSeconds] = useState(30);
   const navigation = useNavigation();
 
   const l1 = useRef();
   const l2 = useRef();
   const l3 = useRef();
   const l4 = useRef();
+
+  useEffect(() => {
+    const countdownInterval = setInterval(() => {
+      setSeconds((prevSeconds) => prevSeconds - 1);
+    }, 1000);
+
+    if (seconds === 0) {
+      clearInterval(countdownInterval);
+    }
+
+    return () => clearInterval(countdownInterval);
+  }, [seconds]);
+
   return (
     <View style={OtpCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
@@ -90,7 +104,7 @@ const Otp = () => {
           Send OTP
         </Text>
       </LinearGradient>
-      <Text style={OtpCss.timer}>00:30</Text>
+      <Text style={OtpCss.timer}>00:{seconds}</Text>
       <LinearGradient
         colors={["#BB14E2", "#161FE4"]}
         start={{ x: 0, y: 0 }}
