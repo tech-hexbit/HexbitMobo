@@ -34,7 +34,7 @@ const Company = () => {
         <Text
           style={CompanyCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Email");
+            navigation.navigate("License");
           }}
         >
           Next
