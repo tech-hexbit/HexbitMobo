@@ -27,6 +27,7 @@ const Path = (props) => {
         <Text style={props.pos >= 4 ? PathCss.active : PathCss.pathmBud}>
           4
         </Text>
+        <View style={PathCss.pathLine1}></View>
       </View>
       <Image source={props.img} style={PathCss.img} />
     </View>
@@ -68,6 +69,13 @@ const PathCss = StyleSheet.create({
     backgroundColor: "#350b5e",
     borderTopLeftRadius: 3,
     borderBottomLeftRadius: 3,
+  },
+  pathLine1: {
+    width: "7%",
+    height: 6,
+    backgroundColor: "#595959",
+    borderTopRightRadius: 3,
+    borderBottomRightRadius: 3,
   },
   pathLine: {
     width: "15%",
