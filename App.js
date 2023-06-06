@@ -8,6 +8,7 @@ import Login from "./src/screens/ONBOARDING/Login";
 import Otp from "./src/screens/ONBOARDING/Otp";
 import WhatsApp from "./src/screens/ONBOARDING/WhatsApp";
 import Name from "./src/screens/ONBOARDING/Name";
+import Email from "./src/screens/ONBOARDING/Email";
 
 // Bottom Nav
 import BottomNav from "./src/Components/BottomNav";
@@ -22,6 +23,7 @@ export default function App() {
           <Stack.Screen name="WhatsApp" component={WhatsApp} />
           <Stack.Screen name="Otp" component={Otp} />
           <Stack.Screen name="Name" component={Name} />
+          <Stack.Screen name="Email" component={Email} />
           <Stack.Screen name="Home" component={BottomNav} />
         </Stack.Navigator>
       </NavigationContainer>
