@@ -13,17 +13,19 @@ const SSCss = StyleSheet.create({
   },
   Selectastore: {
     color: "#350B5E",
-    fontSize: 17,
+    fontSize: 26,
     fontWeight: 700,
     marginBottom: 20,
   },
   storeBlock: {
     backgroundColor: "#7a23cf",
     borderRadius: 10,
-    padding: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 30,
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 15,
   },
   rightView: {
     marginLeft: 20,
