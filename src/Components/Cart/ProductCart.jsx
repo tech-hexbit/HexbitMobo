@@ -1,11 +1,13 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // img
 import img from "./../../../assets/Cart/pod.png";
 import edit from "./../../../assets/Cart/edit.png";
 
 const ProductCart = (props) => {
+  const navigation = useNavigation();
   return (
     <View style={ProductCartCss.insDiv}>
       <View style={ProductCartCss.leftDiv}>
@@ -13,8 +15,22 @@ const ProductCart = (props) => {
       </View>
       <View style={ProductCartCss.rightDiv}>
         <View style={ProductCartCss.statsDiv}>
-          <Text style={ProductCartCss.name}>{props.name}</Text>
-          <Image source={edit} />
+          <Text
+            style={ProductCartCss.name}
+            onPress={() => {
+              console.log("first====");
+              navigation.navigate("Edit");
+            }}
+          >
+            {props.name}
+          </Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Edit");
+            }}
+          >
+            <Image source={edit} />
+          </TouchableOpacity>
         </View>
         <Text style={ProductCartCss.dec}>{props.dec}</Text>
         <Text style={ProductCartCss.price}>PRICE: ₹ {props.price}</Text>
@@ -78,6 +94,11 @@ const ProductCartCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 14,
     color: "#FF1A2E",
+  },
+  edit: {
+    height: "100%",
+    width: 30,
+    backgroundColor: "red",
   },
 });
 
