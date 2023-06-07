@@ -2,12 +2,12 @@ import { View, Text } from "react-native";
 import React from "react";
 
 // style
-import BankCss from "./Css/BankCss";
+import ACss from "./Css/AnalyticsCss";
 
 const Analytics = () => {
   return (
-    <View>
-      <Text>Analytics</Text>
+    <View style={ACss.mDiv}>
+      <Text style={ACss.Analytics}>Analytics</Text>
     </View>
   );
 };
