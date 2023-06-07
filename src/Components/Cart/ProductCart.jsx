@@ -12,12 +12,12 @@ const ProductCart = () => {
 const ProductCartCss = StyleSheet.create({
   mDiv: {
     width: "90%",
-    // backgroundColor: "red",
+    backgroundColor: "red",
     borderRadius: 10,
     padding: 15,
 
-    shadowColor: "#171717",
-    shadowOffset: { width: -2, height: 4 },
+    shadowColor: "red",
+    shadowOffset: { width: -2, height: 40 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
   },
