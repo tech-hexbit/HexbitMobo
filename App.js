@@ -30,7 +30,11 @@ export default function App() {
           <Stack.Screen name="Company" component={Company} />
           <Stack.Screen name="License" component={License} />
           <Stack.Screen name="InpTwo" component={InpTwo} />
-          <Stack.Screen name="Home" component={BottomNav} />
+          <Stack.Screen
+            name="Home"
+            options={{ headerShown: false }}
+            component={BottomNav}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
