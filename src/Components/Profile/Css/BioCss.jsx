@@ -6,6 +6,7 @@ import { COLORS } from "../../../constants/theme";
 const BioCss = StyleSheet.create({
   mDiv: {
     paddingHorizontal: 20,
+    marginBottom: 30,
   },
   RowDiv: {
     flexDirection: "row",
