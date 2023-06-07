@@ -6,6 +6,7 @@ import SSCss from "./Css/SwitchStoreCss";
 
 // img
 import img from "./../../../assets/Profile/shop.png";
+import plus from "./../../../assets/Profile/plus.png";
 
 const SwitchStore = () => {
   return (
@@ -26,6 +27,11 @@ const SwitchStore = () => {
           <Text style={SSCss.StoreName}>Store Name</Text>
           <Text style={SSCss.StoreType}>Store Type</Text>
         </View>
+      </View>
+
+      <View style={SSCss.createView}>
+        <Image source={plus} style={SSCss.plus} />
+        <Text style={SSCss.CreateStore}>Create Store</Text>
       </View>
     </View>
   );
