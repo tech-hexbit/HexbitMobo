@@ -4,7 +4,14 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../../constants/theme";
 
 const BioCss = StyleSheet.create({
-  mDiv: { paddingHorizontal: 20 },
+  mDiv: {
+    paddingHorizontal: 20,
+  },
+  RowDiv: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
   SwitchStoreView: {
     width: 110,
     height: 35,
@@ -22,6 +29,15 @@ const BioCss = StyleSheet.create({
     fontWeight: 600,
     paddingVertical: 5,
     paddingHorizontal: 12,
+  },
+  title: {
+    fontSize: 14,
+    fontWeight: 600,
+    color: "#626262",
+  },
+  data: {
+    fontSize: 17,
+    fontWeight: 600,
   },
 });
 
