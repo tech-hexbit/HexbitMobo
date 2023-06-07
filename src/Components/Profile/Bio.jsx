@@ -7,10 +7,10 @@ import BioCss from "./Css/BioCss";
 const Bio = () => {
   return (
     <View style={BioCss.mDiv}>
-      <View>
-        <View>
-          <Text>Store Name</Text>
-          <Text>Store ABC</Text>
+      <View style={BioCss.RowDiv}>
+        <View style={BioCss.dataView}>
+          <Text style={BioCss.title}>Store Name</Text>
+          <Text style={BioCss.data}>Store ABC</Text>
         </View>
         <View style={BioCss.SwitchStoreView}>
           <Text style={BioCss.SwitchStore}>Edit Profile</Text>
