@@ -17,6 +17,23 @@ const SSCss = StyleSheet.create({
     fontWeight: 700,
     marginBottom: 20,
   },
+  storeBlock: {
+    backgroundColor: "#7a23cf",
+    borderRadius: 10,
+    padding: 16,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  rightView: {
+    marginLeft: 10,
+  },
+  StoreName: {
+    color: "#fff",
+  },
+  StoreType: {
+    color: "#fff",
+  },
 });
 
 export default SSCss;
