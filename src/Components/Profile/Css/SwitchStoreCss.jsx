@@ -46,8 +46,8 @@ const SSCss = StyleSheet.create({
   },
   createView: {
     marginTop: 20,
-    borderColor: "#350B5E",
-    borderWidth: 1,
+    borderColor: "#7A23CF",
+    borderWidth: 2,
     borderRadius: 10,
     flexDirection: "row",
     justifyContent: "center",
@@ -59,6 +59,11 @@ const SSCss = StyleSheet.create({
     width: 35,
     height: 35,
     marginRight: 15,
+  },
+  CreateStore: {
+    fontSize: 18,
+    fontWeight: 600,
+    color: "#7A23CF",
   },
 });
 
