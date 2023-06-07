@@ -1,32 +1,19 @@
 import { StyleSheet } from "react-native";
 
+// theme
+import { COLORS } from "../../../constants/theme";
+
 const HCss = StyleSheet.create({
-  Products: {
-    color: "#350B5E",
-    fontWeight: 700,
+  HeaderText: {
     fontSize: 20,
-    marginVertical: 10,
-    marginLeft: 20,
+    fontWeight: 900,
+    textAlign: "center",
+    marginTop: 20,
+    color: COLORS.primary,
   },
-  ProductsGrid: {
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 10,
-    marginBottom: 10,
-  },
-  Addpod: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  AddProduct: {
-    color: "#fff",
-    backgroundColor: "#622AC3",
-    borderRadius: 10,
-    paddingHorizontal: 22,
-    paddingVertical: 12,
-    marginBottom: 10,
+  img: {
+    width: 200,
+    height: 200,
   },
 });
 
