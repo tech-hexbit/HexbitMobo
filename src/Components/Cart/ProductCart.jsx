@@ -14,6 +14,10 @@ const ProductCart = (props) => {
         <Text style={ProductCartCss.name}>{props.name}</Text>
         <Text style={ProductCartCss.dec}>{props.dec}</Text>
         <Text style={ProductCartCss.price}>PRICE: ₹ {props.price}</Text>
+        <View style={ProductCartCss.statsDiv}>
+          <Text style={ProductCartCss.Order}>Order placed: {props.Order}</Text>
+          <Text style={ProductCartCss.InStore}>In Store : {props.InStore}</Text>
+        </View>
       </View>
     </View>
   );
@@ -56,6 +60,20 @@ const ProductCartCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 18,
     marginBottom: 5,
+  },
+  statsDiv: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  Order: {
+    fontWeight: 600,
+    fontSize: 14,
+    color: "#07B141",
+  },
+  InStore: {
+    fontWeight: 600,
+    fontSize: 14,
+    color: "#FF1A2E",
   },
 });
 
