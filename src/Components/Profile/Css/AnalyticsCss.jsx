@@ -16,7 +16,7 @@ const ACss = StyleSheet.create({
   },
   img: {
     width: "100%",
-    height: 300,
+    height: 200,
     resizeMode: "contain",
   },
 });
