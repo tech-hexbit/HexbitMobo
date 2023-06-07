@@ -18,6 +18,8 @@ export default function CartNav() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Cart" component={Cart} />
         <Stack.Screen name="InpTwo" component={InpTwo} />
+        <Stack.Screen name="Edit" component={Edit} />
+        <Stack.Screen name="AddProduct" component={AddProduct} />
         <Stack.Screen name="StoreFinal" component={StoreFinal} />
         <Stack.Screen name="Store" component={Store} />
       </Stack.Navigator>
