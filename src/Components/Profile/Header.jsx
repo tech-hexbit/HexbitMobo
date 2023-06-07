@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <View style={HCss.mDiv}>
       <Text style={HCss.Title}>Profile</Text>
-      <Text style={HCss.SwitchStore}>Switch Store</Text>
+      <View style={HCss.SwitchStoreView}>
+        <Text style={HCss.SwitchStore}>Switch Store</Text>
+      </View>
     </View>
   );
 };
