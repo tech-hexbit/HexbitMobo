@@ -45,6 +45,9 @@ const Store = () => {
             InStore={326}
           />
         </View>
+        <View style={StoreCss.Addpod}>
+          <Text style={StoreCss.AddProduct}>Add Product</Text>
+        </View>
       </View>
     </ScrollView>
   );
@@ -63,6 +66,22 @@ const StoreCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     gap: 10,
+    marginBottom: 10,
+  },
+  Addpod: {
+    // position: "fixed",
+    // backgroundColor: "red",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  AddProduct: {
+    color: "#fff",
+    backgroundColor: "#622AC3",
+    borderRadius: 10,
+    paddingHorizontal: 22,
+    paddingVertical: 12,
+    marginBottom: 10,
   },
 });
 
