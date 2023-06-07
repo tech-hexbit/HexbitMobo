@@ -7,7 +7,7 @@ import SSCss from "./Css/SwitchStoreCss";
 const SwitchStore = () => {
   return (
     <View style={SSCss.mDIv}>
-      <Text>SwitchStore</Text>
+      <Text>Select a store</Text>
     </View>
   );
 };
