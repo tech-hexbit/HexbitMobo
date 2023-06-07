@@ -12,7 +12,8 @@ const ProductCart = (props) => {
       </View>
       <View style={ProductCartCss.rightDiv}>
         <Text style={ProductCartCss.name}>{props.name}</Text>
-        <Text>{props.dec}</Text>
+        <Text style={ProductCartCss.dec}>{props.dec}</Text>
+        <Text style={ProductCartCss.price}>PRICE: ₹ {props.price}</Text>
       </View>
     </View>
   );
@@ -36,7 +37,20 @@ const ProductCartCss = StyleSheet.create({
   rightDiv: {
     width: "66%",
   },
-
+  dec: {
+    color: "#626262",
+    textAlign: "justify",
+    fontWeight: 400,
+    fontSize: 14,
+    marginBottom: 5,
+  },
+  price: {
+    color: "#626262",
+    textAlign: "justify",
+    fontWeight: 700,
+    fontSize: 14,
+    marginBottom: 5,
+  },
   name: {
     color: "#350b5e",
     fontWeight: 600,
