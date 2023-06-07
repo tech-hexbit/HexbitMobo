@@ -9,6 +9,7 @@ import Cart from "./../screens/Cart";
 import Discount from "./../screens/Discount";
 import CartNav from "../../navigation/CartNav";
 import Profile from "../../navigation/ProfileNav";
+
 // img
 import img1 from "./../../assets/Vector-3.png";
 import img2 from "./../../assets/Vector-1.png";
