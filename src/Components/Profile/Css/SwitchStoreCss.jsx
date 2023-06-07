@@ -11,6 +11,12 @@ const SSCss = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ccceff",
   },
+  Selectastore: {
+    color: "#350B5E",
+    fontSize: 17,
+    fontWeight: 700,
+    marginBottom: 20,
+  },
 });
 
 export default SSCss;
