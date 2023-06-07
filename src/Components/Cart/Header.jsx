@@ -1,5 +1,5 @@
-import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
+import { View, Text, Image } from "react-native";
 
 // style
 import HCss from "./Css/HCss";
