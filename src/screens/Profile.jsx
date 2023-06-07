@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 
 // Components
@@ -7,11 +7,13 @@ import Bio from "./../Components/Profile/Bio";
 
 const Profile = () => {
   return (
-    <View>
-      <Header />
-      <Bio />
-      <Text>Profile</Text>
-    </View>
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View>
+        <Header />
+        <Bio />
+        <Text>Profile</Text>
+      </View>
+    </ScrollView>
   );
 };
 
