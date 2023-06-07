@@ -11,7 +11,7 @@ const ProductCart = (props) => {
         <Image source={img} />
       </View>
       <View style={ProductCartCss.rightDiv}>
-        <Text>{props.name}</Text>
+        <Text style={ProductCartCss.name}>{props.name}</Text>
         <Text>{props.dec}</Text>
       </View>
     </View>
@@ -25,17 +25,23 @@ const ProductCartCss = StyleSheet.create({
     padding: 15,
     flexDirection: "row",
     // flexWrap: "wrap",
+    justifyContent: "space-between",
     gap: 10,
     borderWidth: 1,
     borderColor: "#d3d3d3",
   },
   leftDiv: {
     width: "32%",
-    backgroundColor: "red",
   },
   rightDiv: {
-    width: "68%",
-    backgroundColor: "red",
+    width: "66%",
+  },
+
+  name: {
+    color: "#350b5e",
+    fontWeight: 600,
+    fontSize: 18,
+    marginBottom: 5,
   },
 });
 
