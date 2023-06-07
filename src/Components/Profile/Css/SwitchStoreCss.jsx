@@ -26,7 +26,7 @@ const SSCss = StyleSheet.create({
     alignItems: "center",
   },
   rightView: {
-    marginLeft: 10,
+    marginLeft: 20,
   },
   StoreName: {
     color: "#fff",
@@ -37,6 +37,10 @@ const SSCss = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: 600,
+  },
+  img: {
+    width: 45,
+    height: 45,
   },
 });
 
