@@ -30,9 +30,13 @@ const SSCss = StyleSheet.create({
   },
   StoreName: {
     color: "#fff",
+    fontSize: 20,
+    fontWeight: 600,
   },
   StoreType: {
     color: "#fff",
+    fontSize: 16,
+    fontWeight: 600,
   },
 });
 
