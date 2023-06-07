@@ -19,6 +19,14 @@ const SwitchStore = () => {
           <Text style={SSCss.StoreType}>Store Type</Text>
         </View>
       </View>
+
+      <View style={SSCss.storeBlock}>
+        <Image source={img} style={SSCss.img} />
+        <View style={SSCss.rightView}>
+          <Text style={SSCss.StoreName}>Store Name</Text>
+          <Text style={SSCss.StoreType}>Store Type</Text>
+        </View>
+      </View>
     </View>
   );
 };
