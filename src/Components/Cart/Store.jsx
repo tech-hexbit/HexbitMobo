@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React from "react";
 
 // components
@@ -7,13 +7,34 @@ import ProductCart from "./ProductCart";
 
 const Store = () => {
   return (
-    <View>
-      <StoreHeader true={true} title="MyStore" />
-      <Text style={StoreCss.Products}>Products</Text>
-      <View style={StoreCss.ProductsGrid}>
-        <ProductCart />
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View>
+        <StoreHeader true={true} title="MyStore" />
+        <Text style={StoreCss.Products}>Products</Text>
+        <View style={StoreCss.ProductsGrid}>
+          <ProductCart
+            name="Product Name"
+            dec="Filler text is text that shares some characteristics of a real written
+          text, but is random."
+          />
+          <ProductCart
+            name="Product Name"
+            dec="Filler text is text that shares some characteristics of a real written
+          text, but is random."
+          />
+          <ProductCart
+            name="Product Name"
+            dec="Filler text is text that shares some characteristics of a real written
+        text, but is random."
+          />
+          <ProductCart
+            name="Product Name"
+            dec="Filler text is text that shares some characteristics of a real written
+        text, but is random."
+          />
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -29,6 +50,7 @@ const StoreCss = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    gap: 10,
   },
 });
 
