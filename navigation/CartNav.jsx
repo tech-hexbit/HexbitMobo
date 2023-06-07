@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import InpTwo from "./../src/Components/Cart/InpTwo";
 import StoreFinal from "./../src/Components/Cart/StoreFinal";
 import Store from "./../src/Components/Cart/Store";
+import AddProduct from "./../src/Components/Cart/AddProduct";
+import Edit from "./../src/Components/Cart/Edit";
 import Cart from "./../src/screens/Cart";
 
 export default function CartNav() {
