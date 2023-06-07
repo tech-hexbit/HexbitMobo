@@ -16,7 +16,7 @@ export default function CartNav() {
   return (
     <>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Cart" component={Cart} />
+        <Stack.Screen name="CartMain" component={Cart} />
         <Stack.Screen name="InpTwo" component={InpTwo} />
         <Stack.Screen name="StoreFinal" component={StoreFinal} />
         <Stack.Screen name="Store" component={Store} />
