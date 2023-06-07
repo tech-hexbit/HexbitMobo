@@ -9,6 +9,7 @@ const SSCss = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#ccceff",
   },
 });
 
