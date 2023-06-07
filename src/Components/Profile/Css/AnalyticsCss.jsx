@@ -14,6 +14,11 @@ const ACss = StyleSheet.create({
     fontWeight: 700,
     marginBottom: 10,
   },
+  img: {
+    width: "100%",
+    height: 300,
+    resizeMode: "contain",
+  },
 });
 
 export default ACss;
