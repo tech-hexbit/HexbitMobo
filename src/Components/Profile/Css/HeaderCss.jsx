@@ -17,7 +17,22 @@ const HCss = StyleSheet.create({
     fontSize: 36,
     fontWeight: 900,
   },
-  SwitchStore: {},
+  SwitchStoreView: {
+    height: 35,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: "#350B5E",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  SwitchStore: {
+    color: "#350B5E",
+    fontSize: 15,
+    fontWeight: 600,
+    paddingVertical: 5,
+    paddingHorizontal: 12,
+  },
 });
 
 export default HCss;
