@@ -44,6 +44,22 @@ const SSCss = StyleSheet.create({
     width: 45,
     height: 45,
   },
+  createView: {
+    marginTop: 20,
+    borderColor: "#350B5E",
+    borderWidth: 1,
+    borderRadius: 10,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  plus: {
+    width: 35,
+    height: 35,
+    marginRight: 15,
+  },
 });
 
 export default SSCss;
