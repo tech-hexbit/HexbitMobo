@@ -13,7 +13,7 @@ const SwitchStore = () => {
       <Text style={SSCss.Selectastore}>Select a store</Text>
 
       <View style={SSCss.storeBlock}>
-        <Image source={img} />
+        <Image source={img} style={SSCss.img} />
         <View style={SSCss.rightView}>
           <Text style={SSCss.StoreName}>Store Name</Text>
           <Text style={SSCss.StoreType}>Store Type</Text>
