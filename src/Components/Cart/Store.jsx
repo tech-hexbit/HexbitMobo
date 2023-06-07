@@ -48,7 +48,14 @@ const Store = () => {
           />
         </View>
         <View style={StoreCss.Addpod}>
-          <Text style={StoreCss.AddProduct}>Add Product</Text>
+          <Text
+            style={StoreCss.AddProduct}
+            onPress={() => {
+              navigation.navigate("AddProduct");
+            }}
+          >
+            Add Product
+          </Text>
         </View>
       </View>
     </ScrollView>
