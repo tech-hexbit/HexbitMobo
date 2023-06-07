@@ -8,7 +8,7 @@ const Bio = () => {
   return (
     <View style={BioCss.mDiv}>
       <View style={BioCss.RowDiv}>
-        <View style={BioCss.dataView}>
+        <View>
           <Text style={BioCss.title}>Store Name</Text>
           <Text style={BioCss.data}>Store ABC</Text>
         </View>
@@ -17,19 +17,19 @@ const Bio = () => {
         </View>
       </View>
 
-      <View>
-        <Text>Name</Text>
-        <Text>Raghav Anand</Text>
+      <View style={BioCss.dataView}>
+        <Text style={BioCss.title}>Name</Text>
+        <Text style={BioCss.data}>Raghav Anand</Text>
       </View>
 
-      <View>
-        <Text>Email</Text>
-        <Text>raghavanand@gmail.com</Text>
+      <View style={BioCss.dataView}>
+        <Text style={BioCss.title}>Email</Text>
+        <Text style={BioCss.data}>raghavanand@gmail.com</Text>
       </View>
 
-      <View>
-        <Text>Nature of the company</Text>
-        <Text>Retail</Text>
+      <View style={BioCss.dataView}>
+        <Text style={BioCss.title}>Nature of the company</Text>
+        <Text style={BioCss.data}>Retail</Text>
       </View>
     </View>
   );
