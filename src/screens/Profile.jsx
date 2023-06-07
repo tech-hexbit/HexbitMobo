@@ -5,6 +5,7 @@ import React from "react";
 import Header from "./../Components/Profile/Header";
 import Bio from "./../Components/Profile/Bio";
 import Bank from "./../Components/Profile/Bank";
+import Analytics from "./../Components/Profile/Analytics";
 
 const Profile = () => {
   return (
@@ -13,7 +14,7 @@ const Profile = () => {
         <Header />
         <Bio />
         <Bank />
-        <Text>Profile</Text>
+        <Analytics />
       </View>
     </ScrollView>
   );
