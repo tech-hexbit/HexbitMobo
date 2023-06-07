@@ -3,6 +3,7 @@ import React from "react";
 
 // img
 import img from "./../../../assets/Cart/pod.png";
+import edit from "./../../../assets/Cart/edit.png";
 
 const ProductCart = (props) => {
   return (
@@ -11,7 +12,10 @@ const ProductCart = (props) => {
         <Image source={img} />
       </View>
       <View style={ProductCartCss.rightDiv}>
-        <Text style={ProductCartCss.name}>{props.name}</Text>
+        <View style={ProductCartCss.statsDiv}>
+          <Text style={ProductCartCss.name}>{props.name}</Text>
+          <Image source={edit} />
+        </View>
         <Text style={ProductCartCss.dec}>{props.dec}</Text>
         <Text style={ProductCartCss.price}>PRICE: ₹ {props.price}</Text>
         <View style={ProductCartCss.statsDiv}>
