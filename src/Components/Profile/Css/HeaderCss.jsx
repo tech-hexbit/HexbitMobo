@@ -17,6 +17,11 @@ const HCss = StyleSheet.create({
     fontSize: 36,
     fontWeight: 900,
   },
+  SwitchViewMain: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
+  },
   SwitchStoreView: {
     height: 35,
     borderWidth: 1,
