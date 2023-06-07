@@ -11,6 +11,7 @@ const BioCss = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 10,
   },
   SwitchStoreView: {
     width: 110,
@@ -29,6 +30,9 @@ const BioCss = StyleSheet.create({
     fontWeight: 600,
     paddingVertical: 5,
     paddingHorizontal: 12,
+  },
+  dataView: {
+    marginBottom: 10,
   },
   title: {
     fontSize: 14,
