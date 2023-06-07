@@ -16,21 +16,25 @@ const Store = () => {
             name="Product Name"
             dec="Filler text is text that shares some characteristics of a real written
           text, but is random."
+            price={500}
           />
           <ProductCart
             name="Product Name"
             dec="Filler text is text that shares some characteristics of a real written
           text, but is random."
+            price={500}
           />
           <ProductCart
             name="Product Name"
             dec="Filler text is text that shares some characteristics of a real written
         text, but is random."
+            price={500}
           />
           <ProductCart
             name="Product Name"
             dec="Filler text is text that shares some characteristics of a real written
         text, but is random."
+            price={500}
           />
         </View>
       </View>
