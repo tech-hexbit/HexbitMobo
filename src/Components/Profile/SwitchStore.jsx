@@ -1,5 +1,6 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // style
 import SSCss from "./Css/SwitchStoreCss";
@@ -9,6 +10,7 @@ import img from "./../../../assets/Profile/shop.png";
 import plus from "./../../../assets/Profile/plus.png";
 
 const SwitchStore = () => {
+  const navigation = useNavigation();
   return (
     <View style={SSCss.mDIv}>
       <Text style={SSCss.Selectastore}>Select a store</Text>
@@ -31,7 +33,14 @@ const SwitchStore = () => {
 
       <View style={SSCss.createView}>
         <Image source={plus} style={SSCss.plus} />
-        <Text style={SSCss.CreateStore}>Create Store</Text>
+        <Text
+          style={SSCss.CreateStore}
+          onPress={() => {
+            navigation.navigate("CartMain");
+          }}
+        >
+          Create Store
+        </Text>
       </View>
     </View>
   );
