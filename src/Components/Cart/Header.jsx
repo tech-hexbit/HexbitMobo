@@ -1,8 +1,8 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
 
-// theme
-import { COLORS } from "../../constants/theme";
+// style
+import HCss from "./Css/HCss";
 
 const Header = (props) => {
   return (
@@ -12,19 +12,5 @@ const Header = (props) => {
     </View>
   );
 };
-
-const HCss = StyleSheet.create({
-  HeaderText: {
-    fontSize: 20,
-    fontWeight: 900,
-    textAlign: "center",
-    marginTop: 20,
-    color: COLORS.primary,
-  },
-  img: {
-    width: 200,
-    height: 200,
-  },
-});
 
 export default Header;
