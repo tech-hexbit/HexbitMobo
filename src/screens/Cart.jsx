@@ -8,6 +8,9 @@ import InpOne from "../Components/Cart/InpOne";
 // img
 import img from "./../../assets/Cart/cartGroceries.png";
 
+// style
+import CartCss from "../Components/Cart/Css/CartCss";
+
 const Cart = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -18,14 +21,5 @@ const Cart = () => {
     </ScrollView>
   );
 };
-
-const CartCss = StyleSheet.create({
-  mDiv: {
-    flexGrow: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
 
 export default Cart;
