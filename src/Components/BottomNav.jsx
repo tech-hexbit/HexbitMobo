@@ -6,9 +6,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./../screens/Home";
 import Inventory from "./../screens/Inventory";
 import Cart from "./../screens/Cart";
-import Profile from "./../screens/Profile";
 import Discount from "./../screens/Discount";
 import CartNav from "../../navigation/CartNav";
+import Profile from "../../navigation/ProfileNav";
 // img
 import img1 from "./../../assets/Vector-3.png";
 import img2 from "./../../assets/Vector-1.png";
