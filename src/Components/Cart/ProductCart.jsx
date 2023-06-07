@@ -11,13 +11,9 @@ const ProductCart = (props) => {
         <Image source={img} />
       </View>
       <View style={ProductCartCss.rightDiv}>
-        <Text>Product Name</Text>
-        <Text>
-          Filler text is text that shares some characteristics of a real written
-          text, but is random.
-        </Text>
+        <Text>{props.name}</Text>
+        <Text>{props.dec}</Text>
       </View>
-      <Text>ProductCart</Text>
     </View>
   );
 };
@@ -31,12 +27,15 @@ const ProductCartCss = StyleSheet.create({
     // flexWrap: "wrap",
     gap: 10,
     borderWidth: 1,
+    borderColor: "#d3d3d3",
   },
   leftDiv: {
-    width: "45%",
+    width: "32%",
+    backgroundColor: "red",
   },
   rightDiv: {
-    width: "45%",
+    width: "68%",
+    backgroundColor: "red",
   },
 });
 
