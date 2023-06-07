@@ -11,6 +11,7 @@ const HCss = StyleSheet.create({
     alignContent: "center",
     paddingVertical: 15,
     paddingHorizontal: 20,
+    marginBottom: 20,
   },
   Title: {
     color: "#350b5e",
