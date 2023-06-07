@@ -69,8 +69,6 @@ const StoreCss = StyleSheet.create({
     marginBottom: 10,
   },
   Addpod: {
-    // position: "fixed",
-    // backgroundColor: "red",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
