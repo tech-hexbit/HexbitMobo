@@ -9,36 +9,48 @@ import edit from "./../../../assets/Cart/edit.png";
 const ProductCart = (props) => {
   const navigation = useNavigation();
   return (
-    <View style={ProductCartCss.insDiv}>
-      <View style={ProductCartCss.leftDiv}>
-        <Image source={img} />
-      </View>
-      <View style={ProductCartCss.rightDiv}>
-        <View style={ProductCartCss.statsDiv}>
-          <Text
-            style={ProductCartCss.name}
-            onPress={() => {
-              navigation.navigate("Edit");
-            }}
-          >
-            {props.name}
-          </Text>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("Edit");
-            }}
-          >
-            <Image source={edit} />
-          </TouchableOpacity>
+    <>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("ProductPage");
+        }}
+      >
+        <View style={ProductCartCss.insDiv}>
+          <View style={ProductCartCss.leftDiv}>
+            <Image source={img} />
+          </View>
+          <View style={ProductCartCss.rightDiv}>
+            <View style={ProductCartCss.statsDiv}>
+              <Text
+                style={ProductCartCss.name}
+                onPress={() => {
+                  navigation.navigate("Edit");
+                }}
+              >
+                {props.name}
+              </Text>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("Edit");
+                }}
+              >
+                <Image source={edit} />
+              </TouchableOpacity>
+            </View>
+            <Text style={ProductCartCss.dec}>{props.dec}</Text>
+            <Text style={ProductCartCss.price}>PRICE: ₹ {props.price}</Text>
+            <View style={ProductCartCss.statsDiv}>
+              <Text style={ProductCartCss.Order}>
+                Order placed: {props.Order}
+              </Text>
+              <Text style={ProductCartCss.InStore}>
+                In Store : {props.InStore}
+              </Text>
+            </View>
+          </View>
         </View>
-        <Text style={ProductCartCss.dec}>{props.dec}</Text>
-        <Text style={ProductCartCss.price}>PRICE: ₹ {props.price}</Text>
-        <View style={ProductCartCss.statsDiv}>
-          <Text style={ProductCartCss.Order}>Order placed: {props.Order}</Text>
-          <Text style={ProductCartCss.InStore}>In Store : {props.InStore}</Text>
-        </View>
-      </View>
-    </View>
+      </TouchableOpacity>
+    </>
   );
 };
 
