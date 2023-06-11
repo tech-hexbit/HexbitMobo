@@ -16,11 +16,13 @@ const InvCss = StyleSheet.create({
     position: "absolute",
     right: 15,
     bottom: 15,
+    backgroundColor: "pink",
+    flexDirection: "column",
+    alignItems: "flex-end",
   },
   posAbs: {
     backgroundColor: "#622ac3",
     color: "#fff",
-
     padding: 26,
     flexDirection: "column",
     justifyContent: "center",
@@ -33,6 +35,9 @@ const InvCss = StyleSheet.create({
   plus: {
     width: 21,
     height: 21,
+  },
+  list: {
+    backgroundColor: "red",
   },
 });
 
