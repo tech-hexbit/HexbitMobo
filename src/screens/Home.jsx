@@ -74,9 +74,9 @@ const Home = () => {
       <View style={InvCss.posrel}>
         <View style={InvCss.posAbsMain}>
           <View style={InvCss.list}>
-            <Text>Add a Product</Text>
-            <Text>Import Bulk Products</Text>
-            <Text>Export Products</Text>
+            <Text style={InvCss.opions}>Add a Product</Text>
+            <Text style={InvCss.opions}>Import Bulk Products</Text>
+            <Text style={InvCss.opions}>Export Products</Text>
           </View>
 
           <TouchableOpacity>
