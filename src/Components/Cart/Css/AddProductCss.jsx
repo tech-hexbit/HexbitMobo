@@ -23,7 +23,10 @@ const ADCss = StyleSheet.create({
     alignItems: "center",
   },
   AddImgBorder: {
-    backgroundColor: "red",
+    borderRadius: 18,
+    borderStyle: "dotted",
+    borderWidth: 1.23,
+    padding: 10,
   },
 });
 
