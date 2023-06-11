@@ -21,7 +21,7 @@ const WhatsApp = () => {
     setTextInputValue(text);
   };
 
-  const handleButtonPress = () => {
+  const handleButtonPress = async () => {
     Alert.alert("TextInput Value", textInputValue);
   };
   return (
