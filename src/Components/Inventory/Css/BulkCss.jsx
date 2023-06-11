@@ -24,6 +24,7 @@ const BulkCss = StyleSheet.create({
     color: "rgba(90, 44, 135, 0.8)",
     textAlign: "center",
     fontWeight: 500,
+    marginBottom: 30,
   },
 });
 
