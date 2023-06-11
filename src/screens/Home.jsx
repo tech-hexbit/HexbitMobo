@@ -4,6 +4,7 @@ import React from "react";
 // components
 import StoreHeader from "../Components/Cart/StoreHeader";
 import HeaderLable from "../Components/Inventory/HeaderLable";
+import ProductCart from "./../Components/Cart/ProductCart";
 
 // theme
 import { COLORS } from "../constants/theme";
@@ -13,18 +14,51 @@ const Home = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <StoreHeader true={false} title="Inventory" />
       <HeaderLable />
-      <View style={sty.mDiv}>
-        <Text>Home</Text>
+
+      <View>
+        <ProductCart
+          name="Product Name"
+          dec="Filler text is text that shares some characteristics of a real written
+          text, but is random."
+          price={500}
+          Order={200}
+          InStore={326}
+        />
+        <ProductCart
+          name="Product Name"
+          dec="Filler text is text that shares some characteristics of a real written
+        text, but is random."
+          price={500}
+          Order={200}
+          InStore={326}
+        />
+        <ProductCart
+          name="Product Name"
+          dec="Filler text is text that shares some characteristics of a real written
+      text, but is random."
+          price={500}
+          Order={200}
+          InStore={326}
+        />
+        <ProductCart
+          name="Product Name"
+          dec="Filler text is text that shares some characteristics of a real written
+      text, but is random."
+          price={500}
+          Order={200}
+          InStore={326}
+        />
+        <ProductCart
+          name="Product Name"
+          dec="Filler text is text that shares some characteristics of a real written
+    text, but is random."
+          price={500}
+          Order={200}
+          InStore={326}
+        />
       </View>
     </ScrollView>
   );
 };
-
-const sty = StyleSheet.create({
-  mDiv: {
-    padding: 20,
-    backgroundColor: COLORS.bgScreen,
-  },
-});
 
 export default Home;
