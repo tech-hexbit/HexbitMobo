@@ -26,6 +26,17 @@ const ProductPage = () => {
         <Image source={img} style={PPCss.pimg}></Image>
       </View>
 
+      <View style={PPCss.pimg}>
+        <View>
+          <Text>Product No.</Text>
+          <Text>#6745867</Text>
+        </View>
+        <View>
+          <Text>Product Name</Text>
+          <Text>Product Name1</Text>
+        </View>
+      </View>
+
       <TouchableOpacity
         onPress={() => {
           navigation.navigate("Edit");
