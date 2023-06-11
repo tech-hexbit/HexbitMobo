@@ -9,13 +9,16 @@ import ProductCart from "./../Components/Cart/ProductCart";
 // theme
 import { COLORS } from "../constants/theme";
 
+// style
+import InvCss from "./Css/InventoryCss";
+
 const Home = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <StoreHeader true={false} title="Inventory" />
       <HeaderLable />
 
-      <View>
+      <View style={InvCss.ProductsGrid}>
         <ProductCart
           name="Product Name"
           dec="Filler text is text that shares some characteristics of a real written
