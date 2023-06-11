@@ -30,8 +30,8 @@ const AddProduct = () => {
 
       <View style={ADCss.rowInp}>
         <View style={ADCss.w45Div}>
-          <Text style={ADCss.label}>Product Name</Text>
-          <TextInput style={ADCss.TextInputTag} placeholder="Rs 100" />
+          <Text style={ADCss.label}>Product Price</Text>
+          <TextInput style={ADCss.TextInputTag} placeholder="₹ 100" />
         </View>
         <View style={ADCss.w45Div}>
           <Text style={ADCss.label}>Product Name</Text>
