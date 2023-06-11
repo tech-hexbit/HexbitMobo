@@ -38,6 +38,11 @@ const AddProduct = () => {
           <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
         </View>
       </View>
+
+      <View style={ADCss.paddView}>
+        <Text style={ADCss.label}>Product Name</Text>
+        <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
+      </View>
     </View>
   );
 };
