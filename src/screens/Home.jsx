@@ -1,4 +1,11 @@
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 
 // components
@@ -65,9 +72,11 @@ const Home = () => {
       </View>
 
       <View style={InvCss.posrel}>
-        <View style={InvCss.posAbs}>
-          <Image source={plus} style={InvCss.plus} />
-        </View>
+        <TouchableOpacity>
+          <View style={InvCss.posAbs}>
+            <Image source={plus} style={InvCss.plus} />
+          </View>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
