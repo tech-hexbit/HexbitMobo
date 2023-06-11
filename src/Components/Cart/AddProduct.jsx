@@ -1,10 +1,12 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 
 const AddProduct = () => {
   return (
     <View>
-      <Text>AddProduct</Text>
+      <View>
+        <Text>Add Product</Text>
+      </View>
     </View>
   );
 };
