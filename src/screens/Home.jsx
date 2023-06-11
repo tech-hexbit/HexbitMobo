@@ -90,7 +90,11 @@ const Home = () => {
               <Text style={InvCss.opions}>Add a Product</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Bulk");
+              }}
+            >
               <Text style={InvCss.opions}>Import Bulk Products</Text>
             </TouchableOpacity>
             <TouchableOpacity>
