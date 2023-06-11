@@ -26,7 +26,7 @@ const ProductPage = () => {
         <Image source={img} style={PPCss.pimg}></Image>
       </View>
 
-      <View style={PPCss.pimg}>
+      <View style={PPCss.RowView}>
         <View>
           <Text>Product No.</Text>
           <Text>#6745867</Text>
