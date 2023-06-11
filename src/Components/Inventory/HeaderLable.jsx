@@ -30,7 +30,6 @@ const HeaderLable = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        // style={ADCss.btnNext}
         onPress={() => {
           set("Running Low");
         }}
@@ -41,7 +40,6 @@ const HeaderLable = () => {
               ? HLCss.rowEleViewActive
               : HLCss.rowEleView
           }
-          //   style={HLCss.rowEleView}
         >
           <Text style={HLCss.labText}>Running Low</Text>
           <Text style={HLCss.labVal}>101</Text>
