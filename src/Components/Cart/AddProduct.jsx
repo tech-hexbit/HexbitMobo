@@ -64,6 +64,12 @@ const AddProduct = () => {
             placeholder="ABC Store Description ...."
           />
         </View>
+
+        <View style={ADCss.btnView}>
+          <TouchableOpacity style={ADCss.btnNext}>
+            <Text style={ADCss.Next}>Add</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
