@@ -36,8 +36,6 @@ const WhatsApp = () => {
         onChangeText={handleTextInputChange}
       />
 
-      {/* <Text>{WAnumber}</Text> */}
-
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
