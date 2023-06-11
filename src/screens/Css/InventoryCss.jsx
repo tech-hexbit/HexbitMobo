@@ -47,6 +47,8 @@ const InvCss = StyleSheet.create({
     paddingVertical: 11,
     paddingHorizontal: 15,
     borderRadius: 10,
+    fontSize: 16,
+    fontWeight: 600,
   },
 });
 
