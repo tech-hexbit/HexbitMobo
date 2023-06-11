@@ -66,7 +66,7 @@ const Home = () => {
 
       <View style={InvCss.posrel}>
         <View style={InvCss.posAbs}>
-          <Image source={plus} />
+          <Image source={plus} style={InvCss.plus} />
         </View>
       </View>
     </ScrollView>
