@@ -48,6 +48,7 @@ const InvCss = StyleSheet.create({
     opacity: 1,
   },
   opions: {
+    elevation: 4,
     backgroundColor: "#622ac3",
     color: "#fff",
     textAlign: "center",
