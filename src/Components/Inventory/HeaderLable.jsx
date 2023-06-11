@@ -13,7 +13,7 @@ const HeaderLable = () => {
   return (
     <View style={HLCss.mDIv}>
       <TouchableOpacity
-        style={HLCss.btnNext}
+        // style={HLCss.btnNext}
         onPress={() => {
           set("All Products");
         }}
@@ -29,18 +29,26 @@ const HeaderLable = () => {
           <Text style={HLCss.labVal}>101</Text>
         </View>
       </TouchableOpacity>
-      <View
-        style={
-          showVal === "Running Low" ? HLCss.rowEleViewActive : HLCss.rowEleView
-        }
-        //   style={HLCss.rowEleView}
+
+      <TouchableOpacity
+        // style={ADCss.btnNext}
         onPress={() => {
-          setVal("Running Low");
+          set("Running Low");
         }}
       >
-        <Text style={HLCss.labText}>Running Low</Text>
-        <Text style={HLCss.labVal}>101</Text>
-      </View>
+        <View
+          style={
+            showVal === "Running Low"
+              ? HLCss.rowEleViewActive
+              : HLCss.rowEleView
+          }
+          //   style={HLCss.rowEleView}
+        >
+          <Text style={HLCss.labText}>Running Low</Text>
+          <Text style={HLCss.labVal}>101</Text>
+        </View>
+      </TouchableOpacity>
+
       <View
         style={
           showVal === "Out of Stock" ? HLCss.rowEleViewActive : HLCss.rowEleView
