@@ -18,7 +18,7 @@ const AddProduct = () => {
         <View style={ADCss.AddImgBorder}>
           <View style={ADCss.AddImgGrey}>
             <Image source={img} style={ADCss.plusCircle}></Image>
-            <Text>Add Product Image</Text>
+            <Text style={ADCss.AddpodText}>Add Product Image</Text>
           </View>
         </View>
         <Text>hi</Text>
