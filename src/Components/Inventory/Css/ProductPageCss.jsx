@@ -122,7 +122,7 @@ const PPCss = StyleSheet.create({
     alignItems: "center",
   },
   Edit: {
-    marginTop: 40,
+    marginTop: 30,
     color: "#622AC3",
     borderColor: "#622AC3",
     borderWidth: 1,
