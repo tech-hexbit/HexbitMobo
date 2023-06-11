@@ -18,8 +18,10 @@ const Bulk = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
-        <Image source={img} style={BulkCss.img}></Image>
-        <Text>Bulk s</Text>
+        <View style={BulkCss.imgVIew}>
+          <Image source={img} style={BulkCss.img}></Image>
+        </View>
+        <Text style={BulkCss.UploadFile}>Upload Your File</Text>
       </View>
     </ScrollView>
   );
