@@ -58,6 +58,15 @@ const ADCss = StyleSheet.create({
     paddingLeft: 12,
     marginVertical: 10,
   },
+  rowInp: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginHorizontal: 30,
+  },
+  w45Div: {
+    width: "45%",
+  },
 });
 
 export default ADCss;
