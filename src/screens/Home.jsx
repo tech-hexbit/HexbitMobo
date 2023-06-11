@@ -72,11 +72,19 @@ const Home = () => {
       </View>
 
       <View style={InvCss.posrel}>
-        <TouchableOpacity>
-          <View style={InvCss.posAbs}>
-            <Image source={plus} style={InvCss.plus} />
+        <View style={InvCss.posAbsMain}>
+          <TouchableOpacity>
+            <View style={InvCss.posAbs}>
+              <Image source={plus} style={InvCss.plus} />
+            </View>
+          </TouchableOpacity>
+
+          <View>
+            <Text>Add a Product</Text>
+            <Text>Import Bulk Products</Text>
+            <Text>Export Products</Text>
           </View>
-        </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
