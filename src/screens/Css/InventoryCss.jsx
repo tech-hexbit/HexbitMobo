@@ -39,6 +39,13 @@ const InvCss = StyleSheet.create({
     marginBottom: 15,
     flexDirection: "column",
     gap: 10,
+    opacity: 0,
+  },
+  listshow: {
+    marginBottom: 15,
+    flexDirection: "column",
+    gap: 10,
+    opacity: 1,
   },
   opions: {
     backgroundColor: "#622ac3",
