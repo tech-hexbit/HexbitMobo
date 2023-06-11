@@ -21,7 +21,7 @@ const BottomNav = () => {
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
-      initialRouteName="Inventory"
+      initialRouteName="Cart"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
@@ -48,23 +48,7 @@ const BottomNav = () => {
           ),
         }}
       />
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          tabBarLabel: "Home",
-          tabBarIcon: ({ focused }) => (
-            <Image
-              source={img1}
-              style={{
-                width: 25,
-                height: 25,
-                tintColor: focused ? "#fff" : "#bf9fff",
-              }}
-            />
-          ),
-        }}
-      />
+
       <Tab.Screen
         name="Inventory"
         component={Inventory}
@@ -81,6 +65,23 @@ const BottomNav = () => {
             />
           ),
           tabBarBadge: 3,
+        }}
+      />
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarLabel: "Home",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={img1}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? "#fff" : "#bf9fff",
+              }}
+            />
+          ),
         }}
       />
       <Tab.Screen
