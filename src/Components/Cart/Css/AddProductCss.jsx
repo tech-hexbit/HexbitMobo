@@ -21,6 +21,7 @@ const ADCss = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 30,
   },
   AddImgBorder: {
     borderStyle: "dotted",
