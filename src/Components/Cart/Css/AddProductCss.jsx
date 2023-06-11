@@ -23,10 +23,23 @@ const ADCss = StyleSheet.create({
     alignItems: "center",
   },
   AddImgBorder: {
-    borderRadius: 18,
     borderStyle: "dotted",
     borderWidth: 1.23,
+    borderRadius: 18,
     padding: 10,
+  },
+  AddImgGrey: {
+    backgroundColor: "#c9c9c9",
+    borderRadius: 7.97,
+    paddingVertical: 60,
+    paddingHorizontal: 30,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  plusCircle: {
+    width: 25.18,
+    height: 25.18,
   },
 });
 
