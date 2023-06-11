@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput, Alert } from "react-native";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -13,7 +13,17 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/WhatsApp.png";
 
 const WhatsApp = () => {
+  const [textInputValue, setTextInputValue] = useState("");
+
   const navigation = useNavigation();
+
+  const handleTextInputChange = (text) => {
+    setTextInputValue(text);
+  };
+
+  const handleButtonPress = () => {
+    Alert.alert("TextInput Value", textInputValue);
+  };
   return (
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
@@ -23,7 +33,10 @@ const WhatsApp = () => {
         style={WhatsAppCss.inpNumber}
         // placeholder="Enter your WhatsApp number"
         keyboardType="numeric"
+        onChangeText={handleTextInputChange}
       />
+
+      {/* <Text>{WAnumber}</Text> */}
 
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
@@ -33,9 +46,10 @@ const WhatsApp = () => {
       >
         <Text
           style={WhatsAppCss.SendOTP}
-          onPress={() => {
-            navigation.navigate("Otp");
-          }}
+          // onPress={() => {
+          //   navigation.navigate("Otp");
+          // }}
+          onPress={handleButtonPress}
         >
           Send OTP
         </Text>
