@@ -7,7 +7,7 @@ import HLCss from "./Css/HeaderLableCss";
 const HeaderLable = () => {
   return (
     <View style={HLCss.mDIv}>
-      <View style={HLCss.rowEleView}>
+      <View style={HLCss.rowEleViewActive}>
         <Text style={HLCss.labText}>All Products</Text>
         <Text style={HLCss.labVal}>101</Text>
       </View>
