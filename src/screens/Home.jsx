@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import React from "react";
 
 // components
@@ -11,6 +11,9 @@ import { COLORS } from "../constants/theme";
 
 // style
 import InvCss from "./Css/InventoryCss";
+
+// img
+import plus from "./../../assets/Inventory/plus.png";
 
 const Home = () => {
   return (
@@ -62,7 +65,9 @@ const Home = () => {
       </View>
 
       <View style={InvCss.posrel}>
-        <Text style={InvCss.posAbs}>Add</Text>
+        <View style={InvCss.posAbs}>
+          <Image source={plus} />
+        </View>
       </View>
     </ScrollView>
   );
