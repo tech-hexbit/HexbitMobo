@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React, { useState, useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // components
 import StoreHeader from "../Components/Cart/StoreHeader";
@@ -28,6 +29,8 @@ const Home = () => {
   useEffect(() => {
     console.log(showOp);
   }, [showOp]);
+
+  const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <StoreHeader true={false} title="Inventory" />
@@ -79,9 +82,20 @@ const Home = () => {
       <View style={InvCss.posrel}>
         <View style={InvCss.posAbsMain}>
           <View style={showOp ? InvCss.listshow : InvCss.list}>
-            <Text style={InvCss.opions}>Add a Product</Text>
-            <Text style={InvCss.opions}>Import Bulk Products</Text>
-            <Text style={InvCss.opions}>Export Products</Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("AddProduct");
+              }}
+            >
+              <Text style={InvCss.opions}>Add a Product</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <Text style={InvCss.opions}>Import Bulk Products</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={InvCss.opions}>Export Products</Text>
+            </TouchableOpacity>
           </View>
 
           <TouchableOpacity
