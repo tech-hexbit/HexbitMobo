@@ -9,15 +9,15 @@ const HeaderLable = () => {
     <View style={HLCss.mDIv}>
       <View style={HLCss.rowEleView}>
         <Text style={HLCss.labText}>All Products</Text>
-        <Text>101</Text>
+        <Text style={HLCss.labVal}>101</Text>
       </View>
       <View style={HLCss.rowEleView}>
         <Text style={HLCss.labText}>Running Low</Text>
-        <Text>101</Text>
+        <Text style={HLCss.labVal}>101</Text>
       </View>
       <View style={HLCss.rowEleView}>
         <Text style={HLCss.labText}>Out of Stock</Text>
-        <Text>101</Text>
+        <Text style={HLCss.labVal}>101</Text>
       </View>
     </View>
   );
