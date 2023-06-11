@@ -56,6 +56,7 @@ const ADCss = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 8,
     paddingLeft: 12,
+    marginVertical: 10,
   },
 });
 
