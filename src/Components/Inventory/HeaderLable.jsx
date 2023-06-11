@@ -50,7 +50,6 @@ const HeaderLable = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        // style={ADCss.btnNext}
         onPress={() => {
           set("Out of Stock");
         }}
