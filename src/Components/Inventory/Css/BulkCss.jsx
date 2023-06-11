@@ -18,6 +18,12 @@ const BulkCss = StyleSheet.create({
     color: "#350B5E",
     fontWeight: 700,
     fontSize: 25,
+    marginBottom: 10,
+  },
+  FileDesText: {
+    color: "rgba(90, 44, 135, 0.8)",
+    textAlign: "center",
+    fontWeight: 500,
   },
 });
 
