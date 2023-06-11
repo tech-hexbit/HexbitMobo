@@ -39,8 +39,8 @@ const ProductPage = () => {
         </View>
         <View style={PPCss.RowViewChild}>
           <View>
-            <Text style={PPCss.val1}>Product No.</Text>
-            <Text style={PPCss.val2}>#6745867</Text>
+            <Text style={PPCss.val1}>Price</Text>
+            <Text style={PPCss.val2}>₹ 1000</Text>
           </View>
           <View>
             <Text style={PPCss.val1}>Product Name</Text>
