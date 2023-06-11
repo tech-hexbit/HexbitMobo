@@ -24,6 +24,7 @@ const InvCss = StyleSheet.create({
     height: 74,
     width: 74,
     borderRadius: 37,
+    elevation: 4,
   },
   plus: {
     width: 21,
