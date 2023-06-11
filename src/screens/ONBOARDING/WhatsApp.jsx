@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import { View, Text, StyleSheet, Image, TextInput, Alert } from "react-native";
+import axios from "axios";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -21,9 +22,24 @@ const WhatsApp = () => {
     setTextInputValue(text);
   };
 
-  const handleButtonPress = async () => {
-    Alert.alert("TextInput Value", textInputValue);
-  };
+  // const handleButtonPress = async () => {
+  //   const WhatsAppNumber = textInputValue;
+
+  //   try {
+  //     const res = await axios.post(
+  //       "http://192.168.1.40:8000/api/App/onborading/WhatsAppNumber",
+  //       WhatsAppNumber
+  //       // {
+  //       //   headers: { Authorization: `${authCtx.token}` },
+  //       // }
+  //     );
+
+  //     console.log(res);
+  //     Alert.alert("TextInput Value", textInputValue);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   return (
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
@@ -44,10 +60,10 @@ const WhatsApp = () => {
       >
         <Text
           style={WhatsAppCss.SendOTP}
-          // onPress={() => {
-          //   navigation.navigate("Otp");
-          // }}
-          onPress={handleButtonPress}
+          onPress={() => {
+            navigation.navigate("Otp");
+          }}
+          // onPress={handleButtonPress}
         >
           Send OTP
         </Text>
