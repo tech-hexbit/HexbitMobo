@@ -18,6 +18,12 @@ const InvCss = StyleSheet.create({
     right: 15,
     bottom: 15,
     padding: 26,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
+    height: 74,
+    width: 74,
+    borderRadius: 37,
   },
   plus: {
     width: 21,
