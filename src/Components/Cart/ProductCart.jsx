@@ -18,7 +18,6 @@ const ProductCart = (props) => {
           <Text
             style={ProductCartCss.name}
             onPress={() => {
-              console.log("first====");
               navigation.navigate("Edit");
             }}
           >
