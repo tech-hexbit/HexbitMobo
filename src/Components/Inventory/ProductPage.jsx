@@ -59,11 +59,11 @@ const ProductPage = () => {
         <View style={PPCss.RowViewChild}>
           <View>
             <Text style={PPCss.val1}>Shipping Period</Text>
-            <Text style={PPCss.val2}>1000</Text>
+            <Text style={PPCss.val2}>7 Days</Text>
           </View>
           <View>
-            <Text style={PPCss.val1}>Product Type</Text>
-            <Text style={PPCss.val2}>Product Type</Text>
+            <Text style={PPCss.val1}>Cancellable</Text>
+            <Text style={PPCss.val2}>Yes</Text>
           </View>
         </View>
 
@@ -73,8 +73,8 @@ const ProductPage = () => {
             <Text style={PPCss.val2}>₹ 1000</Text>
           </View>
           <View>
-            <Text style={PPCss.val1}>Product Type</Text>
-            <Text style={PPCss.val2}>Product Type</Text>
+            <Text style={PPCss.val1}>Returnable</Text>
+            <Text style={PPCss.val2}>Yes</Text>
           </View>
         </View>
       </View>
