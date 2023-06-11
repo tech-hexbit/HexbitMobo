@@ -21,6 +21,9 @@ const AddProduct = () => {
             <Text style={ADCss.AddpodText}>Add Product Image</Text>
           </View>
         </View>
+      </View>
+
+      <View>
         <Text>hi</Text>
       </View>
     </View>
