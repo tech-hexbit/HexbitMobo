@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // style
 import ADCss from "./Css/AddProductCss";
@@ -15,6 +16,7 @@ import ADCss from "./Css/AddProductCss";
 import img from "./../../../assets/Cart/plus-circle.png";
 
 const AddProduct = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
@@ -66,7 +68,12 @@ const AddProduct = () => {
         </View>
 
         <View style={ADCss.btnView}>
-          <TouchableOpacity style={ADCss.btnNext}>
+          <TouchableOpacity
+            style={ADCss.btnNext}
+            onPress={() => {
+              navigation.navigate("Store");
+            }}
+          >
             <Text style={ADCss.Next}>Add</Text>
           </TouchableOpacity>
         </View>
