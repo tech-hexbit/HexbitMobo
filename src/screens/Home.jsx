@@ -6,7 +6,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // components
 import StoreHeader from "../Components/Cart/StoreHeader";
@@ -23,6 +23,11 @@ import InvCss from "./Css/InventoryCss";
 import plus from "./../../assets/Inventory/plus.png";
 
 const Home = () => {
+  const [showOp, setOp] = useState(false);
+
+  useEffect(() => {
+    console.log(showOp);
+  }, [showOp]);
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <StoreHeader true={false} title="Inventory" />
@@ -73,13 +78,18 @@ const Home = () => {
 
       <View style={InvCss.posrel}>
         <View style={InvCss.posAbsMain}>
-          <View style={InvCss.list}>
+          <View style={showOp ? InvCss.listshow : InvCss.list}>
             <Text style={InvCss.opions}>Add a Product</Text>
             <Text style={InvCss.opions}>Import Bulk Products</Text>
             <Text style={InvCss.opions}>Export Products</Text>
           </View>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              console.log("==================");
+              setOp(!showOp);
+            }}
+          >
             <View style={InvCss.posAbs}>
               <Image source={plus} style={InvCss.plus} />
             </View>
