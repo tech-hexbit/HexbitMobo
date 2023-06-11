@@ -5,7 +5,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // screens
 import Home from "./../screens/Home";
 import Inventory from "./../screens/Inventory";
-import Cart from "./../screens/Cart";
 import Discount from "./../screens/Discount";
 import CartNav from "../../navigation/CartNav";
 import Profile from "../../navigation/ProfileNav";
@@ -50,10 +49,10 @@ const BottomNav = () => {
       />
 
       <Tab.Screen
-        name="Inventory"
-        component={Inventory}
+        name="Orders"
+        component={Home}
         options={{
-          tabBarLabel: "Inventory",
+          tabBarLabel: "Orders",
           tabBarIcon: ({ focused }) => (
             <Image
               source={img2}
@@ -68,10 +67,10 @@ const BottomNav = () => {
         }}
       />
       <Tab.Screen
-        name="Home"
-        component={Home}
+        name="Inventory"
+        component={Inventory}
         options={{
-          tabBarLabel: "Home",
+          tabBarLabel: "Inventory",
           tabBarIcon: ({ focused }) => (
             <Image
               source={img1}
