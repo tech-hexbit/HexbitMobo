@@ -43,8 +43,38 @@ const ProductPage = () => {
             <Text style={PPCss.val2}>₹ 1000</Text>
           </View>
           <View>
-            <Text style={PPCss.val1}>Product Name</Text>
-            <Text style={PPCss.val2}>Product Name1</Text>
+            <Text style={PPCss.val1}>Product Type</Text>
+            <Text style={PPCss.val2}>Product Type</Text>
+          </View>
+        </View>
+
+        <View style={PPCss.desView}>
+          <Text style={PPCss.val1}>Product Description</Text>
+          <Text style={PPCss.val2des}>
+            Filler text is text that shares some characteristics of a real
+            written text, but is random.
+          </Text>
+        </View>
+
+        <View style={PPCss.RowViewChild}>
+          <View>
+            <Text style={PPCss.val1}>Shipping Period</Text>
+            <Text style={PPCss.val2}>1000</Text>
+          </View>
+          <View>
+            <Text style={PPCss.val1}>Product Type</Text>
+            <Text style={PPCss.val2}>Product Type</Text>
+          </View>
+        </View>
+
+        <View style={PPCss.RowViewChild}>
+          <View>
+            <Text style={PPCss.val1}>Price</Text>
+            <Text style={PPCss.val2}>₹ 1000</Text>
+          </View>
+          <View>
+            <Text style={PPCss.val1}>Product Type</Text>
+            <Text style={PPCss.val2}>Product Type</Text>
           </View>
         </View>
       </View>
