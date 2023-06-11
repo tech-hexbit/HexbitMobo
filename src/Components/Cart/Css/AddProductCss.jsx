@@ -4,12 +4,6 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../../constants/theme";
 
 const ADCss = StyleSheet.create({
-  mDiv: {
-    flexGrow: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   AddProductText: {
     marginVertical: 20,
     color: "#350B5E",
