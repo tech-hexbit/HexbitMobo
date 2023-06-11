@@ -28,8 +28,7 @@ const StoreHeader = (props) => {
 const StoreHeaderCss = StyleSheet.create({
   mDiv: {
     width: "100%",
-    paddingVertical: 20,
-    paddingHorizontal: 20,
+    padding: 20,
     backgroundColor: "#ccceff",
   },
   Welcome: {
