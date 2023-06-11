@@ -11,8 +11,11 @@ const ADCss = StyleSheet.create({
     alignItems: "center",
   },
   AddProductText: {
+    marginTop: 20,
     color: "#350B5E",
     textAlign: "center",
+    fontSize: 10,
+    fontWeight: 900,
   },
 });
 
