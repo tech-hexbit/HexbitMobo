@@ -133,9 +133,10 @@ const PPCss = StyleSheet.create({
     fontWeight: 600,
   },
   RowView: {
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "space-evenly",
     alignItems: "center",
+    gap: 10,
   },
   RowViewChild: {
     width: "80%",
@@ -143,6 +144,14 @@ const PPCss = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     gap: 10,
+  },
+  val1: {
+    fontSize: 15,
+    fontWeight: 500,
+  },
+  val2: {
+    fontSize: 15,
+    fontWeight: 600,
   },
 });
 
