@@ -4,6 +4,16 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../../constants/theme";
 
 const PPCss = StyleSheet.create({
+  headerDiv: {
+    backgroundColor: "#ccceff",
+    paddingVertical: 15,
+    paddingLeft: 24,
+  },
+  headerText: {
+    color: "#350B5E",
+    fontSize: 25,
+    fontWeight: 900,
+  },
   AddProductText: {
     marginVertical: 20,
     color: "#350B5E",
