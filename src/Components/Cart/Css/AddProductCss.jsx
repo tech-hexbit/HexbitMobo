@@ -67,6 +67,26 @@ const ADCss = StyleSheet.create({
   w45Div: {
     width: "45%",
   },
+  btnView: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginTop: 20,
+    marginBottom: 20,
+    paddingHorizontal: 30,
+  },
+  btnNext: {
+    paddingVertical: 11,
+    backgroundColor: "#622AC3",
+    width: 100,
+    borderRadius: 10,
+  },
+  Next: {
+    color: "#fff",
+    fontWeight: 800,
+    fontSize: 18,
+    textAlign: "center",
+  },
 });
 
 export default ADCss;
