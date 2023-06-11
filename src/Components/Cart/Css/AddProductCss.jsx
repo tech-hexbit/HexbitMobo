@@ -42,6 +42,9 @@ const ADCss = StyleSheet.create({
     fontSize: 16,
     fontWeight: 600,
   },
+  paddView: {
+    paddingHorizontal: 30,
+  },
   label: {
     color: "#454444",
     fontSize: 16,
