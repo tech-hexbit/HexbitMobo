@@ -22,6 +22,9 @@ const Bulk = () => {
           <Image source={img} style={BulkCss.img}></Image>
         </View>
         <Text style={BulkCss.UploadFile}>Upload Your File</Text>
+        <Text style={BulkCss.FileDesText}>
+          Upload XL Sheet, JSON, XML files only
+        </Text>
       </View>
     </ScrollView>
   );
