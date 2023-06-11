@@ -8,6 +8,7 @@ const PPCss = StyleSheet.create({
     backgroundColor: "#ccceff",
     paddingVertical: 15,
     paddingLeft: 24,
+    marginBottom: 30,
   },
   headerText: {
     color: "#350B5E",
@@ -45,6 +46,11 @@ const PPCss = StyleSheet.create({
   plusCircle: {
     width: 25.18,
     height: 25.18,
+    marginBottom: 14,
+  },
+  pimg: {
+    width: 190,
+    height: 180,
     marginBottom: 14,
   },
   AddpodText: {
