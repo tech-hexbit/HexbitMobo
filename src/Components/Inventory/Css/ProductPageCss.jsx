@@ -134,9 +134,15 @@ const PPCss = StyleSheet.create({
   },
   RowView: {
     flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  },
+  RowViewChild: {
+    width: "80%",
+    flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "80%",
+    backgroundColor: "red",
   },
 });
 
