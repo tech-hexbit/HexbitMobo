@@ -27,6 +27,17 @@ const AddProduct = () => {
         <Text style={ADCss.label}>Product Name</Text>
         <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
       </View>
+
+      <View style={ADCss.rowInp}>
+        <View style={ADCss.w45Div}>
+          <Text style={ADCss.label}>Product Name</Text>
+          <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
+        </View>
+        <View style={ADCss.w45Div}>
+          <Text style={ADCss.label}>Product Name</Text>
+          <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
+        </View>
+      </View>
     </View>
   );
 };
