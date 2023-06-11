@@ -122,7 +122,7 @@ const PPCss = StyleSheet.create({
     alignItems: "center",
   },
   Edit: {
-    marginTop: 20,
+    marginTop: 40,
     color: "#622AC3",
     borderColor: "#622AC3",
     borderWidth: 1,
@@ -136,7 +136,7 @@ const PPCss = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-evenly",
     alignItems: "center",
-    gap: 10,
+    gap: 15,
   },
   RowViewChild: {
     width: "80%",
