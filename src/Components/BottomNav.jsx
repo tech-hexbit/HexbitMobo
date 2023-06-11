@@ -3,7 +3,8 @@ import { View, Text, Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // screens
-import Home from "./../screens/Home";
+import InventoryScreen from "./../../navigation/Inventory";
+// import Home from "./../screens/Home";
 import Inventory from "./../screens/Inventory";
 import Discount from "./../screens/Discount";
 import CartNav from "../../navigation/CartNav";
@@ -50,7 +51,7 @@ const BottomNav = () => {
 
       <Tab.Screen
         name="Orders"
-        component={Home}
+        component={InventoryScreen}
         options={{
           tabBarLabel: "Orders",
           tabBarIcon: ({ focused }) => (
