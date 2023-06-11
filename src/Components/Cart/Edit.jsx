@@ -21,7 +21,7 @@ const Edit = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
         <View>
-          <Text style={ADCss.AddProductText}>Add Product</Text>
+          <Text style={ADCss.AddProductText}>Edit Product</Text>
         </View>
 
         <View style={ADCss.AddImgView}>
@@ -68,6 +68,15 @@ const Edit = () => {
         </View>
 
         <View style={ADCss.btnView}>
+          <TouchableOpacity
+            style={ADCss.btnDelete}
+            onPress={() => {
+              navigation.navigate("Store");
+            }}
+          >
+            <Text style={ADCss.Delete}>Delete</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity
             style={ADCss.btnNext}
             onPress={() => {
