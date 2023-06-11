@@ -11,12 +11,16 @@ const InvCss = StyleSheet.create({
   posrel: {
     position: "relative",
   },
-  posAbs: {
-    backgroundColor: "#622ac3",
-    color: "#fff",
+
+  posAbsMain: {
     position: "absolute",
     right: 15,
     bottom: 15,
+  },
+  posAbs: {
+    backgroundColor: "#622ac3",
+    color: "#fff",
+
     padding: 26,
     flexDirection: "column",
     justifyContent: "center",
