@@ -12,13 +12,16 @@ const InvCss = StyleSheet.create({
     position: "relative",
   },
   posAbs: {
-    paddingVertical: 5,
-    paddingHorizontal: 40,
-    backgroundColor: "red",
+    backgroundColor: "#622ac3",
     color: "#fff",
     position: "absolute",
     right: 15,
     bottom: 15,
+    padding: 26,
+  },
+  plus: {
+    width: 21,
+    height: 21,
   },
 });
 
