@@ -42,6 +42,11 @@ const ADCss = StyleSheet.create({
     fontSize: 16,
     fontWeight: 600,
   },
+  label: {
+    color: "#454444",
+    fontSize: 16,
+    fontWeight: 600,
+  },
 });
 
 export default ADCss;
