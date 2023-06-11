@@ -27,7 +27,9 @@ const Bulk = () => {
         </Text>
 
         <View style={BulkCss.btnRowDiv}>
-          <Text style={BulkCss.Browse}>Browse Files</Text>
+          <TouchableOpacity>
+            <Text style={BulkCss.Browse}>Browse Files</Text>
+          </TouchableOpacity>
           <Text style={BulkCss.Submit}>Submit</Text>
         </View>
       </View>
