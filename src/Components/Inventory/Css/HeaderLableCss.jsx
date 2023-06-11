@@ -14,8 +14,7 @@ const HLCss = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: 13,
-    // paddingBottom: 4,
+    paddingBottom: 4,
     backgroundColor: "red",
   },
   rowEleViewActive: {
