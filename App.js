@@ -32,7 +32,7 @@ export default function App() {
           <Stack.Screen name="InpTwo" component={InpTwo} />
           <Stack.Screen
             name="Home"
-            options={{ headerShown: false }}
+            // options={{ headerShown: false }}
             component={BottomNav}
           />
         </Stack.Navigator>
