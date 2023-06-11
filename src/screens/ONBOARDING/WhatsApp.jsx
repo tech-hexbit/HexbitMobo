@@ -31,6 +31,7 @@ const WhatsApp = () => {
         // placeholder="Enter your WhatsApp number"
         keyboardType="numeric"
       />
+
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
