@@ -50,6 +50,13 @@ const ADCss = StyleSheet.create({
     fontSize: 16,
     fontWeight: 600,
   },
+  TextInputTag: {
+    borderColor: "#7D629B",
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingLeft: 12,
+  },
 });
 
 export default ADCss;
