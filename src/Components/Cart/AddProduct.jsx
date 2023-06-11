@@ -24,7 +24,7 @@ const AddProduct = () => {
       </View>
 
       <View>
-        <Text>hi</Text>
+        <Text>Product Name</Text>
       </View>
     </View>
   );
