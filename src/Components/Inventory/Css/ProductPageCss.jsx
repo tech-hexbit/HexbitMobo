@@ -116,6 +116,21 @@ const PPCss = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
   },
+  EditVIew: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  Edit: {
+    color: "#622AC3",
+    borderColor: "#622AC3",
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingVertical: 9,
+    paddingHorizontal: 22,
+    fontSize: 16,
+    fontWeight: 600,
+  },
 });
 
 export default PPCss;
