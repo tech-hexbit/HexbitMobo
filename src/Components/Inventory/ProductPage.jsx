@@ -22,6 +22,10 @@ const ProductPage = () => {
       <View style={PPCss.headerDiv}>
         <Text style={PPCss.headerText}>Product Details</Text>
       </View>
+
+      <View style={PPCss.AddImgView}>
+        <Image source={img} style={PPCss.pimg}></Image>
+      </View>
     </ScrollView>
   );
 };
