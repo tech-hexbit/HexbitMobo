@@ -14,6 +14,13 @@ const HLCss = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    paddingBottom: 4,
+  },
+  rowEleViewActive: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingBottom: 4,
   },
   labText: {
     color: "#350B5E",
@@ -28,6 +35,7 @@ const HLCss = StyleSheet.create({
     paddingHorizontal: 9,
     fontWeight: 600,
     fontSize: 7.56,
+    borderRadius: 10,
   },
 });
 
