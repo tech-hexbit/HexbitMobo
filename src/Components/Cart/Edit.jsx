@@ -11,7 +11,7 @@ const Edit = () => {
   return (
     <View>
       <View>
-        <Text style={ADCss.AddProductText}>Add Product</Text>
+        <Text style={ADCss.AddProductText}>Edit Product</Text>
       </View>
 
       <View style={ADCss.AddImgView}>
