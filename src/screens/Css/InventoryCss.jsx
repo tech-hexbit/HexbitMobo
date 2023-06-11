@@ -16,7 +16,6 @@ const InvCss = StyleSheet.create({
     position: "absolute",
     right: 15,
     bottom: 15,
-    backgroundColor: "pink",
     flexDirection: "column",
     alignItems: "flex-end",
   },
@@ -37,7 +36,12 @@ const InvCss = StyleSheet.create({
     height: 21,
   },
   list: {
-    backgroundColor: "red",
+    flexDirection: "column",
+    gap: 10,
+  },
+  opions: {
+    backgroundColor: "#622ac3",
+    color: "#fff",
   },
 });
 
