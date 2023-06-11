@@ -13,7 +13,6 @@ const HeaderLable = () => {
   return (
     <View style={HLCss.mDIv}>
       <TouchableOpacity
-        // style={HLCss.btnNext}
         onPress={() => {
           set("All Products");
         }}
