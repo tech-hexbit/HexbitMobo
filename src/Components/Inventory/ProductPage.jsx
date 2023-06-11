@@ -27,13 +27,15 @@ const ProductPage = () => {
       </View>
 
       <View style={PPCss.RowView}>
-        <View>
-          <Text>Product No.</Text>
-          <Text>#6745867</Text>
-        </View>
-        <View>
-          <Text>Product Name</Text>
-          <Text>Product Name1</Text>
+        <View style={PPCss.RowViewChild}>
+          <View>
+            <Text>Product No.</Text>
+            <Text>#6745867</Text>
+          </View>
+          <View>
+            <Text>Product Name</Text>
+            <Text>Product Name1</Text>
+          </View>
         </View>
       </View>
 
