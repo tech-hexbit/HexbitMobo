@@ -69,8 +69,8 @@ const ProductPage = () => {
 
         <View style={PPCss.RowViewChild}>
           <View>
-            <Text style={PPCss.val1}>Price</Text>
-            <Text style={PPCss.val2}>₹ 1000</Text>
+            <Text style={PPCss.val1}>Return Period</Text>
+            <Text style={PPCss.val2}>7 Days</Text>
           </View>
           <View>
             <Text style={PPCss.val1}>Returnable</Text>
