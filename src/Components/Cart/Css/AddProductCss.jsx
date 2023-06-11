@@ -22,6 +22,9 @@ const ADCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  AddImgBorder: {
+    backgroundColor: "red",
+  },
 });
 
 export default ADCss;
