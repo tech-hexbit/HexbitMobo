@@ -2,9 +2,6 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
-// style
-import PPCss from "../Inventory/Css/ProductPageCss";
-
 // img
 import img from "./../../../assets/Cart/pod.png";
 import edit from "./../../../assets/Cart/edit.png";
