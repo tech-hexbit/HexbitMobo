@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import {
   View,
   Text,
@@ -15,6 +16,7 @@ import BulkCss from "../Inventory/Css/BulkCss";
 import img from "./../../../assets/Inventory/bulk.png";
 
 const Bulk = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
@@ -30,7 +32,13 @@ const Bulk = () => {
           <TouchableOpacity>
             <Text style={BulkCss.Browse}>Browse Files</Text>
           </TouchableOpacity>
-          <Text style={BulkCss.Submit}>Submit</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Edit");
+            }}
+          >
+            <Text style={BulkCss.Submit}>Submit</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
