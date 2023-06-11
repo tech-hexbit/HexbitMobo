@@ -60,6 +60,10 @@ const Home = () => {
           InStore={326}
         />
       </View>
+
+      <View style={InvCss.posrel}>
+        <Text style={InvCss.posAbs}>Add</Text>
+      </View>
     </ScrollView>
   );
 };
