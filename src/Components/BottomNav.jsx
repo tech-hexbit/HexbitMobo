@@ -32,6 +32,23 @@ const BottomNav = () => {
       }}
     >
       <Tab.Screen
+        name="Cart"
+        component={CartNav}
+        options={{
+          tabBarLabel: "Cart",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={img3}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? "#fff" : "#bf9fff",
+              }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Home"
         component={Home}
         options={{
@@ -64,23 +81,6 @@ const BottomNav = () => {
             />
           ),
           tabBarBadge: 3,
-        }}
-      />
-      <Tab.Screen
-        name="Cart"
-        component={CartNav}
-        options={{
-          tabBarLabel: "Cart",
-          tabBarIcon: ({ focused }) => (
-            <Image
-              source={img3}
-              style={{
-                width: 25,
-                height: 25,
-                tintColor: focused ? "#fff" : "#bf9fff",
-              }}
-            />
-          ),
         }}
       />
       <Tab.Screen
