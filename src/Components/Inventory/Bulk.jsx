@@ -25,6 +25,11 @@ const Bulk = () => {
         <Text style={BulkCss.FileDesText}>
           Upload XL Sheet, JSON, XML files only
         </Text>
+
+        <View style={BulkCss.btnRowDiv}>
+          <Text>Browse Files</Text>
+          <Text>Submit</Text>
+        </View>
       </View>
     </ScrollView>
   );
