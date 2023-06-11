@@ -35,12 +35,20 @@ const BulkCss = StyleSheet.create({
     fontSize: 16,
     fontWeight: 800,
     color: "#622AC3",
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#622AC3",
   },
   Submit: {
     fontSize: 16,
     fontWeight: 800,
     color: "#fff",
     backgroundColor: "#622AC3",
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 10,
   },
 });
 
