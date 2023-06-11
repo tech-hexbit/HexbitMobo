@@ -11,7 +11,7 @@ const AddProduct = () => {
       </View>
 
       <View style={ADCss.AddImgView}>
-        <View style={ADCss.AddImgView}>
+        <View style={ADCss.AddImgBorder}>
           <View>
             <Text>Add Product Image</Text>
           </View>
