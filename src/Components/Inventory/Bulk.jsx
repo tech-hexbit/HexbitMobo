@@ -27,8 +27,8 @@ const Bulk = () => {
         </Text>
 
         <View style={BulkCss.btnRowDiv}>
-          <Text>Browse Files</Text>
-          <Text>Submit</Text>
+          <Text style={BulkCss.Browse}>Browse Files</Text>
+          <Text style={BulkCss.Submit}>Submit</Text>
         </View>
       </View>
     </ScrollView>
