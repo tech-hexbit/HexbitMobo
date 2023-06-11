@@ -23,9 +23,9 @@ const AddProduct = () => {
         </View>
       </View>
 
-      <View>
+      <View style={ADCss.paddView}>
         <Text style={ADCss.label}>Product Name</Text>
-        <TextInput></TextInput>
+        <TextInput style={ADCss.TextInputTag} placeholder="" />
       </View>
     </View>
   );
