@@ -26,6 +26,10 @@ const ProductPage = () => {
       <View style={PPCss.AddImgView}>
         <Image source={img} style={PPCss.pimg}></Image>
       </View>
+
+      <View style={PPCss.EditVIew}>
+        <Text>Edit</Text>
+      </View>
     </ScrollView>
   );
 };
