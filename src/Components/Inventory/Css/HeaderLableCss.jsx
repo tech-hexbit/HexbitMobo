@@ -21,6 +21,8 @@ const HLCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingBottom: 4,
+    borderBottomWidth: 3,
+    borderBottomColor: "#350B5E",
   },
   labText: {
     color: "#350B5E",
