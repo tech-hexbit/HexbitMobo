@@ -36,12 +36,17 @@ const InvCss = StyleSheet.create({
     height: 21,
   },
   list: {
+    marginBottom: 15,
     flexDirection: "column",
     gap: 10,
   },
   opions: {
     backgroundColor: "#622ac3",
     color: "#fff",
+    textAlign: "center",
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+    borderRadius: 10,
   },
 });
 
