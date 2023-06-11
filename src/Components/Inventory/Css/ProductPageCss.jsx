@@ -122,6 +122,7 @@ const PPCss = StyleSheet.create({
     alignItems: "center",
   },
   Edit: {
+    marginTop: 20,
     color: "#622AC3",
     borderColor: "#622AC3",
     borderWidth: 1,
@@ -130,6 +131,12 @@ const PPCss = StyleSheet.create({
     paddingHorizontal: 22,
     fontSize: 16,
     fontWeight: 600,
+  },
+  RowView: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "80%",
   },
 });
 
