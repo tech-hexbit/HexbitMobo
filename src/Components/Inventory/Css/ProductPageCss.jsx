@@ -148,10 +148,20 @@ const PPCss = StyleSheet.create({
   val1: {
     fontSize: 15,
     fontWeight: 500,
+    textAlign: "left",
   },
   val2: {
     fontSize: 15,
     fontWeight: 600,
+    textAlign: "left",
+  },
+  desView: {
+    width: "80%",
+  },
+  val2des: {
+    fontSize: 15,
+    fontWeight: 600,
+    textAlign: "justify",
   },
 });
 
