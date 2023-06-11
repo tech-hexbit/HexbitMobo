@@ -70,7 +70,7 @@ const ADCss = StyleSheet.create({
   btnView: {
     width: "100%",
     flexDirection: "row",
-    justifyContent: "flex-end",
+    justifyContent: "space-evenly",
     marginTop: 20,
     marginBottom: 20,
     paddingHorizontal: 30,
@@ -83,6 +83,19 @@ const ADCss = StyleSheet.create({
   },
   Next: {
     color: "#fff",
+    fontWeight: 800,
+    fontSize: 18,
+    textAlign: "center",
+  },
+  btnDelete: {
+    paddingVertical: 11,
+    width: 100,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#FF5D4F",
+  },
+  Delete: {
+    color: "#FF6D60",
     fontWeight: 800,
     fontSize: 18,
     textAlign: "center",
