@@ -49,17 +49,23 @@ const HeaderLable = () => {
         </View>
       </TouchableOpacity>
 
-      <View
-        style={
-          showVal === "Out of Stock" ? HLCss.rowEleViewActive : HLCss.rowEleView
-        }
+      <TouchableOpacity
+        // style={ADCss.btnNext}
         onPress={() => {
-          setVal("Out of Stock");
+          set("Out of Stock");
         }}
       >
-        <Text style={HLCss.labText}>Out of Stock</Text>
-        <Text style={HLCss.labVal}>101</Text>
-      </View>
+        <View
+          style={
+            showVal === "Out of Stock"
+              ? HLCss.rowEleViewActive
+              : HLCss.rowEleView
+          }
+        >
+          <Text style={HLCss.labText}>Out of Stock</Text>
+          <Text style={HLCss.labVal}>101</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
