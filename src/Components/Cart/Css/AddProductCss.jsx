@@ -40,6 +40,12 @@ const ADCss = StyleSheet.create({
   plusCircle: {
     width: 25.18,
     height: 25.18,
+    marginBottom: 14,
+  },
+  AddpodText: {
+    color: "#3E3E3E",
+    fontSize: 16,
+    fontWeight: 600,
   },
 });
 
