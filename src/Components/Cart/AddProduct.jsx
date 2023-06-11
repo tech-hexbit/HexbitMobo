@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TextInput } from "react-native";
 import React from "react";
 
 // style
@@ -24,7 +24,8 @@ const AddProduct = () => {
       </View>
 
       <View>
-        <Text>Product Name</Text>
+        <Text style={ADCss.label}>Product Name</Text>
+        <TextInput></TextInput>
       </View>
     </View>
   );
