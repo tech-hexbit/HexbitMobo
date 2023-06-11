@@ -101,7 +101,7 @@ const Otp = () => {
             navigation.navigate("Name");
           }}
         >
-          Send OTP
+          Verify
         </Text>
       </LinearGradient>
       <Text style={OtpCss.timer}>00:{seconds}</Text>
