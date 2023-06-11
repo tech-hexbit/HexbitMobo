@@ -34,7 +34,7 @@ const Bulk = () => {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("Edit");
+              navigation.navigate("InventoryScreen");
             }}
           >
             <Text style={BulkCss.Submit}>Submit</Text>
