@@ -26,6 +26,22 @@ const BulkCss = StyleSheet.create({
     fontWeight: 500,
     marginBottom: 30,
   },
+  btnRowDiv: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  },
+  Browse: {
+    fontSize: 16,
+    fontWeight: 800,
+    color: "#622AC3",
+  },
+  Submit: {
+    fontSize: 16,
+    fontWeight: 800,
+    color: "#fff",
+    backgroundColor: "#622AC3",
+  },
 });
 
 export default BulkCss;
