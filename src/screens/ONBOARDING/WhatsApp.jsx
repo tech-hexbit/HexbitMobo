@@ -1,7 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
