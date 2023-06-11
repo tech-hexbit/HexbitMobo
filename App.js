@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import axios from "axios";
 
 // screens
 import Login from "./src/screens/ONBOARDING/Login";
@@ -16,8 +17,14 @@ import InpTwo from "./src/Components/Cart/InpTwo";
 // Bottom Nav
 import BottomNav from "./src/Components/BottomNav";
 
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
+axios.defaults.baseURL = REACT_NATIVE_BASE_URL;
+
 export default function App() {
   const Stack = createNativeStackNavigator();
+
   return (
     <>
       <NavigationContainer>
