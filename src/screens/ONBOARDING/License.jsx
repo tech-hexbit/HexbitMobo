@@ -29,7 +29,11 @@ const License = (props) => {
 
   const handleButtonPress = async () => {
     if (showLicense.length > 0 && showGSTIN.length > 0) {
-      console.log(showLicense, showGSTIN);
+      let data = {
+        WhatsAppNumber: props.route.params.WhatsAppNumber,
+        License: showLicense,
+        GSTIN: showGSTIN,
+      };
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
@@ -58,6 +62,10 @@ const License = (props) => {
             setLicense(txt);
           }}
         />
+
+        <Text style={LicenseCss.errorMsg}>
+          {showError.length > 0 ? showError : ""}
+        </Text>
 
         <LinearGradient
           start={{ x: 0, y: 0.75 }}
