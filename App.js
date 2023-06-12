@@ -17,11 +17,6 @@ import InpTwo from "./src/Components/Cart/InpTwo";
 // Bottom Nav
 import BottomNav from "./src/Components/BottomNav";
 
-// env
-import { REACT_NATIVE_BASE_URL } from "@env";
-
-axios.defaults.baseURL = REACT_NATIVE_BASE_URL;
-
 export default function App() {
   const Stack = createNativeStackNavigator();
 
