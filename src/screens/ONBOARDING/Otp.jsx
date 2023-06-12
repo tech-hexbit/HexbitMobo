@@ -61,7 +61,24 @@ const Otp = (props) => {
         Otp,
       };
 
-      console.log(data);
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/OptVer`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+          navigate.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
+        } else {
+          setError("Error: Invalid OTP");
+          // Alert.alert("Phone Number Already in Use");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
@@ -97,6 +114,7 @@ const Otp = (props) => {
       <Header true={true} msg="Enter your Details" />
       <Image source={img} style={OtpCss.img} />
       <Text style={OtpCss.Enter}>Enter the OTP</Text>
+
       <View style={OtpCss.ViewNumber}>
         <TextInput
           style={OtpCss.inpNumber}
