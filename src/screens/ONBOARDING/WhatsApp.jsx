@@ -61,7 +61,7 @@ const WhatsApp = () => {
       <Text style={WhatsAppCss.Enter}>Enter your WhatsApp number:</Text>
       <TextInput
         style={WhatsAppCss.inpNumber}
-        // placeholder="Enter your WhatsApp number"
+        placeholder="99391 97XXX"
         keyboardType="numeric"
         onChangeText={handleTextInputChange}
       />
