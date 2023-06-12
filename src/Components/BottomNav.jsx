@@ -18,8 +18,6 @@ import img4 from "./../../assets/Vector-4.png";
 import img5 from "./../../assets/Vector.png";
 
 const BottomNav = (props) => {
-  console.log("Home = props.route 🚨🚨🚨🚨🚨");
-  console.log(props.route.params);
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
