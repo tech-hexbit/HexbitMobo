@@ -88,6 +88,7 @@ const CompanyCss = StyleSheet.create({
     paddingTop: 14,
     paddingBottom: 14,
     width: "70%",
+    marginBottom: 20,
   },
   SendOTP: {
     color: "#fff",
