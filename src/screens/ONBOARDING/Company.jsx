@@ -37,6 +37,13 @@ const Company = (props) => {
   const handleButtonPress = async () => {
     if (showName.length > 0 && showNature.length > 0 && showType.length > 0) {
       console.log(showName, showNature, showType);
+
+      let data = {
+        WhatsAppNumber: props.route.params.WhatsAppNumber,
+        name: showName,
+        type: showType,
+        nature: showNature,
+      };
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
