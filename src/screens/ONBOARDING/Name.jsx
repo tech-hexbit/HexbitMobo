@@ -56,6 +56,7 @@ const Name = (props) => {
         }
       } catch (error) {
         console.log(error);
+        setError("Error: An Unexpected Error Happened");
       }
     } else {
       console.log("fill");
