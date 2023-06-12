@@ -25,6 +25,8 @@ const WhatsApp = () => {
 
   const handleButtonPress = async () => {
     if (textInputValue.length == 10) {
+      setError("");
+
       let data = {
         WhatsAppNumber: textInputValue,
       };
@@ -40,6 +42,8 @@ const WhatsApp = () => {
       } catch (error) {
         console.log(error);
       }
+    } else {
+      setError("Please Enter A Valid Number");
     }
   };
   return (
@@ -53,6 +57,10 @@ const WhatsApp = () => {
         keyboardType="numeric"
         onChangeText={handleTextInputChange}
       />
+
+      <Text style={WhatsAppCss.errorMsg}>
+        {showError.length > 0 ? showError : ""}
+      </Text>
 
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
@@ -113,6 +121,10 @@ const WhatsAppCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     textAlign: "center",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
