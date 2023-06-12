@@ -12,9 +12,11 @@ import { COLORS } from "../../constants/theme";
 // img
 import img from "./../../../assets/Login/otp.png";
 
-const Otp = () => {
+const Otp = ({ route }) => {
   const [seconds, setSeconds] = useState(30);
   const navigation = useNavigation();
+
+  const WhatsAppNumber = route.paramas;
 
   const l1 = useRef();
   const l2 = useRef();
@@ -104,7 +106,9 @@ const Otp = () => {
           Verify
         </Text>
       </LinearGradient>
+
       <Text style={OtpCss.timer}>00:{seconds}</Text>
+
       <LinearGradient
         colors={["#BB14E2", "#161FE4"]}
         start={{ x: 0, y: 0 }}
