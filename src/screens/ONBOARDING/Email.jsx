@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
 
 // Components
 import Header from "../../Components/ONBOARDING/Header";
@@ -14,6 +20,9 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/email.png";
 
 const Email = () => {
+  const [showError, setError] = useState("");
+  const [showVal, setVal] = useState("");
+
   const navigation = useNavigation();
   return (
     <View style={EmailCss.mDIv}>
