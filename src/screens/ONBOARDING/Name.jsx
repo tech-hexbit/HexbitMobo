@@ -47,7 +47,6 @@ const Name = () => {
           // });
         } else {
           setError("Error: Invalid OTP");
-          // Alert.alert("Phone Number Already in Use");
         }
       } catch (error) {
         console.log(error);
