@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, StyleSheet, Image, TextInput, Alert } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  Alert,
+  TouchableOpacity,
+} from "react-native";
 import axios from "axios";
 
 // Components
