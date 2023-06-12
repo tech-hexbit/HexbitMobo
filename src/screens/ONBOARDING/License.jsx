@@ -19,7 +19,8 @@ const License = () => {
     <View style={LicenseCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
       <Path img={img} pos={4} />
-      <Text style={LicenseCss.Enter}>Importer License</Text>
+
+      <Text style={LicenseCss.Enter}>GSTIN Number</Text>
       <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
 
       <LinearGradient
