@@ -12,6 +12,9 @@ import {
 } from "react-native";
 import axios from "axios";
 
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 // Components
 import Header from "../../Components/ONBOARDING/Header";
 
@@ -41,13 +44,12 @@ const WhatsApp = () => {
 
       try {
         const res = await axios.post(
-          "http://192.168.1.40:8000/api/App/onborading/WhatsAppNumber",
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/WhatsAppNumber`,
           data
         );
-
         if (res.data.exists === false) {
           console.log(res.data);
-          navigation.navigate("Otp");
+          navigation.navigate("Otp", { WhatsAppNumber: textInputValue });
         } else {
           Alert.alert("Phone Number Already in Use");
         }
