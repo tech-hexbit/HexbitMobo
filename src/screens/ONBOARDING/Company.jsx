@@ -34,7 +34,9 @@ const Company = (props) => {
 
   const navigate = useNavigation();
 
-  const handleButtonPress = async () => {};
+  const handleButtonPress = async () => {
+    console.log(showName, showNature, showType);
+  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={CompanyCss.mDIv}>
@@ -42,13 +44,35 @@ const Company = (props) => {
         <Path img={img} pos={3} />
 
         <Text style={CompanyCss.Enter}>Name of the company</Text>
-        <TextInput style={CompanyCss.inpNumber} placeholder="Name" />
+        <TextInput
+          style={CompanyCss.inpNumber}
+          placeholder="Name"
+          onChangeText={(txt) => {
+            setName(txt);
+          }}
+        />
 
         <Text style={CompanyCss.Enter}>Nature of the company</Text>
-        <TextInput style={CompanyCss.inpNumber} placeholder="Select" />
+        <TextInput
+          style={CompanyCss.inpNumber}
+          placeholder="Select"
+          onChangeText={(txt) => {
+            setNature(txt);
+          }}
+        />
 
         <Text style={CompanyCss.Enter}>Type of company</Text>
-        <TextInput style={CompanyCss.inpNumber} placeholder="Select" />
+        <TextInput
+          style={CompanyCss.inpNumber}
+          placeholder="Select"
+          onChangeText={(txt) => {
+            setType(txt);
+          }}
+        />
+
+        <Text style={CompanyCss.errorMsg}>
+          {showError.length > 0 ? showError : ""}
+        </Text>
 
         <LinearGradient
           start={{ x: 0, y: 0.75 }}
@@ -109,6 +133,10 @@ const CompanyCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     textAlign: "center",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
