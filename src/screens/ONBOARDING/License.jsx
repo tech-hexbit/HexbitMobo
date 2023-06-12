@@ -10,6 +10,12 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 // Components
 import Header from "../../Components/ONBOARDING/Header";
 import Path from "../../Components/ONBOARDING/Path";
@@ -34,6 +40,28 @@ const License = (props) => {
         License: showLicense,
         GSTIN: showGSTIN,
       };
+
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/CompanyLicense`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+
+          navigate.navigate("Home", {
+            WhatsAppNumber: `${data.WhatsAppNumber}`,
+          });
+        } else {
+          setError("Error");
+        }
+      } catch (error) {
+        console.log(error);
+        setError("Error: An ");
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
