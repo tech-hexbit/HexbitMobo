@@ -19,40 +19,37 @@ import { COLORS } from "../../constants/theme";
 // img
 import img from "./../../../assets/Login/email.png";
 
-const Email = () => {
+const Email = (props) => {
   const [showError, setError] = useState("");
   const [showVal, setVal] = useState("");
 
   const navigate = useNavigation();
 
-  const handleButtonPress = async (props) => {
+  const handleButtonPress = async () => {
     if (showVal.length > 0) {
-      // let data = {
-      //   WhatsAppNumber: props.route.params.WhatsAppNumber,
-      //   feild: "email",
-      //   value: showVal,
-      // };
-      console.log(props.route);
-
-      // try {
-      //   const res = await axios.post(
-      //     `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
-      //     data
-      //   );
-
-      //   if (res.data.status === true) {
-      //     setError("");
-      //     console.log("res.data");
-      //     console.log(res.data);
-      //     // navigation.navigate("Email", {
-      //     //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
-      //     // });
-      //   } else {
-      //     setError("Error: Invalid OTP");
-      //   }
-      // } catch (error) {
-      //   console.log(error);
-      // }
+      let data = {
+        WhatsAppNumber: props.route.params.WhatsAppNumber,
+        feild: "email",
+        value: showVal,
+      };
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
+          data
+        );
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+          navigate.navigate("Company", {
+            WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+          });
+        } else {
+          setError("Error: Invalid OTP");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
