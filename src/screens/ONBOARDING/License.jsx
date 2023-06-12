@@ -23,6 +23,9 @@ const License = () => {
       <Text style={LicenseCss.Enter}>GSTIN Number</Text>
       <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
 
+      <Text style={LicenseCss.Enter}>Importer License</Text>
+      <TextInput style={LicenseCss.inpNumber} placeholder="IEC Number" />
+
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
