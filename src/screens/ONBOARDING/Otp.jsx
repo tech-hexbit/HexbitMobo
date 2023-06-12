@@ -3,6 +3,12 @@ import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 // Components
 import Header from "../../Components/ONBOARDING/Header";
 
@@ -13,10 +19,16 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/otp.png";
 
 const Otp = (props) => {
+  const [f1, setf1] = useState("");
+  const [f2, setf2] = useState("");
+  const [f3, setf3] = useState("");
+  const [f4, setf4] = useState("");
+
   const [seconds, setSeconds] = useState(30);
   const navigate = useNavigation();
 
   // const { WhatsAppNumber } = route.paramas.WhatsAppNumber;
+
   useEffect(() => {
     console.log(props.route.params.WhatsAppNumber);
   }, []);
@@ -38,6 +50,37 @@ const Otp = (props) => {
     return () => clearInterval(countdownInterval);
   }, [seconds]);
 
+  const handleButtonPress = async () => {
+    // const { f1, f2, f3, f4 } = optVal;
+
+    console.log(f1, f2, f3, f4);
+
+    // if (textInputValue.length == 10) {
+    //   setError("");
+
+    //   let data = {
+    //     WhatsAppNumber: textInputValue,
+    //   };
+
+    //   try {
+    //     const res = await axios.post(
+    //       `${REACT_NATIVE_BASE_URL}/api/App/onborading/WhatsAppNumber`,
+    //       data
+    //     );
+    //     if (res.data.exists === false) {
+    //       console.log(res.data);
+    //       navigation.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
+    //     } else {
+    //       Alert.alert("Phone Number Already in Use");
+    //     }
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // } else {
+    //   setError("Please Enter A Valid Number");
+    // }
+  };
+
   return (
     <View style={OtpCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
@@ -48,8 +91,10 @@ const Otp = (props) => {
           style={OtpCss.inpNumber}
           ref={l1}
           maxLength={1}
+          value={f1}
           keyboardType="numeric"
           onChangeText={(txt) => {
+            setf1(txt);
             if (txt.length >= 1) {
               l2.current.focus();
             }
@@ -59,8 +104,10 @@ const Otp = (props) => {
           style={OtpCss.inpNumber}
           ref={l2}
           maxLength={1}
+          value={f2}
           keyboardType="numeric"
           onChangeText={(txt) => {
+            setf2(txt);
             if (txt.length >= 1) {
               l3.current.focus();
             } else if (txt.length < 1) {
@@ -72,8 +119,10 @@ const Otp = (props) => {
           style={OtpCss.inpNumber}
           ref={l3}
           maxLength={1}
+          value={f3}
           keyboardType="numeric"
           onChangeText={(txt) => {
+            setf3(txt);
             if (txt.length >= 1) {
               l4.current.focus();
             } else if (txt.length < 1) {
@@ -85,8 +134,10 @@ const Otp = (props) => {
           style={OtpCss.inpNumber}
           ref={l4}
           maxLength={1}
+          value={f4}
           keyboardType="numeric"
           onChangeText={(txt) => {
+            setf4(txt);
             if (txt.length < 1) {
               l3.current.focus();
             }
@@ -94,7 +145,7 @@ const Otp = (props) => {
         />
       </View>
 
-      <Text>WhatsAppNumber = {props.route.params.WhatsAppNumber}</Text>
+      {/* <Text>WhatsAppNumber = {props.route.params.WhatsAppNumber}</Text> */}
 
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
@@ -104,9 +155,10 @@ const Otp = (props) => {
       >
         <Text
           style={OtpCss.SendOTP}
-          onPress={() => {
-            navigate.navigate("Name");
-          }}
+          onPress={
+            handleButtonPress
+            // navigate.navigate("Name");
+          }
         >
           Verify
         </Text>
