@@ -43,9 +43,9 @@ const Name = (props) => {
           setError("");
           console.log("res.data");
           console.log(res.data);
-          // navigate.navigate("Name", {
-          //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
-          // });
+          navigation.navigate("Email", {
+            WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+          });
         } else {
           setError("Error: Invalid OTP");
         }
