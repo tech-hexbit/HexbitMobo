@@ -71,7 +71,9 @@ const Otp = (props) => {
           setError("");
           console.log("res.data");
           console.log(res.data);
-          navigate.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
+          navigate.navigate("Name", {
+            WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+          });
         } else {
           setError("Error: Invalid OTP");
           // Alert.alert("Phone Number Already in Use");
