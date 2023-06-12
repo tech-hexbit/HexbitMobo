@@ -23,7 +23,7 @@ const Name = (props) => {
   const [showError, setError] = useState("");
   const [showVal, setVal] = useState("");
 
-  const navigation = useNavigation();
+  const navigate = useNavigation();
 
   const handleButtonPress = async () => {
     if (showVal.length > 0) {
@@ -43,7 +43,9 @@ const Name = (props) => {
           setError("");
           console.log("res.data");
           console.log(res.data);
-          navigation.navigate("Email", {
+
+          // console.log(props.route.params.WhatsAppNumber);
+          navigate.navigate("Email", {
             WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
           });
         } else {
