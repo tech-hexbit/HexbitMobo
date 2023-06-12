@@ -1,3 +1,4 @@
+import React, { useContext, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -17,28 +18,33 @@ import InpTwo from "./src/Components/Cart/InpTwo";
 // Bottom Nav
 import BottomNav from "./src/Components/BottomNav";
 
+// state
+import { AuthContextProvider } from "./store/auth-context";
+
 export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
     <>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="WhatsApp" component={WhatsApp} />
-          <Stack.Screen name="Otp" component={Otp} />
-          <Stack.Screen name="Name" component={Name} />
-          <Stack.Screen name="Email" component={Email} />
-          <Stack.Screen name="Company" component={Company} />
-          <Stack.Screen name="License" component={License} />
-          <Stack.Screen name="InpTwo" component={InpTwo} />
-          <Stack.Screen
-            name="Home"
-            // options={{ headerShown: false }}
-            component={BottomNav}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <AuthContextProvider>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Login">
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="WhatsApp" component={WhatsApp} />
+            <Stack.Screen name="Otp" component={Otp} />
+            <Stack.Screen name="Name" component={Name} />
+            <Stack.Screen name="Email" component={Email} />
+            <Stack.Screen name="Company" component={Company} />
+            <Stack.Screen name="License" component={License} />
+            <Stack.Screen name="InpTwo" component={InpTwo} />
+            <Stack.Screen
+              name="Home"
+              // options={{ headerShown: false }}
+              component={BottomNav}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </AuthContextProvider>
     </>
   );
 }
