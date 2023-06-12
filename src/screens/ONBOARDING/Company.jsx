@@ -44,6 +44,29 @@ const Company = (props) => {
         type: showType,
         nature: showNature,
       };
+
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/Company`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+
+          console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
+          navigate.navigate("License", {
+            WhatsAppNumber: `${data.WhatsAppNumber}`,
+          });
+        } else {
+          setError("Error");
+        }
+      } catch (error) {
+        console.log(error);
+        setError("Error: An ");
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
