@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -10,6 +10,12 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 // Components
 import Header from "../../Components/ONBOARDING/Header";
 import Path from "../../Components/ONBOARDING/Path";
@@ -20,8 +26,15 @@ import { COLORS } from "../../constants/theme";
 // img
 import img from "./../../../assets/Login/company.png";
 
-const Company = () => {
-  const navigation = useNavigation();
+const Company = (props) => {
+  const [showError, setError] = useState("");
+  const [showName, setName] = useState("");
+  const [showNature, setNature] = useState("");
+  const [showType, setType] = useState("");
+
+  const navigate = useNavigation();
+
+  const handleButtonPress = async () => {};
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={CompanyCss.mDIv}>
@@ -45,9 +58,10 @@ const Company = () => {
         >
           <Text
             style={CompanyCss.SendOTP}
-            onPress={() => {
-              navigation.navigate("License");
-            }}
+            onPress={
+              handleButtonPress
+              // navigation.navigate("License");
+            }
           >
             Next
           </Text>
