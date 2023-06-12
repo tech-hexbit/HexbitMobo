@@ -23,35 +23,36 @@ const Email = () => {
   const [showError, setError] = useState("");
   const [showVal, setVal] = useState("");
 
-  const navigation = useNavigation();
+  const navigate = useNavigation();
 
-  const handleButtonPress = async () => {
+  const handleButtonPress = async (props) => {
     if (showVal.length > 0) {
-      let data = {
-        WhatsAppNumber: props.route.params.WhatsAppNumber,
-        feild: "email",
-        value: showVal,
-      };
+      // let data = {
+      //   WhatsAppNumber: props.route.params.WhatsAppNumber,
+      //   feild: "email",
+      //   value: showVal,
+      // };
+      console.log(props.route);
 
-      try {
-        const res = await axios.post(
-          `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
-          data
-        );
+      // try {
+      //   const res = await axios.post(
+      //     `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
+      //     data
+      //   );
 
-        if (res.data.status === true) {
-          setError("");
-          console.log("res.data");
-          console.log(res.data);
-          // navigation.navigate("Email", {
-          //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
-          // });
-        } else {
-          setError("Error: Invalid OTP");
-        }
-      } catch (error) {
-        console.log(error);
-      }
+      //   if (res.data.status === true) {
+      //     setError("");
+      //     console.log("res.data");
+      //     console.log(res.data);
+      //     // navigation.navigate("Email", {
+      //     //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+      //     // });
+      //   } else {
+      //     setError("Error: Invalid OTP");
+      //   }
+      // } catch (error) {
+      //   console.log(error);
+      // }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
