@@ -16,8 +16,23 @@ const InpOne = (props) => {
   const [stType, setstType] = useState("");
   const [stLocation, setstLocation] = useState("");
   const [stWebsite, setstWebsite] = useState("");
+  const [showError, setError] = useState("");
 
   const navigation = useNavigation();
+
+  const handleButtonPress = async () => {
+    if (
+      stName.length > 0 &&
+      stType.length > 0 &&
+      stLocation.length > 0 &&
+      stWebsite.length > 0
+    ) {
+      console.log(stName, stType, stLocation, stWebsite);
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
+  };
   return (
     <View style={InpOneCss.imp1View}>
       <Text style={InpOneCss.StoreName}>Store Name</Text>
@@ -51,14 +66,18 @@ const InpOne = (props) => {
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="https://www.abcstore.com"
+        onChangeText={(txt) => {
+          setstWebsite(txt);
+        }}
       />
 
       <View style={InpOneCss.btnView}>
         <TouchableOpacity
           style={InpOneCss.btnNext}
-          onPress={() => {
-            navigation.navigate("InpTwo");
-          }}
+          onPress={
+            handleButtonPress
+            // navigation.navigate("InpTwo");
+          }
         >
           <Text style={InpOneCss.Next}>Next</Text>
         </TouchableOpacity>
