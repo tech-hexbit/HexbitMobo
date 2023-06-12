@@ -19,6 +19,8 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/otp.png";
 
 const Otp = (props) => {
+  const [showError, setError] = useState("");
+
   const [f1, setf1] = useState("");
   const [f2, setf2] = useState("");
   const [f3, setf3] = useState("");
@@ -26,8 +28,6 @@ const Otp = (props) => {
 
   const [seconds, setSeconds] = useState(30);
   const navigate = useNavigation();
-
-  // const { WhatsAppNumber } = route.paramas.WhatsAppNumber;
 
   useEffect(() => {
     console.log(props.route.params.WhatsAppNumber);
@@ -51,8 +51,15 @@ const Otp = (props) => {
   }, [seconds]);
 
   const handleButtonPress = async () => {
-    console.log(f1, f2, f3, f4);
+    if (f1 !== "" && f2 !== "" && f3 !== "" && f4 !== "") {
+      setError("");
 
+      let otp = f1 + f2 + f3 + f4;
+      console.log(otp);
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
     // if (textInputValue.length == 10) {
     //   setError("");
 
@@ -143,7 +150,9 @@ const Otp = (props) => {
         />
       </View>
 
-      {/* <Text>WhatsAppNumber = {props.route.params.WhatsAppNumber}</Text> */}
+      <Text style={OtpCss.errorMsg}>
+        {showError.length > 0 ? showError : ""}
+      </Text>
 
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
@@ -251,6 +260,10 @@ const OtpCss = StyleSheet.create({
     margin: 10,
     color: "#BB14E2",
     backgroundColor: "transparent",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
