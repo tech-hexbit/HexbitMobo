@@ -11,7 +11,7 @@ import InpTwo from "./../src/Components/Cart/InpTwo";
 import AddProduct from "./../src/Components/Cart/AddProduct";
 import StoreFinal from "./../src/Components/Cart/StoreFinal";
 
-export default function CartNav() {
+export default function CartNav(props) {
   const Stack = createNativeStackNavigator();
   return (
     <>
