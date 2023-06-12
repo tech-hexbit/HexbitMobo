@@ -51,8 +51,6 @@ const Otp = (props) => {
   }, [seconds]);
 
   const handleButtonPress = async () => {
-    // const { f1, f2, f3, f4 } = optVal;
-
     console.log(f1, f2, f3, f4);
 
     // if (textInputValue.length == 10) {
