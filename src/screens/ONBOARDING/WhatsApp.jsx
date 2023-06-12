@@ -49,7 +49,7 @@ const WhatsApp = () => {
         );
         if (res.data.exists === false) {
           console.log(res.data);
-          navigation.navigate("Otp", { WhatsAppNumber: textInputValue });
+          navigation.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
         } else {
           Alert.alert("Phone Number Already in Use");
         }
