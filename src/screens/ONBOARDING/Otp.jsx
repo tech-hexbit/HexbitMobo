@@ -12,11 +12,14 @@ import { COLORS } from "../../constants/theme";
 // img
 import img from "./../../../assets/Login/otp.png";
 
-const Otp = ({ route }) => {
+const Otp = (props) => {
   const [seconds, setSeconds] = useState(30);
-  const navigation = useNavigation();
+  const navigate = useNavigation();
 
-  const WhatsAppNumber = route.paramas;
+  // const { WhatsAppNumber } = route.paramas.WhatsAppNumber;
+  useEffect(() => {
+    console.log(props.route.params.WhatsAppNumber);
+  }, []);
 
   const l1 = useRef();
   const l2 = useRef();
@@ -91,7 +94,7 @@ const Otp = ({ route }) => {
         />
       </View>
 
-      <Text>{WhatsAppNumber}</Text>
+      <Text>WhatsAppNumber = {props.route.params.WhatsAppNumber}</Text>
 
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
@@ -102,7 +105,7 @@ const Otp = ({ route }) => {
         <Text
           style={OtpCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Name");
+            navigate.navigate("Name");
           }}
         >
           Verify
