@@ -20,14 +20,21 @@ import { COLORS } from "../../constants/theme";
 // img
 import img from "./../../../assets/Login/company.png";
 
-const License = () => {
+const License = (props) => {
   const [showError, setError] = useState("");
   const [showLicense, setLicense] = useState("");
   const [showGSTIN, setGSTIN] = useState("");
 
   const navigate = useNavigation();
 
-  const handleButtonPress = async () => {};
+  const handleButtonPress = async () => {
+    if (showLicense.length > 0 && showGSTIN.length > 0) {
+      console.log(showLicense, showGSTIN);
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
+  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={LicenseCss.mDIv}>
@@ -35,7 +42,13 @@ const License = () => {
         <Path img={img} pos={4} />
 
         <Text style={LicenseCss.Enter}>GSTIN Number</Text>
-        <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
+        <TextInput
+          style={LicenseCss.inpNumber}
+          placeholder="Number"
+          onChangeText={(txt) => {
+            setGSTIN(txt);
+          }}
+        />
 
         <Text style={LicenseCss.Enter}>Importer License</Text>
         <TextInput
@@ -54,9 +67,10 @@ const License = () => {
         >
           <Text
             style={LicenseCss.SendOTP}
-            onPress={() => {
-              navigation.navigate("Home");
-            }}
+            onPress={
+              handleButtonPress
+              // navigation.navigate("Home");
+            }
           >
             Next
           </Text>
@@ -71,10 +85,9 @@ const License = () => {
           <View style={LicenseCss.innerContainer}>
             <Text
               style={LicenseCss.buttonText}
-              onPress={
-                handleButtonPress
-                // navigation.navigate("Home");
-              }
+              onPress={() => {
+                navigate.navigate("Home");
+              }}
             >
               Skip
             </Text>
