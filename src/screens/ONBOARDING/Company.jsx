@@ -35,7 +35,12 @@ const Company = (props) => {
   const navigate = useNavigation();
 
   const handleButtonPress = async () => {
-    console.log(showName, showNature, showType);
+    if (showName.length > 0 && showNature.length > 0 && showType.length > 0) {
+      console.log(showName, showNature, showType);
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
