@@ -54,8 +54,14 @@ const Otp = (props) => {
     if (f1 !== "" && f2 !== "" && f3 !== "" && f4 !== "") {
       setError("");
 
-      let otp = f1 + f2 + f3 + f4;
-      console.log(otp);
+      let Otp = f1 + f2 + f3 + f4;
+
+      let data = {
+        WhatsAppNumber: props.route.params.WhatsAppNumber,
+        Otp,
+      };
+
+      console.log(data);
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
