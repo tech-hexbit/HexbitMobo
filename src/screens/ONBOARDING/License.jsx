@@ -23,7 +23,7 @@ import img from "./../../../assets/Login/company.png";
 const License = () => {
   const [showError, setError] = useState("");
   const [showLicense, setLicense] = useState("");
-  const [showNature, setNature] = useState("");
+  const [showGSTIN, setGSTIN] = useState("");
 
   const navigate = useNavigation();
 
@@ -38,7 +38,13 @@ const License = () => {
         <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
 
         <Text style={LicenseCss.Enter}>Importer License</Text>
-        <TextInput style={LicenseCss.inpNumber} placeholder="IEC Number" />
+        <TextInput
+          style={LicenseCss.inpNumber}
+          placeholder="IEC Number"
+          onChangeText={(txt) => {
+            setLicense(txt);
+          }}
+        />
 
         <LinearGradient
           start={{ x: 0, y: 0.75 }}
