@@ -44,12 +44,15 @@ const Name = (props) => {
           console.log("res.data");
           console.log(res.data);
 
-          // console.log(props.route.params.WhatsAppNumber);
+          console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
+          // navigate.navigate("Email", {
+          //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+          // });
           navigate.navigate("Email", {
-            WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+            WhatsAppNumber: `${data.WhatsAppNumber}`,
           });
         } else {
-          setError("Error: Invalid OTP");
+          setError("Error");
         }
       } catch (error) {
         console.log(error);
