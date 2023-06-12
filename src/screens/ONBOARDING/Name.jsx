@@ -29,11 +29,9 @@ const Name = () => {
     if(){
       let data = {
         WhatsAppNumber: props.route.params.WhatsAppNumber,
-        feild: showError,
+        feild: showVal,
       };
   
-      console.log(showVal);
-      // console.log("object");
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
