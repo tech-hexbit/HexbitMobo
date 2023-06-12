@@ -26,17 +26,36 @@ const Name = () => {
   const navigation = useNavigation();
 
   const handleButtonPress = async () => {
-    if(){
+    if (showVal.length > 0) {
       let data = {
         WhatsAppNumber: props.route.params.WhatsAppNumber,
         feild: showVal,
       };
-  
+
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+          // navigate.navigate("Name", {
+          //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+          // });
+        } else {
+          setError("Error: Invalid OTP");
+          // Alert.alert("Phone Number Already in Use");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
     }
-   
   };
   return (
     <View style={NameCss.mDIv}>
