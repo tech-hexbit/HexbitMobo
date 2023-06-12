@@ -1,3 +1,4 @@
+import React, { useState, useContext } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -11,7 +12,14 @@ import InpTwo from "./../src/Components/Cart/InpTwo";
 import AddProduct from "./../src/Components/Cart/AddProduct";
 import StoreFinal from "./../src/Components/Cart/StoreFinal";
 
+// state
+import AuthContext from "./../store/auth-context";
+
 export default function CartNav(props) {
+  const { WhatsAppNumber } = useContext(AuthContext);
+
+  console.log("AuthContext WhatsAppNumber 📧📧");
+  console.log(WhatsAppNumber);
   const Stack = createNativeStackNavigator();
   return (
     <>
