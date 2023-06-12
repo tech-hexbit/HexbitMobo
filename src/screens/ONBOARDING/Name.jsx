@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -20,13 +20,32 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/name.png";
 
 const Name = () => {
+  const [showError, setError] = useState("");
+  const [showVal, setVal] = useState("");
+
   const navigation = useNavigation();
+
+  const handleButtonPress = async () => {
+    console.log(showVal);
+    // console.log("object");
+  };
   return (
     <View style={NameCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
       <Path img={img} pos={1} />
       <Text style={NameCss.Enter}>Enter your Name</Text>
-      <TextInput style={NameCss.inpNumber} placeholder="Name" />
+      <TextInput
+        style={NameCss.inpNumber}
+        placeholder="Name"
+        onChangeText={(txt) => {
+          setVal(txt);
+        }}
+      />
+
+      <Text style={NameCss.errorMsg}>
+        {showError.length > 0 ? showError : ""}
+      </Text>
+
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
@@ -35,9 +54,10 @@ const Name = () => {
       >
         <Text
           style={NameCss.SendOTP}
-          onPress={() => {
+          onPress={
+            handleButtonPress
             // navigation.navigate("Email");
-          }}
+          }
         >
           Next
         </Text>
@@ -83,6 +103,10 @@ const NameCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     textAlign: "center",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
