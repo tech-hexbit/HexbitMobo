@@ -1,5 +1,12 @@
-import React from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -14,52 +21,61 @@ import { COLORS } from "../../constants/theme";
 import img from "./../../../assets/Login/company.png";
 
 const License = () => {
-  const navigation = useNavigation();
+  const [showError, setError] = useState("");
+  const [showName, setName] = useState("");
+  const [showNature, setNature] = useState("");
+
+  const navigate = useNavigation();
+
+  const handleButtonPress = async () => {};
   return (
-    <View style={LicenseCss.mDIv}>
-      <Header true={false} msg="Enter your Details" />
-      <Path img={img} pos={4} />
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={LicenseCss.mDIv}>
+        <Header true={false} msg="Enter your Details" />
+        <Path img={img} pos={4} />
 
-      <Text style={LicenseCss.Enter}>GSTIN Number</Text>
-      <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
+        <Text style={LicenseCss.Enter}>GSTIN Number</Text>
+        <TextInput style={LicenseCss.inpNumber} placeholder="Number" />
 
-      <Text style={LicenseCss.Enter}>Importer License</Text>
-      <TextInput style={LicenseCss.inpNumber} placeholder="IEC Number" />
+        <Text style={LicenseCss.Enter}>Importer License</Text>
+        <TextInput style={LicenseCss.inpNumber} placeholder="IEC Number" />
 
-      <LinearGradient
-        start={{ x: 0, y: 0.75 }}
-        end={{ x: 1, y: 0.25 }}
-        colors={["#BB14E2", "#161FE4"]}
-        style={LicenseCss.button}
-      >
-        <Text
-          style={LicenseCss.SendOTP}
-          onPress={() => {
-            navigation.navigate("Home");
-          }}
+        <LinearGradient
+          start={{ x: 0, y: 0.75 }}
+          end={{ x: 1, y: 0.25 }}
+          colors={["#BB14E2", "#161FE4"]}
+          style={LicenseCss.button}
         >
-          Next
-        </Text>
-      </LinearGradient>
-
-      <LinearGradient
-        colors={["#BB14E2", "#161FE4"]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0 }}
-        style={LicenseCss.linearGradient}
-      >
-        <View style={LicenseCss.innerContainer}>
           <Text
-            style={LicenseCss.buttonText}
+            style={LicenseCss.SendOTP}
             onPress={() => {
               navigation.navigate("Home");
             }}
           >
-            Skip
+            Next
           </Text>
-        </View>
-      </LinearGradient>
-    </View>
+        </LinearGradient>
+
+        <LinearGradient
+          colors={["#BB14E2", "#161FE4"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={LicenseCss.linearGradient}
+        >
+          <View style={LicenseCss.innerContainer}>
+            <Text
+              style={LicenseCss.buttonText}
+              onPress={
+                handleButtonPress
+                // navigation.navigate("Home");
+              }
+            >
+              Skip
+            </Text>
+          </View>
+        </LinearGradient>
+      </View>
+    </ScrollView>
   );
 };
 
@@ -106,6 +122,7 @@ const LicenseCss = StyleSheet.create({
     height: 50,
     width: "30%",
     borderRadius: 20, // <-- Outer Border Radius
+    marginBottom: 20,
   },
   innerContainer: {
     borderRadius: 15, // <-- Inner Border Radius
@@ -122,6 +139,10 @@ const LicenseCss = StyleSheet.create({
     margin: 10,
     color: "#BB14E2",
     backgroundColor: "transparent",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
