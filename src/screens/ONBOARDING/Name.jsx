@@ -26,8 +26,19 @@ const Name = () => {
   const navigation = useNavigation();
 
   const handleButtonPress = async () => {
-    console.log(showVal);
-    // console.log("object");
+    if(){
+      let data = {
+        WhatsAppNumber: props.route.params.WhatsAppNumber,
+        feild: showError,
+      };
+  
+      console.log(showVal);
+      // console.log("object");
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
+   
   };
   return (
     <View style={NameCss.mDIv}>
