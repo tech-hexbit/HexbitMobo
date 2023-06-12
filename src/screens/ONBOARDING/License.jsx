@@ -22,7 +22,7 @@ import img from "./../../../assets/Login/company.png";
 
 const License = () => {
   const [showError, setError] = useState("");
-  const [showName, setName] = useState("");
+  const [showLicense, setLicense] = useState("");
   const [showNature, setNature] = useState("");
 
   const navigate = useNavigation();
