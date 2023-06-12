@@ -3,6 +3,12 @@ import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 // Components
 import Header from "../../Components/ONBOARDING/Header";
 import Path from "../../Components/ONBOARDING/Path";
@@ -30,7 +36,7 @@ const Name = () => {
         <Text
           style={NameCss.SendOTP}
           onPress={() => {
-            navigation.navigate("Email");
+            // navigation.navigate("Email");
           }}
         >
           Next
