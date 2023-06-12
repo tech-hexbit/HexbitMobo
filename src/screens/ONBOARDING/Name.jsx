@@ -19,7 +19,7 @@ import { COLORS } from "../../constants/theme";
 // img
 import img from "./../../../assets/Login/name.png";
 
-const Name = () => {
+const Name = (props) => {
   const [showError, setError] = useState("");
   const [showVal, setVal] = useState("");
 
@@ -29,7 +29,8 @@ const Name = () => {
     if (showVal.length > 0) {
       let data = {
         WhatsAppNumber: props.route.params.WhatsAppNumber,
-        feild: showVal,
+        feild: "name",
+        value: showVal,
       };
 
       try {
