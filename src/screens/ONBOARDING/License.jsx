@@ -34,7 +34,7 @@ const License = (props) => {
   const [showLicense, setLicense] = useState("");
   const [showGSTIN, setGSTIN] = useState("");
 
-  const authCtx = useContext(AuthContext);
+  const { setWhatsAppNumber } = useContext(AuthContext);
 
   const navigate = useNavigation();
 
@@ -56,6 +56,8 @@ const License = (props) => {
           setError("");
           console.log("res.data");
           console.log(res.data);
+
+          setWhatsAppNumber(data.WhatsAppNumber);
 
           navigate.navigate("Home", {
             WhatsAppNumber: `${data.WhatsAppNumber}`,
