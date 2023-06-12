@@ -47,7 +47,7 @@ const WhatsApp = () => {
 
         if (res.data.exists === false) {
           console.log(res.data);
-          Alert.alert("TextInput Value", textInputValue);
+          navigation.navigate("Otp");
         } else {
           Alert.alert("Phone Number Already in Use");
         }
