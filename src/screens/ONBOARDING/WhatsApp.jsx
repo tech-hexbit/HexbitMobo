@@ -15,6 +15,7 @@ import img from "./../../../assets/Login/WhatsApp.png";
 
 const WhatsApp = () => {
   const [textInputValue, setTextInputValue] = useState("");
+  const [showError, setError] = useState("");
 
   const navigation = useNavigation();
 
@@ -23,24 +24,22 @@ const WhatsApp = () => {
   };
 
   const handleButtonPress = async () => {
-    let data = {
-      WhatsAppNumber: textInputValue,
-    };
+    if (textInputValue.length == 10) {
+      let data = {
+        WhatsAppNumber: textInputValue,
+      };
 
-    try {
-      const res = await axios.post(
-        "http://192.168.1.40:8000/api/App/onborading/WhatsAppNumber",
-        data
-        // {
-        // headers: { "Content-Type": "application/json" },
-        // headers: { Authorization: `${authCtx.token}` },
-        // }
-      );
+      try {
+        const res = await axios.post(
+          "http://192.168.1.40:8000/api/App/onborading/WhatsAppNumber",
+          data
+        );
 
-      console.log(res.data);
-      Alert.alert("TextInput Value", textInputValue);
-    } catch (error) {
-      console.log(error);
+        console.log(res.data);
+        Alert.alert("TextInput Value", textInputValue);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
   return (
