@@ -55,6 +55,7 @@ const WhatsApp = () => {
         }
       } catch (error) {
         console.log(error);
+        setError("Error: An Unexpected Error Happened");
       }
     } else {
       setError("Please Enter A Valid Number");
