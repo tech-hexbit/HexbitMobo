@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   View,
   Text,
@@ -9,6 +9,9 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+
+// state
+import AuthContext from "./../../../store/auth-context";
 
 // axios
 import axios from "axios";
@@ -30,6 +33,8 @@ const License = (props) => {
   const [showError, setError] = useState("");
   const [showLicense, setLicense] = useState("");
   const [showGSTIN, setGSTIN] = useState("");
+
+  const authCtx = useContext(AuthContext);
 
   const navigate = useNavigation();
 
