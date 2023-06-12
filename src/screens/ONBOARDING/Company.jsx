@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -16,32 +23,37 @@ import img from "./../../../assets/Login/company.png";
 const Company = () => {
   const navigation = useNavigation();
   return (
-    <View style={CompanyCss.mDIv}>
-      <Header true={false} msg="Enter your Details" />
-      <Path img={img} pos={3} />
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={CompanyCss.mDIv}>
+        <Header true={false} msg="Enter your Details" />
+        <Path img={img} pos={3} />
 
-      <Text style={CompanyCss.Enter}>Name of the company</Text>
-      <TextInput style={CompanyCss.inpNumber} placeholder="Name" />
+        <Text style={CompanyCss.Enter}>Name of the company</Text>
+        <TextInput style={CompanyCss.inpNumber} placeholder="Name" />
 
-      <Text style={CompanyCss.Enter}>Nature of the company</Text>
-      <TextInput style={CompanyCss.inpNumber} placeholder="Select" />
+        <Text style={CompanyCss.Enter}>Nature of the company</Text>
+        <TextInput style={CompanyCss.inpNumber} placeholder="Select" />
 
-      <LinearGradient
-        start={{ x: 0, y: 0.75 }}
-        end={{ x: 1, y: 0.25 }}
-        colors={["#BB14E2", "#161FE4"]}
-        style={CompanyCss.button}
-      >
-        <Text
-          style={CompanyCss.SendOTP}
-          onPress={() => {
-            navigation.navigate("License");
-          }}
+        <Text style={CompanyCss.Enter}>Type of company</Text>
+        <TextInput style={CompanyCss.inpNumber} placeholder="Select" />
+
+        <LinearGradient
+          start={{ x: 0, y: 0.75 }}
+          end={{ x: 1, y: 0.25 }}
+          colors={["#BB14E2", "#161FE4"]}
+          style={CompanyCss.button}
         >
-          Next
-        </Text>
-      </LinearGradient>
-    </View>
+          <Text
+            style={CompanyCss.SendOTP}
+            onPress={() => {
+              navigation.navigate("License");
+            }}
+          >
+            Next
+          </Text>
+        </LinearGradient>
+      </View>
+    </ScrollView>
   );
 };
 
