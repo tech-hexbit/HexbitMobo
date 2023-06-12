@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   View,
@@ -12,17 +12,40 @@ import {
 import InpOneCss from "./Css/InpOneCss";
 
 const InpOne = (props) => {
+  const [stName, setstName] = useState("");
+  const [stType, setstType] = useState("");
+  const [stLocation, setstLocation] = useState("");
+  const [stWebsite, setstWebsite] = useState("");
+
   const navigation = useNavigation();
   return (
     <View style={InpOneCss.imp1View}>
       <Text style={InpOneCss.StoreName}>Store Name</Text>
-      <TextInput style={InpOneCss.inpNumber} placeholder="ABC Store" />
+      <TextInput
+        style={InpOneCss.inpNumber}
+        placeholder="ABC Store"
+        onChangeText={(txt) => {
+          setstName(txt);
+        }}
+      />
 
       <Text style={InpOneCss.StoreName}>Store Type</Text>
-      <TextInput style={InpOneCss.inpNumber} placeholder="Select Store type" />
+      <TextInput
+        style={InpOneCss.inpNumber}
+        placeholder="Select Store type"
+        onChangeText={(txt) => {
+          setstType(txt);
+        }}
+      />
 
       <Text style={InpOneCss.StoreName}>Location</Text>
-      <TextInput style={InpOneCss.inpNumber} placeholder="Delhi, India" />
+      <TextInput
+        style={InpOneCss.inpNumber}
+        placeholder="Delhi, India"
+        onChangeText={(txt) => {
+          setstLocation(txt);
+        }}
+      />
 
       <Text style={InpOneCss.StoreName}>Website</Text>
       <TextInput
