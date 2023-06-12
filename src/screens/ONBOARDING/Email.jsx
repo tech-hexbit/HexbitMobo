@@ -24,12 +24,51 @@ const Email = () => {
   const [showVal, setVal] = useState("");
 
   const navigation = useNavigation();
+
+  const handleButtonPress = async () => {
+    if (showVal.length > 0) {
+      let data = {
+        WhatsAppNumber: props.route.params.WhatsAppNumber,
+        feild: "email",
+        value: showVal,
+      };
+
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+          // navigation.navigate("Email", {
+          //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+          // });
+        } else {
+          setError("Error: Invalid OTP");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
+  };
   return (
     <View style={EmailCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
       <Path img={img} pos={2} />
       <Text style={EmailCss.Enter}>Enter your Email</Text>
-      <TextInput style={EmailCss.inpNumber} placeholder="example@email.com" />
+      <TextInput
+        style={EmailCss.inpNumber}
+        placeholder="example@email.com"
+        onChangeText={(txt) => {
+          setVal(txt);
+        }}
+      />
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
@@ -38,9 +77,10 @@ const Email = () => {
       >
         <Text
           style={EmailCss.SendOTP}
-          onPress={() => {
-            navigation.navigate("Company");
-          }}
+          onPress={
+            handleButtonPress
+            // navigation.navigate("Company");
+          }
         >
           Next
         </Text>
