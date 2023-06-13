@@ -108,7 +108,6 @@ const Home = () => {
 
           <TouchableOpacity
             onPress={() => {
-              console.log("==================");
               setOp(!showOp);
             }}
           >
