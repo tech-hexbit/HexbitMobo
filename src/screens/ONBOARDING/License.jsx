@@ -129,6 +129,7 @@ const License = (props) => {
             <Text
               style={LicenseCss.buttonText}
               onPress={() => {
+                setWhatsAppNumber(props.route.params.WhatsAppNumber);
                 navigate.navigate("Home");
               }}
             >
