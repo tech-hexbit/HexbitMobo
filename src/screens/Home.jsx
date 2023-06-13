@@ -71,6 +71,7 @@ const Home = () => {
           {itemsData.map((val, key) => {
             return (
               <ProductCart
+                _id={val._id}
                 name={val.name}
                 dec={val.des}
                 price={val.price}
