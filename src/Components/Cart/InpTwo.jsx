@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   View,
   Text,
@@ -15,10 +15,22 @@ import Header from "./Header";
 // img
 import img from "./../../../assets/Cart/cartGroceries.png";
 
+// state
+import AuthContext from "./../../../store/auth-context";
+
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 const InpTwo = (props) => {
+  const [showError, setError] = useState("");
   const [shoeDes, setDes] = useState("");
 
   const navigation = useNavigation();
+
+  const { WhatsAppNumber } = useContext(AuthContext);
 
   // useEffect(() => {
   //   console.log(props.route.params);
@@ -26,9 +38,6 @@ const InpTwo = (props) => {
 
   const handleButtonPress = async () => {
     if (shoeDes.length > 0) {
-      console.log(shoeDes);
-      console.log(props.route.params.Add);
-
       let data = {
         WhatsAppNumber: "",
         StoreName: props.route.params.StoreName,
@@ -42,6 +51,8 @@ const InpTwo = (props) => {
         Website: props.route.params.Website,
         StoreDescription: props.route.params.StoreDescription,
       };
+
+      console.log(WhatsAppNumber, "= WhatsAppNumber");
     } else {
     }
   };
@@ -67,6 +78,10 @@ const InpTwo = (props) => {
           }}
           // style={{ height: 200, textAlignVertical: "top" }}
         />
+
+        <Text style={InpTwoCss.errorMsg}>
+          {showError.length > 0 ? showError : ""}
+        </Text>
 
         <View style={InpTwoCss.btnView}>
           <TouchableOpacity
@@ -137,6 +152,10 @@ const InpTwoCss = StyleSheet.create({
     fontWeight: 800,
     fontSize: 18,
     textAlign: "center",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
