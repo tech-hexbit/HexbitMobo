@@ -33,8 +33,13 @@ const InpOne = (props) => {
     if (
       stName.length > 0 &&
       stType.length > 0 &&
-      stLocation.length > 0 &&
-      stWebsite.length > 0
+      stWebsite.length > 0 &&
+      stPinCode.length > 0 &&
+      stAdd.length > 0 &&
+      stLocality.length > 0 &&
+      stCity.length > 0 &&
+      stState.length > 0 &&
+      stCountry.length > 0
     ) {
       console.log(
         stName,
@@ -51,7 +56,7 @@ const InpOne = (props) => {
       let data = {
         StoreName: stName,
         StoreType: stType,
-        Location: stLocation,
+        // Location: stLocation,
         Website: stWebsite,
       };
 
