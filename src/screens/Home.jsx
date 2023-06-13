@@ -70,15 +70,14 @@ const Home = () => {
         <View style={InvCss.ProductsGrid}>
           {itemsData.map((val, key) => {
             return (
-              <View key={key}>
-                <ProductCart
-                  name={val.name}
-                  dec={val.des}
-                  price={val.price}
-                  Order={val.totalSold}
-                  InStore={val.stock}
-                />
-              </View>
+              <ProductCart
+                name={val.name}
+                dec={val.des}
+                price={val.price}
+                Order={val.totalSold}
+                InStore={val.stock}
+                key={key}
+              />
             );
           })}
         </View>
