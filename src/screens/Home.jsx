@@ -27,8 +27,12 @@ const Home = () => {
   const [showOp, setOp] = useState(false);
 
   useEffect(() => {
-    console.log(showOp);
-  }, [showOp]);
+    invData();
+  }, []);
+
+  const invData = async () => {
+    console.log("invData");
+  };
 
   const navigation = useNavigation();
   return (
