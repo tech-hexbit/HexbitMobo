@@ -54,6 +54,8 @@ const InpTwo = (props) => {
 
       console.log(WhatsAppNumber, "= WhatsAppNumber");
     } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
     }
   };
   return (
@@ -155,7 +157,7 @@ const InpTwoCss = StyleSheet.create({
   },
   errorMsg: {
     color: "#800000",
-    marginBottom: 15,
+    marginVertical: 15,
   },
 });
 
