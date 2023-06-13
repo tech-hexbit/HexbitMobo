@@ -28,6 +28,15 @@ const InpOne = (props) => {
       stWebsite.length > 0
     ) {
       console.log(stName, stType, stLocation, stWebsite);
+
+      let data = {
+        StoreName: stName,
+        StoreType: stType,
+        Location: stLocation,
+        Website: stWebsite,
+      };
+
+      navigation.navigate("InpTwo");
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
