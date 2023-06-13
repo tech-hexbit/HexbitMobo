@@ -8,6 +8,7 @@ import Bulk from "../src/Components/Inventory/Bulk";
 
 export default function CartNav() {
   const Stack = createNativeStackNavigator();
+
   return (
     <>
       <Stack.Navigator initialRouteName="Login">
