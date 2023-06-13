@@ -38,8 +38,10 @@ const InpTwo = (props) => {
 
   const handleButtonPress = async () => {
     if (shoeDes.length > 0) {
+      setError("");
+
       let data = {
-        WhatsAppNumber: "",
+        WhatsAppNumber: WhatsAppNumber,
         StoreName: props.route.params.StoreName,
         StoreType: props.route.params.StoreType,
         PinCode: props.route.params.PinCode,
@@ -49,10 +51,35 @@ const InpTwo = (props) => {
         State: props.route.params.State,
         Country: props.route.params.Country,
         Website: props.route.params.Website,
-        StoreDescription: props.route.params.StoreDescription,
+        StoreDescription: shoeDes,
       };
 
       console.log(WhatsAppNumber, "= WhatsAppNumber");
+
+      try {
+        const res = await axios.post(
+          `${REACT_NATIVE_BASE_URL}/api/App/cart/AddStore`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+
+          // setWhatsAppNumber(data.WhatsAppNumber);
+
+          // navigate.navigate("Home", {
+          //   WhatsAppNumber: `${data.WhatsAppNumber}`,
+          // });
+        } else {
+          console.log(res);
+          setError("Error");
+        }
+      } catch (error) {
+        console.log(error);
+        setError("Error: An ");
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
