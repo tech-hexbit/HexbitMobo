@@ -56,11 +56,18 @@ const InpOne = (props) => {
       let data = {
         StoreName: stName,
         StoreType: stType,
-        // Location: stLocation,
+        PinCode: stPinCode,
+        Add: stAdd,
+        Locality: stLocality,
+        City: stCity,
+        State: stState,
+        Country: stCountry,
         Website: stWebsite,
       };
 
-      // navigation.navigate("InpTwo");
+      console.log(data);
+
+      navigation.navigate("InpTwo", { data: `${data}` });
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
