@@ -70,7 +70,7 @@ const ProductCartCss = StyleSheet.create({
     width: "32%",
   },
   rightDiv: {
-    width: "66%",
+    width: "60%",
   },
   dec: {
     color: "#626262",
