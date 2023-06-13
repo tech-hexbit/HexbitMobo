@@ -67,6 +67,8 @@ const InpTwo = (props) => {
           console.log("res.data");
           console.log(res.data);
 
+          navigation.navigate("StoreFinal");
+
           // setWhatsAppNumber(data.WhatsAppNumber);
 
           // navigate.navigate("Home", {
