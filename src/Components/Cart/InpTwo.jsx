@@ -16,11 +16,35 @@ import Header from "./Header";
 import img from "./../../../assets/Cart/cartGroceries.png";
 
 const InpTwo = (props) => {
+  const [shoeDes, setDes] = useState("");
+
   const navigation = useNavigation();
 
-  useEffect(() => {
-    console.log(props.route.params);
-  }, []);
+  // useEffect(() => {
+  //   console.log(props.route.params);
+  // }, []);
+
+  const handleButtonPress = async () => {
+    if (shoeDes.length > 0) {
+      console.log(shoeDes);
+      console.log(props.route.params.Add);
+
+      let data = {
+        WhatsAppNumber: "",
+        StoreName: props.route.params.StoreName,
+        StoreType: props.route.params.StoreType,
+        PinCode: props.route.params.PinCode,
+        Add: props.route.params.Add,
+        Locality: props.route.params.Locality,
+        City: props.route.params.City,
+        State: props.route.params.State,
+        Country: props.route.params.Country,
+        Website: props.route.params.Website,
+        StoreDescription: props.route.params.StoreDescription,
+      };
+    } else {
+    }
+  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={InpTwoCss.mDiv}>
@@ -38,15 +62,19 @@ const InpTwo = (props) => {
           multiline={true}
           numberOfLines={20}
           style={InpTwoCss.des}
+          onChangeText={(txt) => {
+            setDes(txt);
+          }}
           // style={{ height: 200, textAlignVertical: "top" }}
         />
 
         <View style={InpTwoCss.btnView}>
           <TouchableOpacity
             style={InpTwoCss.btnNext}
-            onPress={() => {
-              navigation.navigate("StoreFinal");
-            }}
+            onPress={
+              handleButtonPress
+              // navigation.navigate("StoreFinal");
+            }
           >
             <Text style={InpTwoCss.Next}>Next</Text>
           </TouchableOpacity>
