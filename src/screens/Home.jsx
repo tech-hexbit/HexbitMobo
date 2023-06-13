@@ -23,7 +23,15 @@ import InvCss from "./Css/InventoryCss";
 // img
 import plus from "./../../assets/Inventory/plus.png";
 
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 const Home = () => {
+  const [showError, setError] = useState("");
+  const [itemsData, setItemData] = useState([]);
   const [showOp, setOp] = useState(false);
 
   useEffect(() => {
@@ -31,57 +39,50 @@ const Home = () => {
   }, []);
 
   const invData = async () => {
-    console.log("invData");
+    try {
+      const res = await axios.get(
+        `${REACT_NATIVE_BASE_URL}/api/App/Inventory/InventoryGet`
+      );
+
+      if (res.data.status === true) {
+        setError("");
+        console.log("res.data");
+        console.log(res.data.itemData);
+        setItemData(res.data.itemData);
+      } else {
+        setError("Error");
+      }
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
+    }
   };
 
   const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <StoreHeader true={false} title="Inventory" />
+      <StoreHeader true={false} title="Inventory s" />
       <HeaderLable />
 
-      <View style={InvCss.ProductsGrid}>
-        <ProductCart
-          name="Product Name"
-          dec="Filler text is text that shares some characteristics of a real written
-          text, but is random."
-          price={500}
-          Order={200}
-          InStore={326}
-        />
-        <ProductCart
-          name="Product Name"
-          dec="Filler text is text that shares some characteristics of a real written
-        text, but is random."
-          price={500}
-          Order={200}
-          InStore={326}
-        />
-        <ProductCart
-          name="Product Name"
-          dec="Filler text is text that shares some characteristics of a real written
-      text, but is random."
-          price={500}
-          Order={200}
-          InStore={326}
-        />
-        <ProductCart
-          name="Product Name"
-          dec="Filler text is text that shares some characteristics of a real written
-      text, but is random."
-          price={500}
-          Order={200}
-          InStore={326}
-        />
-        <ProductCart
-          name="Product Name"
-          dec="Filler text is text that shares some characteristics of a real written
-    text, but is random."
-          price={500}
-          Order={200}
-          InStore={326}
-        />
-      </View>
+      {itemsData.length === 0 ? (
+        <Text>No Items To Show</Text>
+      ) : (
+        <View style={InvCss.ProductsGrid}>
+          {itemsData.map((val, key) => {
+            return (
+              <View key={key}>
+                <ProductCart
+                  name={val.name}
+                  dec={val.des}
+                  price={val.price}
+                  Order={val.totalSold}
+                  InStore={val.stock}
+                />
+              </View>
+            );
+          })}
+        </View>
+      )}
 
       <View style={InvCss.posrel}>
         <View style={InvCss.posAbsMain}>
