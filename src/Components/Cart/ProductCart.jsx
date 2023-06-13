@@ -8,6 +8,8 @@ import edit from "./../../../assets/Cart/edit.png";
 
 const ProductCart = (props) => {
   const navigation = useNavigation();
+
+  console.log("props._id", props._id);
   return (
     <>
       <TouchableOpacity
