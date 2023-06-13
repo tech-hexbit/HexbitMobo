@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import axios from "axios";
@@ -16,7 +16,7 @@ import License from "./src/screens/ONBOARDING/License";
 import InpTwo from "./src/Components/Cart/InpTwo";
 
 // Bottom Nav
-import BottomNav from "./src/Components/BottomNav";
+import BottomNav from "./navigation/BottomNav";
 
 // state
 import { AuthContextProvider } from "./store/auth-context";
