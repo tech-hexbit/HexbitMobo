@@ -16,7 +16,16 @@ const InpOne = (props) => {
   const [stType, setstType] = useState("");
   const [stWebsite, setstWebsite] = useState("");
   const [showError, setError] = useState("");
+
+  // Address
   const [stLocation, setstLocation] = useState("");
+
+  const [stPinCode, setPinCode] = useState("");
+  const [stAdd, setAdd] = useState("");
+  const [stLocality, setLocality] = useState("");
+  const [stCity, setCity] = useState("");
+  const [stState, setState] = useState("");
+  const [stCountry, setCountry] = useState("");
 
   const navigation = useNavigation();
 
@@ -27,7 +36,17 @@ const InpOne = (props) => {
       stLocation.length > 0 &&
       stWebsite.length > 0
     ) {
-      console.log(stName, stType, stLocation, stWebsite);
+      console.log(
+        stName,
+        stType,
+        stPinCode,
+        stAdd,
+        stLocality,
+        stCity,
+        stState,
+        stCountry,
+        stWebsite
+      );
 
       let data = {
         StoreName: stName,
@@ -60,48 +79,48 @@ const InpOne = (props) => {
           setstType(txt);
         }}
       />
-      <Text style={InpOneCss.StoreName}>Location</Text>
+      <Text style={InpOneCss.StoreName}>Address</Text>
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="Pin Code*"
-        // onChangeText={(txt) => {
-        //   setstLocation(txt);
-        // }}
+        onChangeText={(txt) => {
+          setPinCode(txt);
+        }}
       />
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="Address (House No, Building, Street, Area)*"
-        // onChangeText={(txt) => {
-        //   setstLocation(txt);
-        // }}
+        onChangeText={(txt) => {
+          setAdd(txt);
+        }}
       />
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="Locality*"
-        // onChangeText={(txt) => {
-        //   setstLocation(txt);
-        // }}
+        onChangeText={(txt) => {
+          setLocality(txt);
+        }}
       />
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="City*"
-        // onChangeText={(txt) => {
-        //   setstLocation(txt);
-        // }}
+        onChangeText={(txt) => {
+          setCity(txt);
+        }}
       />
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="State*"
-        // onChangeText={(txt) => {
-        //   setstLocation(txt);
-        // }}
+        onChangeText={(txt) => {
+          setState(txt);
+        }}
       />
       <TextInput
         style={InpOneCss.inpNumber}
         placeholder="Country*"
-        // onChangeText={(txt) => {
-        //   setstLocation(txt);
-        // }}
+        onChangeText={(txt) => {
+          setCountry(txt);
+        }}
       />
       <Text style={InpOneCss.StoreName}>Website</Text>
       <TextInput
