@@ -108,13 +108,7 @@ const License = (props) => {
           colors={["#BB14E2", "#161FE4"]}
           style={LicenseCss.button}
         >
-          <Text
-            style={LicenseCss.SendOTP}
-            onPress={
-              handleButtonPress
-              // navigation.navigate("Home");
-            }
-          >
+          <Text style={LicenseCss.SendOTP} onPress={handleButtonPress}>
             Next
           </Text>
         </LinearGradient>
