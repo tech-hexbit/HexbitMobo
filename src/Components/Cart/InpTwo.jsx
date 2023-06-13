@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -15,8 +15,12 @@ import Header from "./Header";
 // img
 import img from "./../../../assets/Cart/cartGroceries.png";
 
-const InpTwo = () => {
+const InpTwo = (props) => {
   const navigation = useNavigation();
+
+  useEffect(() => {
+    console.log(props.route.params);
+  }, []);
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={InpTwoCss.mDiv}>
