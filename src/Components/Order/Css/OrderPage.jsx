@@ -46,6 +46,14 @@ const OPCss = StyleSheet.create({
   },
   valName: {
     fontWeight: 600,
+    fontSize: 17,
+    marginBottom: 5,
+    color: "#350B5E",
+  },
+  valDes: {
+    fontWeight: 400,
+    fontSize: 14,
+    marginBottom: 5,
   },
 });
 
