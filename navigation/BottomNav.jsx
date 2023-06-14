@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // screens
 import InventoryScreen from "./Inventory";
 // import Home from "./../screens/Home";
-import Inventory from "../src/screens/Inventory";
+import Inventory from "./Dashboard";
 import Discount from "../src/screens/Discount";
 import CartNav from "./CartNav";
 import Profile from "./ProfileNav";
