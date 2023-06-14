@@ -7,6 +7,9 @@ import axios from "axios";
 // img
 import Img from "./../../../assets/Cart/pod.png";
 
+// style
+import OPCss from "./Css/OrderPage";
+
 const OrdersPage = (props) => {
   const [show, set] = useState([]);
 
@@ -35,28 +38,28 @@ const OrdersPage = (props) => {
         <>
           {show.map((val, key) => {
             return (
-              <View key={key}>
-                <View>
-                  <View>
-                    <Text>Order No.</Text>
-                    <Text>{val._id}</Text>
+              <View key={key} style={OPCss.mDiv}>
+                <View style={OPCss.HMDiv}>
+                  <View style={OPCss.val1}>
+                    <Text style={OPCss.labelTEXT}>Order No.</Text>
+                    <Text style={OPCss.valText}>{val._id}</Text>
                   </View>
                   <View>
-                    <Text>Order Date</Text>
-                    <Text>{val.Date}</Text>
+                    <Text style={OPCss.labelTEXT}>Order Date</Text>
+                    <Text style={OPCss.valText}>{val.Date}</Text>
                   </View>
                   <View>
-                    <Text>Status</Text>
-                    <Text>{val.Status}</Text>
+                    <Text style={OPCss.labelTEXT}>Status</Text>
+                    <Text style={OPCss.valText}>{val.Status}</Text>
                   </View>
                 </View>
 
-                <View>
-                  <Text>Customer Name</Text>
-                  <Text>{val.CustormerID}</Text>
+                <View style={OPCss.cnName}>
+                  <Text style={OPCss.labelTEXT}>Customer Name</Text>
+                  <Text style={OPCss.valText}>{val.CustormerID}</Text>
                 </View>
 
-                <View>
+                <View style={OPCss.cenDiv}>
                   <View>
                     <Text>Payment</Text>
                     <Text>{val.method}</Text>
