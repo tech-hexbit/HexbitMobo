@@ -42,7 +42,18 @@ const AddProduct = () => {
     // const result = await launchCamera(options?)
   };
   const handleButtonPress = async () => {
-    console.log("handleButtonPress");
+    if (
+      name !== "" &&
+      Price !== "" &&
+      Stock !== "" &&
+      Type !== "" &&
+      Des !== ""
+    ) {
+      console.log("handleButtonPress");
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
   };
 
   return (
