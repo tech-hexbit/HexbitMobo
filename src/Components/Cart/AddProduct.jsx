@@ -6,8 +6,8 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React, { useState, useEffect } from "react";
-import { useNavigation } from "@react-navigation/native";
+import React, { useState, useEffect, useContext } from "react";
+import { useNavigation, validatePathConfig } from "@react-navigation/native";
 import ImagePicker from "react-native-image-picker";
 
 // style
@@ -16,7 +16,15 @@ import ADCss from "./Css/AddProductCss";
 // img
 import img from "./../../../assets/Cart/plus-circle.png";
 
-const AddProduct = () => {
+// state
+import AuthContext from "./../../../store/auth-context";
+
+// axios
+import axios from "axios";
+
+const AddProduct = (props) => {
+  const { storeID, WhatsAppNumber } = useContext(AuthContext);
+
   const [showError, setError] = useState("");
   const [name, setName] = useState("");
   const [Price, setPrice] = useState("");
@@ -49,7 +57,42 @@ const AddProduct = () => {
       Type !== "" &&
       Des !== ""
     ) {
-      console.log("handleButtonPress");
+      setError("");
+
+      let data = {
+        StoreID: storeID,
+        name: name,
+        price: Price,
+        stock: Stock,
+        type: Type,
+        Img: "img",
+        des: Des,
+        wa: WhatsAppNumber,
+      };
+
+      console.log(data);
+
+      try {
+        const res = await axios.post(
+          `http://192.168.1.40:8000/api/User/AddItem`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          console.log("res.data");
+          console.log(res.data);
+
+          // setWhatsAppNumber(data.WhatsAppNumber);
+
+          navigation.navigate("Store");
+        } else {
+          setError("Error");
+        }
+      } catch (error) {
+        console.log(error);
+        setError("Error: An ");
+      }
     } else {
       console.log("fill");
       setError("Please Enter A Valid Number");
