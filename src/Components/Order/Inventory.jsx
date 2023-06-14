@@ -119,7 +119,7 @@ const Inventory = () => {
               <TouchableOpacity
                 key={index}
                 onPress={() => {
-                  navigate.navigate("Email", {
+                  navigate.navigate("OrdersPage", {
                     _id: `${row._id}`,
                   });
                   console.log(row._id);
