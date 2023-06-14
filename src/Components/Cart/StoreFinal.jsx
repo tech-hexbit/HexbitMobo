@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 // img
 import img from "./../../../assets/Cart/StoreFinal.png";
 
-const StoreFinal = () => {
+const StoreFinal = (props) => {
   const navigation = useNavigation();
   return (
     <View style={SFCss.mDiv}>
