@@ -17,6 +17,7 @@ import ADCss from "./Css/AddProductCss";
 import img from "./../../../assets/Cart/plus-circle.png";
 
 const AddProduct = () => {
+  const [showError, setError] = useState("");
   const [name, setName] = useState("");
   const [Price, setPrice] = useState("");
   const [Stock, setStock] = useState("");
@@ -40,6 +41,10 @@ const AddProduct = () => {
 
     // const result = await launchCamera(options?)
   };
+  const handleButtonPress = async () => {
+    console.log("handleButtonPress");
+  };
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
@@ -116,12 +121,17 @@ const AddProduct = () => {
           />
         </View>
 
+        <Text style={ADCss.errorMsg}>
+          {showError.length > 0 ? showError : ""}
+        </Text>
+
         <View style={ADCss.btnView}>
           <TouchableOpacity
             style={ADCss.btnNext}
-            onPress={() => {
-              navigation.navigate("Store");
-            }}
+            onPress={
+              handleButtonPress
+              // navigation.navigate("Store");
+            }
           >
             <Text style={ADCss.Next}>Add</Text>
           </TouchableOpacity>
