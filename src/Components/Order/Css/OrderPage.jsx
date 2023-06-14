@@ -80,6 +80,24 @@ const OPCss = StyleSheet.create({
     fontWeight: 700,
     fontSize: 20,
   },
+  UpdateStatusView: {
+    flexDirection: "column",
+    alignItems: "flex-end",
+    marginVertical: 20,
+  },
+  UpdateStatusViewChild: {
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderColor: "#622AC3",
+    borderWidth: 1,
+    borderRadius: 10,
+  },
+  UpdateStatus: {
+    fontWeight: 600,
+    fontSize: 14,
+    color: "#622AC3",
+    textAlign: "center",
+  },
 });
 
 export default OPCss;
