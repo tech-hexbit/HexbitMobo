@@ -55,6 +55,16 @@ const OPCss = StyleSheet.create({
     fontSize: 14,
     marginBottom: 5,
   },
+  qtpriceDiv: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignContent: "center",
+    gap: 10,
+  },
+  valPriceQt: {
+    fontWeight: 600,
+    fontSize: 14,
+  },
 });
 
 export default OPCss;
