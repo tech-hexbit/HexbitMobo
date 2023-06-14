@@ -37,11 +37,9 @@ const WhatsApp = () => {
   };
 
   const handleButtonPress = async () => {
-    console.log("WA Number F");
     if (textInputValue.length == 10) {
       setError("");
 
-      console.log("WA Number F==");
       let data = {
         WhatsAppNumber: textInputValue,
       };
@@ -50,13 +48,14 @@ const WhatsApp = () => {
 
       try {
         const res = await axios.post(
-          `${REACT_NATIVE_BASE_URL}:8000/api/App/onborading/WhatsAppNumber`,
+          `http://192.168.1.40:8000/api/App/onborading/WhatsAppNumber`,
           data
         );
 
-        console.log(res.data);
         if (res.data.exists === false) {
           console.log(res.data);
+
+          console.log("navigate...");
           navigation.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
         } else {
           Alert.alert("Phone Number Already in Use");
