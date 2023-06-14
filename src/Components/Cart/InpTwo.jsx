@@ -30,7 +30,7 @@ const InpTwo = (props) => {
 
   const navigation = useNavigation();
 
-  const { WhatsAppNumber } = useContext(AuthContext);
+  const { WhatsAppNumber, setstoreID } = useContext(AuthContext);
 
   // useEffect(() => {
   //   console.log(props.route.params);
@@ -68,6 +68,8 @@ const InpTwo = (props) => {
           setError("");
           console.log("res.data");
           console.log(res.data);
+
+          setstoreID(res.data.storeID);
 
           navigation.navigate("StoreFinal");
 
