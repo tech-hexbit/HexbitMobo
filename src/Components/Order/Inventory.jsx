@@ -14,12 +14,8 @@ import axios from "axios";
 import { REACT_NATIVE_BASE_URL } from "@env";
 
 const Inventory = () => {
-  const [showTablwData, setTableData] = useState();
+  const [tableData, setTableData] = useState();
   const [show, set] = useState("All");
-
-  useEffect(() => {
-    console.log(show);
-  }, [show]);
 
   useEffect(() => {
     dataSet();
@@ -36,7 +32,8 @@ const Inventory = () => {
         data
       );
 
-      console.log(res.data.Order[0].Date);
+      console.log(res.data.Order);
+      setTableData(res.data.Order);
     } catch (error) {
       console.log(error);
     }
@@ -101,7 +98,33 @@ const Inventory = () => {
           On Hold
         </Text>
       </View>
-      <Table />
+      {/* <Table /> */}
+
+      {tableData.length > 0 ? (
+        <View>
+          <View style={InventoryCss.tableRow}>
+            <Text style={InventoryCss.headerCell}>Date</Text>
+            <Text style={InventoryCss.headerCell}>Order No.</Text>
+            <Text style={InventoryCss.headerCell}>Status</Text>
+            <Text style={InventoryCss.headerCell}>Amount</Text>
+          </View>
+
+          {tableData.map((row, index) => {
+            console.log("row------------");
+            console.log(row.Date);
+            return (
+              <View key={index} style={InventoryCss.tableRow}>
+                <Text style={InventoryCss.tableCell}>{row.Date}</Text>
+                <Text style={InventoryCss.tableCell}>{row._id}</Text>
+                <Text style={InventoryCss.tableCell}>{row.Status}</Text>
+                <Text style={InventoryCss.tableCell}>{row.amount}</Text>
+              </View>
+            );
+          })}
+        </View>
+      ) : (
+        <Text>No Orders</Text>
+      )}
     </View>
   );
 };
@@ -221,6 +244,19 @@ const InventoryCss = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     width: "25%",
+  },
+  tableRow: {
+    flexDirection: "row",
+    borderBottomWidth: 1,
+    borderBottomColor: "gray",
+    paddingVertical: 10,
+  },
+  headerCell: {
+    fontWeight: "bold",
+    flex: 1,
+  },
+  tableCell: {
+    flex: 1,
   },
 });
 
