@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // components
 import Table from "./TableCom";
@@ -16,6 +17,8 @@ import { REACT_NATIVE_BASE_URL } from "@env";
 const Inventory = () => {
   const [tableData, setTableData] = useState();
   const [show, set] = useState("All");
+
+  const navigate = useNavigation();
 
   useEffect(() => {
     dataSet();
@@ -100,7 +103,7 @@ const Inventory = () => {
       </View>
       {/* <Table /> */}
 
-      {tableData.length > 0 ? (
+      {tableData?.length > 0 ? (
         <View>
           <View style={InventoryCss.tableRow}>
             <Text style={InventoryCss.headerCell}>Date</Text>
@@ -113,12 +116,22 @@ const Inventory = () => {
             console.log("row------------");
             console.log(row.Date);
             return (
-              <View key={index} style={InventoryCss.tableRow}>
-                <Text style={InventoryCss.tableCell}>{row.Date}</Text>
-                <Text style={InventoryCss.tableCell}>{row._id}</Text>
-                <Text style={InventoryCss.tableCell}>{row.Status}</Text>
-                <Text style={InventoryCss.tableCell}>{row.amount}</Text>
-              </View>
+              <TouchableOpacity
+                key={index}
+                onPress={() => {
+                  navigate.navigate("Email", {
+                    _id: `${row._id}`,
+                  });
+                  console.log(row._id);
+                }}
+              >
+                <View style={InventoryCss.tableRow}>
+                  <Text style={InventoryCss.tableCell}>{row.Date}</Text>
+                  <Text style={InventoryCss.tableCell}>{row._id}</Text>
+                  <Text style={InventoryCss.tableCell}>{row.Status}</Text>
+                  <Text style={InventoryCss.tableCell}>{row.amount}</Text>
+                </View>
+              </TouchableOpacity>
             );
           })}
         </View>
