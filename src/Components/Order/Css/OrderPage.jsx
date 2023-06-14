@@ -39,6 +39,10 @@ const OPCss = StyleSheet.create({
   ItemDiv: {
     flexDirection: "row",
     justifyContent: "space-evenly",
+    borderWidth: 1,
+    borderColor: "lightgrey",
+    padding: 10,
+    borderRadius: 10,
   },
 });
 
