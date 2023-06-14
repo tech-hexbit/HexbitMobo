@@ -31,6 +31,11 @@ const OPCss = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  OrderedItems: {
+    fontWeight: 600,
+    fontSize: 18,
+    marginVertical: 15,
+  },
 });
 
 export default OPCss;
