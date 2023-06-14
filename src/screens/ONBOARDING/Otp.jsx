@@ -88,30 +88,6 @@ const Otp = (props) => {
       console.log("fill");
       setError("Please Enter A Valid Number");
     }
-    // if (textInputValue.length == 10) {
-    //   setError("");
-
-    //   let data = {
-    //     WhatsAppNumber: textInputValue,
-    //   };
-
-    //   try {
-    //     const res = await axios.post(
-    //       `${REACT_NATIVE_BASE_URL}/api/App/onborading/WhatsAppNumber`,
-    //       data
-    //     );
-    //     if (res.data.exists === false) {
-    //       console.log(res.data);
-    //       navigation.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
-    //     } else {
-    //       Alert.alert("Phone Number Already in Use");
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // } else {
-    //   setError("Please Enter A Valid Number");
-    // }
   };
 
   return (
