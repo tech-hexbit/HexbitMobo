@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import React, { useState, useEffect } from "react";
 
 // axios
@@ -33,74 +33,76 @@ const OrdersPage = (props) => {
   };
 
   return (
-    <>
-      {show.length ? (
-        <>
-          {show.map((val, key) => {
-            return (
-              <View key={key} style={OPCss.mDiv}>
-                <View style={OPCss.HMDiv}>
-                  <View style={OPCss.val1}>
-                    <Text style={OPCss.labelTEXT}>Order No.</Text>
-                    <Text style={OPCss.valText}>{val._id}</Text>
-                  </View>
-                  <View>
-                    <Text style={OPCss.labelTEXT}>Order Date</Text>
-                    <Text style={OPCss.valText}>{val.Date}</Text>
-                  </View>
-                  <View>
-                    <Text style={OPCss.labelTEXT}>Status</Text>
-                    <Text style={OPCss.valText}>{val.Status}</Text>
-                  </View>
-                </View>
-
-                <View style={OPCss.cnName}>
-                  <Text style={OPCss.labelTEXT}>Customer Name</Text>
-                  <Text style={OPCss.valText}>{val.CustormerID}</Text>
-                </View>
-
-                <View style={OPCss.cenDiv}>
-                  <View>
-                    <Text>Payment</Text>
-                    <Text>{val.method}</Text>
-                  </View>
-                  <View>
-                    <Text>Amount</Text>
-                    <Text>{val.amount}</Text>
-                  </View>
-                </View>
-
-                <View>
-                  <Text>Shipping Address</Text>
-                  <Text>{val.ShippingAddress}</Text>
-                </View>
-
-                <Text>Ordered Items</Text>
-
-                <View>
-                  <View>
-                    <Image source={Img} />
-                  </View>
-                  <View>
-                    <Text>{val.Items[0].ItemID.name}</Text>
-                    <Text>{val.Items[0].ItemID.des}</Text>
-
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <>
+        {show.length ? (
+          <>
+            {show.map((val, key) => {
+              return (
+                <View key={key} style={OPCss.mDiv}>
+                  <View style={OPCss.HMDiv}>
+                    <View style={OPCss.val1}>
+                      <Text style={OPCss.labelTEXT}>Order No.</Text>
+                      <Text style={OPCss.valText}>{val._id}</Text>
+                    </View>
                     <View>
-                      <Text>Price: Rs {val.Items[0].ItemID.price}</Text>
-                      <Text>Quantity: {val.Items[0].quantity}</Text>
+                      <Text style={OPCss.labelTEXT}>Order Date</Text>
+                      <Text style={OPCss.valText}>{val.Date}</Text>
+                    </View>
+                    <View>
+                      <Text style={OPCss.labelTEXT}>Status</Text>
+                      <Text style={OPCss.valText}>{val.Status}</Text>
                     </View>
                   </View>
-                </View>
 
-                <Text>OrdersPage</Text>
-              </View>
-            );
-          })}
-        </>
-      ) : (
-        <Text>No Data</Text>
-      )}
-    </>
+                  <View style={OPCss.cnName}>
+                    <Text style={OPCss.labelTEXT}>Customer Name</Text>
+                    <Text style={OPCss.valText}>{val.CustormerID}</Text>
+                  </View>
+
+                  <View style={OPCss.cenDiv}>
+                    <View>
+                      <Text style={OPCss.labelTEXT}>Payment</Text>
+                      <Text style={OPCss.valText}>{val.method}</Text>
+                    </View>
+                    <View>
+                      <Text style={OPCss.labelTEXT}>Amount</Text>
+                      <Text style={OPCss.valText}>₹ {val.amount}</Text>
+                    </View>
+                  </View>
+
+                  <View style={OPCss.cnName}>
+                    <Text style={OPCss.labelTEXT}>Shipping Address</Text>
+                    <Text style={OPCss.valText}>{val.ShippingAddress}</Text>
+                  </View>
+
+                  <Text style={OPCss.OrderedItems}>Ordered Items</Text>
+
+                  <View>
+                    <View>
+                      <Image source={Img} />
+                    </View>
+                    <View>
+                      <Text>{val.Items[0].ItemID.name}</Text>
+                      <Text>{val.Items[0].ItemID.des}</Text>
+
+                      <View>
+                        <Text>Price: Rs {val.Items[0].ItemID.price}</Text>
+                        <Text>Quantity: {val.Items[0].quantity}</Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <Text>OrdersPage</Text>
+                </View>
+              );
+            })}
+          </>
+        ) : (
+          <Text>No Data</Text>
+        )}
+      </>
+    </ScrollView>
   );
 };
 
