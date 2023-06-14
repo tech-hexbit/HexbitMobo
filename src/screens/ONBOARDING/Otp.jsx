@@ -61,9 +61,11 @@ const Otp = (props) => {
         Otp,
       };
 
+      console.log(REACT_NATIVE_BASE_URL);
+
       try {
         const res = await axios.post(
-          `${REACT_NATIVE_BASE_URL}/api/App/onborading/OptVer`,
+          `http://192.168.1.40:8000/api/App/onborading/OptVer`,
           data
         );
 
