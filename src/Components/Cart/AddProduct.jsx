@@ -6,8 +6,9 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import ImagePicker from "react-native-image-picker";
 
 // style
 import ADCss from "./Css/AddProductCss";
@@ -16,7 +17,29 @@ import ADCss from "./Css/AddProductCss";
 import img from "./../../../assets/Cart/plus-circle.png";
 
 const AddProduct = () => {
+  const [name, setName] = useState("");
+  const [Price, setPrice] = useState("");
+  const [Stock, setStock] = useState("");
+  const [Type, setType] = useState("");
+  const [Des, setDes] = useState("");
+  const [Img, setImg] = useState("");
+
+  const [image, setImage] = useState(null);
+
   const navigation = useNavigation();
+
+  const openGallery = async () => {
+    console.log("========================");
+
+    ImagePicker.showImagePicker({
+      title: "Select an Image",
+      multiple: false,
+    }).then((image) => {
+      setImage(image);
+    });
+
+    // const result = await launchCamera(options?)
+  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
@@ -24,28 +47,48 @@ const AddProduct = () => {
           <Text style={ADCss.AddProductText}>Add Product</Text>
         </View>
 
-        <View style={ADCss.AddImgView}>
-          <View style={ADCss.AddImgBorder}>
-            <View style={ADCss.AddImgGrey}>
-              <Image source={img} style={ADCss.plusCircle}></Image>
-              <Text style={ADCss.AddpodText}>Add Product Image</Text>
+        <TouchableOpacity onPress={openGallery}>
+          <View style={ADCss.AddImgView}>
+            <View style={ADCss.AddImgBorder}>
+              <View style={ADCss.AddImgGrey}>
+                <Image source={img} style={ADCss.plusCircle}></Image>
+                <Text style={ADCss.AddpodText}>Add Product Image</Text>
+              </View>
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
 
         <View style={ADCss.paddView}>
           <Text style={ADCss.label}>Product Name</Text>
-          <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
+          <TextInput
+            style={ADCss.TextInputTag}
+            placeholder="ABC Store"
+            onChangeText={(txt) => {
+              setName(txt);
+            }}
+          />
         </View>
 
         <View style={ADCss.rowInp}>
           <View style={ADCss.w45Div}>
             <Text style={ADCss.label}>Product Price</Text>
-            <TextInput style={ADCss.TextInputTag} placeholder="₹ 100" />
+            <TextInput
+              style={ADCss.TextInputTag}
+              placeholder="₹ 100"
+              onChangeText={(txt) => {
+                setPrice(txt);
+              }}
+            />
           </View>
           <View style={ADCss.w45Div}>
             <Text style={ADCss.label}>Qty In Stock</Text>
-            <TextInput style={ADCss.TextInputTag} placeholder="100" />
+            <TextInput
+              style={ADCss.TextInputTag}
+              placeholder="100"
+              onChangeText={(txt) => {
+                setStock(txt);
+              }}
+            />
           </View>
         </View>
 
@@ -54,6 +97,9 @@ const AddProduct = () => {
           <TextInput
             style={ADCss.TextInputTag}
             placeholder="Select Product type"
+            onChangeText={(txt) => {
+              setType(txt);
+            }}
           />
         </View>
 
@@ -64,6 +110,9 @@ const AddProduct = () => {
             multiline={true}
             numberOfLines={4}
             placeholder="ABC Store Description ...."
+            onChangeText={(txt) => {
+              setDes(txt);
+            }}
           />
         </View>
 
