@@ -65,6 +65,21 @@ const OPCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 14,
   },
+  HeaderView: {
+    backgroundColor: "#CCCEFF",
+    paddingVertical: 20,
+    paddingHorizontal: 30,
+  },
+  HeaderTextDetails: {
+    color: "#350B5E",
+    fontWeight: 700,
+    fontSize: 30,
+  },
+  HeaderText_id: {
+    color: "#350B5E",
+    fontWeight: 700,
+    fontSize: 20,
+  },
 });
 
 export default OPCss;
