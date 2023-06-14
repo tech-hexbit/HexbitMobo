@@ -83,7 +83,9 @@ const OrdersPage = (props) => {
                       <Image source={Img} />
                     </View>
                     <View>
-                      <Text>{val.Items[0].ItemID.name}</Text>
+                      <Text style={OPCss.valName}>
+                        {val.Items[0].ItemID.name}
+                      </Text>
                       <Text>{val.Items[0].ItemID.des}</Text>
 
                       <View>
