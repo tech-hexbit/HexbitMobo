@@ -100,6 +100,10 @@ const ADCss = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
   },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
+  },
 });
 
 export default ADCss;
