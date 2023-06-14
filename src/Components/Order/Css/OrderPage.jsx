@@ -44,6 +44,9 @@ const OPCss = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
   },
+  valName: {
+    fontWeight: 600,
+  },
 });
 
 export default OPCss;
