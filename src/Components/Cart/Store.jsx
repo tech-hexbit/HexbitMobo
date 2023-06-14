@@ -9,7 +9,7 @@ import ProductCart from "./ProductCart";
 // style
 import StoreCss from "./Css/StoreCss";
 
-const Store = () => {
+const Store = (props) => {
   const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -54,6 +54,7 @@ const Store = () => {
           <Text
             style={StoreCss.AddProduct}
             onPress={() => {
+              // console.log(props.route.params);
               navigation.navigate("AddProduct");
             }}
           >
