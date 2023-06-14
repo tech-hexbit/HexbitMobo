@@ -90,9 +90,13 @@ const OrdersPage = (props) => {
                         {val.Items[0].ItemID.des}
                       </Text>
 
-                      <View>
-                        <Text>Price: Rs {val.Items[0].ItemID.price}</Text>
-                        <Text>Quantity: {val.Items[0].quantity}</Text>
+                      <View style={OPCss.qtpriceDiv}>
+                        <Text style={OPCss.valPriceQt}>
+                          Price: Rs {val.Items[0].ItemID.price}
+                        </Text>
+                        <Text style={OPCss.valPriceQt}>
+                          Quantity: {val.Items[0].quantity}
+                        </Text>
                       </View>
                     </View>
                   </View>
