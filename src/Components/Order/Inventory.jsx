@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 // components
 import Table from "./TableCom";
@@ -7,12 +7,40 @@ import Table from "./TableCom";
 // theme
 import { COLORS, SIZES } from "../../constants/theme";
 
+// axios
+import axios from "axios";
+
+// env
+import { REACT_NATIVE_BASE_URL } from "@env";
+
 const Inventory = () => {
+  const [showTablwData, setTableData] = useState();
   const [show, set] = useState("All");
 
   useEffect(() => {
     console.log(show);
   }, [show]);
+
+  useEffect(() => {
+    dataSet();
+  }, []);
+
+  const dataSet = async () => {
+    try {
+      let data = {
+        StoreID: "64893a6b749921c486f47f7d",
+      };
+
+      const res = await axios.post(
+        `http://192.168.1.40:8000/api/App/Order/GetStoreOrder`,
+        data
+      );
+
+      console.log(res.data.Order[0].Date);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <View>
       <Text style={InventoryCss.StatusText}>Inventory Status</Text>
@@ -26,6 +54,13 @@ const Inventory = () => {
           <Text style={InventoryCss.txt4}>674</Text>
         </View>
       </View>
+
+      <TouchableOpacity onPress={dataSet}>
+        <View>
+          <Text>Refresh</Text>
+        </View>
+      </TouchableOpacity>
+
       <View style={InventoryCss.toggleBtn}>
         <Text
           style={show === "All" ? InventoryCss.selected : InventoryCss.All}
