@@ -78,7 +78,7 @@ const OrdersPage = (props) => {
 
                   <Text style={OPCss.OrderedItems}>Ordered Items</Text>
 
-                  <View>
+                  <View style={OPCss.ItemDiv}>
                     <View>
                       <Image source={Img} />
                     </View>
