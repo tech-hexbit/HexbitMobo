@@ -36,6 +36,10 @@ const OPCss = StyleSheet.create({
     fontSize: 18,
     marginVertical: 15,
   },
+  ItemDiv: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
 });
 
 export default OPCss;
