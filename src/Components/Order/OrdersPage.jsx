@@ -106,7 +106,11 @@ const OrdersPage = (props) => {
                       </View>
                     </View>
 
-                    <Text>OrdersPage</Text>
+                    <View style={OPCss.UpdateStatusView}>
+                      <View style={OPCss.UpdateStatusViewChild}>
+                        <Text style={OPCss.UpdateStatus}>Update Status</Text>
+                      </View>
+                    </View>
                   </View>
                 </View>
               );
