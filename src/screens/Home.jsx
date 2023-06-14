@@ -27,7 +27,7 @@ import plus from "./../../assets/Inventory/plus.png";
 import axios from "axios";
 
 // env
-import { REACT_NATIVE_BASE_URL } from "@env";
+// import { http://192.168.1.40:8000 } from "@env";
 
 const Home = () => {
   const [showError, setError] = useState("");
@@ -41,7 +41,7 @@ const Home = () => {
   const invData = async () => {
     try {
       const res = await axios.get(
-        `${REACT_NATIVE_BASE_URL}/api/App/Inventory/InventoryGet`
+        `http://192.168.1.40:8000/api/App/Inventory/InventoryGet`
       );
 
       if (res.data.status === true) {
