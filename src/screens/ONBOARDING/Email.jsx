@@ -34,9 +34,12 @@ const Email = (props) => {
       };
       try {
         const res = await axios.post(
-          `${REACT_NATIVE_BASE_URL}/api/App/onborading/name&Email`,
+          `http://192.168.1.40:8000/api/App/onborading/name&Email`,
           data
         );
+
+        console.log(data);
+
         if (res.data.status === true) {
           setError("");
           console.log("res.data");
