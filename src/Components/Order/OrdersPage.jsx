@@ -86,7 +86,9 @@ const OrdersPage = (props) => {
                       <Text style={OPCss.valName}>
                         {val.Items[0].ItemID.name}
                       </Text>
-                      <Text>{val.Items[0].ItemID.des}</Text>
+                      <Text style={OPCss.valDes}>
+                        {val.Items[0].ItemID.des}
+                      </Text>
 
                       <View>
                         <Text>Price: Rs {val.Items[0].ItemID.price}</Text>
