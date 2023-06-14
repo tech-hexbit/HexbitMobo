@@ -56,9 +56,11 @@ const InpTwo = (props) => {
 
       console.log(WhatsAppNumber, "= WhatsAppNumber");
 
+      console.log(data);
+
       try {
         const res = await axios.post(
-          `${REACT_NATIVE_BASE_URL}/api/App/cart/AddStore`,
+          `http://192.168.1.40:8000/api/App/cart/AddStore`,
           data
         );
 
