@@ -38,6 +38,7 @@ export const AuthContextProvider = (props) => {
   //   const contextValue = useMemo(() => ({}), []);
 
   const [WhatsAppNumber, setWhatsAppNumber] = useState(0);
+  const [storeID, setstoreID] = useState("");
 
   return (
     <AuthContext.Provider
@@ -48,6 +49,8 @@ export const AuthContextProvider = (props) => {
         logout,
         isLoading,
         userToken,
+        storeID,
+        setstoreID,
       }}
     >
       {props.children}
