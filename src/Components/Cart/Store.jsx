@@ -22,7 +22,9 @@ import AuthContext from "./../../../store/auth-context";
 import axios from "axios";
 
 const Store = (props) => {
-  const { WhatsAppNumber, setstoreID } = useContext(AuthContext);
+  const { WhatsAppNumber, storeID } = useContext(AuthContext);
+
+  const [showData, setData] = useState([]);
   const [showError, setError] = useState("");
 
   useEffect(() => {
@@ -34,8 +36,11 @@ const Store = (props) => {
       console.log("first-->");
 
       let data = {
-        StoreID: setstoreID,
+        StoreID: storeID,
       };
+
+      console.log(data);
+
       const res = await axios.post(
         `http://192.168.1.40:8000/api/App/cart/getStoreItems`,
         data
@@ -43,7 +48,10 @@ const Store = (props) => {
       if (res.data.status === true) {
         setError("");
         console.log("res.data");
-        console.log(res.data);
+        // console.log(res.data);
+
+        console.log(res.data.Store);
+        setData(res.data.Store);
       } else {
         console.log(res);
         setError("Error");
@@ -66,38 +74,27 @@ const Store = (props) => {
         <StoreHeader true={true} title="MyStore" />
         <Text style={StoreCss.Products}>Products</Text>
         <View style={StoreCss.ProductsGrid}>
-          <ProductCart
-            name="Product Name"
-            dec="Filler text is text that shares some characteristics of a real written
-          text, but is random."
-            price={500}
-            Order={200}
-            InStore={326}
-          />
-          <ProductCart
-            name="Product Name"
-            dec="Filler text is text that shares some characteristics of a real written
-          text, but is random."
-            price={500}
-            Order={200}
-            InStore={326}
-          />
-          <ProductCart
-            name="Product Name"
-            dec="Filler text is text that shares some characteristics of a real written
-        text, but is random."
-            price={500}
-            Order={200}
-            InStore={326}
-          />
-          <ProductCart
-            name="Product Name"
-            dec="Filler text is text that shares some characteristics of a real written
-        text, but is random."
-            price={500}
-            Order={200}
-            InStore={326}
-          />
+          {showData.length > 0 ? (
+            <View>
+              {showData.map((val, key) => {
+                return (
+                  <ProductCart
+                    name={val.ItemID.name}
+                    dec={val.ItemID.des}
+                    price={val.ItemID.price}
+                    Order={val.ItemID.totalSold}
+                    InStore={val.ItemID.stock}
+                    _id={val.ItemID._id}
+                    key={key}
+                  />
+                );
+              })}
+            </View>
+          ) : (
+            <View>
+              <Text>Please Add Products</Text>
+            </View>
+          )}
         </View>
         <View style={StoreCss.Addpod}>
           <Text
