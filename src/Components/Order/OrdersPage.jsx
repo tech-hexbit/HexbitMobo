@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React, { useState, useEffect } from "react";
 
 // axios
@@ -106,11 +106,13 @@ const OrdersPage = (props) => {
                       </View>
                     </View>
 
-                    <View style={OPCss.UpdateStatusView}>
-                      <View style={OPCss.UpdateStatusViewChild}>
-                        <Text style={OPCss.UpdateStatus}>Update Status</Text>
+                    <TouchableOpacity>
+                      <View style={OPCss.UpdateStatusView}>
+                        <View style={OPCss.UpdateStatusViewChild}>
+                          <Text style={OPCss.UpdateStatus}>Update Status</Text>
+                        </View>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 </View>
               );
