@@ -101,8 +101,9 @@ const ADCss = StyleSheet.create({
     textAlign: "center",
   },
   errorMsg: {
+    textAlign: "center",
     color: "#800000",
-    marginBottom: 15,
+    marginTop: 15,
   },
 });
 
