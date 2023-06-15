@@ -38,6 +38,18 @@ const LMCss = StyleSheet.create({
     borderColor: "#fff",
     color: "#fff",
   },
+  GetStarted: {
+    marginTop: 60,
+    backgroundColor: "#fff",
+    color: COLORS.primary,
+    paddingTop: 15,
+    paddingBottom: 15,
+    paddingHorizontal: 70,
+    borderRadius: 10,
+    fontWeight: 600,
+    fontSize: 20,
+    lineHeight: 30,
+  },
 });
 
 export default LMCss;
