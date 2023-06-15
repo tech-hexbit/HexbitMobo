@@ -16,10 +16,15 @@ const LoginMain = () => {
   const navigation = useNavigation();
 
   const handleButtonPress = async () => {
-    if (showNum !== "" && showEmail !== "") {
+    if (showNum.length == 10 && showEmail !== "") {
       setError("");
       console.log(showNum);
       console.log(showEmail);
+
+      let data = {
+        WhatsAppNumber: showNum,
+        email: showEmail,
+      };
     } else {
       setError("Please Fill All the Details");
     }
@@ -33,6 +38,7 @@ const LoginMain = () => {
           style={LMCss.LoginText1}
           placeholder="WhatsApp Number"
           placeholderTextColor="#717171"
+          keyboardType="numeric"
           onChangeText={(txt) => {
             setNum(txt);
           }}
