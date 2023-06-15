@@ -20,8 +20,11 @@ import BottomNav from "./navigation/BottomNav";
 
 // state
 import { AuthContextProvider } from "./store/auth-context";
+import AuthContext from "./store/auth-context";
 
 export default function App() {
+  const { isLoading, userToken } = useContext(AuthContext);
+
   const Stack = createNativeStackNavigator();
 
   return (
