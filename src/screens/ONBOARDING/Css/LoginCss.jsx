@@ -32,6 +32,12 @@ const LoginCss = StyleSheet.create({
     fontSize: 20,
     lineHeight: 30,
   },
+  Already: {
+    marginTop: 20,
+    color: "#fff",
+    fontWeight: 600,
+    fontSize: 18,
+  },
 });
 
 export default LoginCss;
