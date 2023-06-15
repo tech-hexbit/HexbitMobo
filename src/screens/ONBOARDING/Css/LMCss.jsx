@@ -9,6 +9,35 @@ const LMCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  MDiv: {
+    marginTop: 20,
+    width: "80%",
+  },
+  LoginText: {
+    color: "#fff",
+    fontWeight: 600,
+    fontSize: 18,
+  },
+  LoginText1: {
+    borderWidth: 2,
+    marginBottom: 15,
+    width: "100%",
+    borderRadius: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderColor: "#fff",
+    color: "#fff",
+  },
+  LoginText2: {
+    borderWidth: 2,
+    marginBottom: 15,
+    width: "100%",
+    borderRadius: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderColor: "#fff",
+    color: "#fff",
+  },
 });
 
 export default LMCss;
