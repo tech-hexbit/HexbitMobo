@@ -1,5 +1,5 @@
 import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 // style
@@ -9,6 +9,9 @@ import LMCss from "./Css/LMCss";
 import img1 from "./../../../assets/Login/logo.png";
 
 const LoginMain = () => {
+  const [showNum, setNum] = useState("");
+  const [showEmail, setEmail] = useState("");
+
   const navigation = useNavigation();
   return (
     <View style={LMCss.mDIv}>
@@ -19,11 +22,17 @@ const LoginMain = () => {
           style={LMCss.LoginText1}
           placeholder="WhatsApp Number"
           placeholderTextColor="#717171"
+          onChangeText={(txt) => {
+            setNum(txt);
+          }}
         />
         <TextInput
           style={LMCss.LoginText2}
           placeholder="Email"
           placeholderTextColor="#717171"
+          onChangeText={(txt) => {
+            setEmail(txt);
+          }}
         />
       </View>
 
