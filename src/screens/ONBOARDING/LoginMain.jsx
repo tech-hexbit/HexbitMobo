@@ -13,7 +13,6 @@ const LoginMain = () => {
       <Image source={img1} />
 
       <View style={LMCss.MDiv}>
-        <Text>Login</Text>
         <TextInput style={LMCss.LoginText1} />
         <TextInput style={LMCss.LoginText2} />
       </View>
