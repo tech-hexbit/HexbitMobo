@@ -56,9 +56,6 @@ const LMCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 18,
   },
-
-  //   LoginText1::place
-  //   LoginText2::place
 });
 
 export default LMCss;
