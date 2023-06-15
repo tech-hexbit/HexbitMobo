@@ -24,6 +24,14 @@ const LoginMain = () => {
       >
         <Text style={LMCss.GetStarted}>Login</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("WhatsApp");
+        }}
+      >
+        <Text style={LMCss.Already}>Create a new Account</Text>
+      </TouchableOpacity>
     </View>
   );
 };
