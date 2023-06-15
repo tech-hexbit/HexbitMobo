@@ -1,10 +1,14 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import React, { useContext } from "react";
+
+// state
+import AuthContext from "./../../../store/auth-context";
 
 // style
 import BioCss from "./Css/BioCss";
 
 const Bio = () => {
+  const { logout } = useContext(AuthContext);
   return (
     <View style={BioCss.mDiv}>
       <View style={BioCss.RowDiv}>
@@ -22,9 +26,15 @@ const Bio = () => {
           <Text style={BioCss.title}>Name</Text>
           <Text style={BioCss.data}>Raghav Anand</Text>
         </View>
-        <View style={BioCss.SwitchStoreView}>
-          <Text style={BioCss.SwitchStore}>Logout</Text>
-        </View>
+        <TouchableOpacity
+          onPress={() => {
+            logout();
+          }}
+        >
+          <View style={BioCss.SwitchStoreView}>
+            <Text style={BioCss.SwitchStore}>Logout</Text>
+          </View>
+        </TouchableOpacity>
       </View>
 
       <View style={BioCss.dataView}>
