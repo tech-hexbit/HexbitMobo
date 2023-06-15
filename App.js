@@ -28,7 +28,7 @@ export default function App() {
     <>
       <AuthContextProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
+          <Stack.Navigator initialRouteName="Login">
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="WhatsApp" component={WhatsApp} />
             <Stack.Screen name="Otp" component={Otp} />
