@@ -17,9 +17,14 @@ const Bio = () => {
         </View>
       </View>
 
-      <View style={BioCss.dataView}>
-        <Text style={BioCss.title}>Name</Text>
-        <Text style={BioCss.data}>Raghav Anand</Text>
+      <View style={BioCss.RowDiv}>
+        <View style={BioCss.dataView}>
+          <Text style={BioCss.title}>Name</Text>
+          <Text style={BioCss.data}>Raghav Anand</Text>
+        </View>
+        <View style={BioCss.SwitchStoreView}>
+          <Text style={BioCss.SwitchStore}>Logout</Text>
+        </View>
       </View>
 
       <View style={BioCss.dataView}>
