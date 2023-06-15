@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 // theme
 import { COLORS } from "../../constants/theme";
@@ -24,14 +24,13 @@ const Login = () => {
         <Text style={LoginCss.Sell}>Sell Faster</Text>
       </View>
 
-      <Text
-        style={LoginCss.GetStarted}
+      <TouchableOpacity
         onPress={() => {
           navigation.navigate("WhatsApp");
         }}
       >
-        Get Started
-      </Text>
+        <Text style={LoginCss.GetStarted}>Get Started</Text>
+      </TouchableOpacity>
     </View>
   );
 };
