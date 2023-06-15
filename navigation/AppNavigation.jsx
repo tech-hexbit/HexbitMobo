@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // screens
 import Login from "./../src/screens/ONBOARDING/Login";
+import LoginMain from "./../src/screens/ONBOARDING/LoginMain";
 import Otp from "./../src/screens/ONBOARDING/Otp";
 import WhatsApp from "./../src/screens/ONBOARDING/WhatsApp";
 import Name from "./../src/screens/ONBOARDING/Name";
@@ -47,6 +48,11 @@ const AppNavigation = () => {
             <Stack.Screen
               name="Login"
               component={Login}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="LoginMain"
+              component={LoginMain}
               options={{ headerShown: false }}
             />
             <Stack.Screen
