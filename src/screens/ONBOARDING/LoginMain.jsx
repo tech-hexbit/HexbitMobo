@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import React from "react";
 
 // style
@@ -16,6 +16,14 @@ const LoginMain = () => {
         <TextInput style={LMCss.LoginText1} />
         <TextInput style={LMCss.LoginText2} />
       </View>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("LoginMain");
+        }}
+      >
+        <Text style={LMCss.GetStarted}>Login</Text>
+      </TouchableOpacity>
     </View>
   );
 };
