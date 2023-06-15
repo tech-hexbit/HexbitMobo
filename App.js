@@ -29,17 +29,44 @@ export default function App() {
       <AuthContextProvider>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Login">
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="WhatsApp" component={WhatsApp} />
-            <Stack.Screen name="Otp" component={Otp} />
-            <Stack.Screen name="Name" component={Name} />
-            <Stack.Screen name="Email" component={Email} />
-            <Stack.Screen name="Company" component={Company} />
-            <Stack.Screen name="License" component={License} />
-            <Stack.Screen name="InpTwo" component={InpTwo} />
+            <Stack.Screen
+              name="Login"
+              component={Login}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="WhatsApp"
+              component={WhatsApp}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Otp"
+              component={Otp}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Name"
+              component={Name}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Email"
+              component={Email}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Company"
+              component={Company}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="License"
+              component={License}
+              options={{ headerShown: false }}
+            />
             <Stack.Screen
               name="Home"
-              // options={{ headerShown: false }}
+              options={{ headerShown: false }}
               component={BottomNav}
             />
           </Stack.Navigator>
