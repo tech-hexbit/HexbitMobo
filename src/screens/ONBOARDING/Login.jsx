@@ -31,6 +31,14 @@ const Login = () => {
       >
         <Text style={LoginCss.GetStarted}>Get Started</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("LoginMain");
+        }}
+      >
+        <Text>Already Have A Account</Text>
+      </TouchableOpacity>
     </View>
   );
 };
