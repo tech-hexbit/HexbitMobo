@@ -19,7 +19,7 @@ const LoginMain = () => {
 
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("LoginMain");
+          //   navigation.navigate("LoginMain");
         }}
       >
         <Text style={LMCss.GetStarted}>Login</Text>
