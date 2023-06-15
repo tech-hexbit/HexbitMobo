@@ -1,5 +1,8 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
+import React, { useContext, useState } from "react";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // screens
 import Login from "./../src/screens/ONBOARDING/Login";
@@ -11,9 +14,15 @@ import Company from "./../src/screens/ONBOARDING/Company";
 import License from "./../src/screens/ONBOARDING/License";
 
 // Bottom Nav
-import BottomNav from "./navigation/BottomNav";
+import BottomNav from "./BottomNav";
+
+// state
+import AuthContext from "./../store/auth-context";
 
 const AppNavigation = () => {
+  const { isLoading, userToken } = useContext(AuthContext);
+
+  const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
@@ -62,6 +71,13 @@ const AppNavigation = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 
 export default AppNavigation;
