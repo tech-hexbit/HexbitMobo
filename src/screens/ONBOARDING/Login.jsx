@@ -37,7 +37,7 @@ const Login = () => {
           navigation.navigate("LoginMain");
         }}
       >
-        <Text>Already Have A Account</Text>
+        <Text style={LoginCss.Already}>Already Have A Account</Text>
       </TouchableOpacity>
     </View>
   );
