@@ -20,7 +20,7 @@ const LMCss = StyleSheet.create({
   },
   LoginText1: {
     borderWidth: 2,
-    marginBottom: 15,
+    marginBottom: 20,
     width: "100%",
     borderRadius: 10,
     paddingVertical: 12,
@@ -30,7 +30,7 @@ const LMCss = StyleSheet.create({
   },
   LoginText2: {
     borderWidth: 2,
-    marginBottom: 15,
+    marginBottom: 20,
     width: "100%",
     borderRadius: 10,
     paddingVertical: 12,
@@ -39,7 +39,7 @@ const LMCss = StyleSheet.create({
     color: "#fff",
   },
   GetStarted: {
-    marginTop: 60,
+    marginTop: 30,
     backgroundColor: "#fff",
     color: COLORS.primary,
     paddingTop: 15,
@@ -55,6 +55,10 @@ const LMCss = StyleSheet.create({
     color: "#fff",
     fontWeight: 600,
     fontSize: 18,
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
