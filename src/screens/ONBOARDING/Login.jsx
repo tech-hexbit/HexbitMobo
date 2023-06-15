@@ -5,6 +5,9 @@ import { View, Text, StyleSheet, Image } from "react-native";
 // theme
 import { COLORS } from "../../constants/theme";
 
+// style
+import LoginCss from "./Css/LoginCss";
+
 // img
 import img1 from "./../../../assets/Login/logo.png";
 import img2 from "./../../../assets/Login/Cash.png";
@@ -32,7 +35,5 @@ const Login = () => {
     </View>
   );
 };
-
-const LoginCss = StyleSheet.create({});
 
 export default Login;
