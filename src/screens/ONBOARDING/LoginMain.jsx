@@ -11,8 +11,19 @@ import img1 from "./../../../assets/Login/logo.png";
 const LoginMain = () => {
   const [showNum, setNum] = useState("");
   const [showEmail, setEmail] = useState("");
+  const [showError, setError] = useState("");
 
   const navigation = useNavigation();
+
+  const handleButtonPress = async () => {
+    if (showNum !== "" && showEmail !== "") {
+      setError("");
+      console.log(showNum);
+      console.log(showEmail);
+    } else {
+      setError("Please Fill All the Details");
+    }
+  };
   return (
     <View style={LMCss.mDIv}>
       <Image source={img1} />
@@ -36,11 +47,11 @@ const LoginMain = () => {
         />
       </View>
 
-      <TouchableOpacity
-        onPress={() => {
-          //   navigation.navigate("LoginMain");
-        }}
-      >
+      <Text style={LMCss.errorMsg}>
+        {showError.length > 0 ? showError : ""}
+      </Text>
+
+      <TouchableOpacity onPress={handleButtonPress}>
         <Text style={LMCss.GetStarted}>Login</Text>
       </TouchableOpacity>
 
