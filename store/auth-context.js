@@ -11,7 +11,7 @@ export const AuthContextProvider = (props) => {
   const [userInfo, setuserInfo] = useState(null);
 
   const login = (token, userInfo) => {
-    console.log("+-----------------------");
+    console.log("+----------------------+");
     console.log(token);
     console.log(userInfo);
 
