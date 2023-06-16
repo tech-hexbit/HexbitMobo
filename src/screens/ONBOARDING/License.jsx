@@ -57,15 +57,16 @@ const License = (props) => {
         if (res.data.status === true) {
           setError("");
           console.log("res.data");
-          console.log(res.data);
+          // console.log(res.data.token);
+          // console.log(res.data.userInfo);
 
           setWhatsAppNumber(data.WhatsAppNumber);
 
-          login();
+          login(res.data.token, res.data.userInfo);
 
-          navigate.navigate("Home", {
-            WhatsAppNumber: `${data.WhatsAppNumber}`,
-          });
+          // navigate.navigate("Home", {
+          //   WhatsAppNumber: `${data.WhatsAppNumber}`,
+          // });
         } else {
           setError("Error");
         }
