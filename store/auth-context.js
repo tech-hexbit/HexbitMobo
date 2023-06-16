@@ -66,6 +66,7 @@ export const AuthContextProvider = (props) => {
         userToken,
         storeID,
         setstoreID,
+        userInfo,
       }}
     >
       {props.children}
