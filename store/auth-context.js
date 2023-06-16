@@ -57,7 +57,6 @@ export const AuthContextProvider = (props) => {
   useEffect(() => {
     isLoadingFun();
   }, []);
-  //   const contextValue = useMemo(() => ({}), []);
 
   return (
     <AuthContext.Provider
