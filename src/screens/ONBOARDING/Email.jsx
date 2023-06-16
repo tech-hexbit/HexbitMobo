@@ -66,6 +66,7 @@ const Email = (props) => {
       <TextInput
         style={EmailCss.inpNumber}
         placeholder="example@email.com"
+        // keyboardType="email"
         onChangeText={(txt) => {
           setVal(txt);
         }}
