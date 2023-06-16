@@ -27,6 +27,7 @@ export const AuthContextProvider = (props) => {
     setLoading(true);
     setuserToken(null);
     AsyncStorage.removeItem("token");
+    AsyncStorage.removeItem("userInfo");
     setLoading(false);
   };
 
