@@ -35,7 +35,15 @@ export const AuthContextProvider = (props) => {
     try {
       setLoading(true);
       let userToken = await AsyncStorage.getItem("token");
-      setuserToken(userToken);
+      let userInfo = await AsyncStorage.getItem("userInfo");
+
+      userInfo = JSON.parse(userInfo);
+
+      if (userInfo) {
+        setuserToken(userToken);
+        setuserInfo(userInfo);
+      }
+
       setLoading(false);
     } catch (error) {
       console.log("error", error);
