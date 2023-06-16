@@ -51,8 +51,8 @@ const LoginMain = () => {
           console.log("res.data");
           console.log(res.data);
 
-          login();
-          //   console.log("navigate...");
+          login(res.data.token, res.data.userInfo);
+
           navigation.navigate("Home");
         } else {
           setError("Invalid Credentials");
