@@ -8,7 +8,9 @@ import AuthContext from "./../../../store/auth-context";
 import BioCss from "./Css/BioCss";
 
 const Bio = () => {
-  const { logout } = useContext(AuthContext);
+  const { logout, userInfo } = useContext(AuthContext);
+
+  console.log(userInfo);
   return (
     <View style={BioCss.mDiv}>
       <View style={BioCss.RowDiv}>
@@ -24,7 +26,7 @@ const Bio = () => {
       <View style={BioCss.RowDiv}>
         <View style={BioCss.dataView}>
           <Text style={BioCss.title}>Name</Text>
-          <Text style={BioCss.data}>Raghav Anand</Text>
+          <Text style={BioCss.data}>{userInfo.name}</Text>
         </View>
         <TouchableOpacity
           onPress={() => {
@@ -39,12 +41,12 @@ const Bio = () => {
 
       <View style={BioCss.dataView}>
         <Text style={BioCss.title}>Email</Text>
-        <Text style={BioCss.data}>raghavanand@gmail.com</Text>
+        <Text style={BioCss.data}>{userInfo.email}</Text>
       </View>
 
       <View style={BioCss.dataView}>
         <Text style={BioCss.title}>Nature of the company</Text>
-        <Text style={BioCss.data}>Retail</Text>
+        <Text style={BioCss.data}>{userInfo.CompanyNature}</Text>
       </View>
     </View>
   );
