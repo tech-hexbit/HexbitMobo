@@ -30,7 +30,7 @@ const InpTwo = (props) => {
 
   const navigation = useNavigation();
 
-  const { WhatsAppNumber, setstoreID } = useContext(AuthContext);
+  const { userInfo, setstoreID } = useContext(AuthContext);
 
   // useEffect(() => {
   //   console.log(props.route.params);
@@ -41,7 +41,7 @@ const InpTwo = (props) => {
       setError("");
 
       let data = {
-        WhatsAppNumber: WhatsAppNumber,
+        WhatsAppNumber: userInfo.WhatsAppNumber,
         StoreName: props.route.params.StoreName,
         StoreType: props.route.params.StoreType,
         PinCode: props.route.params.PinCode,
@@ -54,8 +54,7 @@ const InpTwo = (props) => {
         StoreDescription: shoeDes,
       };
 
-      console.log(WhatsAppNumber, "= WhatsAppNumber");
-
+      console.log("data============");
       console.log(data);
 
       try {
