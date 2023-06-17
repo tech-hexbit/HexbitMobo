@@ -12,6 +12,7 @@ export const AuthContextProvider = (props) => {
   const [WhatsAppNumber, setWhatsAppNumber] = useState(0);
   const [storeID, setstoreID] = useState("");
   const [userInfo, setuserInfo] = useState(null);
+  const [AddStore, setAddStore] = useState(null);
 
   const login = (token, userInfo) => {
     console.log("+----------------------+");
@@ -57,17 +58,35 @@ export const AuthContextProvider = (props) => {
     }
   };
 
-  const updateData = async (WhatsAppNumber) => {
+  const isLoadingStoreFun = async () => {
     try {
-      let data = {
-        WhatsAppNumber,
-      };
-      const res = await axios.post(
-        `http://192.168.1.40:8000/api/App/onborading/StoreData`,
-        data
-      );
+      let StoreID = await AsyncStorage.getItem("StoreID");
 
-      console.log(res.data);
+      if (StoreID) {
+        setAddStore(id);
+      }
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  const updateData = async (id) => {
+    console.log("================================");
+    console.log("Update Data");
+    try {
+      // let data = {
+      //   WhatsAppNumber,
+      // };
+      // const res = await axios.post(
+      //   `http://192.168.1.40:8000/api/App/onborading/StoreData`,
+      //   data
+      // );
+
+      // if (res.data.status === true) {
+      setAddStore(id);
+      AsyncStorage.setItem("StoreID", id);
+      console.log("id = " + id);
+      // }
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +94,12 @@ export const AuthContextProvider = (props) => {
 
   useEffect(() => {
     isLoadingFun();
+    isLoadingStoreFun();
   }, []);
+
+  useEffect(() => {
+    console.log("AddStore =================================" + AddStore);
+  }, [AddStore]);
 
   return (
     <AuthContext.Provider
@@ -90,6 +114,7 @@ export const AuthContextProvider = (props) => {
         userToken,
         storeID,
         userInfo,
+        AddStore,
       }}
     >
       {props.children}
