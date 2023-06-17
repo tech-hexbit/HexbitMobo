@@ -55,7 +55,7 @@ export const AuthContextProvider = (props) => {
   };
 
   const updateData = async () => {
-    console.log(first);
+    console.log("first");
   };
 
   useEffect(() => {
