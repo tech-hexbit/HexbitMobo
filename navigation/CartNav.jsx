@@ -16,7 +16,7 @@ import StoreFinal from "./../src/Components/Cart/StoreFinal";
 import AuthContext from "./../store/auth-context";
 
 export default function CartNav(props) {
-  const { WhatsAppNumber } = useContext(AuthContext);
+  const { WhatsAppNumber, userInfo } = useContext(AuthContext);
 
   console.log("AuthContext WhatsAppNumber 📧📧");
   console.log(WhatsAppNumber);
