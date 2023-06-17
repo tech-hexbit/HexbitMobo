@@ -117,7 +117,7 @@ const License = (props) => {
           </Text>
         </LinearGradient>
 
-        <LinearGradient
+        {/* <LinearGradient
           colors={["#BB14E2", "#161FE4"]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
@@ -134,7 +134,7 @@ const License = (props) => {
               Skip
             </Text>
           </View>
-        </LinearGradient>
+        </LinearGradient> */}
       </View>
     </ScrollView>
   );
