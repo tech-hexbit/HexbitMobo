@@ -21,15 +21,23 @@ export default function CartNav(props) {
   console.log("AuthContext WhatsAppNumber 📧📧");
   console.log(WhatsAppNumber);
   const Stack = createNativeStackNavigator();
+
   return (
     <>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="CartMain" component={Cart} />
-        <Stack.Screen name="InpTwo" component={InpTwo} />
-        <Stack.Screen name="StoreFinal" component={StoreFinal} />
-        <Stack.Screen name="Store" component={Store} />
-        <Stack.Screen name="AddProduct" component={AddProduct} />
-        <Stack.Screen name="Edit" component={Edit} />
+        {userInfo.Store.length === 0 ? (
+          <>
+            <Stack.Screen name="CartMain" component={Cart} />
+            <Stack.Screen name="InpTwo" component={InpTwo} />
+            <Stack.Screen name="StoreFinal" component={StoreFinal} />
+          </>
+        ) : (
+          <>
+            <Stack.Screen name="Store" component={Store} />
+            <Stack.Screen name="AddProduct" component={AddProduct} />
+            <Stack.Screen name="Edit" component={Edit} />
+          </>
+        )}
       </Stack.Navigator>
     </>
   );
