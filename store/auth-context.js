@@ -3,6 +3,9 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 
 const AuthContext = React.createContext();
 
+// axios
+import axios from "axios";
+
 export const AuthContextProvider = (props) => {
   const [isLoading, setLoading] = useState(false);
   const [userToken, setuserToken] = useState(null);
@@ -54,8 +57,20 @@ export const AuthContextProvider = (props) => {
     }
   };
 
-  const updateData = async () => {
-    console.log("first");
+  const updateData = async (WhatsAppNumber) => {
+    try {
+      let data = {
+        WhatsAppNumber,
+      };
+      const res = await axios.post(
+        `http://192.168.1.40:8000/api/App/onborading/StoreData`,
+        data
+      );
+
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
