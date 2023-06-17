@@ -30,7 +30,7 @@ const InpTwo = (props) => {
 
   const navigation = useNavigation();
 
-  const { userInfo, setstoreID } = useContext(AuthContext);
+  const { userInfo, setstoreID, updateData } = useContext(AuthContext);
 
   // useEffect(() => {
   //   console.log(props.route.params);
@@ -54,33 +54,34 @@ const InpTwo = (props) => {
         StoreDescription: shoeDes,
       };
 
-      console.log("data============");
-      console.log(data);
+      // console.log("data============");
+      // console.log(data);
 
       try {
-        const res = await axios.post(
-          `http://192.168.1.40:8000/api/App/cart/AddStore`,
-          data
-        );
+        // const res = await axios.post(
+        //   `http://192.168.1.40:8000/api/App/cart/AddStore`,
+        //   data
+        // );
 
-        if (res.data.status === true) {
-          setError("");
-          console.log("res.data");
-          console.log(res.data);
+        // if (res.data.status === true) {
+        //   setError("");
+        //   console.log("res.data");
+        //   console.log(res.data);
 
-          setstoreID(res.data.storeID);
+        //   setstoreID(res.data.storeID);
 
-          navigation.navigate("StoreFinal");
+        //   navigation.navigate("StoreFinal");
 
-          // setWhatsAppNumber(data.WhatsAppNumber);
+        // setWhatsAppNumber(data.WhatsAppNumber);
 
-          // navigate.navigate("Home", {
-          //   WhatsAppNumber: `${data.WhatsAppNumber}`,
-          // });
-        } else {
-          console.log(res);
-          setError("Error");
-        }
+        // navigate.navigate("Home", {
+        //   WhatsAppNumber: `${data.WhatsAppNumber}`,
+        // });
+        // } else {
+        //   console.log(res);
+        //   setError("Error");
+        // }
+        updateData();
       } catch (error) {
         console.log(error);
         setError("Error: An Unexpected Error Happened");
