@@ -16,28 +16,30 @@ import StoreFinal from "./../src/Components/Cart/StoreFinal";
 import AuthContext from "./../store/auth-context";
 
 export default function CartNav(props) {
-  const { WhatsAppNumber, userInfo } = useContext(AuthContext);
+  const { WhatsAppNumber, AddStore, userInfo } = useContext(AuthContext);
 
-  console.log("AuthContext WhatsAppNumber 📧📧");
-  console.log(WhatsAppNumber);
   const Stack = createNativeStackNavigator();
+
+  console.log("userInfo.Store.length = " + userInfo.Store.length);
 
   return (
     <>
       <Stack.Navigator initialRouteName="Login">
-        {userInfo.Store.length === 0 ? (
-          <>
-            <Stack.Screen name="CartMain" component={Cart} />
-            <Stack.Screen name="InpTwo" component={InpTwo} />
-            <Stack.Screen name="StoreFinal" component={StoreFinal} />
-          </>
-        ) : (
-          <>
-            <Stack.Screen name="Store" component={Store} />
-            <Stack.Screen name="AddProduct" component={AddProduct} />
-            <Stack.Screen name="Edit" component={Edit} />
-          </>
-        )}
+        <>
+          {AddStore !== null ? (
+            <>
+              <Stack.Screen name="CartMain" component={Cart} />
+              <Stack.Screen name="InpTwo" component={InpTwo} />
+              <Stack.Screen name="StoreFinal" component={StoreFinal} />
+            </>
+          ) : (
+            <>
+              <Stack.Screen name="Store" component={Store} />
+              <Stack.Screen name="AddProduct" component={AddProduct} />
+              <Stack.Screen name="Edit" component={Edit} />
+            </>
+          )}
+        </>
       </Stack.Navigator>
     </>
   );
