@@ -34,6 +34,7 @@ const Store = (props) => {
   const getData = async () => {
     try {
       console.log("first-->");
+
       console.log(userInfo.Store[0].StoreID);
 
       let data = {
