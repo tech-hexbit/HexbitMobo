@@ -54,6 +54,10 @@ export const AuthContextProvider = (props) => {
     }
   };
 
+  const updateData = async () => {
+    console.log(first);
+  };
+
   useEffect(() => {
     isLoadingFun();
   }, []);
@@ -61,14 +65,15 @@ export const AuthContextProvider = (props) => {
   return (
     <AuthContext.Provider
       value={{
-        WhatsAppNumber,
         setWhatsAppNumber,
         login,
         logout,
+        setstoreID,
+        updateData,
+        WhatsAppNumber,
         isLoading,
         userToken,
         storeID,
-        setstoreID,
         userInfo,
       }}
     >
