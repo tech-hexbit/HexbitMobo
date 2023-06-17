@@ -81,7 +81,7 @@ const InpTwo = (props) => {
         //   console.log(res);
         //   setError("Error");
         // }
-        updateData();
+        updateData(userInfo.WhatsAppNumber);
       } catch (error) {
         console.log(error);
         setError("Error: An Unexpected Error Happened");
