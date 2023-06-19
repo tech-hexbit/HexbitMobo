@@ -52,13 +52,6 @@ const SwitchStore = () => {
         console.log("Lenght", res.data.StoresList.length);
 
         setStoreData(res.data.StoresList);
-        // console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
-        // navigate.navigate("Email", {
-        //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
-        // });
-        // navigate.navigate("Email", {
-        // WhatsAppNumber: `${data.WhatsAppNumber}`,
-        // });
       } else {
         setError("Error");
       }
