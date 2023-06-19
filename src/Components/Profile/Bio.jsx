@@ -72,9 +72,11 @@ const Bio = () => {
               <Text style={BioCss.data}>--</Text>
             )}
           </View>
-          <View style={BioCss.SwitchStoreView}>
-            <Text style={BioCss.SwitchStore}>Edit Profile</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={BioCss.SwitchStoreView}>
+              <Text style={BioCss.SwitchStore}>Edit Profile</Text>
+            </View>
+          </TouchableOpacity>
         </View>
 
         <View style={BioCss.RowDiv}>
