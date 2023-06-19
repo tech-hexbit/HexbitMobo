@@ -62,6 +62,10 @@ const SwitchStore = () => {
     }
   };
 
+  const selectStore = async (id) => {
+    console.log(id);
+  };
+
   return (
     <View style={SSCss.mDIv}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -70,7 +74,12 @@ const SwitchStore = () => {
           <>
             {storeData.map((val, key) => {
               return (
-                <TouchableOpacity key={key}>
+                <TouchableOpacity
+                  key={key}
+                  onPress={() => {
+                    selectStore(val.StoreID._id);
+                  }}
+                >
                   <View style={SSCss.storeBlock}>
                     <Image source={img} style={SSCss.img} />
                     <View style={SSCss.rightView}>
