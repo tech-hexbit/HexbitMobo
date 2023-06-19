@@ -67,6 +67,12 @@ const SSCss = StyleSheet.create({
     fontWeight: 600,
     color: "#7A23CF",
   },
+  centerCreateStore: {
+    flex: 1,
+    justifyContent: "center",
+    alignContent: "center",
+    backgroundColor: "red",
+  },
 });
 
 export default SSCss;
