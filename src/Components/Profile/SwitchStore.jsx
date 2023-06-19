@@ -102,9 +102,9 @@ const SwitchStore = () => {
           ""
         )}
         <TouchableOpacity
-        // onPress={() => {
-        //   navigation.navigate("CartMain");
-        // }}
+          onPress={() => {
+            navigation.navigate("CartMainPro");
+          }}
         >
           <View style={SSCss.createView}>
             <Image source={plus} style={SSCss.plus} />
