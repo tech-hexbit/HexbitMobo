@@ -10,6 +10,7 @@ const SSCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#ccceff",
+    paddingVertical: 20,
   },
   Selectastore: {
     color: "#350B5E",
@@ -23,7 +24,7 @@ const SSCss = StyleSheet.create({
     paddingVertical: 16,
     paddingHorizontal: 30,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     alignItems: "center",
     marginBottom: 15,
   },
