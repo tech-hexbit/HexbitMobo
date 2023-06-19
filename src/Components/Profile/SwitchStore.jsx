@@ -27,6 +27,10 @@ const SwitchStore = () => {
     StoreDataFum();
   }, []);
 
+  useEffect(() => {
+    console.log(storeData);
+  }, [storeData]);
+
   const StoreDataFum = async () => {
     console.log("--------storeData--------");
 
@@ -45,9 +49,9 @@ const SwitchStore = () => {
       if (res.data.status === true) {
         setError("");
 
-        console.log("res.data");
-        console.log(res.data.StoresList);
         console.log("Lenght", res.data.StoresList.length);
+
+        setStoreData(res.data.StoresList);
         // console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
         // navigate.navigate("Email", {
         //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
