@@ -44,9 +44,6 @@ export const AuthContextProvider = (props) => {
 
       userInfo = JSON.parse(userInfo);
 
-      console.log(userToken);
-      console.log(userInfo);
-
       if (userInfo) {
         setuserToken(userToken);
         setuserInfo(userInfo);
