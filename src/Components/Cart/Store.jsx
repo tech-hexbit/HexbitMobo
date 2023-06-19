@@ -22,7 +22,7 @@ import AuthContext from "./../../../store/auth-context";
 import axios from "axios";
 
 const Store = (props) => {
-  const { WhatsAppNumber, storeID, userInfo } = useContext(AuthContext);
+  const { WhatsAppNumber, AddStore, userInfo } = useContext(AuthContext);
 
   const [showData, setData] = useState([]);
   const [showError, setError] = useState("");
@@ -33,13 +33,11 @@ const Store = (props) => {
 
   const getData = async () => {
     try {
-      console.log("first-->");
-
-      console.log(userInfo.Store[0].StoreID);
-
       let data = {
         StoreID: AddStore,
       };
+
+      console.log(data);
 
       const res = await axios.post(
         `http://192.168.1.40:8000/api/App/cart/getStoreItems`,
@@ -48,8 +46,8 @@ const Store = (props) => {
       if (res.data.status === true) {
         setError("");
         console.log("res.data");
+        console.log(res.data.Store);
 
-        // console.log(res.data.Store);
         setData(res.data.Store);
       } else {
         console.log(res);
