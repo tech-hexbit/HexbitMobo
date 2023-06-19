@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 const DisCss = StyleSheet.create({
   mDiv: {
     flexGrow: 1,
-    backgroundColor: COLORS.primary,
     justifyContent: "center",
     alignItems: "center",
   },
