@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -9,8 +9,16 @@ import SSCss from "./Css/SwitchStoreCss";
 import img from "./../../../assets/Profile/shop.png";
 import plus from "./../../../assets/Profile/plus.png";
 
+// state
+import AuthContext from "./../../../store/auth-context";
+
+// axios
+import axios from "axios";
+
 const SwitchStore = () => {
   const navigation = useNavigation();
+
+  const { userInfo } = useContext(AuthContext);
 
   const [showError, setError] = useState("");
   const [storeData, setStoreData] = useState([]);
@@ -23,37 +31,37 @@ const SwitchStore = () => {
     console.log("--------storeData--------");
 
     let data = {
-      SellerID: "",
+      SellerID: userInfo._id,
     };
-    console.log(data);
 
-    // try {
-    //   const res = await axios.post(
-    //     `http://192.168.1.40:8000/api/App/onborading/name&Email`,
-    //     data
-    //   );
+    try {
+      const res = await axios.post(
+        `http://192.168.1.40:8000/api/App/Profile/getStoreList`,
+        data
+      );
 
-    //   console.log(data);
+      console.log(data);
 
-    //   if (res.data.status === true) {
-    //     setError("");
-    //     console.log("res.data");
-    //     console.log(res.data);
+      if (res.data.status === true) {
+        setError("");
 
-    //     // console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
-    //     // navigate.navigate("Email", {
-    //     //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
-    //     // });
-    //     // navigate.navigate("Email", {
-    //       // WhatsAppNumber: `${data.WhatsAppNumber}`,
-    //     // });
-    //   } else {
-    //     setError("Error");
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    //   setError("Error: An Unexpected Error Happened");
-    // }
+        console.log("res.data");
+        console.log(res.data.StoresList);
+        console.log("Lenght", res.data.StoresList.length);
+        // console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
+        // navigate.navigate("Email", {
+        //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+        // });
+        // navigate.navigate("Email", {
+        // WhatsAppNumber: `${data.WhatsAppNumber}`,
+        // });
+      } else {
+        setError("Error");
+      }
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
+    }
   };
   return (
     <View style={SSCss.mDIv}>
