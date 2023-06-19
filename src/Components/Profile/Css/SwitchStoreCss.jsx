@@ -17,6 +17,7 @@ const SSCss = StyleSheet.create({
     fontSize: 26,
     fontWeight: 700,
     marginBottom: 20,
+    textAlign: "center",
   },
   storeBlock: {
     backgroundColor: "#7a23cf",
