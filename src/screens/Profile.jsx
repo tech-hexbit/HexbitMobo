@@ -10,12 +10,10 @@ import Analytics from "./../Components/Profile/Analytics";
 const Profile = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <View>
-        <Header />
-        <Bio />
-        <Bank />
-        <Analytics />
-      </View>
+      <Header />
+      <Bio />
+      <Bank />
+      <Analytics />
     </ScrollView>
   );
 };
