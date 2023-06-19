@@ -52,8 +52,6 @@ const SwitchStore = () => {
       if (res.data.status === true) {
         setError("");
 
-        console.log("Lenght", res.data.StoresList.length);
-
         setStoreData(res.data.StoresList);
       } else {
         setError("Error");
