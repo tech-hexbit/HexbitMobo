@@ -58,8 +58,8 @@ const SwitchStore = () => {
   };
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={SSCss.mDIv}>
+    <View style={SSCss.mDIv}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={SSCss.Selectastore}>Select a store</Text>
 
         {storeData.length > 0 ? (
@@ -91,8 +91,8 @@ const SwitchStore = () => {
             Create Store
           </Text>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
