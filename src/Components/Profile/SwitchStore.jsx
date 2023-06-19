@@ -60,6 +60,7 @@ const SwitchStore = () => {
       setError("Error: An Unexpected Error Happened");
     }
   };
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={SSCss.mDIv}>
