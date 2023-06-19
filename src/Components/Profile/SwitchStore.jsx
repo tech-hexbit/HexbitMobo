@@ -25,7 +25,7 @@ import axios from "axios";
 const SwitchStore = () => {
   const navigation = useNavigation();
 
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, updateData } = useContext(AuthContext);
 
   const [showError, setError] = useState("");
   const [storeData, setStoreData] = useState([]);
@@ -64,14 +64,17 @@ const SwitchStore = () => {
 
   const selectStore = async (id) => {
     console.log(id);
+    updateData(id);
+
+    navigation.goBack();
   };
 
   return (
     <View style={SSCss.mDIv}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={SSCss.Selectastore}>Select a store</Text>
         {storeData.length > 0 ? (
           <>
+            <Text style={SSCss.Selectastore}>Select a store</Text>
             {storeData.map((val, key) => {
               return (
                 <TouchableOpacity
