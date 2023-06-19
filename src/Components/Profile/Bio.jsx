@@ -16,7 +16,7 @@ const Bio = () => {
   const [showError, setError] = useState("");
   const [storeData, setStoreData] = useState([]);
 
-  const { logout, userInfo } = useContext(AuthContext);
+  const { logout, userInfo, AddStore } = useContext(AuthContext);
 
   useEffect(() => {
     StoreDataFum();
@@ -25,24 +25,27 @@ const Bio = () => {
   const StoreDataFum = async () => {
     console.log("--------storeData--------");
 
+    console.log(AddStore);
+
     let data = {
-      SellerID: userInfo._id,
+      StoreID: AddStore,
     };
 
     try {
       const res = await axios.post(
-        `http://192.168.1.40:8000/api/App/Profile/getStoreList`,
+        `http://192.168.1.40:8000/api/App/Profile/getStoreData`,
         data
       );
-
-      console.log(data);
 
       if (res.data.status === true) {
         setError("");
 
-        console.log("Lenght", res.data.StoresList.length);
+        console.log("res.data");
+        console.log(res.data);
 
-        setStoreData(res.data.StoresList);
+        console.log("Lenght", res.data.store.length);
+
+        setStoreData(res.data.store);
       } else {
         setError("Error");
       }
@@ -62,13 +65,13 @@ const Bio = () => {
                 {storeData.map((val, key) => {
                   return (
                     <Text style={BioCss.data} key={key}>
-                      {val.StoreID.StoreName}
+                      {val.StoreName}
                     </Text>
                   );
                 })}
               </>
             ) : (
-              <Text style={BioCss.data}>Store ABC</Text>
+              <Text style={BioCss.data}>--</Text>
             )}
           </View>
           <View style={BioCss.SwitchStoreView}>
