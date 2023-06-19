@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
@@ -11,16 +11,15 @@ const Header = () => {
     <View style={HCss.mDiv}>
       <Text style={HCss.Title}>Profile</Text>
       <View style={HCss.SwitchViewMain}>
-        <View style={HCss.SwitchStoreView}>
-          <Text
-            style={HCss.SwitchStore}
-            onPress={() => {
-              navigation.navigate("SwitchStore");
-            }}
-          >
-            Switch Store
-          </Text>
-        </View>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("SwitchStore");
+          }}
+        >
+          <View style={HCss.SwitchStoreView}>
+            <Text style={HCss.SwitchStore}>Switch Store</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
