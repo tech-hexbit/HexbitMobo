@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -11,6 +11,16 @@ import plus from "./../../../assets/Profile/plus.png";
 
 const SwitchStore = () => {
   const navigation = useNavigation();
+
+  const [storeData, setStoreData] = useState([]);
+
+  useEffect(() => {
+    StoreDataFum();
+  }, []);
+
+  const StoreDataFum = async () => {
+    console.log("first=====================");
+  };
   return (
     <View style={SSCss.mDIv}>
       <Text style={SSCss.Selectastore}>Select a store</Text>
