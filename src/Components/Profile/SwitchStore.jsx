@@ -89,15 +89,7 @@ const SwitchStore = () => {
             })}
           </>
         ) : (
-          <View
-            style={{
-              flex: 1,
-              justifyContent: "center",
-              alignContent: "center",
-            }}
-          >
-            <ActivityIndicator size={"large"} />
-          </View>
+          ""
         )}
         <TouchableOpacity
         // onPress={() => {
