@@ -38,7 +38,7 @@ const Store = (props) => {
       console.log(userInfo.Store[0].StoreID);
 
       let data = {
-        StoreID: userInfo.Store[0].StoreID,
+        StoreID: AddStore,
       };
 
       const res = await axios.post(
