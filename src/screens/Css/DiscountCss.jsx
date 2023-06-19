@@ -1,9 +1,7 @@
 import { StyleSheet } from "react-native";
 
-import { COLORS } from "../../../constants/theme";
-
 const DisCss = StyleSheet.create({
-  mDIv: {
+  mDiv: {
     flexGrow: 1,
     backgroundColor: COLORS.primary,
     justifyContent: "center",
