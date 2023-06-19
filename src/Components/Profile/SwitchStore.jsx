@@ -69,12 +69,14 @@ const SwitchStore = () => {
         {storeData.length > 0 ? (
           <>
             {storeData.map((val, key) => {
+              console.log("------------VAL----------------");
+              console.log(val);
               return (
                 <View style={SSCss.storeBlock} key={key}>
                   <Image source={img} style={SSCss.img} />
                   <View style={SSCss.rightView}>
-                    <Text style={SSCss.StoreName}>Store Name</Text>
-                    <Text style={SSCss.StoreType}>Store Type</Text>
+                    <Text style={SSCss.StoreName}>{val.StoreID.StoreName}</Text>
+                    <Text style={SSCss.StoreType}>{val.StoreID.StoreType}</Text>
                   </View>
                 </View>
               );
