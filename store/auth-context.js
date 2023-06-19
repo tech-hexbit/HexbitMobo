@@ -63,7 +63,10 @@ export const AuthContextProvider = (props) => {
       let StoreID = await AsyncStorage.getItem("StoreID");
 
       if (StoreID) {
-        setAddStore(id);
+        console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<,StoreID");
+        console.log(StoreID);
+
+        setAddStore(StoreID);
       }
     } catch (error) {
       console.log("error", error);
