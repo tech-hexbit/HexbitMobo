@@ -12,6 +12,7 @@ import plus from "./../../../assets/Profile/plus.png";
 const SwitchStore = () => {
   const navigation = useNavigation();
 
+  const [showError, setError] = useState("");
   const [storeData, setStoreData] = useState([]);
 
   useEffect(() => {
@@ -20,6 +21,39 @@ const SwitchStore = () => {
 
   const StoreDataFum = async () => {
     console.log("--------storeData--------");
+
+    let data = {
+      SellerID: "",
+    };
+    console.log(data);
+
+    // try {
+    //   const res = await axios.post(
+    //     `http://192.168.1.40:8000/api/App/onborading/name&Email`,
+    //     data
+    //   );
+
+    //   console.log(data);
+
+    //   if (res.data.status === true) {
+    //     setError("");
+    //     console.log("res.data");
+    //     console.log(res.data);
+
+    //     // console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
+    //     // navigate.navigate("Email", {
+    //     //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
+    //     // });
+    //     // navigate.navigate("Email", {
+    //       // WhatsAppNumber: `${data.WhatsAppNumber}`,
+    //     // });
+    //   } else {
+    //     setError("Error");
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    //   setError("Error: An Unexpected Error Happened");
+    // }
   };
   return (
     <View style={SSCss.mDIv}>
