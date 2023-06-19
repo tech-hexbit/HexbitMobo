@@ -66,53 +66,23 @@ const SwitchStore = () => {
       <View style={SSCss.mDIv}>
         <Text style={SSCss.Selectastore}>Select a store</Text>
 
-        <View style={SSCss.storeBlock}>
-          <Image source={img} style={SSCss.img} />
-          <View style={SSCss.rightView}>
-            <Text style={SSCss.StoreName}>Store Name</Text>
-            <Text style={SSCss.StoreType}>Store Type</Text>
-          </View>
-        </View>
-
-        <View style={SSCss.storeBlock}>
-          <Image source={img} style={SSCss.img} />
-          <View style={SSCss.rightView}>
-            <Text style={SSCss.StoreName}>Store Name</Text>
-            <Text style={SSCss.StoreType}>Store Type</Text>
-          </View>
-        </View>
-
-        <View style={SSCss.storeBlock}>
-          <Image source={img} style={SSCss.img} />
-          <View style={SSCss.rightView}>
-            <Text style={SSCss.StoreName}>Store Name</Text>
-            <Text style={SSCss.StoreType}>Store Type</Text>
-          </View>
-        </View>
-
-        <View style={SSCss.storeBlock}>
-          <Image source={img} style={SSCss.img} />
-          <View style={SSCss.rightView}>
-            <Text style={SSCss.StoreName}>Store Name</Text>
-            <Text style={SSCss.StoreType}>Store Type</Text>
-          </View>
-        </View>
-
-        <View style={SSCss.storeBlock}>
-          <Image source={img} style={SSCss.img} />
-          <View style={SSCss.rightView}>
-            <Text style={SSCss.StoreName}>Store Name</Text>
-            <Text style={SSCss.StoreType}>Store Type</Text>
-          </View>
-        </View>
-
-        <View style={SSCss.storeBlock}>
-          <Image source={img} style={SSCss.img} />
-          <View style={SSCss.rightView}>
-            <Text style={SSCss.StoreName}>Store Name</Text>
-            <Text style={SSCss.StoreType}>Store Type</Text>
-          </View>
-        </View>
+        {storeData.length > 0 ? (
+          <>
+            {storeData.map((val, key) => {
+              return (
+                <View style={SSCss.storeBlock} key={key}>
+                  <Image source={img} style={SSCss.img} />
+                  <View style={SSCss.rightView}>
+                    <Text style={SSCss.StoreName}>Store Name</Text>
+                    <Text style={SSCss.StoreType}>Store Type</Text>
+                  </View>
+                </View>
+              );
+            })}
+          </>
+        ) : (
+          ""
+        )}
 
         <View style={SSCss.createView}>
           <Image source={plus} style={SSCss.plus} />
