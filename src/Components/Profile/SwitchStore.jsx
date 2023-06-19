@@ -19,7 +19,7 @@ const SwitchStore = () => {
   }, []);
 
   const StoreDataFum = async () => {
-    console.log("first=====================");
+    console.log("--------storeData--------");
   };
   return (
     <View style={SSCss.mDIv}>
