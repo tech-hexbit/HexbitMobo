@@ -26,7 +26,7 @@ export default function CartNav(props) {
     <>
       <Stack.Navigator initialRouteName="Login">
         <>
-          {AddStore !== null ? (
+          {AddStore === null ? (
             <>
               <Stack.Screen name="CartMain" component={Cart} />
               <Stack.Screen name="InpTwo" component={InpTwo} />
