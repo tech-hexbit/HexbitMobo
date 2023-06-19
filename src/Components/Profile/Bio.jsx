@@ -43,8 +43,6 @@ const Bio = () => {
         console.log("res.data");
         console.log(res.data);
 
-        console.log("Lenght", res.data.store.length);
-
         setStoreData(res.data.store);
       } else {
         setError("Error");
