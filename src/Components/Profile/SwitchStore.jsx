@@ -27,10 +27,6 @@ const SwitchStore = () => {
     StoreDataFum();
   }, []);
 
-  useEffect(() => {
-    console.log(storeData);
-  }, [storeData]);
-
   const StoreDataFum = async () => {
     console.log("--------storeData--------");
 
@@ -69,8 +65,6 @@ const SwitchStore = () => {
         {storeData.length > 0 ? (
           <>
             {storeData.map((val, key) => {
-              console.log("------------VAL----------------");
-              console.log(val);
               return (
                 <View style={SSCss.storeBlock} key={key}>
                   <Image source={img} style={SSCss.img} />
