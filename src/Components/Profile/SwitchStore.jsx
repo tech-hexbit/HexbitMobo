@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  ActivityIndicator,
+  TouchableOpacity,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 // style
@@ -61,36 +68,39 @@ const SwitchStore = () => {
     <View style={SSCss.mDIv}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={SSCss.Selectastore}>Select a store</Text>
-
         {storeData.length > 0 ? (
           <>
             {storeData.map((val, key) => {
               return (
-                <View style={SSCss.storeBlock} key={key}>
-                  <Image source={img} style={SSCss.img} />
-                  <View style={SSCss.rightView}>
-                    <Text style={SSCss.StoreName}>{val.StoreID.StoreName}</Text>
-                    <Text style={SSCss.StoreType}>{val.StoreID.StoreType}</Text>
+                <TouchableOpacity key={key}>
+                  <View style={SSCss.storeBlock}>
+                    <Image source={img} style={SSCss.img} />
+                    <View style={SSCss.rightView}>
+                      <Text style={SSCss.StoreName}>
+                        {val.StoreID.StoreName}
+                      </Text>
+                      <Text style={SSCss.StoreType}>
+                        {val.StoreID.StoreType}
+                      </Text>
+                    </View>
                   </View>
-                </View>
+                </TouchableOpacity>
               );
             })}
           </>
         ) : (
           ""
         )}
-
-        <View style={SSCss.createView}>
-          <Image source={plus} style={SSCss.plus} />
-          <Text
-            style={SSCss.CreateStore}
-            onPress={() => {
-              navigation.navigate("CartMain");
-            }}
-          >
-            Create Store
-          </Text>
-        </View>
+        <TouchableOpacity
+        // onPress={() => {
+        //   navigation.navigate("CartMain");
+        // }}
+        >
+          <View style={SSCss.createView}>
+            <Image source={plus} style={SSCss.plus} />
+            <Text style={SSCss.CreateStore}>Create Store</Text>
+          </View>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
