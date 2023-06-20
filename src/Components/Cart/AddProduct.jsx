@@ -23,7 +23,7 @@ import AuthContext from "./../../../store/auth-context";
 import axios from "axios";
 
 const AddProduct = (props) => {
-  const { storeID, WhatsAppNumber } = useContext(AuthContext);
+  const { AddStore, WhatsAppNumber } = useContext(AuthContext);
 
   const [showError, setError] = useState("");
   const [name, setName] = useState("");
@@ -60,7 +60,7 @@ const AddProduct = (props) => {
       setError("");
 
       let data = {
-        StoreID: storeID,
+        StoreID: AddStore,
         name: name,
         price: Price,
         stock: Stock,
