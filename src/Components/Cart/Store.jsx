@@ -72,7 +72,7 @@ const Store = (props) => {
         <Text style={StoreCss.Products}>Products</Text>
         <View style={StoreCss.ProductsGrid}>
           {showData.length > 0 ? (
-            <View>
+            <>
               {showData.map((val, key) => {
                 return (
                   <ProductCart
@@ -86,7 +86,7 @@ const Store = (props) => {
                   />
                 );
               })}
-            </View>
+            </>
           ) : (
             <View>
               <Text>Please Add Products</Text>
