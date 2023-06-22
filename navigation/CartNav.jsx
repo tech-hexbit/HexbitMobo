@@ -16,11 +16,9 @@ import StoreFinal from "./../src/Components/Cart/StoreFinal";
 import AuthContext from "./../store/auth-context";
 
 export default function CartNav(props) {
-  const { WhatsAppNumber, AddStore, userInfo } = useContext(AuthContext);
+  const { AddStore } = useContext(AuthContext);
 
   const Stack = createNativeStackNavigator();
-
-  console.log("userInfo.Store.length = " + userInfo.Store.length);
 
   return (
     <>
