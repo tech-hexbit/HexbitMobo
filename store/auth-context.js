@@ -17,14 +17,19 @@ export const AuthContextProvider = (props) => {
   const login = (token, userInfo) => {
     console.log("+----------------------+");
     console.log(token);
+
+    console.log("userInfo Store");
     console.log(userInfo);
 
     setLoading(true);
     setuserToken(token);
     setuserInfo(userInfo);
+
     AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
     AsyncStorage.setItem("token", token);
     setLoading(false);
+
+    updateData(userInfo.Store[0]._id);
   };
 
   const logout = () => {
