@@ -60,7 +60,7 @@ const InpTwo = (props) => {
 
       try {
         const res = await axios.post(
-          `http://192.168.1.40:8000/api/App/cart/AddStore`,
+          `http://192.168.43.29:8000/api/App/cart/AddStore`,
           data
         );
 
