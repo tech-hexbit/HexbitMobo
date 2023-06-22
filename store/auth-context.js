@@ -74,19 +74,11 @@ export const AuthContextProvider = (props) => {
     console.log("================================");
     console.log("Update Data");
     try {
-      // let data = {
-      //   WhatsAppNumber,
-      // };
-      // const res = await axios.post(
-      //   `http://192.168.1.40:8000/api/App/onborading/StoreData`,
-      //   data
-      // );
-
-      // if (res.data.status === true) {
       setAddStore(id);
+
       AsyncStorage.setItem("StoreID", id);
+
       console.log("id = " + id);
-      // }
     } catch (error) {
       console.log(error);
     }
