@@ -66,16 +66,16 @@ const Store = (props) => {
   const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <TouchableOpacity onPress={getData}>
-        {/* <View>
-          <Text>hello</Text>
-
-        </View> */}
-        <Image source={refresh} style={StoreCss.refresh} />
-      </TouchableOpacity>
       <View>
         <StoreHeader true={true} title="MyStore" />
-        <Text style={StoreCss.Products}>Products</Text>
+
+        <View style={StoreCss.refreshDiv}>
+          <Text style={StoreCss.Products}>Products</Text>
+
+          <TouchableOpacity onPress={getData}>
+            <Image source={refresh} style={StoreCss.refresh} />
+          </TouchableOpacity>
+        </View>
         <View style={StoreCss.ProductsGrid}>
           {showData.length > 0 ? (
             <>
