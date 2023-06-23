@@ -16,11 +16,13 @@ const Inventory = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={InventoryCss.mDiv}>
-        <View>
+        <View style={InventoryCss.HeaderView}>
           <Header pageName="Orders" />
           <Sales />
         </View>
-        <InventoryC />
+        <View style={InventoryCss.InventoryC}>
+          <InventoryC />
+        </View>
       </View>
     </ScrollView>
   );
