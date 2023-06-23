@@ -86,7 +86,7 @@ const OrdersPage = (props) => {
 
                   {updateView ? (
                     <>
-                      <View>
+                      <View style={OPCss.UPdataView}>
                         <Text>kkkkkk</Text>
                       </View>
                     </>
