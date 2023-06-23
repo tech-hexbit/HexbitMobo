@@ -134,6 +134,7 @@ const InventoryCss = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "gray",
     paddingVertical: 10,
+    gap: 14,
   },
   headerCell: {
     fontWeight: "bold",
@@ -141,6 +142,7 @@ const InventoryCss = StyleSheet.create({
   },
   tableCell: {
     flex: 1,
+    textTransform: "capitalize",
   },
   NoOrders: {
     textAlign: "center",
