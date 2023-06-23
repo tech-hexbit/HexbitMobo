@@ -5,6 +5,13 @@ import { COLORS, SIZES } from "./../../../constants/theme";
 
 const InventoryCss = StyleSheet.create({
   mDiv: {
+    // padding: 20,
+  },
+  HeaderView: {
+    backgroundColor: "#e0eaff",
+    padding: 20,
+  },
+  InventoryC: {
     padding: 20,
   },
   StatusText: {
