@@ -20,6 +20,7 @@ const Inventory = () => {
           <Header pageName="Orders" />
           <Sales />
         </View>
+
         <View style={InventoryCss.InventoryC}>
           <InventoryC />
         </View>
