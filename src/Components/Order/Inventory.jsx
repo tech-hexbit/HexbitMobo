@@ -31,10 +31,10 @@ const Inventory = () => {
 
   useEffect(() => {
     let data = tableData.filter((val) => {
-      if (show === "") {
+      if (show === "All") {
         return val;
       } else if (val.Status.includes(show)) {
-        console.log(val.Status);
+        return val;
       }
     });
     console.log(data);
