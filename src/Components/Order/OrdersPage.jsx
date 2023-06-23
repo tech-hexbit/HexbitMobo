@@ -21,6 +21,7 @@ import OPCss from "./Css/OrderPage";
 const OrdersPage = (props) => {
   const [show, set] = useState([]);
   const [updateView, setUpdateView] = useState(false);
+  const [orderUP, setorderUP] = useState("");
 
   useEffect(() => {
     getData();
@@ -96,7 +97,23 @@ const OrdersPage = (props) => {
                     <>
                       <View style={OPCss.UPdataView}>
                         <Text style={OPCss.UPdataViewText}>Order Status</Text>
-                        <Image source={close} style={OPCss.close} />
+
+                        <TouchableOpacity
+                          style={OPCss.close}
+                          onPress={() => {
+                            setUpdateView(false);
+                          }}
+                        >
+                          <Image source={close} />
+                        </TouchableOpacity>
+
+                        <TextInput
+                          style={OPCss.inpNumber}
+                          placeholder="Select Order Status"
+                          onChangeText={(txt) => {
+                            setorderUP(txt);
+                          }}
+                        />
                       </View>
                     </>
                   ) : (
