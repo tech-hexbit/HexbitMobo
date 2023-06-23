@@ -85,7 +85,11 @@ const OrdersPage = (props) => {
                   <Text style={OPCss.OrderedItems}>Ordered Items</Text>
 
                   {updateView ? (
-                    ""
+                    <>
+                      <View>
+                        <Text>kkkkkk</Text>
+                      </View>
+                    </>
                   ) : (
                     <>
                       <View style={OPCss.ItemDiv}>
