@@ -47,9 +47,7 @@ const Name = (props) => {
           console.log(res.data);
 
           console.log(data.WhatsAppNumber, "kkkkkkkkkkk");
-          // navigate.navigate("Email", {
-          //   WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
-          // });
+
           navigate.navigate("Email", {
             WhatsAppNumber: `${data.WhatsAppNumber}`,
           });
