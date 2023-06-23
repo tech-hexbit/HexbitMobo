@@ -20,7 +20,6 @@ const OPCss = StyleSheet.create({
   },
   val1: {
     width: "40%",
-    // backgroundColor: "red",
   },
   valText: {
     fontSize: 16,
