@@ -29,19 +29,6 @@ const Inventory = () => {
     dataSet();
   }, []);
 
-  // useEffect(() => {
-  //   let data = tableData.filter((val) => {
-  //     if (show === "All") {
-  //        return val;
-  //     } else if (val.Status.includes(show)) {
-  //       return val;
-  //     }
-  //   });
-  //   console.log(data);
-
-  //   set(data);
-  // }, [show]);
-
   const dataSet = async () => {
     try {
       let data = {
