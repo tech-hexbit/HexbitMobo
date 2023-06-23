@@ -101,7 +101,7 @@ const Inventory = () => {
         </Text>
       </View>
 
-      <TouchableOpacity onPress={dataSet}>
+      <TouchableOpacity onPress={dataSet} style={InventoryCss.refreshDiv}>
         <Image source={refresh} style={InventoryCss.refresh} />
       </TouchableOpacity>
 
