@@ -1,5 +1,12 @@
-import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React, { useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 
 // axios
 import axios from "axios";
@@ -89,6 +96,7 @@ const OrdersPage = (props) => {
                     <>
                       <View style={OPCss.UPdataView}>
                         <Text style={OPCss.UPdataViewText}>Order Status</Text>
+                        <Image source={close} style={OPCss.close} />
                       </View>
                     </>
                   ) : (
