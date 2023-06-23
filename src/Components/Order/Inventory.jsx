@@ -132,7 +132,7 @@ const Inventory = () => {
           })}
         </View>
       ) : (
-        <Text>No Orders</Text>
+        <Text style={InventoryCss.NoOrders}>No Orders</Text>
       )}
     </View>
   );
