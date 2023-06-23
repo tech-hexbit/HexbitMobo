@@ -4,6 +4,9 @@ import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "./../../../constants/theme";
 
 const InventoryCss = StyleSheet.create({
+  mDiv: {
+    padding: 20,
+  },
   StatusText: {
     color: COLORS.primary,
     fontWeight: 900,
