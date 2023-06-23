@@ -6,6 +6,7 @@ import axios from "axios";
 
 // img
 import Img from "./../../../assets/Cart/pod.png";
+import close from "./../../../assets/Profile/close.png";
 
 // style
 import OPCss from "./Css/OrderPage";
@@ -87,7 +88,7 @@ const OrdersPage = (props) => {
                   {updateView ? (
                     <>
                       <View style={OPCss.UPdataView}>
-                        <Text>kkkkkk</Text>
+                        <Text style={OPCss.UPdataViewText}>Order Status</Text>
                       </View>
                     </>
                   ) : (
