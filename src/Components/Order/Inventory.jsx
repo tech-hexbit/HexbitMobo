@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -11,9 +11,14 @@ import { REACT_NATIVE_BASE_URL } from "@env";
 // style
 import InventoryCss from "./Css/InventoryCss";
 
+// store
+import AuthContext from "./../../../store/auth-context";
+
 const Inventory = () => {
   const [tableData, setTableData] = useState();
   const [show, set] = useState("All");
+
+  const { AddStore } = useContext(AuthContext);
 
   const navigate = useNavigation();
 
@@ -24,7 +29,7 @@ const Inventory = () => {
   const dataSet = async () => {
     try {
       let data = {
-        StoreID: "64893a6b749921c486f47f7d",
+        StoreID: AddStore,
       };
 
       const res = await axios.post(
