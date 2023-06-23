@@ -110,6 +110,11 @@ const OPCss = StyleSheet.create({
     fontWeight: 600,
     marginVertical: 30,
   },
+  UPdataView: {
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: "#ccceff",
+  },
 });
 
 export default OPCss;
