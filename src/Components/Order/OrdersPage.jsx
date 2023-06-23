@@ -20,7 +20,7 @@ import OPCss from "./Css/OrderPage";
 
 const OrdersPage = (props) => {
   const [show, set] = useState([]);
-  const [showError, setError] = useState("dd");
+  const [showError, setError] = useState("");
   const [updateView, setUpdateView] = useState(false);
   const [orderUP, setorderUP] = useState("");
 
@@ -38,15 +38,33 @@ const OrdersPage = (props) => {
       data
     );
 
-    console.log("--------res.data.data---------");
-    console.log(res.data.data[0].Items);
     set(res.data.data);
   };
 
   const handle = async () => {
     if (orderUP.length > 0) {
-      setError("");
-      console.log(orderUP);
+      let data = {
+        id: show[0]._id,
+        val: orderUP,
+      };
+
+      try {
+        const res = await axios.post(
+          `http://192.168.43.29:8000/api/App/Order/UpdateStatus`,
+          data
+        );
+
+        if (res.data.status === true) {
+          setError("");
+          getData();
+          setUpdateView(false);
+        } else {
+          setError("Error: An Unexpected Error Happened");
+        }
+      } catch (error) {
+        console.log(error);
+        setError("Error: An Unexpected Error Happened");
+      }
     } else {
       console.log("first");
       setError("Please Fill");
