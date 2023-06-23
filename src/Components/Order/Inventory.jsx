@@ -29,6 +29,10 @@ const Inventory = () => {
     dataSet();
   }, []);
 
+  useEffect(() => {
+    console.log(show);
+  }, [show]);
+
   const dataSet = async () => {
     try {
       let data = {
