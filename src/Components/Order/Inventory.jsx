@@ -29,16 +29,18 @@ const Inventory = () => {
     dataSet();
   }, []);
 
-  useEffect(() => {
-    let data = tableData.filter((val) => {
-      if (show === "All") {
-        return val;
-      } else if (val.Status.includes(show)) {
-        return val;
-      }
-    });
-    console.log(data);
-  }, [show]);
+  // useEffect(() => {
+  //   let data = tableData.filter((val) => {
+  //     if (show === "All") {
+  //        return val;
+  //     } else if (val.Status.includes(show)) {
+  //       return val;
+  //     }
+  //   });
+  //   console.log(data);
+
+  //   set(data);
+  // }, [show]);
 
   const dataSet = async () => {
     try {
@@ -125,52 +127,60 @@ const Inventory = () => {
             <Text style={InventoryCss.headerCell}>Amount</Text>
           </View>
 
-          {tableData.map((row, index) => {
-            console.log("row------------");
-            console.log(row.Date);
-            return (
-              <TouchableOpacity
-                key={index}
-                onPress={() => {
-                  navigate.navigate("OrdersPage", {
-                    _id: `${row._id}`,
-                  });
-                  console.log(row._id);
-                }}
-              >
-                <View style={InventoryCss.tableRow}>
-                  <Text style={[InventoryCss.tableCell, InventoryCss.Date]}>
-                    {row.Date}
-                  </Text>
-                  <Text style={[InventoryCss.tableCell, InventoryCss.idText]}>
-                    {row._id}
-                  </Text>
-                  <Text
-                    style={[
-                      InventoryCss.tableCell,
-                      row.Status === "Cancelled"
-                        ? InventoryCss.cancelledTableText
-                        : "",
-                      row.Status === "Shipped"
-                        ? InventoryCss.ShippedTableText
-                        : "",
-                      row.Status === "Delivered"
-                        ? InventoryCss.DeliveredTableText
-                        : "",
-                    ]}
-                  >
-                    {row.Status}
-                  </Text>
-                  <Text style={[InventoryCss.tableCell, InventoryCss.method]}>
-                    {row.method}
-                  </Text>
-                  <Text style={[InventoryCss.tableCell, InventoryCss.amount]}>
-                    {row.amount}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            );
-          })}
+          {tableData
+            .filter((val) => {
+              if (show === "All") {
+                return val;
+              } else if (val.Status.includes(show)) {
+                return val;
+              }
+            })
+            .map((row, index) => {
+              console.log("row------------");
+              console.log(row.Date);
+              return (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => {
+                    navigate.navigate("OrdersPage", {
+                      _id: `${row._id}`,
+                    });
+                    console.log(row._id);
+                  }}
+                >
+                  <View style={InventoryCss.tableRow}>
+                    <Text style={[InventoryCss.tableCell, InventoryCss.Date]}>
+                      {row.Date}
+                    </Text>
+                    <Text style={[InventoryCss.tableCell, InventoryCss.idText]}>
+                      {row._id}
+                    </Text>
+                    <Text
+                      style={[
+                        InventoryCss.tableCell,
+                        row.Status === "Cancelled"
+                          ? InventoryCss.cancelledTableText
+                          : "",
+                        row.Status === "Shipped"
+                          ? InventoryCss.ShippedTableText
+                          : "",
+                        row.Status === "Delivered"
+                          ? InventoryCss.DeliveredTableText
+                          : "",
+                      ]}
+                    >
+                      {row.Status}
+                    </Text>
+                    <Text style={[InventoryCss.tableCell, InventoryCss.method]}>
+                      {row.method}
+                    </Text>
+                    <Text style={[InventoryCss.tableCell, InventoryCss.amount]}>
+                      {row.amount}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            })}
         </View>
       ) : (
         <Text style={InventoryCss.NoOrders}>No Orders</Text>
