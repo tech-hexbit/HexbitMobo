@@ -44,9 +44,11 @@ const OrdersPage = (props) => {
   };
 
   const handle = async () => {
-    if (orderUP === "") {
+    if (orderUP.length > 0) {
+      setError("");
       console.log(orderUP);
     } else {
+      console.log("first");
       setError("Please Fill");
     }
   };
@@ -124,10 +126,6 @@ const OrdersPage = (props) => {
                           }}
                         />
 
-                        <Text style={OPCss.errorMsg}>
-                          {showError.length > 0 ? showError : ""}
-                        </Text>
-
                         <View style={OPCss.saveBtnView}>
                           <TouchableOpacity
                             style={OPCss.tOSave}
@@ -136,6 +134,10 @@ const OrdersPage = (props) => {
                             <Text style={OPCss.Save}>Save</Text>
                           </TouchableOpacity>
                         </View>
+
+                        <Text style={OPCss.errorMsg}>
+                          {showError.length > 0 ? showError : ""}
+                        </Text>
                       </View>
                     </>
                   ) : (
