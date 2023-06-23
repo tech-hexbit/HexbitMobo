@@ -144,6 +144,9 @@ const InventoryCss = StyleSheet.create({
     flex: 1,
     textTransform: "capitalize",
   },
+  idText: {
+    color: "#24385E",
+  },
   NoOrders: {
     textAlign: "center",
     fontWeight: 600,
