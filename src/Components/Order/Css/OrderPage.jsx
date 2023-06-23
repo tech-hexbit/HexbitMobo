@@ -112,7 +112,8 @@ const OPCss = StyleSheet.create({
   },
   UPdataView: {
     position: "relative",
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
     borderRadius: 10,
     backgroundColor: "#ccceff",
   },
@@ -120,6 +121,11 @@ const OPCss = StyleSheet.create({
     color: "#350B5E",
     fontSize: 18,
     fontWeight: 700,
+  },
+  close: {
+    position: "absolute",
+    top: 12,
+    right: 12,
   },
 });
 
