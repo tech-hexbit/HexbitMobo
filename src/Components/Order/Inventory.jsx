@@ -134,7 +134,14 @@ const Inventory = () => {
                   <Text style={[InventoryCss.tableCell, InventoryCss.idText]}>
                     {row._id}
                   </Text>
-                  <Text style={[InventoryCss.tableCell, InventoryCss.Status]}>
+                  <Text
+                    style={[
+                      InventoryCss.tableCell,
+                      row.Status === "Cancelled" ? InventoryCss.cancelled : "",
+                      row.Status === "Shipped" ? InventoryCss.Shipped : "",
+                      row.Status === "Delivered" ? InventoryCss.Delivered : "",
+                    ]}
+                  >
                     {row.Status}
                   </Text>
                   <Text style={[InventoryCss.tableCell, InventoryCss.amount]}>
