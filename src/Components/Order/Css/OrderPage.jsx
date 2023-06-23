@@ -153,6 +153,11 @@ const OPCss = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 10,
   },
+  errorMsg: {
+    color: "#800000",
+    marginVertical: 15,
+    textAlign: "center",
+  },
 });
 
 export default OPCss;
