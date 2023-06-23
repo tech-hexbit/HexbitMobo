@@ -26,6 +26,4 @@ const Inventory = () => {
   );
 };
 
-const sty = StyleSheet.create({});
-
 export default Inventory;
