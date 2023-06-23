@@ -149,15 +149,15 @@ const InventoryCss = StyleSheet.create({
     fontWeight: 600,
     textAlign: "center",
   },
-  cancelled: {
+  cancelledTableText: {
     color: "#ff0000",
     fontWeight: 400,
   },
-  Shipped: {
+  ShippedTableText: {
     color: "#FEC107",
     fontWeight: 400,
   },
-  Delivered: {
+  DeliveredTableText: {
     color: "#07B141",
     fontWeight: 400,
   },
