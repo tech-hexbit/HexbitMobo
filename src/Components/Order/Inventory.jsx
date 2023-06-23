@@ -18,7 +18,7 @@ import AuthContext from "./../../../store/auth-context";
 import refresh from "./../../../assets/refresh.png";
 
 const Inventory = () => {
-  const [tableData, setTableData] = useState();
+  const [tableData, setTableData] = useState([]);
   const [show, set] = useState("All");
 
   const { AddStore } = useContext(AuthContext);
@@ -30,7 +30,14 @@ const Inventory = () => {
   }, []);
 
   useEffect(() => {
-    console.log(show);
+    let data = tableData.filter((val) => {
+      if (show === "") {
+        return val;
+      } else if (val.Status.includes(show)) {
+        console.log(val.Status);
+      }
+    });
+    console.log(data);
   }, [show]);
 
   const dataSet = async () => {
@@ -44,7 +51,6 @@ const Inventory = () => {
         data
       );
 
-      console.log(res.data.Order);
       setTableData(res.data.Order);
     } catch (error) {
       console.log(error);
