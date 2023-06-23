@@ -77,7 +77,7 @@ const OPCss = StyleSheet.create({
   HeaderText_id: {
     color: "#350B5E",
     fontWeight: 700,
-    fontSize: 20,
+    fontSize: 16,
   },
   UpdateStatusView: {
     flexDirection: "column",
