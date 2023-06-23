@@ -33,6 +33,12 @@ const StoreCss = StyleSheet.create({
     height: 20,
     tintColor: "#35005d",
   },
+  refreshDiv: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginRight: 30,
+  },
 });
 
 export default StoreCss;
