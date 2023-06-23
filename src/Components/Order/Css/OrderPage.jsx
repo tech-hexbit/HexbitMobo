@@ -97,6 +97,9 @@ const OPCss = StyleSheet.create({
     color: "#622AC3",
     textAlign: "center",
   },
+  itemdataView: {
+    width: "50%",
+  },
 });
 
 export default OPCss;
