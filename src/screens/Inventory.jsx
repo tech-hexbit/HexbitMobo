@@ -9,23 +9,23 @@ import InventoryC from "./../Components/Order/Inventory";
 // theme
 import { COLORS } from "../constants/theme";
 
+// style
+import InventoryCss from "../Components/Order/Css/InventoryCss";
+
 const Inventory = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={sty.mDiv}>
-        <Header pageName="Orders" />
-        <Sales />
+      <View style={InventoryCss.mDiv}>
+        <View>
+          <Header pageName="Orders" />
+          <Sales />
+        </View>
         <InventoryC />
       </View>
     </ScrollView>
   );
 };
 
-const sty = StyleSheet.create({
-  mDiv: {
-    padding: 20,
-    backgroundColor: COLORS.bgScreen,
-  },
-});
+const sty = StyleSheet.create({});
 
 export default Inventory;
