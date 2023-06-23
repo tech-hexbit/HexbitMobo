@@ -28,6 +28,11 @@ const StoreCss = StyleSheet.create({
     paddingVertical: 12,
     marginBottom: 10,
   },
+  refresh: {
+    width: 20,
+    height: 20,
+    tintColor: "#35005d",
+  },
 });
 
 export default StoreCss;
