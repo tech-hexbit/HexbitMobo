@@ -155,7 +155,7 @@ const OPCss = StyleSheet.create({
   },
   errorMsg: {
     color: "#800000",
-    marginVertical: 15,
+    marginVertical: 5,
     textAlign: "center",
   },
 });
