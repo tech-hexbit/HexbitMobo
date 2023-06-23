@@ -132,6 +132,11 @@ const InventoryCss = StyleSheet.create({
   tableCell: {
     flex: 1,
   },
+  NoOrders: {
+    textAlign: "center",
+    fontWeight: 600,
+    fontSize: 16,
+  },
 });
 
 export default InventoryCss;
