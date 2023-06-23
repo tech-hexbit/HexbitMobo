@@ -114,6 +114,12 @@ const OrdersPage = (props) => {
                             setorderUP(txt);
                           }}
                         />
+
+                        <View style={OPCss.saveBtnView}>
+                          <TouchableOpacity style={OPCss.tOSave}>
+                            <Text style={OPCss.Save}>Save</Text>
+                          </TouchableOpacity>
+                        </View>
                       </View>
                     </>
                   ) : (
