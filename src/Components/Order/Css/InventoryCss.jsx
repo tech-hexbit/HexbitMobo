@@ -147,6 +147,7 @@ const InventoryCss = StyleSheet.create({
   idText: {
     color: "#24385E",
     fontWeight: 600,
+    textAlign: "center",
   },
   cancelled: {
     color: "#ff0000",
