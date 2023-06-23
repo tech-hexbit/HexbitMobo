@@ -111,6 +111,7 @@ const Inventory = () => {
             <Text style={InventoryCss.headerCell}>Date</Text>
             <Text style={InventoryCss.headerCell}>Order No.</Text>
             <Text style={InventoryCss.headerCell}>Status</Text>
+            <Text style={InventoryCss.headerCell}>Method</Text>
             <Text style={InventoryCss.headerCell}>Amount</Text>
           </View>
 
@@ -143,6 +144,9 @@ const Inventory = () => {
                     ]}
                   >
                     {row.Status}
+                  </Text>
+                  <Text style={[InventoryCss.tableCell, InventoryCss.method]}>
+                    {row.method}
                   </Text>
                   <Text style={[InventoryCss.tableCell, InventoryCss.amount]}>
                     {row.amount}
