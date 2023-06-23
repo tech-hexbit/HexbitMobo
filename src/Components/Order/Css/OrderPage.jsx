@@ -136,6 +136,23 @@ const OPCss = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#7D629B",
   },
+  saveBtnView: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  tOSave: {
+    marginRight: 10,
+  },
+  Save: {
+    backgroundColor: "#622AC3",
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: 800,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  },
 });
 
 export default OPCss;
