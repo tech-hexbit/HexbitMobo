@@ -127,6 +127,15 @@ const OPCss = StyleSheet.create({
     top: 12,
     right: 12,
   },
+  inpNumber: {
+    backgroundColor: "#fff",
+    marginVertical: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#7D629B",
+  },
 });
 
 export default OPCss;
