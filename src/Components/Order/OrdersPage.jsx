@@ -36,7 +36,7 @@ const OrdersPage = (props) => {
     <ScrollView showsVerticalScrollIndicator={false}>
       {show.length ? (
         <>
-          {/* {show.map((val, key) => {
+          {show.map((val, key) => {
             return (
               <View key={key}>
                 <View style={OPCss.HeaderView}>
@@ -115,14 +115,11 @@ const OrdersPage = (props) => {
                 </View>
               </View>
             );
-          })} */}
-          <View style={OPCss.DataNoView}>
-            <Text style={OPCss.NoData}>No Data</Text>
-          </View>
+          })}
         </>
       ) : (
-        <View>
-          <Text>No Data</Text>
+        <View style={OPCss.DataNoView}>
+          <Text style={OPCss.NoData}>No Data</Text>
         </View>
       )}
     </ScrollView>
