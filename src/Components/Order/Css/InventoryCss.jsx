@@ -148,6 +148,11 @@ const InventoryCss = StyleSheet.create({
     fontSize: 16,
     color: "#35005d",
   },
+  refresh: {
+    width: 20,
+    height: 20,
+    tintColor: "#35005d",
+  },
 });
 
 export default InventoryCss;
