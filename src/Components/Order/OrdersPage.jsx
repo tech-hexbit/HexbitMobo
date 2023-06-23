@@ -20,6 +20,7 @@ import OPCss from "./Css/OrderPage";
 
 const OrdersPage = (props) => {
   const [show, set] = useState([]);
+  const [showError, setError] = useState("dd");
   const [updateView, setUpdateView] = useState(false);
   const [orderUP, setorderUP] = useState("");
 
@@ -40,6 +41,14 @@ const OrdersPage = (props) => {
     console.log("--------res.data.data---------");
     console.log(res.data.data[0].Items);
     set(res.data.data);
+  };
+
+  const handle = async () => {
+    if (orderUP === "") {
+      console.log(orderUP);
+    } else {
+      setError("Please Fill");
+    }
   };
 
   return (
@@ -115,8 +124,15 @@ const OrdersPage = (props) => {
                           }}
                         />
 
+                        <Text style={OPCss.errorMsg}>
+                          {showError.length > 0 ? showError : ""}
+                        </Text>
+
                         <View style={OPCss.saveBtnView}>
-                          <TouchableOpacity style={OPCss.tOSave}>
+                          <TouchableOpacity
+                            style={OPCss.tOSave}
+                            onPress={handle}
+                          >
                             <Text style={OPCss.Save}>Save</Text>
                           </TouchableOpacity>
                         </View>
