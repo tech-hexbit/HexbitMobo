@@ -61,7 +61,7 @@ const Home = () => {
   const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <StoreHeader true={false} title="Inventory s" />
+      <StoreHeader true={false} title="Inventory" />
       <HeaderLable />
 
       {itemsData.length === 0 ? (
