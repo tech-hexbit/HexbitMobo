@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-// components
-import Table from "./TableCom";
-
 // theme
 import { COLORS, SIZES } from "../../constants/theme";
 
@@ -101,7 +98,6 @@ const Inventory = () => {
           On Hold
         </Text>
       </View>
-      {/* <Table /> */}
 
       {tableData?.length > 0 ? (
         <View>
