@@ -128,10 +128,18 @@ const Inventory = () => {
                 }}
               >
                 <View style={InventoryCss.tableRow}>
-                  <Text style={InventoryCss.tableCell}>{row.Date}</Text>
-                  <Text style={InventoryCss.tableCell}>{row._id}</Text>
-                  <Text style={InventoryCss.tableCell}>{row.Status}</Text>
-                  <Text style={InventoryCss.tableCell}>{row.amount}</Text>
+                  <Text style={[InventoryCss.tableCell, InventoryCss.Date]}>
+                    {row.Date}
+                  </Text>
+                  <Text style={[InventoryCss.tableCell, InventoryCss.idText]}>
+                    {row._id}
+                  </Text>
+                  <Text style={[InventoryCss.tableCell, InventoryCss.Status]}>
+                    {row.Status}
+                  </Text>
+                  <Text style={[InventoryCss.tableCell, InventoryCss.amount]}>
+                    {row.amount}
+                  </Text>
                 </View>
               </TouchableOpacity>
             );
