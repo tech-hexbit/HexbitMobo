@@ -103,7 +103,6 @@ const Store = (props) => {
           <Text
             style={StoreCss.AddProduct}
             onPress={() => {
-              // console.log(props.route.params);
               navigation.navigate("AddProduct");
             }}
           >
