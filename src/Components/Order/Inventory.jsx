@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 // axios
@@ -13,6 +13,9 @@ import InventoryCss from "./Css/InventoryCss";
 
 // store
 import AuthContext from "./../../../store/auth-context";
+
+// img
+import refresh from "./../../../assets/refresh.png";
 
 const Inventory = () => {
   const [tableData, setTableData] = useState();
@@ -57,12 +60,6 @@ const Inventory = () => {
         </View>
       </View>
 
-      <TouchableOpacity onPress={dataSet}>
-        <View>
-          <Text>Refresh</Text>
-        </View>
-      </TouchableOpacity>
-
       <View style={InventoryCss.toggleBtn}>
         <Text
           style={show === "All" ? InventoryCss.selected : InventoryCss.All}
@@ -103,6 +100,10 @@ const Inventory = () => {
           On Hold
         </Text>
       </View>
+
+      <TouchableOpacity onPress={dataSet}>
+        <Image source={refresh} style={InventoryCss.refresh} />
+      </TouchableOpacity>
 
       {tableData?.length > 0 ? (
         <View>
