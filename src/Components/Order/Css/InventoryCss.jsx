@@ -153,6 +153,11 @@ const InventoryCss = StyleSheet.create({
     height: 20,
     tintColor: "#35005d",
   },
+  refreshDiv: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginRight: 10,
+  },
 });
 
 export default InventoryCss;
