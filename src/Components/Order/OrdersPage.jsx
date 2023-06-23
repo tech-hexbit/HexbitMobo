@@ -12,6 +12,7 @@ import OPCss from "./Css/OrderPage";
 
 const OrdersPage = (props) => {
   const [show, set] = useState([]);
+  const [updateView, setUpdateView] = useState(false);
 
   useEffect(() => {
     getData();
@@ -43,6 +44,7 @@ const OrdersPage = (props) => {
                   <Text style={OPCss.HeaderTextDetails}>Order Details</Text>
                   <Text style={OPCss.HeaderText_id}>{val._id}</Text>
                 </View>
+
                 <View style={OPCss.mDiv}>
                   <View style={OPCss.HMDiv}>
                     <View style={OPCss.val1}>
@@ -82,33 +84,49 @@ const OrdersPage = (props) => {
 
                   <Text style={OPCss.OrderedItems}>Ordered Items</Text>
 
-                  <View style={OPCss.ItemDiv}>
-                    <View>
-                      <Image source={Img} />
-                    </View>
-                    <View style={OPCss.itemdataView}>
-                      <Text style={OPCss.valName}>
-                        {val.Items[0].ItemID.name}
-                      </Text>
-                      <Text style={OPCss.valDes}>
-                        {val.Items[0].ItemID.des}
-                      </Text>
+                  {updateView ? (
+                    ""
+                  ) : (
+                    <>
+                      <View style={OPCss.ItemDiv}>
+                        <View>
+                          <Image source={Img} />
+                        </View>
+                        <View style={OPCss.itemdataView}>
+                          <Text style={OPCss.valName}>
+                            {val.Items[0].ItemID.name}
+                          </Text>
+                          <Text style={OPCss.valDes}>
+                            {val.Items[0].ItemID.des}
+                          </Text>
 
-                      <View style={OPCss.qtpriceDiv}>
-                        <Text style={OPCss.valPriceQt}>
-                          Price: Rs {val.Items[0].ItemID.price}
-                        </Text>
-                        <Text style={OPCss.valPriceQt}>
-                          Quantity: {val.Items[0].quantity}
-                        </Text>
+                          <View style={OPCss.qtpriceDiv}>
+                            <Text style={OPCss.valPriceQt}>
+                              Price: Rs {val.Items[0].ItemID.price}
+                            </Text>
+                            <Text style={OPCss.valPriceQt}>
+                              Quantity: {val.Items[0].quantity}
+                            </Text>
+                          </View>
+                        </View>
                       </View>
-                    </View>
-                  </View>
+                    </>
+                  )}
 
-                  <TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => {
+                      setUpdateView(!updateView);
+                    }}
+                  >
                     <View style={OPCss.UpdateStatusView}>
                       <View style={OPCss.UpdateStatusViewChild}>
-                        <Text style={OPCss.UpdateStatus}>Update Status</Text>
+                        {updateView ? (
+                          <Text style={OPCss.UpdateStatus}>
+                            Update Order Status
+                          </Text>
+                        ) : (
+                          <Text style={OPCss.UpdateStatus}>Update Status</Text>
+                        )}
                       </View>
                     </View>
                   </TouchableOpacity>
