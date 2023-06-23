@@ -100,6 +100,16 @@ const OPCss = StyleSheet.create({
   itemdataView: {
     width: "50%",
   },
+  DataNoView: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  NoData: {
+    fontSize: 20,
+    fontWeight: 600,
+    marginVertical: 30,
+  },
 });
 
 export default OPCss;
