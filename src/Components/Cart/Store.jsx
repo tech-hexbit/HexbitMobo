@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
@@ -20,6 +21,9 @@ import AuthContext from "./../../../store/auth-context";
 
 // axios
 import axios from "axios";
+
+// img
+import refresh from "./../../../assets/refresh.png";
 
 const Store = (props) => {
   const { WhatsAppNumber, AddStore, userInfo } = useContext(AuthContext);
@@ -63,9 +67,11 @@ const Store = (props) => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <TouchableOpacity onPress={getData}>
-        <View>
+        {/* <View>
           <Text>hello</Text>
-        </View>
+
+        </View> */}
+        <Image source={refresh} style={StoreCss.refresh} />
       </TouchableOpacity>
       <View>
         <StoreHeader true={true} title="MyStore" />
