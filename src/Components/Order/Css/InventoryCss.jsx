@@ -136,6 +136,7 @@ const InventoryCss = StyleSheet.create({
     textAlign: "center",
     fontWeight: 600,
     fontSize: 16,
+    color: "#35005d",
   },
 });
 
