@@ -160,6 +160,9 @@ const InventoryCss = StyleSheet.create({
     color: "#07B141",
     fontWeight: 400,
   },
+  method: {
+    textTransform: "uppercase",
+  },
   NoOrders: {
     textAlign: "center",
     fontWeight: 600,
