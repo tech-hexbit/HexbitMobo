@@ -14,7 +14,6 @@ const Inventory = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={sty.mDiv}>
         <Header pageName="Orders" />
-
         <Sales />
         <InventoryC />
       </View>
