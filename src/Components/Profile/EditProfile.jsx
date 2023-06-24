@@ -26,25 +26,41 @@ const EditProfile = () => {
   const { userInfo, AddStore } = useContext(AuthContext);
 
   const saveData = async () => {
-    if (
-      StoreName.length > 0 &&
-      Name.length > 0 &&
-      Email.length > 0 &&
-      Nature.length > 0 &&
-      AddStore.length > 0
-    ) {
-      setError("");
+    // if (
+    //   StoreName.length > 0 &&
+    //   Name.length > 0 &&
+    //   Email.length > 0 &&
+    //   Nature.length > 0 &&
+    //   AddStore.length > 0
+    // ) {
+    let data = {
+      SellerID: userInfo._id,
+      StoreID: AddStore,
+      Name: Name,
+      Email: Email,
+      StoreName: StoreName,
+      Nature: Nature,
+    };
 
-      console.log("StoreName ->", StoreName);
-      console.log("Name ->", Name);
-      console.log("Email ->", Email);
-      console.log("Nature ->", Nature);
-      console.log("StoreID ->", AddStore);
-      console.log("user ID ->", userInfo._id);
-    } else {
-      console.log("fill");
-      setError("Please Enter A Valid Number");
+    try {
+      const res = await axios.post(
+        `http://192.168.43.29:8000/api/App/Profile/UpdateProfile`,
+        data
+      );
+
+      if (res.data.status === true) {
+        setError("");
+        console.log("res.data");
+        console.log(res.data);
+      }
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
     }
+    // } else {
+    //   console.log("fill");
+    //   setError("Please Enter A Valid Number");
+    // }
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
