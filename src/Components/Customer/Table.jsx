@@ -12,6 +12,11 @@ const Table = () => {
         <Text style={TableCss.headerCell}>Group</Text>
         <Text style={TableCss.headerCell}>Amount Spent</Text>
       </View>
+      <View style={TableCss.tableRow}>
+        <Text style={TableCss.tableCell}>row.Date</Text>
+        <Text style={TableCss.tableCell}>row.Date</Text>
+        <Text style={TableCss.tableCell}>row.Date</Text>
+      </View>
     </View>
   );
 };
