@@ -9,6 +9,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+// axios
+import axios from "axios";
+
 // style
 import PPCss from "../Inventory/Css/ProductPageCss";
 
@@ -19,6 +22,7 @@ const ProductPage = (props) => {
   const navigation = useNavigation();
 
   const [showError, setError] = useState("");
+  const [showData, setData] = useState([]);
 
   useEffect(() => {
     dataInfo();
@@ -37,7 +41,9 @@ const ProductPage = (props) => {
       if (res.data.status === true) {
         setError("");
         console.log("res.data");
-        console.log(res.data);
+        console.log(res.data.Item);
+
+        setData(res.data.Item);
       } else {
         setError("Error");
       }
