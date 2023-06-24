@@ -72,6 +72,7 @@ const Home = () => {
                 name={val.name}
                 dec={val.des}
                 price={val.price}
+                img={val.Img}
                 Order={val.totalSold}
                 InStore={val.stock}
                 key={key}
