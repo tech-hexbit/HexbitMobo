@@ -121,7 +121,9 @@ const ProductPage = (props) => {
 
                 <TouchableOpacity
                   onPress={() => {
-                    navigation.navigate("Edit");
+                    navigation.navigate("Edit", {
+                      _id: props.route.params.id,
+                    });
                   }}
                 >
                   <View style={PPCss.EditVIew}>
