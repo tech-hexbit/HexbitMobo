@@ -23,6 +23,9 @@ export const AuthContextProvider = (props) => {
     AsyncStorage.setItem("token", token);
     setLoading(false);
 
+    console.log("****userInfo.Store*****");
+    console.log(userInfo.Store);
+
     updateData(userInfo.Store[0]._id);
   };
 
@@ -48,6 +51,9 @@ export const AuthContextProvider = (props) => {
       let userInfo = await AsyncStorage.getItem("userInfo");
 
       userInfo = JSON.parse(userInfo);
+
+      console.log("---- userInfo ----");
+      console.log(userInfo);
 
       if (userInfo) {
         setuserToken(userToken);
@@ -78,6 +84,8 @@ export const AuthContextProvider = (props) => {
   const updateData = async (id) => {
     console.log("================================");
     console.log("Update Data");
+
+    console.log("id ->" + id);
     try {
       setAddStore(id);
 
