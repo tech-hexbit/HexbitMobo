@@ -73,7 +73,11 @@ const Bio = () => {
               <Text style={BioCss.data}>--</Text>
             )}
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("EditProfile");
+            }}
+          >
             <View style={BioCss.SwitchStoreView}>
               <Text style={BioCss.SwitchStore}>Edit Profile</Text>
             </View>
