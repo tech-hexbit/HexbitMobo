@@ -24,10 +24,6 @@ const Bio = () => {
   }, []);
 
   const StoreDataFum = async () => {
-    console.log("--------storeData--------");
-
-    console.log(AddStore);
-
     let data = {
       StoreID: AddStore,
     };
