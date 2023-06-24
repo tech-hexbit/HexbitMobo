@@ -9,6 +9,9 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+// axios
+import axios from "axios";
+
 // style
 import ADCss from "./Css/AddProductCss";
 
@@ -16,16 +19,45 @@ import ADCss from "./Css/AddProductCss";
 import img from "./../../../assets/Cart/plus-circle.png";
 
 const Edit = (props) => {
-  const [Name, setName] = useState(props.route.params.name);
   const [state_id, setState_id] = useState(props.route.params._id);
-  const [price, setprice] = useState(props.route.params.price);
-  const [dec, setdec] = useState(props.route.params.dec);
+  const [Name, setName] = useState("");
+  const [price, setprice] = useState("");
+  const [dec, setdec] = useState("");
+  const [showError, setError] = useState("");
 
   const navigation = useNavigation();
 
   useEffect(() => {
-    console.log("Name ->", props.route.params);
+    dataFun();
   }, []);
+
+  const dataFun = async () => {
+    try {
+      let data = {
+        ItemID: state_id,
+      };
+
+      const res = await axios.post(
+        `http://192.168.43.29:8000/api/App/cart/getItemInfo`,
+        data
+      );
+
+      if (res.data.status === true) {
+        setError("");
+        console.log("res.data");
+        console.log(res.data.Item[0].name);
+
+        setName(res.data.Item[0].name);
+        setprice(res.data.Item[0].price);
+        setdec();
+      } else {
+        setError("Error");
+      }
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
+    }
+  };
 
   const AddData = (e) => {
     console.log(Name);
@@ -53,10 +85,10 @@ const Edit = (props) => {
           <TextInput
             style={ADCss.TextInputTag}
             placeholder="ABC Store"
-            value={Name}
-            onChangeText={(txt) => {
-              setName(txt);
-            }}
+            // value={Name}
+            // onChangeText={(txt) => {
+            //   setName(txt);
+            // }}
           />
         </View>
 
@@ -66,10 +98,10 @@ const Edit = (props) => {
             <TextInput
               style={ADCss.TextInputTag}
               placeholder="₹ 100"
-              value={price}
-              onChangeText={(T) => {
-                setprice(T);
-              }}
+              // value={price}
+              // onChangeText={(T) => {
+              //   setprice(T);
+              // }}
             />
           </View>
           <View style={ADCss.w45Div}>
