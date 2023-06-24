@@ -154,6 +154,7 @@ const PPCss = StyleSheet.create({
     fontSize: 15,
     fontWeight: 600,
     textAlign: "left",
+    textTransform: "capitalize",
   },
   desView: {
     width: "80%",
