@@ -85,6 +85,7 @@ const Store = (props) => {
                     price={val.ItemID.price}
                     Order={val.ItemID.totalSold}
                     InStore={val.ItemID.stock}
+                    img={val.ItemID.Img}
                     _id={val.ItemID._id}
                     key={key}
                   />
