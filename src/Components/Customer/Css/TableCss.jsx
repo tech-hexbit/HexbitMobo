@@ -15,8 +15,8 @@ const TableCss = StyleSheet.create({
   tableRow: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    // borderBottomWidth: 1,
-    // borderBottomColor: "gray",
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(0, 0, 0, 0.10)",
     paddingVertical: 10,
     // paddingHorizontal: 8,
     gap: 14,
