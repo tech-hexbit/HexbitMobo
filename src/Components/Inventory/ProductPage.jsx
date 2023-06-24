@@ -15,8 +15,10 @@ import PPCss from "../Inventory/Css/ProductPageCss";
 // img
 import img from "./../../../assets/Cart/pod.png";
 
-const ProductPage = () => {
+const ProductPage = (props) => {
   const navigation = useNavigation();
+
+  console.log(props.route.params.id);
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={PPCss.headerDiv}>
