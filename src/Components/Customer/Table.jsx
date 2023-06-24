@@ -1,8 +1,11 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 
 // style
 import TableCss from "./Css/TableCss";
+
+// img
+import arrow from "./../../../assets/Customer/arrow.png";
 
 const Table = () => {
   return (
@@ -16,7 +19,10 @@ const Table = () => {
       <View style={TableCss.tableRow}>
         <Text style={TableCss.tableCell}>Devesh</Text>
         <Text style={TableCss.tableCell}>Group 2</Text>
-        <Text style={TableCss.tableCell}>₹564</Text>
+        <View style={TableCss.tableCell2}>
+          <Text style={TableCss.tableCellText}>₹564</Text>
+          <Image source={arrow} style={TableCss.awr} />
+        </View>
       </View>
     </View>
   );
