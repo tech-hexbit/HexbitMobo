@@ -58,6 +58,12 @@ const InvCss = StyleSheet.create({
     fontSize: 16,
     fontWeight: 600,
   },
+  NoItems: {
+    textAlign: "center",
+    fontWeight: 600,
+    fontSize: 18,
+    marginVertical: 20,
+  },
 });
 
 export default InvCss;
