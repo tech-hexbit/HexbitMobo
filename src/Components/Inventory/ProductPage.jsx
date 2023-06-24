@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   View,
@@ -18,7 +18,14 @@ import img from "./../../../assets/Cart/pod.png";
 const ProductPage = (props) => {
   const navigation = useNavigation();
 
-  console.log(props.route.params.id);
+  useEffect(() => {
+    dataInfo();
+  }, []);
+
+  const dataInfo = async () => {
+    console.log(props.route.params.id);
+  };
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={PPCss.headerDiv}>
