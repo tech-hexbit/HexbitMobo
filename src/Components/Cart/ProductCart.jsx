@@ -16,17 +16,6 @@ import edit from "./../../../assets/Cart/edit.png";
 const ProductCart = (props) => {
   const navigation = useNavigation();
 
-  const imageUrl =
-    "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc91e10d0634e7b8bb7_friends.webp";
-  // useEffect(() => {
-  //   console.log(props.img);
-  //   imageUrl =
-  //     "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc91e10d0634e7b8bb7_friends.webp";
-  // }, []);
-
-  console.log("props.img");
-  console.log(props.img);
-  // console.log("props._id", props._id);
   return (
     <>
       <TouchableOpacity
