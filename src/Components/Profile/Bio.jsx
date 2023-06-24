@@ -75,7 +75,10 @@ const Bio = () => {
           </View>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("EditProfile");
+              // console.log();
+              navigation.navigate("EditProfile", {
+                StoreName: `${storeData[0].StoreName}`,
+              });
             }}
           >
             <View style={BioCss.SwitchStoreView}>
