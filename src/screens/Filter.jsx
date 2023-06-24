@@ -16,18 +16,16 @@ const Filter = () => {
         <TextInput style={FilterCss.inp} placeholder="Search Order"></TextInput>
       </View>
 
-      <View>
-        <View>
-          <Text>STATUS</Text>
-          <View>
-            <Text>Shipped</Text>
-            <Image source={dn_arrow} />
+      <View style={FilterCss.rightView}>
+        <View style={FilterCss.statViewMain}>
+          <Text style={FilterCss.STATUSText}>STATUS</Text>
+          <View style={FilterCss.statView}>
+            <Text style={FilterCss.ShippedText}>Shipped</Text>
+            <Image source={dn_arrow} style={FilterCss.dn_arrow} />
           </View>
         </View>
         <View></View>
       </View>
-
-      <Text>Filter</Text>
     </View>
   );
 };
