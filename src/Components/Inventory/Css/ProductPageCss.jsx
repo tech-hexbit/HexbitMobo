@@ -120,6 +120,7 @@ const PPCss = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 20,
   },
   Edit: {
     marginTop: 30,
