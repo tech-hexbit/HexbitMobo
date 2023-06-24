@@ -7,8 +7,6 @@ import AuthContext from "./../../../store/auth-context";
 // style
 import BioCss from "./Css/BioCss";
 
-// state
-
 // axios
 import axios from "axios";
 
