@@ -12,7 +12,15 @@ const Discount = () => {
     <>
       <StoreHeader true={true} title="Customer" DisTabs={true} />
       <View style={DisCss.mDiv}>
-        <></>
+        <>
+          <View style={DisCss.tableRow}>
+            <Text style={DisCss.headerCell}>Date</Text>
+            <Text style={DisCss.headerCell}>Order No.</Text>
+            <Text style={DisCss.headerCell}>Status</Text>
+            <Text style={DisCss.headerCell}>Method</Text>
+            <Text style={DisCss.headerCell}>Amount</Text>
+          </View>
+        </>
         <>
           <Text>No Customer</Text>
         </>
