@@ -9,6 +9,16 @@ const EditProfileCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  EPHeaderView: {
+    backgroundColor: "#CCCEFF",
+    paddingVertical: 20,
+    paddingHorizontal: 30,
+  },
+  EditProfile: {
+    fontSize: 30,
+    fontWeight: 900,
+    color: "#350B5E",
+  },
 });
 
 export default EditProfileCss;
