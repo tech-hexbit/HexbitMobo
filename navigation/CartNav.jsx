@@ -11,6 +11,7 @@ import Store from "./../src/Components/Cart/Store";
 import InpTwo from "./../src/Components/Cart/InpTwo";
 import AddProduct from "./../src/Components/Cart/AddProduct";
 import StoreFinal from "./../src/Components/Cart/StoreFinal";
+import ProductPage from "../src/Components/Inventory/ProductPage";
 
 // state
 import AuthContext from "./../store/auth-context";
@@ -38,6 +39,7 @@ export default function CartNav(props) {
               <Stack.Screen name="Store" component={Store} />
               <Stack.Screen name="AddProduct" component={AddProduct} />
               <Stack.Screen name="Edit" component={Edit} />
+              <Stack.Screen name="ProductPage" component={ProductPage} />
             </>
           )}
         </>
