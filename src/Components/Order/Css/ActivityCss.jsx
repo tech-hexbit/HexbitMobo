@@ -4,18 +4,25 @@ import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../../../constants/theme";
 
 const ActivityCss = StyleSheet.create({
-  SalesText: {
-    color: COLORS.primary,
-    fontWeight: 900,
-    fontSize: 20,
-    marginTop: 15,
-    marginBottom: 15,
+  ActivityBlock: {
+    backgroundColor: COLORS.ActivityBlock,
+    borderRadius: 10,
+    paddingTop: 12,
+    paddingBottom: 12,
+    paddingLeft: 25,
+    paddingRight: 25,
   },
-  ActivityRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 15,
+  amtText: {
+    color: "white",
+    fontWeight: 500,
+    fontSize: 30,
+    textAlign: "center",
+  },
+  statusText: {
+    color: "white",
+    fontWeight: 500,
+    fontSize: 20,
+    textAlign: "center",
   },
 });
 
