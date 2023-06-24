@@ -23,7 +23,18 @@ const ProductPage = (props) => {
   }, []);
 
   const dataInfo = async () => {
-    console.log(props.route.params.id);
+    try {
+      let data = {
+        ItemID: props.route.params.id,
+      };
+      const res = await axios.post(
+        `http://192.168.43.29:8000/api/App/cart/getItemInfo`,
+        data
+      );
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
+    }
   };
 
   return (
