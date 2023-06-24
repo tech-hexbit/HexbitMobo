@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // screens
 import Profile from "./../src/screens/Profile";
 import SwitchStore from "./../src/Components/Profile/SwitchStore";
+import EditProfile from "./../src/Components/Profile/EditProfile";
 import Cart from "./../src/screens/Cart";
 import InpTwo from "./../src/Components/Cart/InpTwo";
 import StoreFinal from "./../src/Components/Cart/StoreFinal";
@@ -17,6 +18,7 @@ export default function CartNav() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="ProfileMain" component={Profile} />
         <Stack.Screen name="SwitchStore" component={SwitchStore} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="CartMainPro" component={Cart} />
         <Stack.Screen name="InpTwoPro" component={InpTwo} />
         <Stack.Screen name="StoreFinalPro" component={StoreFinal} />
