@@ -21,9 +21,9 @@ import img from "./../../../assets/Cart/plus-circle.png";
 const Edit = (props) => {
   const [state_id, setState_id] = useState(props.route.params._id);
   const [Name, setName] = useState("");
-  const [Price, setprice] = useState("");
   const [dec, setdec] = useState("");
-  const [stock, setStock] = useState("");
+  const [Price, setprice] = useState(0);
+  const [stock, setStock] = useState(0);
   const [type, setType] = useState("");
   const [showError, setError] = useState("");
 
