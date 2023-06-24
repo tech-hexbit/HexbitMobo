@@ -23,7 +23,7 @@ import AuthContext from "./../../../store/auth-context";
 import axios from "axios";
 
 const AddProduct = (props) => {
-  const { AddStore, WhatsAppNumber } = useContext(AuthContext);
+  const { AddStore, WhatsAppNumber, userInfo } = useContext(AuthContext);
 
   const [showError, setError] = useState("");
   const [name, setName] = useState("");
@@ -67,10 +67,8 @@ const AddProduct = (props) => {
         type: Type,
         Img: "img",
         des: Des,
-        wa: WhatsAppNumber,
+        wa: userInfo._id,
       };
-
-      console.log(data);
 
       try {
         const res = await axios.post(
@@ -94,6 +92,7 @@ const AddProduct = (props) => {
         setError("Error: An ");
       }
     } else {
+      // console.log();
       console.log("fill");
       setError("Please Enter A Valid Number");
     }
