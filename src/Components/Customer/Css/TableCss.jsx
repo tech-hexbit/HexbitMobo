@@ -31,6 +31,19 @@ const TableCss = StyleSheet.create({
     textTransform: "capitalize",
     textAlign: "center",
   },
+  tableCell2: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  },
+  tableCellText: {
+    textAlign: "center",
+    textTransform: "capitalize",
+  },
+  awr: {
+    marginLeft: 10,
+  },
 });
 
 export default TableCss;
