@@ -23,6 +23,8 @@ const Edit = (props) => {
   const [Name, setName] = useState("");
   const [price, setprice] = useState("");
   const [dec, setdec] = useState("");
+  const [stock, setStock] = useState("");
+  const [type, setType] = useState("");
   const [showError, setError] = useState("");
 
   const navigation = useNavigation();
@@ -45,11 +47,12 @@ const Edit = (props) => {
       if (res.data.status === true) {
         setError("");
         console.log("res.data");
-        console.log(res.data.Item[0].name);
+        console.log(res.data.Item[0]);
 
         setName(res.data.Item[0].name);
         setprice(res.data.Item[0].price);
-        setdec();
+        setdec(res.data.Item[0].des);
+        setStock(res.data.Item[0].stock);
       } else {
         setError("Error");
       }
