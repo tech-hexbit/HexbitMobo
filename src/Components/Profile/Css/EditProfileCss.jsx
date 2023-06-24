@@ -7,7 +7,9 @@ const EditProfileCss = StyleSheet.create({
   mDIV: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-end",
+    paddingHorizontal: 30,
+    marginTop: 20,
   },
   EPHeaderView: {
     backgroundColor: "#CCCEFF",
