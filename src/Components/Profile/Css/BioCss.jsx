@@ -24,6 +24,16 @@ const BioCss = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
   },
+  SwitchStoreView2: {
+    width: 120,
+    height: 35,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: "#350B5E",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
+  },
   SwitchStore: {
     textAlign: "center",
     color: "#350B5E",
