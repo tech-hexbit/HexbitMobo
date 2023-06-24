@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -6,7 +7,6 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
 // style
@@ -15,8 +15,23 @@ import ADCss from "./Css/AddProductCss";
 // img
 import img from "./../../../assets/Cart/plus-circle.png";
 
-const Edit = () => {
+const Edit = (props) => {
+  const [Name, setName] = useState(props.route.params.name);
+  const [state_id, setState_id] = useState(props.route.params._id);
+  const [price, setprice] = useState(props.route.params.price);
+  const [dec, setdec] = useState(props.route.params.dec);
+
   const navigation = useNavigation();
+
+  useEffect(() => {
+    console.log("Name ->", props.route.params);
+  }, []);
+
+  const AddData = (e) => {
+    console.log(Name);
+    console.log(state_id);
+    console.log(price);
+  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
@@ -35,13 +50,27 @@ const Edit = () => {
 
         <View style={ADCss.paddView}>
           <Text style={ADCss.label}>Product Name</Text>
-          <TextInput style={ADCss.TextInputTag} placeholder="ABC Store" />
+          <TextInput
+            style={ADCss.TextInputTag}
+            placeholder="ABC Store"
+            value={Name}
+            onChangeText={(txt) => {
+              setName(txt);
+            }}
+          />
         </View>
 
         <View style={ADCss.rowInp}>
           <View style={ADCss.w45Div}>
             <Text style={ADCss.label}>Product Price</Text>
-            <TextInput style={ADCss.TextInputTag} placeholder="₹ 100" />
+            <TextInput
+              style={ADCss.TextInputTag}
+              placeholder="₹ 100"
+              value={price}
+              onChangeText={(T) => {
+                setprice(T);
+              }}
+            />
           </View>
           <View style={ADCss.w45Div}>
             <Text style={ADCss.label}>Qty In Stock</Text>
@@ -79,9 +108,12 @@ const Edit = () => {
 
           <TouchableOpacity
             style={ADCss.btnNext}
-            onPress={() => {
-              navigation.navigate("Store");
-            }}
+            onPress={
+              AddData
+              // () => {
+              // navigation.navigate("Store");
+              // }
+            }
           >
             <Text style={ADCss.Next}>Add</Text>
           </TouchableOpacity>
