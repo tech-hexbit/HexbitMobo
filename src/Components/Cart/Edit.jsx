@@ -55,6 +55,8 @@ const Edit = (props) => {
         console.log("res.data");
         console.log(res.data.Item[0]);
 
+        console.log(res.data.Item[0].name);
+
         setName(res.data.Item[0].name);
         setprice(res.data.Item[0].price);
         setdec(res.data.Item[0].des);
