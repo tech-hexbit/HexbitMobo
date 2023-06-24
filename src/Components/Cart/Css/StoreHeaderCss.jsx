@@ -40,6 +40,24 @@ const StoreHeaderCss = StyleSheet.create({
     alignItems: "center",
     marginTop: 15,
   },
+  Add: {
+    textAlign: "center",
+    backgroundColor: "#350B5E",
+    color: "#fff",
+    paddingVertical: 5,
+    borderRadius: 10,
+    fontWeight: 400,
+    paddingHorizontal: 10,
+  },
+  View: {
+    textAlign: "center",
+    backgroundColor: "#350B5E",
+    color: "#fff",
+    paddingVertical: 5,
+    borderRadius: 10,
+    fontWeight: 400,
+    paddingHorizontal: 10,
+  },
 });
 
 export default StoreHeaderCss;
