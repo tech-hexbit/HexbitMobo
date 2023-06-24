@@ -48,6 +48,12 @@ const EditProfileCss = StyleSheet.create({
     paddingHorizontal: 12,
     marginTop: 10,
   },
+  errorMsg: {
+    textAlign: "center",
+    color: "#800000",
+    marginVertical: 10,
+    fontSize: 16,
+  },
 });
 
 export default EditProfileCss;
