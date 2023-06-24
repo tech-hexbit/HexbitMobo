@@ -65,9 +65,9 @@ const Edit = (props) => {
     }
   };
 
-  const AddData = (e) => {
+  const AddData = async (e) => {
     let data = {
-      id: state_id,
+      ItemID: state_id,
       Name,
       Price,
       dec,
@@ -79,6 +79,19 @@ const Edit = (props) => {
     console.log(data);
 
     try {
+      const res = await axios.post(
+        `http://192.168.43.29:8000/api/App/cart/EditItem`,
+        data
+      );
+
+      if (res.data.status === true) {
+        setError("");
+
+        console.log("res.data");
+        console.log(res.data.Item);
+      } else {
+        setError("Error");
+      }
     } catch (error) {
       console.log(error);
       setError("Error: An Unexpected Error Happened");
