@@ -62,7 +62,7 @@ const Home = () => {
       <HeaderLable />
 
       {itemsData.length === 0 ? (
-        <Text>No Items To Show</Text>
+        <Text style={InvCss.NoItems}>No Items To Show</Text>
       ) : (
         <View style={InvCss.ProductsGrid}>
           {itemsData.map((val, key) => {
