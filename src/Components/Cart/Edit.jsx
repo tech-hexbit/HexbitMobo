@@ -63,9 +63,12 @@ const Edit = (props) => {
   };
 
   const AddData = (e) => {
-    console.log(Name);
     console.log(state_id);
+    console.log(Name);
     console.log(price);
+    console.log(dec);
+    console.log(stock);
+    console.log(type);
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
