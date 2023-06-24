@@ -9,7 +9,6 @@ const ProductCartCss = StyleSheet.create({
     borderRadius: 10,
     padding: 15,
     flexDirection: "row",
-    // flexWrap: "wrap",
     justifyContent: "space-between",
     gap: 10,
     borderWidth: 1,
