@@ -39,6 +39,10 @@ const StoreCss = StyleSheet.create({
     alignItems: "center",
     marginRight: 30,
   },
+  PAPText: {
+    fontSize: 18,
+    marginVertical: 20,
+  },
 });
 
 export default StoreCss;
