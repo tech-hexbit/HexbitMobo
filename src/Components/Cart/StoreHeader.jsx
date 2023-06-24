@@ -39,8 +39,10 @@ const StoreHeader = (props) => {
               <Text style={StoreHeaderCss.View}>View Group</Text>
             </TouchableOpacity>
             <View style={StoreHeaderCss.SORTView}>
-              <Text>SORT BY</Text>
-              <Text>A-Z</Text>
+              <Text style={StoreHeaderCss.SORT}>SORT BY</Text>
+              <TouchableOpacity>
+                <Text style={StoreHeaderCss.AText}>A-Z</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </>
