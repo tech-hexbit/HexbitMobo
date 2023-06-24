@@ -26,7 +26,7 @@ import axios from "axios";
 import refresh from "./../../../assets/refresh.png";
 
 const Store = (props) => {
-  const { WhatsAppNumber, AddStore, userInfo } = useContext(AuthContext);
+  const { AddStore } = useContext(AuthContext);
 
   const [showData, setData] = useState([]);
   const [showError, setError] = useState("");
@@ -49,8 +49,6 @@ const Store = (props) => {
       );
       if (res.data.status === true) {
         setError("");
-        console.log("res.data");
-        console.log(res.data.Store);
 
         setData(res.data.Store);
       } else {
