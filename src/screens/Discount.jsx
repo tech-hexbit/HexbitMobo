@@ -13,15 +13,17 @@ const Discount = () => {
     <>
       <StoreHeader true={true} title="Customer" DisTabs={true} />
 
-      <View>
+      <View style={DisCss.YesDiv}>
         <>
+          {/* <View style={DisCss.TableView}> */}
           <Table />
+          {/* </View> */}
         </>
-        <>
+        {/* <>
           <View style={DisCss.NoDiv}>
             <Text>No Customer</Text>
           </View>
-        </>
+        </> */}
       </View>
     </>
   );
