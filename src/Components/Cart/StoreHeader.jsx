@@ -1,4 +1,11 @@
-import { View, Text, StyleSheet, TextInput, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 
 // img
@@ -25,9 +32,13 @@ const StoreHeader = (props) => {
       {props.DisTabs ? (
         <>
           <View style={StoreHeaderCss.Tabs}>
-            <Text>Add Customer</Text>
-            <Text>View Group</Text>
-            <View>
+            <TouchableOpacity>
+              <Text style={StoreHeaderCss.Add}>Add Customer</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={StoreHeaderCss.View}>View Group</Text>
+            </TouchableOpacity>
+            <View style={StoreHeaderCss.SORTView}>
               <Text>SORT BY</Text>
               <Text>A-Z</Text>
             </View>
