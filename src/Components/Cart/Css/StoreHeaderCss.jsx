@@ -34,6 +34,12 @@ const StoreHeaderCss = StyleSheet.create({
     width: "100%",
     fontSize: 20,
   },
+  Tabs: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 15,
+  },
 });
 
 export default StoreHeaderCss;
