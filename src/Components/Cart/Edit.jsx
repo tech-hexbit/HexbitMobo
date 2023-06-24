@@ -25,6 +25,7 @@ const Edit = (props) => {
   const [Price, setprice] = useState(0);
   const [stock, setStock] = useState(0);
   const [type, setType] = useState("");
+  const [Img, setImg] = useState("");
   const [showError, setError] = useState("");
 
   const navigation = useNavigation();
@@ -54,6 +55,7 @@ const Edit = (props) => {
         setdec(res.data.Item[0].des);
         setStock(res.data.Item[0].stock);
         setType(res.data.Item[0].type);
+        setImg(res.data.Item[0].Img);
       } else {
         setError("Error");
       }
@@ -64,12 +66,23 @@ const Edit = (props) => {
   };
 
   const AddData = (e) => {
-    console.log(state_id);
-    console.log(Name);
-    console.log(Price);
-    console.log(dec);
-    console.log(stock);
-    console.log(type);
+    let data = {
+      id: state_id,
+      Name,
+      Price,
+      dec,
+      stock,
+      type,
+      Img,
+    };
+
+    console.log(data);
+
+    try {
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
+    }
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
