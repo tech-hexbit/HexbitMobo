@@ -26,9 +26,6 @@ import plus from "./../../assets/Inventory/plus.png";
 // axios
 import axios from "axios";
 
-// env
-// import { http://192.168.43.29:8000 } from "@env";
-
 const Home = () => {
   const [showError, setError] = useState("");
   const [itemsData, setItemData] = useState([]);
