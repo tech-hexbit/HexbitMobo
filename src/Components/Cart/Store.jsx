@@ -94,8 +94,8 @@ const Store = (props) => {
               })}
             </>
           ) : (
-            <View>
-              <Text>Please Add Products</Text>
+            <View style={StoreCss.APView}>
+              <Text style={StoreCss.PAPText}>Please Add Products</Text>
             </View>
           )}
         </View>
