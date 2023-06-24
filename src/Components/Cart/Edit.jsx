@@ -53,6 +53,7 @@ const Edit = (props) => {
         setprice(res.data.Item[0].price);
         setdec(res.data.Item[0].des);
         setStock(res.data.Item[0].stock);
+        setType(res.data.Item[0].type);
       } else {
         setError("Error");
       }
