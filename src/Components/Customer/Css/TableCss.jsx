@@ -18,7 +18,6 @@ const TableCss = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "rgba(0, 0, 0, 0.10)",
     paddingVertical: 10,
-    // paddingHorizontal: 8,
     gap: 14,
   },
   headerCell: {
