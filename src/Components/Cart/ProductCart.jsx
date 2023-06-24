@@ -10,7 +10,6 @@ import React, { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 // img
-import img from "./../../../assets/Cart/pod.png";
 import edit from "./../../../assets/Cart/edit.png";
 
 const ProductCart = (props) => {
