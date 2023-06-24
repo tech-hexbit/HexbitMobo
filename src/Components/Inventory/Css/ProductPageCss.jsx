@@ -112,6 +112,7 @@ const PPCss = StyleSheet.create({
     borderColor: "#FF5D4F",
   },
   idText: {
+    width: 100,
     backgroundColor: "red",
   },
   Delete: {
@@ -148,6 +149,7 @@ const PPCss = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    gap: 20,
   },
   val1: {
     fontSize: 15,
