@@ -10,7 +10,7 @@ import StoreHeader from "./../Components/Cart/StoreHeader";
 const Discount = () => {
   return (
     <>
-      <StoreHeader true={true} title="Customer" />
+      <StoreHeader true={true} title="Customer" DisTabs={true} />
       <View style={DisCss.mDiv}>
         <Text>Discount</Text>
       </View>
