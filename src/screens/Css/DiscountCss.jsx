@@ -1,7 +1,12 @@
 import { StyleSheet } from "react-native";
 
 const DisCss = StyleSheet.create({
-  YesDiv: {},
+  YesDiv: {
+    flexGrow: 1,
+    // justifyContent: "center",
+    alignItems: "center",
+  },
+  TableView: {},
   NoDiv: {
     flexGrow: 1,
     justifyContent: "center",
