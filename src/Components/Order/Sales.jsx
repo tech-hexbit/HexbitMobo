@@ -4,8 +4,8 @@ import { View, Text, StyleSheet } from "react-native";
 // components
 import Activity from "./Activity";
 
-// theme
-import { COLORS, SIZES } from "../../constants/theme";
+// style
+import SalesCss from "./Css/SalesCss";
 
 const Sales = () => {
   return (
