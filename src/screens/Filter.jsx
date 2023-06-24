@@ -7,6 +7,7 @@ import FilterCss from "../Components/Order/Css/FilterCss";
 // img
 import img from "./../../assets/Cart/search.png";
 import dn_arrow from "./../../assets/Customer/dn_Arrow.png";
+import cal from "./../../assets/Customer/cal.png";
 
 const Filter = () => {
   return (
@@ -26,7 +27,9 @@ const Filter = () => {
             </View>
           </TouchableOpacity>
         </View>
-        <View></View>
+        <View style={FilterCss.calView}>
+          <Image source={cal} style={FilterCss.cal} />
+        </View>
       </View>
     </View>
   );
