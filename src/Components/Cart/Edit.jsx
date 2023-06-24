@@ -21,7 +21,7 @@ import img from "./../../../assets/Cart/plus-circle.png";
 const Edit = (props) => {
   const [state_id, setState_id] = useState(props.route.params._id);
   const [Name, setName] = useState("");
-  const [price, setprice] = useState("");
+  const [Price, setprice] = useState("");
   const [dec, setdec] = useState("");
   const [stock, setStock] = useState("");
   const [type, setType] = useState("");
@@ -64,12 +64,12 @@ const Edit = (props) => {
   };
 
   const AddData = (e) => {
-    console.log(state_id);
-    console.log(Name);
-    console.log(price);
-    console.log(dec);
-    console.log(stock);
-    console.log(type);
+    // console.log(state_id);
+    // console.log(Name);
+    // console.log(Price);
+    // console.log(dec);
+    // console.log(stock);
+    // console.log(type);
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -92,10 +92,10 @@ const Edit = (props) => {
           <TextInput
             style={ADCss.TextInputTag}
             placeholder="ABC Store"
-            // value={Name}
-            // onChangeText={(txt) => {
-            //   setName(txt);
-            // }}
+            value={Name}
+            onChangeText={(txt) => {
+              setName(txt);
+            }}
           />
         </View>
 
@@ -105,15 +105,22 @@ const Edit = (props) => {
             <TextInput
               style={ADCss.TextInputTag}
               placeholder="₹ 100"
-              // value={price}
-              // onChangeText={(T) => {
-              //   setprice(T);
-              // }}
+              value={Price}
+              onChangeText={(txt) => {
+                setprice(txt);
+              }}
             />
           </View>
           <View style={ADCss.w45Div}>
             <Text style={ADCss.label}>Qty In Stock</Text>
-            <TextInput style={ADCss.TextInputTag} placeholder="100" />
+            <TextInput
+              style={ADCss.TextInputTag}
+              placeholder="87"
+              value={stock}
+              onChangeText={(txt) => {
+                setStock(txt);
+              }}
+            />
           </View>
         </View>
 
