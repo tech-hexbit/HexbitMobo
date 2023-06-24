@@ -12,12 +12,12 @@ const Sales = () => {
     <View>
       <Text style={SalesCss.SalesText}>Sales Activity</Text>
       <View style={SalesCss.ActivityRow}>
-        <Activity amt="65" status="To be packed" />
-        <Activity amt="65" status="To be packed" />
+        <Activity amt="65" status="TOTAL ORDERS" />
+        <Activity amt="65" status="SHIPPED" />
       </View>
       <View style={SalesCss.ActivityRow}>
-        <Activity amt="65" status="To be packed" />
-        <Activity amt="65" status="To be packed" />
+        <Activity amt="65" status="PACKED" />
+        <Activity amt="65" status="DELIVERED" />
       </View>
     </View>
   );
