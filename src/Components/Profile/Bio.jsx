@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React, { useContext, useState, useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // state
 import AuthContext from "./../../../store/auth-context";
@@ -15,6 +16,8 @@ const Bio = () => {
   const [storeData, setStoreData] = useState([]);
 
   const { logout, userInfo, AddStore } = useContext(AuthContext);
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     StoreDataFum();
