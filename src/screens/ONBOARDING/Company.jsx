@@ -142,13 +142,7 @@ const Company = (props) => {
           colors={["#BB14E2", "#161FE4"]}
           style={CompanyCss.button}
         >
-          <Text
-            style={CompanyCss.SendOTP}
-            onPress={
-              handleButtonPress
-              // navigation.navigate("License");
-            }
-          >
+          <Text style={CompanyCss.SendOTP} onPress={handleButtonPress}>
             Next
           </Text>
         </LinearGradient>
