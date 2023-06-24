@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   View,
   Text,
@@ -10,17 +10,41 @@ import {
 // style
 import EditProfileCss from "./Css/EditProfileCss";
 
+// state
+import AuthContext from "./../../../store/auth-context";
+
+// axios
+import axios from "axios";
+
 const EditProfile = () => {
   const [StoreName, setStoreName] = useState("");
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Nature, setNature] = useState("");
+  const [showError, setError] = useState("");
+
+  const { userInfo, AddStore } = useContext(AuthContext);
 
   const saveData = async () => {
-    console.log("StoreName ->", StoreName);
-    console.log("Name ->", Name);
-    console.log("Email ->", Email);
-    console.log("Nature ->", Nature);
+    if (
+      StoreName.length > 0 &&
+      Name.length > 0 &&
+      Email.length > 0 &&
+      Nature.length > 0 &&
+      AddStore.length > 0
+    ) {
+      setError("");
+
+      console.log("StoreName ->", StoreName);
+      console.log("Name ->", Name);
+      console.log("Email ->", Email);
+      console.log("Nature ->", Nature);
+      console.log("StoreID ->", AddStore);
+      console.log("user ID ->", userInfo._id);
+    } else {
+      console.log("fill");
+      setError("Please Enter A Valid Number");
+    }
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -71,6 +95,10 @@ const EditProfile = () => {
           }}
         />
       </View>
+
+      <Text style={EditProfileCss.errorMsg}>
+        {showError.length > 0 ? showError : ""}
+      </Text>
 
       <View style={EditProfileCss.mDIV}>
         <TouchableOpacity onPress={saveData}>
