@@ -1,5 +1,8 @@
 import { StyleSheet } from "react-native";
 
+// theme
+import { COLORS } from "../../../constants/theme";
+
 const StoreHeaderCss = StyleSheet.create({
   mDiv: {
     width: "100%",
