@@ -114,7 +114,10 @@ const PPCss = StyleSheet.create({
   idText: {
     width: 120,
   },
-  nameText: {},
+  nameText: {
+    width: 120,
+    backgroundColor: "red",
+  },
   Delete: {
     color: "#FF6D60",
     fontWeight: 800,
