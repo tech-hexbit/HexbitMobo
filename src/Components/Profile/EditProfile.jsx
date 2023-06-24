@@ -11,11 +11,11 @@ const EditProfile = () => {
         <Text style={EditProfileCss.EditProfile}>Edit Profile</Text>
       </View>
 
-      <View>
+      <View style={EditProfileCss.ViewInp}>
         <Text style={EditProfileCss.SNText}>Store Name</Text>
         <TextInput
           style={EditProfileCss.inpNumber}
-          placeholder="Name"
+          placeholder="ABC Store"
           // onChangeText={(txt) => {
           //   setVal(txt);
           // }}
