@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, TextInput, Image } from "react-native";
 import React from "react";
 
-// theme
-import { COLORS } from "../../constants/theme";
-
 // img
 import img from "./../../../assets/Cart/search.png";
+
+// style
+import StoreHeaderCss from "./Css/StoreHeaderCss";
 
 const StoreHeader = (props) => {
   return (
@@ -21,41 +21,23 @@ const StoreHeader = (props) => {
         <Image source={img} />
         <TextInput style={StoreHeaderCss.inp} placeholder="Search"></TextInput>
       </View>
+
+      {props.DisTabs ? (
+        <>
+          <View style={StoreHeaderCss.Tabs}>
+            <Text>Add Customer</Text>
+            <Text>View Group</Text>
+            <View>
+              <Text>SORT BY</Text>
+              <Text>A-Z</Text>
+            </View>
+          </View>
+        </>
+      ) : (
+        ""
+      )}
     </View>
   );
 };
-
-const StoreHeaderCss = StyleSheet.create({
-  mDiv: {
-    width: "100%",
-    padding: 20,
-    backgroundColor: "#ccceff",
-  },
-  Welcome: {
-    color: COLORS.primary,
-    fontSize: 20,
-    fontWeight: 900,
-  },
-  Hexbit: {
-    color: COLORS.primary,
-    fontSize: 33,
-    fontWeight: 900,
-  },
-  inpView: {
-    paddingLeft: 15,
-    marginTop: 20,
-    overflow: "hidden",
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#fff",
-    borderRadius: 10,
-  },
-  inp: {
-    marginVertical: 10,
-    marginLeft: 24,
-    width: "100%",
-    fontSize: 20,
-  },
-});
 
 export default StoreHeader;
