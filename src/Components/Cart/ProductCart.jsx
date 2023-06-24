@@ -15,7 +15,9 @@ const ProductCart = (props) => {
     <>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("ProductPage");
+          navigation.navigate("ProductPage", {
+            id: props._id,
+          });
         }}
       >
         <View style={ProductCartCss.insDiv}>
