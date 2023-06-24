@@ -26,6 +26,7 @@ const CompanyCss = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 10,
     width: "80%",
+    marginHorizontal: "10%",
     marginBottom: 20,
   },
   button: {
