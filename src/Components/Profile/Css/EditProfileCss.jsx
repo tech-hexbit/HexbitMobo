@@ -19,6 +19,7 @@ const EditProfileCss = StyleSheet.create({
     fontWeight: 900,
     color: "#350B5E",
   },
+  SNText: {},
 });
 
 export default EditProfileCss;
