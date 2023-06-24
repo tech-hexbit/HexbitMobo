@@ -15,9 +15,7 @@ const Discount = () => {
 
       <View style={DisCss.YesDiv}>
         <>
-          {/* <View style={DisCss.TableView}> */}
           <Table />
-          {/* </View> */}
         </>
         {/* <>
           <View style={DisCss.NoDiv}>
