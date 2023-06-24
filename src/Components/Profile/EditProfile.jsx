@@ -7,6 +7,10 @@ import EditProfileCss from "./Css/EditProfileCss";
 const EditProfile = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={EditProfileCss.EPHeaderView}>
+        <Text style={EditProfileCss.EditProfile}>Edit Profile</Text>
+      </View>
+
       <View style={EditProfileCss.mDIV}>
         <Text>EditProfile</Text>
       </View>
