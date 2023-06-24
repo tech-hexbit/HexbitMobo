@@ -36,10 +36,6 @@ const OrdersPage = (props) => {
   ]);
 
   useEffect(() => {
-    console.log(value);
-  }, [value]);
-
-  useEffect(() => {
     getData();
   }, []);
 
