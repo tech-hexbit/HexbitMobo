@@ -1,5 +1,12 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  Thumbnail,
+} from "react-native";
+import React, { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 // img
@@ -9,6 +16,16 @@ import edit from "./../../../assets/Cart/edit.png";
 const ProductCart = (props) => {
   const navigation = useNavigation();
 
+  const imageUrl =
+    "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc91e10d0634e7b8bb7_friends.webp";
+  // useEffect(() => {
+  //   console.log(props.img);
+  //   imageUrl =
+  //     "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc91e10d0634e7b8bb7_friends.webp";
+  // }, []);
+
+  console.log("props.img");
+  console.log(props.img);
   // console.log("props._id", props._id);
   return (
     <>
@@ -19,7 +36,12 @@ const ProductCart = (props) => {
       >
         <View style={ProductCartCss.insDiv}>
           <View style={ProductCartCss.leftDiv}>
-            <Image source={img} />
+            <Image
+              source={{
+                uri: props.img,
+              }}
+              style={ProductCartCss.ImgRender}
+            />
           </View>
           <View style={ProductCartCss.rightDiv}>
             <View style={ProductCartCss.statsDiv}>
@@ -119,6 +141,11 @@ const ProductCartCss = StyleSheet.create({
     height: "100%",
     width: 30,
     backgroundColor: "red",
+  },
+  ImgRender: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
   },
 });
 
