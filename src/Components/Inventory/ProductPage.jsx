@@ -64,7 +64,7 @@ const ProductPage = (props) => {
             return (
               <View key={key}>
                 <View style={PPCss.AddImgView}>
-                  <Image source={img} style={PPCss.pimg}></Image>
+                  <Image source={{ uri: val.Img }} style={PPCss.pimg}></Image>
                 </View>
 
                 <View style={PPCss.RowView}>
@@ -91,10 +91,7 @@ const ProductPage = (props) => {
 
                   <View style={PPCss.desView}>
                     <Text style={PPCss.val1}>Product Description</Text>
-                    <Text style={PPCss.val2des}>
-                      Filler text is text that shares some characteristics of a
-                      real written text, but is random.
-                    </Text>
+                    <Text style={PPCss.val2des}>{val.des}</Text>
                   </View>
 
                   <View style={PPCss.RowViewChild}>
