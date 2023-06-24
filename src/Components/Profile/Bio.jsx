@@ -88,7 +88,11 @@ const Bio = () => {
               </View>
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("CartMain");
+              }}
+            >
               <View style={BioCss.SwitchStoreView2}>
                 <Text style={BioCss.SwitchStore}>Set Up Store</Text>
               </View>
