@@ -11,6 +11,8 @@ const ActivityCss = StyleSheet.create({
     paddingBottom: 12,
     paddingLeft: 25,
     paddingRight: 25,
+    width: "46%",
+    height: 90,
   },
   amtText: {
     color: "white",
@@ -21,7 +23,7 @@ const ActivityCss = StyleSheet.create({
   statusText: {
     color: "white",
     fontWeight: 500,
-    fontSize: 20,
+    fontSize: 15,
     textAlign: "center",
   },
 });
