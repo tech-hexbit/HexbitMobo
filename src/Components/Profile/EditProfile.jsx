@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -11,6 +11,10 @@ import {
 import EditProfileCss from "./Css/EditProfileCss";
 
 const EditProfile = () => {
+  const [StoreName, setStoreName] = useState("");
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Nature, setNature] = useState("");
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={EditProfileCss.EPHeaderView}>
@@ -22,9 +26,9 @@ const EditProfile = () => {
         <TextInput
           style={EditProfileCss.inpNumber}
           placeholder="ABC Store"
-          // onChangeText={(txt) => {
-          //   setVal(txt);
-          // }}
+          onChangeText={(txt) => {
+            setStoreName(txt);
+          }}
         />
       </View>
 
@@ -33,9 +37,9 @@ const EditProfile = () => {
         <TextInput
           style={EditProfileCss.inpNumber}
           placeholder="Name"
-          // onChangeText={(txt) => {
-          //   setVal(txt);
-          // }}
+          onChangeText={(txt) => {
+            setName(txt);
+          }}
         />
       </View>
 
@@ -44,9 +48,9 @@ const EditProfile = () => {
         <TextInput
           style={EditProfileCss.inpNumber}
           placeholder="example@email.com"
-          // onChangeText={(txt) => {
-          //   setVal(txt);
-          // }}
+          onChangeText={(txt) => {
+            setEmail(txt);
+          }}
         />
       </View>
 
@@ -55,9 +59,9 @@ const EditProfile = () => {
         <TextInput
           style={EditProfileCss.inpNumber}
           placeholder="Retailer"
-          // onChangeText={(txt) => {
-          //   setVal(txt);
-          // }}
+          onChangeText={(txt) => {
+            setNature(txt);
+          }}
         />
       </View>
 
