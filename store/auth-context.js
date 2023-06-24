@@ -15,12 +15,6 @@ export const AuthContextProvider = (props) => {
   const [AddStore, setAddStore] = useState(null);
 
   const login = (token, userInfo) => {
-    console.log("+----------------------+");
-    console.log(token);
-
-    console.log("userInfo Store");
-    console.log(userInfo);
-
     setLoading(true);
     setuserToken(token);
     setuserInfo(userInfo);
@@ -34,9 +28,15 @@ export const AuthContextProvider = (props) => {
 
   const logout = () => {
     setLoading(true);
+
     setuserToken(null);
+    setAddStore(null);
+    setuserInfo(null);
+
     AsyncStorage.removeItem("token");
     AsyncStorage.removeItem("userInfo");
+    AsyncStorage.removeItem("StoreID");
+
     setLoading(false);
   };
 
