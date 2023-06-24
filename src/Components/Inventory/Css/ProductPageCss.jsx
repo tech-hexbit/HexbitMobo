@@ -112,8 +112,8 @@ const PPCss = StyleSheet.create({
     borderColor: "#FF5D4F",
   },
   idText: {
-    width: 100,
-    backgroundColor: "red",
+    width: 120,
+    // backgroundColor: "red",
   },
   Delete: {
     color: "#FF6D60",
