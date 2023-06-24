@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+import DropDownPicker from "react-native-dropdown-picker";
 
 // axios
 import axios from "axios";
@@ -31,6 +32,15 @@ const Company = (props) => {
   const [showName, setName] = useState("");
   const [showNature, setNature] = useState("");
   const [showType, setType] = useState("");
+
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState([
+    { label: "Manufacturer ", value: "Manufacturer " },
+    { label: "Trader", value: "Trader" },
+    { label: "Retailer", value: "Retailer" },
+    { label: "Importer", value: "Importer" },
+  ]);
 
   const navigate = useNavigation();
 
@@ -90,12 +100,24 @@ const Company = (props) => {
         />
 
         <Text style={CompanyCss.Enter}>Nature of the company</Text>
-        <TextInput
+        {/* <TextInput
           style={CompanyCss.inpNumber}
           placeholder="Select"
           onChangeText={(txt) => {
             setNature(txt);
           }}
+        /> */}
+
+        <DropDownPicker
+          style={CompanyCss.inpNumber}
+          open={open}
+          value={value}
+          items={items}
+          placeholder="Select an option"
+          setOpen={setOpen}
+          // zIndex={10000}
+          setValue={setValue}
+          setItems={setItems}
         />
 
         <Text style={CompanyCss.Enter}>Type of company</Text>
