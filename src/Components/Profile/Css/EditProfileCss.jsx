@@ -11,6 +11,15 @@ const EditProfileCss = StyleSheet.create({
     paddingHorizontal: 30,
     marginTop: 20,
   },
+  mDIVSave: {
+    color: "#fff",
+    borderRadius: 10,
+    backgroundColor: "#622AC3",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    fontSize: 16,
+    fontWeight: 600,
+  },
   EPHeaderView: {
     backgroundColor: "#CCCEFF",
     paddingVertical: 20,
