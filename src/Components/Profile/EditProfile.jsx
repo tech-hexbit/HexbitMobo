@@ -63,9 +63,7 @@ const EditProfile = () => {
 
       <View style={EditProfileCss.mDIV}>
         <TouchableOpacity>
-          <View>
-            <Text>Save</Text>
-          </View>
+          <Text style={EditProfileCss.mDIVSave}>Save</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
