@@ -41,8 +41,6 @@ const Store = (props) => {
         StoreID: AddStore,
       };
 
-      console.log(data);
-
       const res = await axios.post(
         `http://192.168.43.29:8000/api/App/cart/getStoreItems`,
         data
