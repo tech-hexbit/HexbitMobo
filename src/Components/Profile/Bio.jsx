@@ -23,6 +23,9 @@ const Bio = () => {
     StoreDataFum();
   }, []);
 
+  console.log("--- storeData ---");
+  console.log(storeData);
+
   const StoreDataFum = async () => {
     console.log("--------storeData--------");
 
@@ -73,18 +76,27 @@ const Bio = () => {
               <Text style={BioCss.data}>--</Text>
             )}
           </View>
-          <TouchableOpacity
-            onPress={() => {
-              // console.log();
-              navigation.navigate("EditProfile", {
-                StoreName: `${storeData[0].StoreName}`,
-              });
-            }}
-          >
-            <View style={BioCss.SwitchStoreView}>
-              <Text style={BioCss.SwitchStore}>Edit Profile</Text>
-            </View>
-          </TouchableOpacity>
+
+          {storeData.length > 0 ? (
+            <TouchableOpacity
+              onPress={() => {
+                // console.log();
+                navigation.navigate("EditProfile", {
+                  StoreName: `${storeData[0].StoreName}`,
+                });
+              }}
+            >
+              <View style={BioCss.SwitchStoreView}>
+                <Text style={BioCss.SwitchStore}>Edit Profile</Text>
+              </View>
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity>
+              <View style={BioCss.SwitchStoreView}>
+                <Text style={BioCss.SwitchStore}>Edit Profile</Text>
+              </View>
+            </TouchableOpacity>
+          )}
         </View>
 
         <View style={BioCss.RowDiv}>
