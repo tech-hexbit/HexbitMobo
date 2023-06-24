@@ -14,19 +14,22 @@ const TableCss = StyleSheet.create({
   },
   tableRow: {
     flexDirection: "row",
+    justifyContent: "space-evenly",
     // borderBottomWidth: 1,
     // borderBottomColor: "gray",
     paddingVertical: 10,
+    // paddingHorizontal: 8,
     gap: 14,
   },
   headerCell: {
     fontWeight: "bold",
-    paddingHorizontal: 8,
+    textAlign: "center",
     flex: 1,
   },
   tableCell: {
     flex: 1,
     textTransform: "capitalize",
+    textAlign: "center",
   },
 });
 
