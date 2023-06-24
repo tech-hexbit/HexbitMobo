@@ -12,7 +12,10 @@ const Discount = () => {
     <>
       <StoreHeader true={true} title="Customer" DisTabs={true} />
       <View style={DisCss.mDiv}>
-        <Text>Discount</Text>
+        <></>
+        <>
+          <Text>No Customer</Text>
+        </>
       </View>
     </>
   );
