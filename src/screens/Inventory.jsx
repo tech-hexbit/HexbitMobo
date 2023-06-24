@@ -5,6 +5,7 @@ import React from "react";
 import Header from "./../Components/Header";
 import Sales from "./../Components/Order/Sales";
 import InventoryC from "./../Components/Order/Inventory";
+import Filter from "./Filter";
 
 // theme
 import { COLORS } from "../constants/theme";
@@ -19,6 +20,7 @@ const Inventory = () => {
         <View style={InventoryCss.HeaderView}>
           <Header pageName="Orders" />
           <Sales />
+          <Filter />
         </View>
 
         <View style={InventoryCss.InventoryC}>
