@@ -6,6 +6,7 @@ import DisCss from "./Css/DiscountCss";
 
 // components
 import StoreHeader from "./../Components/Cart/StoreHeader";
+import Table from "./../Components/Customer/Table";
 
 const Discount = () => {
   return (
@@ -13,13 +14,7 @@ const Discount = () => {
       <StoreHeader true={true} title="Customer" DisTabs={true} />
       <View style={DisCss.mDiv}>
         <>
-          <View style={DisCss.tableRow}>
-            <Text style={DisCss.headerCell}>Date</Text>
-            <Text style={DisCss.headerCell}>Order No.</Text>
-            <Text style={DisCss.headerCell}>Status</Text>
-            <Text style={DisCss.headerCell}>Method</Text>
-            <Text style={DisCss.headerCell}>Amount</Text>
-          </View>
+          <Table />
         </>
         <>
           <Text>No Customer</Text>
