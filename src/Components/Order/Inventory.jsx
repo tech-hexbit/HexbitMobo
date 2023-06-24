@@ -47,8 +47,8 @@ const Inventory = () => {
   };
   return (
     <View>
-      <Text style={InventoryCss.StatusText}>Inventory Status</Text>
-      <View style={InventoryCss.tabView}>
+      {/* <Text style={InventoryCss.StatusText}>Inventory Status</Text> */}
+      {/* <View style={InventoryCss.tabView}>
         <View style={InventoryCss.ViewRow}>
           <Text style={InventoryCss.txt1}>QUANTITY IN HAND</Text>
           <Text style={InventoryCss.txt2}>5768</Text>
@@ -98,7 +98,7 @@ const Inventory = () => {
         >
           On Hold
         </Text>
-      </View>
+      </View> */}
 
       <TouchableOpacity onPress={dataSet} style={InventoryCss.refreshDiv}>
         <Image source={refresh} style={InventoryCss.refresh} />
@@ -162,7 +162,7 @@ const Inventory = () => {
                       {row.method}
                     </Text>
                     <Text style={[InventoryCss.tableCell, InventoryCss.amount]}>
-                      {row.amount}
+                      ₹ {row.amount}
                     </Text>
                   </View>
                 </TouchableOpacity>
