@@ -54,8 +54,6 @@ const FilterCss = StyleSheet.create({
   dn_arrow: {
     backgroundColor: "#fff",
     marginRight: 5,
-    // paddingVertical: 5,
-    // paddingHorizontal: 10,
   },
 });
 
