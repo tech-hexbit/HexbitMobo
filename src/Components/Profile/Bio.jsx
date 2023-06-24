@@ -77,7 +77,6 @@ const Bio = () => {
           {storeData.length > 0 ? (
             <TouchableOpacity
               onPress={() => {
-                // console.log();
                 navigation.navigate("EditProfile", {
                   StoreName: `${storeData[0].StoreName}`,
                 });
