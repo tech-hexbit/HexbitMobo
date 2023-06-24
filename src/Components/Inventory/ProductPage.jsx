@@ -75,7 +75,9 @@ const ProductPage = (props) => {
                     </View>
                     <View>
                       <Text style={PPCss.val1}>Product Name</Text>
-                      <Text style={PPCss.val2}>{val.name}</Text>
+                      <Text style={[PPCss.val2, PPCss.nameText]}>
+                        {val.name}
+                      </Text>
                     </View>
                   </View>
                   <View style={PPCss.RowViewChild}>
