@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // style
 import EditProfileCss from "./Css/EditProfileCss";
@@ -16,7 +17,7 @@ import AuthContext from "./../../../store/auth-context";
 // axios
 import axios from "axios";
 
-const EditProfile = () => {
+const EditProfile = (props) => {
   const [StoreName, setStoreName] = useState("");
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
@@ -25,17 +26,16 @@ const EditProfile = () => {
 
   const { userInfo, AddStore } = useContext(AuthContext);
 
+  const navigation = useNavigation();
+
   useEffect(() => {
     setName(userInfo.name);
     setEmail(userInfo.email);
+    setNature(userInfo.CompanyNature);
+    setStoreName(props.route.params.StoreName);
   }, []);
 
   const saveData = async () => {
-    if (Name === "") {
-      //   setName(userInfo.name);
-      console.log("++++++++++++++++userInfo");
-      console.log(userInfo.name);
-    }
     let data = {
       SellerID: userInfo._id,
       StoreID: AddStore,
@@ -47,21 +47,23 @@ const EditProfile = () => {
 
     console.log(data);
 
-    // try {
-    //   const res = await axios.post(
-    //     `http://192.168.43.29:8000/api/App/Profile/UpdateProfile`,
-    //     data
-    //   );
+    try {
+      const res = await axios.post(
+        `http://192.168.43.29:8000/api/App/Profile/UpdateProfile`,
+        data
+      );
 
-    //   if (res.data.status === true) {
-    //     setError("");
-    //     console.log("res.data");
-    //     console.log(res.data);
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    //   setError("Error: An Unexpected Error Happened");
-    // }
+      if (res.data.status === true) {
+        setError("");
+        console.log("res.data");
+        console.log(res.data);
+
+        navigation.navigate("ProfileMain");
+      }
+    } catch (error) {
+      console.log(error);
+      setError("Error: An Unexpected Error Happened");
+    }
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -74,6 +76,7 @@ const EditProfile = () => {
         <TextInput
           style={EditProfileCss.inpNumber}
           placeholder="ABC Store"
+          value={StoreName}
           onChangeText={(txt) => {
             setStoreName(txt);
           }}
@@ -109,7 +112,7 @@ const EditProfile = () => {
         <TextInput
           style={EditProfileCss.inpNumber}
           placeholder="Retailer"
-          value={Email}
+          value={Nature}
           onChangeText={(txt) => {
             setNature(txt);
           }}
