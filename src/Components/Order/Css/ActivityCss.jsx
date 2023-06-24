@@ -5,7 +5,7 @@ import { COLORS, SIZES } from "../../../constants/theme";
 
 const ActivityCss = StyleSheet.create({
   ActivityBlock: {
-    backgroundColor: COLORS.ActivityBlock,
+    // backgroundColor: COLORS.ActivityBlock,
     borderRadius: 10,
     paddingTop: 12,
     paddingBottom: 12,
@@ -15,16 +15,28 @@ const ActivityCss = StyleSheet.create({
     height: 90,
   },
   amtText: {
-    color: "white",
+    color: "#592161",
     fontWeight: 500,
     fontSize: 30,
     textAlign: "center",
   },
   statusText: {
-    color: "white",
+    color: "#000",
     fontWeight: 500,
     fontSize: 15,
     textAlign: "center",
+  },
+  num1: {
+    backgroundColor: "#fcebff",
+  },
+  num2: {
+    backgroundColor: "",
+  },
+  num3: {
+    backgroundColor: "",
+  },
+  num4: {
+    backgroundColor: "",
   },
 });
 
