@@ -19,6 +19,44 @@ const FilterCss = StyleSheet.create({
     width: "100%",
     fontSize: 20,
   },
+  rightView: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  statViewMain: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+    borderRadius: 10,
+  },
+  statView: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+  },
+  STATUSText: {
+    backgroundColor: "#595959",
+    color: "#fff",
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    fontWeight: 600,
+  },
+  ShippedText: {
+    color: "#595959",
+    fontWeight: 600,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    backgroundColor: "#fff",
+  },
+  dn_arrow: {
+    backgroundColor: "#fff",
+    marginRight: 5,
+    // paddingVertical: 5,
+    // paddingHorizontal: 10,
+  },
 });
 
 export default FilterCss;
