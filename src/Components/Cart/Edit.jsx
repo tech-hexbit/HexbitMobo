@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   View,
   Text,
@@ -8,6 +8,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+
+// state
+import AuthContext from "./../../../store/auth-context";
 
 // axios
 import axios from "axios";
@@ -28,6 +31,8 @@ const Edit = (props) => {
   const [Img, setImg] = useState("");
   const [showError, setError] = useState("");
 
+  const { AddStore } = useContext(AuthContext);
+
   const navigation = useNavigation();
 
   useEffect(() => {
@@ -37,7 +42,7 @@ const Edit = (props) => {
   const dataFun = async () => {
     try {
       let data = {
-        ItemID: state_id,
+        ItemID: AddStore,
       };
 
       const res = await axios.post(
