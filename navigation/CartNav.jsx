@@ -20,6 +20,9 @@ export default function CartNav(props) {
 
   const Stack = createNativeStackNavigator();
 
+  console.log("-------- AddStore --------");
+  console.log(AddStore);
+
   return (
     <>
       <Stack.Navigator initialRouteName="Login">
