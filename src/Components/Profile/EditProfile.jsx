@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 
 // style
@@ -6,9 +6,11 @@ import EditProfileCss from "./Css/EditProfileCss";
 
 const EditProfile = () => {
   return (
-    <View style={EditProfileCss.mDIV}>
-      <Text>EditProfile</Text>
-    </View>
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={EditProfileCss.mDIV}>
+        <Text>EditProfile</Text>
+      </View>
+    </ScrollView>
   );
 };
 
