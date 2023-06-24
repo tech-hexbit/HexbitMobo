@@ -39,6 +39,8 @@ const ProductCartCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 18,
     marginBottom: 5,
+    marginRight: 10,
+    marginTop: 10,
   },
   statsDiv: {
     flexDirection: "row",
