@@ -66,7 +66,7 @@ const Bio = () => {
                 })}
               </>
             ) : (
-              <Text style={BioCss.data}>--</Text>
+              <Text style={BioCss.data}>---</Text>
             )}
           </View>
 
