@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   View,
@@ -18,6 +18,8 @@ import img from "./../../../assets/Cart/pod.png";
 const ProductPage = (props) => {
   const navigation = useNavigation();
 
+  const [showError, setError] = useState("");
+
   useEffect(() => {
     dataInfo();
   }, []);
@@ -31,6 +33,14 @@ const ProductPage = (props) => {
         `http://192.168.43.29:8000/api/App/cart/getItemInfo`,
         data
       );
+
+      if (res.data.status === true) {
+        setError("");
+        console.log("res.data");
+        console.log(res.data);
+      } else {
+        setError("Error");
+      }
     } catch (error) {
       console.log(error);
       setError("Error: An Unexpected Error Happened");
