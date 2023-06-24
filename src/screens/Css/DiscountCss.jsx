@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 
 const DisCss = StyleSheet.create({
-  mDiv: {
+  YesDiv: {},
+  NoDiv: {
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "center",
