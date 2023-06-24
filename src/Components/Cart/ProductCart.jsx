@@ -33,9 +33,9 @@ const ProductCart = (props) => {
             <View style={ProductCartCss.statsDiv}>
               <Text
                 style={ProductCartCss.name}
-                onPress={() => {
-                  navigation.navigate("Edit");
-                }}
+                // onPress={() => {
+                // navigation.navigate("Edit");
+                // }}
               >
                 {props.name}
               </Text>
