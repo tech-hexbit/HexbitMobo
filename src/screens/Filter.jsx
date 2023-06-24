@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import React from "react";
 
 // style
@@ -19,10 +19,12 @@ const Filter = () => {
       <View style={FilterCss.rightView}>
         <View style={FilterCss.statViewMain}>
           <Text style={FilterCss.STATUSText}>STATUS</Text>
-          <View style={FilterCss.statView}>
-            <Text style={FilterCss.ShippedText}>Shipped</Text>
-            <Image source={dn_arrow} style={FilterCss.dn_arrow} />
-          </View>
+          <TouchableOpacity>
+            <View style={FilterCss.statView}>
+              <Text style={FilterCss.ShippedText}>Shipped</Text>
+              <Image source={dn_arrow} style={FilterCss.dn_arrow} />
+            </View>
+          </TouchableOpacity>
         </View>
         <View></View>
       </View>
