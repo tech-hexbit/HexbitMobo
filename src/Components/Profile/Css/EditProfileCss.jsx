@@ -19,7 +19,24 @@ const EditProfileCss = StyleSheet.create({
     fontWeight: 900,
     color: "#350B5E",
   },
-  SNText: {},
+  ViewInp: {
+    marginVertical: 15,
+    paddingHorizontal: 20,
+  },
+  SNText: {
+    fontSize: 18,
+    fontWeight: 600,
+  },
+  inpNumber: {
+    borderRadius: 10,
+    borderStyle: "solid",
+    borderColor: "#7D629B",
+    borderWidth: 1,
+    backgroundColor: "#F9F9F9",
+    paddingVertical: 7,
+    paddingHorizontal: 12,
+    marginTop: 10,
+  },
 });
 
 export default EditProfileCss;
