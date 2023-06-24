@@ -58,6 +58,27 @@ const StoreHeaderCss = StyleSheet.create({
     fontWeight: 400,
     paddingHorizontal: 10,
   },
+  SORTView: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+    borderRadius: 10,
+  },
+  SORT: {
+    backgroundColor: "#595959",
+    color: "#fff",
+    textAlign: "center",
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+  },
+  AText: {
+    color: "#595959",
+    backgroundColor: "#fff",
+    textAlign: "center",
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+  },
 });
 
 export default StoreHeaderCss;
