@@ -45,6 +45,15 @@ const Company = (props) => {
     { label: "Importer", value: "Importer" },
   ]);
 
+  const [open1, setOpen1] = useState(false);
+  const [value1, setValue1] = useState(null);
+  const [items1, setItems1] = useState([
+    { label: "PVT", value: "PVT" },
+    { label: "LTD", value: "LTD" },
+    { label: "LLP", value: "LLP" },
+    { label: "Other", value: "Other" },
+  ]);
+
   const navigate = useNavigation();
 
   const handleButtonPress = async () => {
@@ -124,12 +133,24 @@ const Company = (props) => {
         />
 
         <Text style={CompanyCss.Enter}>Type of company</Text>
-        <TextInput
+        {/* <TextInput
           style={CompanyCss.inpNumber}
           placeholder="Select"
           onChangeText={(txt) => {
             setType(txt);
           }}
+        /> */}
+
+        <DropDownPicker
+          style={CompanyCss.inpNumber}
+          open={open1}
+          value={value1}
+          items={items1}
+          placeholder="Select an option"
+          setOpen={setOpen1}
+          // zIndex={10000}
+          setValue={setValue1}
+          setItems={setItems1}
         />
 
         <Text style={CompanyCss.errorMsg}>
