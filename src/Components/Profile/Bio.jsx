@@ -23,9 +23,6 @@ const Bio = () => {
     StoreDataFum();
   }, []);
 
-  console.log("--- storeData ---");
-  console.log(storeData);
-
   const StoreDataFum = async () => {
     console.log("--------storeData--------");
 
@@ -92,8 +89,8 @@ const Bio = () => {
             </TouchableOpacity>
           ) : (
             <TouchableOpacity>
-              <View style={BioCss.SwitchStoreView}>
-                <Text style={BioCss.SwitchStore}>Edit Profile</Text>
+              <View style={BioCss.SwitchStoreView2}>
+                <Text style={BioCss.SwitchStore}>Set Up Store</Text>
               </View>
             </TouchableOpacity>
           )}
