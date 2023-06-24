@@ -57,14 +57,14 @@ const Company = (props) => {
   const navigate = useNavigation();
 
   const handleButtonPress = async () => {
-    if (showName.length > 0 && showNature.length > 0 && showType.length > 0) {
+    if (showName.length > 0 && value !== null && value1 !== null) {
       console.log(showName, showNature, showType);
 
       let data = {
         WhatsAppNumber: props.route.params.WhatsAppNumber,
         name: showName,
-        type: showType,
-        nature: showNature,
+        type: value,
+        nature: value1,
       };
 
       try {
