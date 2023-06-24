@@ -15,6 +15,13 @@ const EditProfile = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Nature, setNature] = useState("");
+
+  const saveData = async () => {
+    console.log("StoreName ->", StoreName);
+    console.log("Name ->", Name);
+    console.log("Email ->", Email);
+    console.log("Nature ->", Nature);
+  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={EditProfileCss.EPHeaderView}>
@@ -66,7 +73,7 @@ const EditProfile = () => {
       </View>
 
       <View style={EditProfileCss.mDIV}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={saveData}>
           <Text style={EditProfileCss.mDIVSave}>Save</Text>
         </TouchableOpacity>
       </View>
