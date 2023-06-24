@@ -64,12 +64,12 @@ const Edit = (props) => {
   };
 
   const AddData = (e) => {
-    // console.log(state_id);
-    // console.log(Name);
-    // console.log(Price);
-    // console.log(dec);
-    // console.log(stock);
-    // console.log(type);
+    console.log(state_id);
+    console.log(Name);
+    console.log(Price);
+    console.log(dec);
+    console.log(stock);
+    console.log(type);
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -129,6 +129,10 @@ const Edit = (props) => {
           <TextInput
             style={ADCss.TextInputTag}
             placeholder="Select Product type"
+            value={type}
+            onChangeText={(txt) => {
+              setType(txt);
+            }}
           />
         </View>
 
