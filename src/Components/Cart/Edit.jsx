@@ -143,6 +143,10 @@ const Edit = (props) => {
             multiline={true}
             numberOfLines={4}
             placeholder="ABC Store Description ...."
+            value={dec}
+            onChangeText={(txt) => {
+              setdec(txt);
+            }}
           />
         </View>
 
