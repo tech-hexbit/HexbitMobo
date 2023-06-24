@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 
 // style
@@ -16,14 +16,16 @@ const Table = () => {
         <Text style={TableCss.headerCell}>Amount Spent</Text>
       </View>
 
-      <View style={TableCss.tableRow}>
-        <Text style={TableCss.tableCell}>Devesh</Text>
-        <Text style={TableCss.tableCell}>Group 2</Text>
-        <View style={TableCss.tableCell2}>
-          <Text style={TableCss.tableCellText}>₹564</Text>
-          <Image source={arrow} style={TableCss.awr} />
+      <TouchableOpacity>
+        <View style={TableCss.tableRow}>
+          <Text style={TableCss.tableCell}>Devesh</Text>
+          <Text style={TableCss.tableCell}>Group 2</Text>
+          <View style={TableCss.tableCell2}>
+            <Text style={TableCss.tableCellText}>₹564</Text>
+            <Image source={arrow} style={TableCss.awr} />
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
