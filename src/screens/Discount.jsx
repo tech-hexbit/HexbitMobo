@@ -4,11 +4,17 @@ import React from "react";
 // style
 import DisCss from "./Css/DiscountCss";
 
+// components
+import StoreHeader from "./../Components/Cart/StoreHeader";
+
 const Discount = () => {
   return (
-    <View style={DisCss.mDiv}>
-      <Text>Discount</Text>
-    </View>
+    <>
+      <StoreHeader true={true} title="Customer" />
+      <View style={DisCss.mDiv}>
+        <Text>Discount</Text>
+      </View>
+    </>
   );
 };
 
