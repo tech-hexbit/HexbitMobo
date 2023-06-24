@@ -6,7 +6,10 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
+  // Picker,
 } from "react-native";
+
+import DropDownPicker from "react-native-dropdown-picker";
 
 // axios
 import axios from "axios";
@@ -23,6 +26,18 @@ const OrdersPage = (props) => {
   const [showError, setError] = useState("");
   const [updateView, setUpdateView] = useState(false);
   const [orderUP, setorderUP] = useState("");
+
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState([
+    { label: "Shipped", value: "Shipped" },
+    { label: "Cancelled", value: "Cancelled" },
+    { label: "Delivered", value: "Delivered" },
+  ]);
+
+  useEffect(() => {
+    console.log(value);
+  }, [value]);
 
   useEffect(() => {
     getData();
@@ -42,10 +57,10 @@ const OrdersPage = (props) => {
   };
 
   const handle = async () => {
-    if (orderUP.length > 0) {
+    if (value !== null) {
       let data = {
         id: show[0]._id,
-        val: orderUP,
+        val: value,
       };
 
       try {
@@ -136,13 +151,23 @@ const OrdersPage = (props) => {
                           <Image source={close} />
                         </TouchableOpacity>
 
-                        <TextInput
+                        <DropDownPicker
                           style={OPCss.inpNumber}
+                          open={open}
+                          value={value}
+                          items={items}
+                          placeholder="Select an option"
+                          setOpen={setOpen}
+                          setValue={setValue}
+                          setItems={setItems}
+                        />
+
+                        {/* <TextInput
                           placeholder="Select Order Status"
                           onChangeText={(txt) => {
                             setorderUP(txt);
                           }}
-                        />
+                        /> */}
 
                         <View style={OPCss.saveBtnView}>
                           <TouchableOpacity
