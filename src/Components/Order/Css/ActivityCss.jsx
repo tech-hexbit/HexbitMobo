@@ -13,6 +13,7 @@ const ActivityCss = StyleSheet.create({
     paddingRight: 25,
     width: "46%",
     height: 90,
+    elevation: 4,
   },
   amtText: {
     color: "#592161",
@@ -30,13 +31,13 @@ const ActivityCss = StyleSheet.create({
     backgroundColor: "#fcebff",
   },
   num2: {
-    backgroundColor: "",
+    backgroundColor: "#f6d5b6",
   },
   num3: {
-    backgroundColor: "",
+    backgroundColor: "#e4eaff",
   },
   num4: {
-    backgroundColor: "",
+    backgroundColor: "#dcfef0",
   },
 });
 
