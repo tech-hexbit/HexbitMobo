@@ -1,5 +1,11 @@
-import { View, Text, ScrollView, TextInput } from "react-native";
 import React from "react";
+import {
+  View,
+  Text,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 // style
 import EditProfileCss from "./Css/EditProfileCss";
@@ -22,8 +28,45 @@ const EditProfile = () => {
         />
       </View>
 
+      <View style={EditProfileCss.ViewInp}>
+        <Text style={EditProfileCss.SNText}>Name</Text>
+        <TextInput
+          style={EditProfileCss.inpNumber}
+          placeholder="Name"
+          // onChangeText={(txt) => {
+          //   setVal(txt);
+          // }}
+        />
+      </View>
+
+      <View style={EditProfileCss.ViewInp}>
+        <Text style={EditProfileCss.SNText}>Email</Text>
+        <TextInput
+          style={EditProfileCss.inpNumber}
+          placeholder="example@email.com"
+          // onChangeText={(txt) => {
+          //   setVal(txt);
+          // }}
+        />
+      </View>
+
+      <View style={EditProfileCss.ViewInp}>
+        <Text style={EditProfileCss.SNText}>Nature of the company</Text>
+        <TextInput
+          style={EditProfileCss.inpNumber}
+          placeholder="Retailer"
+          // onChangeText={(txt) => {
+          //   setVal(txt);
+          // }}
+        />
+      </View>
+
       <View style={EditProfileCss.mDIV}>
-        <Text>EditProfile</Text>
+        <TouchableOpacity>
+          <View>
+            <Text>Save</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
