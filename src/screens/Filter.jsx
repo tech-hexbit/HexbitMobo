@@ -27,9 +27,12 @@ const Filter = () => {
             </View>
           </TouchableOpacity>
         </View>
-        <View style={FilterCss.calView}>
-          <Image source={cal} style={FilterCss.cal} />
-        </View>
+
+        <TouchableOpacity>
+          <View style={FilterCss.calView}>
+            <Image source={cal} style={FilterCss.cal} />
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
