@@ -33,7 +33,14 @@ const ProductCart = (props) => {
               </Text>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate("Edit");
+                  navigation.navigate("Edit", {
+                    name: `${props.name}`,
+                    dec: `${props.dec}`,
+                    price: `${props.price}`,
+                    Order: `${props.totalSold}`,
+                    InStore: `${props.stock}`,
+                    _id: `${props._id}`,
+                  });
                 }}
               >
                 <Image source={edit} />
