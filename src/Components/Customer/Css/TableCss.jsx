@@ -9,7 +9,6 @@ const TableCss = StyleSheet.create({
     marginTop: 10,
     borderColor: "rgba(0, 0, 0, 0.10)",
     borderWidth: 1,
-    // borderRadius: 10,
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,
   },
