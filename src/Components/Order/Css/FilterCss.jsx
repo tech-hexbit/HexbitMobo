@@ -30,6 +30,7 @@ const FilterCss = StyleSheet.create({
     alignItems: "center",
     overflow: "hidden",
     borderRadius: 10,
+    elevation: 4,
   },
   statView: {
     flexDirection: "row",
@@ -54,6 +55,14 @@ const FilterCss = StyleSheet.create({
   dn_arrow: {
     backgroundColor: "#fff",
     marginRight: 5,
+  },
+  cal: {},
+  calView: {
+    borderRadius: 10,
+    backgroundColor: "#fff",
+    marginLeft: 10,
+    paddingVertical: 5,
+    elevation: 4,
   },
 });
 
