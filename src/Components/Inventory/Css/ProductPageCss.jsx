@@ -115,7 +115,7 @@ const PPCss = StyleSheet.create({
     width: 120,
   },
   nameText: {
-    width: 120,
+    width: "75%",
     backgroundColor: "red",
   },
   Delete: {
