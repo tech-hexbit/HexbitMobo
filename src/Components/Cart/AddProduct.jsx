@@ -56,6 +56,7 @@ const AddProduct = (props) => {
       });
 
       if (!result.cancelled) {
+        console.log("---- result ----");
         console.log(result.uri);
 
         setSelectedImage(result.uri);
