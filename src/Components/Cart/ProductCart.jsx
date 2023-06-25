@@ -24,7 +24,7 @@ const ProductCart = (props) => {
           <View style={ProductCartCss.leftDiv}>
             <Image
               source={{
-                uri: props.img,
+                uri: `data:image/png;base64,${props.img}`,
               }}
               style={ProductCartCss.ImgRender}
             />
