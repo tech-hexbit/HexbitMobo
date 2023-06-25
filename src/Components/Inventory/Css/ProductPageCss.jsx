@@ -53,6 +53,7 @@ const PPCss = StyleSheet.create({
     height: 180,
     marginBottom: 14,
     borderRadius: 10,
+    resizeMode: "contain",
   },
   AddpodText: {
     color: "#3E3E3E",
