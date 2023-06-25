@@ -53,11 +53,14 @@ const AddProduct = (props) => {
       const result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
         quality: 1,
+        base64: true,
       });
 
       if (!result.cancelled) {
         console.log("---- result ----");
-        console.log(result.uri);
+        console.log(result.base64);
+
+        setImg(result.base64);
 
         setSelectedImage(result.uri);
       }
@@ -72,7 +75,8 @@ const AddProduct = (props) => {
       Price !== "" &&
       Stock !== "" &&
       Type !== "" &&
-      Des !== ""
+      Des !== "" &&
+      Img !== ""
     ) {
       setError("");
 
@@ -82,10 +86,12 @@ const AddProduct = (props) => {
         price: Price,
         stock: Stock,
         type: Type,
-        Img: "img",
+        Img: Img,
         des: Des,
         wa: userInfo._id,
       };
+
+      console.log(data);
 
       try {
         const res = await axios.post(
