@@ -32,6 +32,11 @@ const ADCss = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  previewImg: {
+    width: 200,
+    height: 200,
+    borderRadius: 10,
+  },
   plusCircle: {
     width: 25.18,
     height: 25.18,
