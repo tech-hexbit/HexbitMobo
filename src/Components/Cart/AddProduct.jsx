@@ -4,11 +4,13 @@ import {
   Image,
   TextInput,
   ScrollView,
+  Button,
   TouchableOpacity,
 } from "react-native";
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigation, validatePathConfig } from "@react-navigation/native";
-import ImagePicker from "react-native-image-picker";
+
+import * as ImagePicker from "expo-image-picker";
 
 // style
 import ADCss from "./Css/AddProductCss";
@@ -37,18 +39,32 @@ const AddProduct = (props) => {
 
   const navigation = useNavigation();
 
-  const openGallery = async () => {
-    console.log("========================");
+  const [selectedImage, setSelectedImage] = useState(null);
 
-    ImagePicker.showImagePicker({
-      title: "Select an Image",
-      multiple: false,
-    }).then((image) => {
-      setImage(image);
-    });
+  const pickImage = async () => {
+    try {
+      const { status } =
+        await ImagePicker.requestMediaLibraryPermissionsAsync();
+      if (status !== "granted") {
+        console.log("Permission denied!");
+        return;
+      }
 
-    // const result = await launchCamera(options?)
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        quality: 1,
+      });
+
+      if (!result.cancelled) {
+        console.log(result.uri);
+
+        setSelectedImage(result.uri);
+      }
+    } catch (error) {
+      console.log("Error picking image:", error);
+    }
   };
+
   const handleButtonPress = async () => {
     if (
       name !== "" &&
@@ -105,13 +121,20 @@ const AddProduct = (props) => {
           <Text style={ADCss.AddProductText}>Add Product</Text>
         </View>
 
-        <TouchableOpacity onPress={openGallery}>
+        <TouchableOpacity onPress={pickImage}>
           <View style={ADCss.AddImgView}>
             <View style={ADCss.AddImgBorder}>
-              <View style={ADCss.AddImgGrey}>
-                <Image source={img} style={ADCss.plusCircle}></Image>
-                <Text style={ADCss.AddpodText}>Add Product Image</Text>
-              </View>
+              {selectedImage ? (
+                <Image
+                  style={ADCss.previewImg}
+                  source={{ uri: selectedImage }}
+                />
+              ) : (
+                <View style={ADCss.AddImgGrey}>
+                  <Image source={img} style={ADCss.plusCircle}></Image>
+                  <Text style={ADCss.AddpodText}>Add Product Image</Text>
+                </View>
+              )}
             </View>
           </View>
         </TouchableOpacity>
