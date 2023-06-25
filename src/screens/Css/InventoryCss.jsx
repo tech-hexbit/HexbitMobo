@@ -62,7 +62,7 @@ const InvCss = StyleSheet.create({
     textAlign: "center",
     fontWeight: 600,
     fontSize: 18,
-    marginVertical: 20,
+    marginVertical: 50,
   },
 });
 
