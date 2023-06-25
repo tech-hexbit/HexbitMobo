@@ -64,7 +64,10 @@ const ProductPage = (props) => {
             return (
               <View key={key}>
                 <View style={PPCss.AddImgView}>
-                  <Image source={{ uri: val.Img }} style={PPCss.pimg}></Image>
+                  <Image
+                    source={{ uri: `data:image/png;base64,${val.Img}` }}
+                    style={PPCss.pimg}
+                  ></Image>
                 </View>
 
                 <View style={PPCss.RowView}>
