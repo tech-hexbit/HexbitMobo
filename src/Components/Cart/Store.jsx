@@ -118,9 +118,6 @@ const Store = (props) => {
               >
                 <Text style={InvCss.opions}>Import Bulk Products</Text>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Text style={InvCss.opions}>Export Products</Text>
-              </TouchableOpacity>
             </View>
 
             <TouchableOpacity
