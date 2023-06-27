@@ -43,6 +43,9 @@ const StoreCss = StyleSheet.create({
     fontSize: 18,
     marginVertical: 20,
   },
+  APView: {
+    marginVertical: 20,
+  },
 });
 
 export default StoreCss;
