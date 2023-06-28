@@ -2,59 +2,43 @@ import { StyleSheet } from "react-native";
 
 import { COLORS } from "../../../constants/theme";
 
-const LMCss = StyleSheet.create({
+const NameCss = StyleSheet.create({
   mDIv: {
     flexGrow: 1,
-    backgroundColor: COLORS.primary,
+    backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
   },
-  MDiv: {
-    marginTop: 20,
+  img: {
     width: "80%",
-  },
-  LoginText: {
-    color: "#fff",
-    fontWeight: 600,
-    fontSize: 18,
-  },
-  LoginText1: {
-    borderWidth: 2,
+    height: "30%",
     marginBottom: 20,
-    width: "100%",
-    borderRadius: 10,
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderColor: "#fff",
-    color: "#fff",
   },
-  LoginText2: {
-    borderWidth: 2,
-    marginBottom: 20,
-    width: "100%",
-    borderRadius: 10,
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderColor: "#fff",
-    color: "#fff",
-  },
-  GetStarted: {
-    marginTop: 30,
-    backgroundColor: "#fff",
+  Enter: {
+    marginBottom: 30,
     color: COLORS.primary,
-    paddingTop: 15,
-    paddingBottom: 15,
-    paddingHorizontal: 70,
+    fontWeight: 700,
+    fontSize: 21,
+  },
+  inpNumber: {
+    padding: 12,
+    borderColor: "#6B4EFF",
+    borderWidth: 2,
     borderRadius: 10,
+    width: "80%",
+    marginBottom: 20,
+  },
+  button: {
+    borderRadius: 10,
+    paddingTop: 14,
+    paddingBottom: 14,
+    width: "70%",
+  },
+  SendOTP: {
+    color: "#fff",
     fontWeight: 600,
     fontSize: 20,
-    lineHeight: 30,
-  },
-  Already: {
-    marginTop: 20,
-    color: "#fff",
-    fontWeight: 600,
-    fontSize: 18,
+    textAlign: "center",
   },
   errorMsg: {
     color: "#800000",
