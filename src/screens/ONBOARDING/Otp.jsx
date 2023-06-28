@@ -1,7 +1,15 @@
-import React, { useRef, useState, useEffect } from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
+import React, { useRef, useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ActivityIndicator,
+  TouchableOpacity,
+} from "react-native";
 
 // axios
 import axios from "axios";
@@ -20,6 +28,7 @@ import img from "./../../../assets/Login/otp.png";
 
 const Otp = (props) => {
   const [showError, setError] = useState("");
+  const [load, setLoad] = useState(false);
 
   const [f1, setf1] = useState("");
   const [f2, setf2] = useState("");
@@ -52,6 +61,7 @@ const Otp = (props) => {
 
   const handleButtonPress = async () => {
     if (f1 !== "" && f2 !== "" && f3 !== "" && f4 !== "") {
+      setLoad(true);
       setError("");
 
       let Otp = f1 + f2 + f3 + f4;
@@ -70,6 +80,7 @@ const Otp = (props) => {
         );
 
         if (res.data.status === true) {
+          setLoad(false);
           setError("");
           console.log("res.data");
           console.log(res.data);
@@ -77,14 +88,16 @@ const Otp = (props) => {
             WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
           });
         } else {
+          setLoad(false);
           setError("Error: Invalid OTP");
-          // Alert.alert("Phone Number Already in Use");
         }
       } catch (error) {
+        setLoad(false);
         console.log(error);
         setError("Error: An Unexpected Error Happened");
       }
     } else {
+      setLoad(false);
       console.log("fill");
       setError("Please Enter A Valid Number");
     }
@@ -165,15 +178,11 @@ const Otp = (props) => {
         colors={["#BB14E2", "#161FE4"]}
         style={OtpCss.button}
       >
-        <Text
-          style={OtpCss.SendOTP}
-          onPress={
-            handleButtonPress
-            // navigate.navigate("Name");
-          }
-        >
-          Verify
-        </Text>
+        <TouchableOpacity onPress={handleButtonPress}>
+          <Text style={OtpCss.SendOTP}>
+            {load ? <ActivityIndicator size={"large"} /> : "Verify"}
+          </Text>
+        </TouchableOpacity>
       </LinearGradient>
 
       <Text style={OtpCss.timer}>00:{seconds}</Text>

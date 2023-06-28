@@ -43,9 +43,6 @@ const Home = () => {
 
       if (res.data.status === true) {
         setError("");
-        console.log("res.data");
-        console.log(res.data.itemData);
-        setItemData(res.data.itemData);
       } else {
         setError("Error");
       }
@@ -99,9 +96,6 @@ const Home = () => {
               }}
             >
               <Text style={InvCss.opions}>Import Bulk Products</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={InvCss.opions}>Export Products</Text>
             </TouchableOpacity>
           </View>
 

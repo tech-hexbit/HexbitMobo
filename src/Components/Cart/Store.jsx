@@ -14,6 +14,7 @@ import StoreHeader from "./StoreHeader";
 import ProductCart from "./ProductCart";
 
 // style
+import InvCss from "./../../screens/Css/InventoryCss";
 import StoreCss from "./Css/StoreCss";
 
 // state
@@ -24,12 +25,14 @@ import axios from "axios";
 
 // img
 import refresh from "./../../../assets/refresh.png";
+import plus from "./../../../assets/Inventory/plus.png";
 
 const Store = (props) => {
   const { AddStore } = useContext(AuthContext);
 
   const [showData, setData] = useState([]);
   const [showError, setError] = useState("");
+  const [showOp, setOp] = useState(false);
 
   useEffect(() => {
     getData;
@@ -96,15 +99,37 @@ const Store = (props) => {
             </View>
           )}
         </View>
-        <View style={StoreCss.Addpod}>
-          <Text
-            style={StoreCss.AddProduct}
-            onPress={() => {
-              navigation.navigate("AddProduct");
-            }}
-          >
-            Add Product
-          </Text>
+
+        <View style={InvCss.posrel}>
+          <View style={InvCss.posAbsMain}>
+            <View style={showOp ? InvCss.listshow : InvCss.list}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("AddProduct");
+                }}
+              >
+                <Text style={InvCss.opions}>Add a Product</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("Bulk");
+                }}
+              >
+                <Text style={InvCss.opions}>Import Bulk Products</Text>
+              </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity
+              onPress={() => {
+                setOp(!showOp);
+              }}
+            >
+              <View style={InvCss.posAbs}>
+                <Image source={plus} style={InvCss.plus} />
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </ScrollView>

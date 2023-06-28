@@ -6,17 +6,37 @@ import {
   Image,
   TextInput,
   ScrollView,
+  Button,
   TouchableOpacity,
 } from "react-native";
 
 // style
 import BulkCss from "../Inventory/Css/BulkCss";
 
+// document-picker
+import * as DocumentPicker from "expo-document-picker";
+
 // img
 import img from "./../../../assets/Inventory/bulk.png";
 
 const Bulk = () => {
   const navigation = useNavigation();
+
+  const pickDocument = async () => {
+    try {
+      const result = await DocumentPicker.getDocumentAsync();
+      if (result.type === "success") {
+        console.log("result");
+        console.log(result);
+
+        console.log("File selected:", result.uri);
+        // Process the selected document here
+      }
+    } catch (error) {
+      console.log("Error picking document:", error);
+    }
+  };
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
@@ -29,7 +49,7 @@ const Bulk = () => {
         </Text>
 
         <View style={BulkCss.btnRowDiv}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={pickDocument}>
             <Text style={BulkCss.Browse}>Browse Files</Text>
           </TouchableOpacity>
           <TouchableOpacity
