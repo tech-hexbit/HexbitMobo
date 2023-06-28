@@ -26,6 +26,9 @@ const Bulk = () => {
     try {
       const result = await DocumentPicker.getDocumentAsync();
       if (result.type === "success") {
+        console.log("result");
+        console.log(result);
+
         console.log("File selected:", result.uri);
         // Process the selected document here
       }
