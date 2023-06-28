@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ActivityIndicator,
+} from "react-native";
 
 // axios
 import axios from "axios";
@@ -28,6 +35,7 @@ const Name = (props) => {
 
   const handleButtonPress = async () => {
     if (showVal.length > 0) {
+      setLoad(true);
       let data = {
         WhatsAppNumber: props.route.params.WhatsAppNumber,
         feild: "name",
@@ -60,7 +68,7 @@ const Name = (props) => {
         setError("Error: An Unexpected Error Happened");
       }
     } else {
-      console.log("fill");
+      setLoad(false);
       setError("Please Enter A Valid Number");
     }
   };
@@ -88,6 +96,7 @@ const Name = (props) => {
         style={NameCss.button}
       >
         <Text style={NameCss.SendOTP} onPress={handleButtonPress}>
+          {load ? <ActivityIndicator size={"large"} /> : "Send OTP"}
           Next
         </Text>
       </LinearGradient>
