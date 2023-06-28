@@ -43,9 +43,6 @@ const Home = () => {
 
       if (res.data.status === true) {
         setError("");
-        console.log("res.data");
-        console.log(res.data.itemData);
-        setItemData(res.data.itemData);
       } else {
         setError("Error");
       }
