@@ -46,4 +46,4 @@ const NameCss = StyleSheet.create({
   },
 });
 
-export default LMCss;
+export default NameCss;
