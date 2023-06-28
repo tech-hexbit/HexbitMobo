@@ -34,7 +34,9 @@ const Email = (props) => {
   const navigate = useNavigation();
 
   const handleButtonPress = async () => {
-    if (showVal.length > 0) {
+    if (showVal.length > 0 && showVal.includes("@") && showVal.includes(".")) {
+      setLoad(true);
+
       let data = {
         WhatsAppNumber: props.route.params.WhatsAppNumber,
         feild: "email",
@@ -49,6 +51,7 @@ const Email = (props) => {
         console.log(data);
 
         if (res.data.status === true) {
+          setLoad(false);
           setError("");
           console.log("res.data");
           console.log(res.data);
@@ -56,14 +59,15 @@ const Email = (props) => {
             WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
           });
         } else {
+          setLoad(false);
           setError("Error: Invalid OTP");
         }
       } catch (error) {
         console.log(error);
       }
     } else {
-      console.log("fill");
-      setError("Please Enter A Valid Number");
+      setLoad(false);
+      setError("Please Enter A Valid Email");
     }
   };
 
@@ -79,6 +83,11 @@ const Email = (props) => {
           setVal(txt);
         }}
       />
+
+      <Text style={EmailCss.errorMsg}>
+        {showError.length > 0 ? showError : ""}
+      </Text>
+
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
@@ -130,6 +139,10 @@ const EmailCss = StyleSheet.create({
     fontWeight: 600,
     fontSize: 20,
     textAlign: "center",
+  },
+  errorMsg: {
+    color: "#800000",
+    marginBottom: 15,
   },
 });
 
