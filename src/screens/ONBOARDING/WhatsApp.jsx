@@ -32,6 +32,7 @@ import WhatsAppCss from "./Css/WhatsAppCss";
 
 const WhatsApp = () => {
   const [textInputValue, setTextInputValue] = useState("");
+  const [load, setLoad] = useState(false);
   const [showError, setError] = useState("");
 
   const navigation = useNavigation();
@@ -42,6 +43,7 @@ const WhatsApp = () => {
 
   const handleButtonPress = async () => {
     if (textInputValue.length == 10) {
+      setLoad(true);
       setError("");
 
       let data = {
@@ -57,18 +59,22 @@ const WhatsApp = () => {
         );
 
         if (res.data.exists === false) {
+          setLoad(false);
           console.log(res.data);
 
           console.log("navigate...");
           navigation.navigate("Otp", { WhatsAppNumber: `${textInputValue}` });
         } else {
+          setLoad(false);
           Alert.alert("Phone Number Already in Use");
         }
       } catch (error) {
+        setLoad(false);
         console.log(error);
         setError("Error: An Unexpected Error Happened");
       }
     } else {
+      setLoad(false);
       setError("Please Enter A Valid Number");
     }
   };
@@ -96,7 +102,7 @@ const WhatsApp = () => {
         style={WhatsAppCss.button}
       >
         <Text style={WhatsAppCss.SendOTP} onPress={handleButtonPress}>
-          Send OTP
+          {load ? <ActivityIndicator size={"large"} /> : "Send OTP"}
         </Text>
       </LinearGradient>
     </View>
