@@ -61,6 +61,7 @@ const Otp = (props) => {
 
   const handleButtonPress = async () => {
     if (f1 !== "" && f2 !== "" && f3 !== "" && f4 !== "") {
+      setLoad(true);
       setError("");
 
       let Otp = f1 + f2 + f3 + f4;
@@ -79,6 +80,7 @@ const Otp = (props) => {
         );
 
         if (res.data.status === true) {
+          setLoad(false);
           setError("");
           console.log("res.data");
           console.log(res.data);
@@ -86,14 +88,17 @@ const Otp = (props) => {
             WhatsAppNumber: `${props.route.params.WhatsAppNumber}`,
           });
         } else {
+          setLoad(false);
           setError("Error: Invalid OTP");
           // Alert.alert("Phone Number Already in Use");
         }
       } catch (error) {
+        setLoad(false);
         console.log(error);
         setError("Error: An Unexpected Error Happened");
       }
     } else {
+      setLoad(false);
       console.log("fill");
       setError("Please Enter A Valid Number");
     }
