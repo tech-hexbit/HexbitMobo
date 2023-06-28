@@ -66,6 +66,7 @@ const Email = (props) => {
       setError("Please Enter A Valid Number");
     }
   };
+
   return (
     <View style={EmailCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
