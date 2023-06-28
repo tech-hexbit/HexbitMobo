@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ActivityIndicator,
+} from "react-native";
 
 // axios
 import axios from "axios";
@@ -21,6 +28,7 @@ import img from "./../../../assets/Login/email.png";
 
 const Email = (props) => {
   const [showError, setError] = useState("");
+  const [load, setLoad] = useState(false);
   const [showVal, setVal] = useState("");
 
   const navigate = useNavigation();
@@ -66,7 +74,6 @@ const Email = (props) => {
       <TextInput
         style={EmailCss.inpNumber}
         placeholder="example@email.com"
-        // keyboardType="email"
         onChangeText={(txt) => {
           setVal(txt);
         }}
@@ -77,14 +84,8 @@ const Email = (props) => {
         colors={["#BB14E2", "#161FE4"]}
         style={EmailCss.button}
       >
-        <Text
-          style={EmailCss.SendOTP}
-          onPress={
-            handleButtonPress
-            // navigation.navigate("Company");
-          }
-        >
-          Next
+        <Text style={EmailCss.SendOTP} onPress={handleButtonPress}>
+          {load ? <ActivityIndicator size={"large"} /> : "Next"}
         </Text>
       </LinearGradient>
     </View>
