@@ -10,6 +10,7 @@ import {
   Alert,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
 } from "react-native";
 
 // axios
@@ -94,13 +95,7 @@ const WhatsApp = () => {
         colors={["#BB14E2", "#161FE4"]}
         style={WhatsAppCss.button}
       >
-        <Text
-          style={WhatsAppCss.SendOTP}
-          // onPress={() => {
-          //   navigation.navigate("Otp");
-          // }}
-          onPress={handleButtonPress}
-        >
+        <Text style={WhatsAppCss.SendOTP} onPress={handleButtonPress}>
           Send OTP
         </Text>
       </LinearGradient>
