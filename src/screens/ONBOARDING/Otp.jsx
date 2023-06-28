@@ -8,6 +8,7 @@ import {
   Image,
   TextInput,
   ActivityIndicator,
+  TouchableOpacity,
 } from "react-native";
 
 // axios
@@ -173,15 +174,11 @@ const Otp = (props) => {
         colors={["#BB14E2", "#161FE4"]}
         style={OtpCss.button}
       >
-        <Text
-          style={OtpCss.SendOTP}
-          onPress={
-            handleButtonPress
-            // navigate.navigate("Name");
-          }
-        >
-          Verify
-        </Text>
+        <TouchableOpacity onPress={handleButtonPress}>
+          <Text style={OtpCss.SendOTP}>
+            {load ? <ActivityIndicator size={"large"} /> : "Verify"}
+          </Text>
+        </TouchableOpacity>
       </LinearGradient>
 
       <Text style={OtpCss.timer}>00:{seconds}</Text>
