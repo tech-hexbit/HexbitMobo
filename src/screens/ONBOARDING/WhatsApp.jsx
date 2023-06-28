@@ -71,6 +71,7 @@ const WhatsApp = () => {
       setError("Please Enter A Valid Number");
     }
   };
+
   return (
     <View style={WhatsAppCss.mDIv}>
       <Header true={true} msg="Enter your Details" />
