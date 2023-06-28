@@ -87,13 +87,7 @@ const Name = (props) => {
         colors={["#BB14E2", "#161FE4"]}
         style={NameCss.button}
       >
-        <Text
-          style={NameCss.SendOTP}
-          onPress={
-            handleButtonPress
-            // navigation.navigate("Email");
-          }
-        >
+        <Text style={NameCss.SendOTP} onPress={handleButtonPress}>
           Next
         </Text>
       </LinearGradient>
