@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 import { COLORS } from "../../../constants/theme";
 
-const NameCss = StyleSheet.create({
+const EmailCss = StyleSheet.create({
   mDIv: {
     flexGrow: 1,
     backgroundColor: "#fff",
@@ -46,4 +46,4 @@ const NameCss = StyleSheet.create({
   },
 });
 
-export default NameCss;
+export default EmailCss;
