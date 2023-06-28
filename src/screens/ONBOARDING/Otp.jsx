@@ -90,7 +90,6 @@ const Otp = (props) => {
         } else {
           setLoad(false);
           setError("Error: Invalid OTP");
-          // Alert.alert("Phone Number Already in Use");
         }
       } catch (error) {
         setLoad(false);
