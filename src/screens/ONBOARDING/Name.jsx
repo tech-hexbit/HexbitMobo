@@ -22,6 +22,7 @@ import img from "./../../../assets/Login/name.png";
 const Name = (props) => {
   const [showError, setError] = useState("");
   const [showVal, setVal] = useState("");
+  const [load, setLoad] = useState(false);
 
   const navigate = useNavigation();
 
