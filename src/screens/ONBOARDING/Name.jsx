@@ -13,6 +13,9 @@ import {
 // axios
 import axios from "axios";
 
+// style
+import NameCss from "./Css/NameCss";
+
 // env
 import { REACT_NATIVE_BASE_URL } from "@env";
 
@@ -51,6 +54,7 @@ const Name = (props) => {
         console.log(data);
 
         if (res.data.status === true) {
+          setLoad(false);
           setError("");
           console.log("res.data");
           console.log(res.data);
@@ -61,9 +65,11 @@ const Name = (props) => {
             WhatsAppNumber: `${data.WhatsAppNumber}`,
           });
         } else {
+          setLoad(false);
           setError("Error");
         }
       } catch (error) {
+        setLoad(false);
         console.log(error);
         setError("Error: An Unexpected Error Happened");
       }
@@ -96,8 +102,7 @@ const Name = (props) => {
         style={NameCss.button}
       >
         <Text style={NameCss.SendOTP} onPress={handleButtonPress}>
-          {load ? <ActivityIndicator size={"large"} /> : "Send OTP"}
-          Next
+          {load ? <ActivityIndicator size={"large"} /> : "Next"}
         </Text>
       </LinearGradient>
     </View>
