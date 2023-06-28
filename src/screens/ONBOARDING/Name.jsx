@@ -78,6 +78,7 @@ const Name = (props) => {
       setError("Please Enter A Valid Number");
     }
   };
+
   return (
     <View style={NameCss.mDIv}>
       <Header true={false} msg="Enter your Details" />
