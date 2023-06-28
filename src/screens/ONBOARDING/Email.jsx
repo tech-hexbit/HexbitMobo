@@ -98,9 +98,11 @@ const Email = (props) => {
         colors={["#BB14E2", "#161FE4"]}
         style={EmailCss.button}
       >
-        <Text style={EmailCss.SendOTP} onPress={handleButtonPress}>
-          {load ? <ActivityIndicator size={"large"} /> : "Next"}
-        </Text>
+        <TouchableOpacity onPress={handleButtonPress}>
+          <Text style={EmailCss.SendOTP}>
+            {load ? <ActivityIndicator size={"large"} /> : "Next"}
+          </Text>
+        </TouchableOpacity>
       </LinearGradient>
     </View>
   );
