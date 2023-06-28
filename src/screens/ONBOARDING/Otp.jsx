@@ -1,7 +1,14 @@
-import React, { useRef, useState, useEffect } from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
+import React, { useRef, useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ActivityIndicator,
+} from "react-native";
 
 // axios
 import axios from "axios";
@@ -20,6 +27,7 @@ import img from "./../../../assets/Login/otp.png";
 
 const Otp = (props) => {
   const [showError, setError] = useState("");
+  const [load, setLoad] = useState(false);
 
   const [f1, setf1] = useState("");
   const [f2, setf2] = useState("");
