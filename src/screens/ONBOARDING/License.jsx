@@ -6,6 +6,8 @@ import {
   Image,
   TextInput,
   ScrollView,
+  ActivityIndicator,
+  TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -112,29 +114,10 @@ const License = (props) => {
           colors={["#BB14E2", "#161FE4"]}
           style={LicenseCss.button}
         >
-          <Text style={LicenseCss.SendOTP} onPress={handleButtonPress}>
-            Next
-          </Text>
+          <TouchableOpacity onPress={handleButtonPress}>
+            <Text style={LicenseCss.SendOTP}>Next</Text>
+          </TouchableOpacity>
         </LinearGradient>
-
-        {/* <LinearGradient
-          colors={["#BB14E2", "#161FE4"]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          style={LicenseCss.linearGradient}
-        >
-          <View style={LicenseCss.innerContainer}>
-            <Text
-              style={LicenseCss.buttonText}
-              onPress={() => {
-                setWhatsAppNumber(props.route.params.WhatsAppNumber);
-                navigate.navigate("Home");
-              }}
-            >
-              Skip
-            </Text>
-          </View>
-        </LinearGradient> */}
       </View>
     </ScrollView>
   );
